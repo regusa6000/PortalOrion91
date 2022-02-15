@@ -8,6 +8,10 @@ import { DiarioPedidosComponent } from './diario-pedidos/diario-pedidos.componen
 import { DiferenciaDePagoComponent } from './diferencia-de-pago/diferencia-de-pago.component';
 import { PendientesAlmacenComponent } from './pendientes-almacen/pendientes-almacen.component';
 import { PreCompraComponent } from './pre-compra/pre-compra.component';
+import { TransportistasComponent } from './transportistas/transportistas.component';
+import { PorcentajeEnviadosComponent } from './porcentaje-enviados/porcentaje-enviados.component';
+import { ImagenesCleanerComponent } from './imagenes-cleaner/imagenes-cleaner.component';
+import { ManoManoComponent } from './mano-mano/mano-mano.component'
 
 const routes: Routes = [{
   path: '',
@@ -37,6 +41,22 @@ const routes: Routes = [{
       path: 'pre-compra',
       component: PreCompraComponent
     },
+    {
+      path: 'imagenes-cleaner',
+      component: ImagenesCleanerComponent
+    },
+    {
+      path: 'porcentaje-enviados',
+      component: PorcentajeEnviadosComponent
+    },
+    {
+      path: 'transportistas',
+      component: TransportistasComponent
+    },
+    {
+      path: 'mano-mano',
+      component: ManoManoComponent
+    }
   ],
 }];
 

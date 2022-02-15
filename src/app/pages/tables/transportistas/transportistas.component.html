@@ -1,0 +1,20 @@
+
+<div>
+  <nb-select placeholder="Transportistas" (selectedChange)="buscarTransportista($event)">
+    <nb-option *ngFor="let name of nameTransportistas" [value]="name.id_carrier">{{ name.name }}</nb-option>
+    <nb-option [value]="idPaack">{{ transportistaPaack }}</nb-option>
+  </nb-select>
+</div>
+
+<br><br>
+
+<nb-card>
+  <nb-card-header>
+    Transportistas
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="config" [source]="source">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

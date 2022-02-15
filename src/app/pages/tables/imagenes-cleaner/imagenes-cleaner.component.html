@@ -1,0 +1,28 @@
+<nb-card>
+  <nb-card-header>
+    Imagenes Cleaner
+  </nb-card-header>
+  <nb-card-body>
+    <table class="table table-striped" id="div1">
+      <thead>
+        <tr>
+          <th scope="col">Product Id</th>
+          <th scope="col">Referencia</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Atributo</th>
+          <th scope="col">Imagen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let imagen of imagenesCleaner">
+          <td>{{ imagen.id_product }}</td>
+          <td>{{ imagen.ref }}</td>
+          <td>{{ imagen.nombre_producto }}</td>
+          <td>{{ imagen.nombre_valor_att }}</td>
+          <td><a href="{{ imagen.link }}" target="_blank"><img src="https://www.orion91.com/{{ imagen.id_image }}-home_default/{{ imagen.ref }}.jpg"  width="200px" style="padding: 15px;"></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+</nb-card>
+

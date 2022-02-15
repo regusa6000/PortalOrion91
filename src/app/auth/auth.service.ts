@@ -29,6 +29,25 @@ export class AuthService {
   urlControlAliexpress: string = 'http://vpnxer.grupohidalgos.com:8070/controlAliExpress';
   urlCombinadosPredeterminadosSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/CombinadospredeterminadosSinStock';
 
+  //Envios
+  urlControlTransportistas: string = 'http://vpnxer.grupohidalgos.com:8070/controlTransportistas';
+  urlCargarComboName: string = 'http://vpnxer.grupohidalgos.com:8070/cargarComboName';
+  urlControlTransportistasName: string = 'http://vpnxer.grupohidalgos.com:8070/controlTransportistasName/';
+  urlPorcentajeTransportistas: string = 'http://vpnxer.grupohidalgos.com:8070/porcentajeTransportistas';
+
+  //Imagenes
+  urlImagenes: string = 'http://vpnxer.grupohidalgos.com:8070/imagenes';
+
+  //Control ManoMano
+  urlControlManoAMano: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmano';
+  urlControlManoAManoPorId: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmano/';
+  urlManoManoDistinto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAManoDivision';
+  urlManoManoPrimero: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorPrimero';
+  urlManoManoSegundo: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSegundo';
+  urlManoManoTercero: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorTercero';
+  urlManoManoCuarto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorCuarto';
+  urlManoManoSexto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSexto';
+  urlManoManoSeptimo: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSeptimo';
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -136,6 +155,65 @@ export class AuthService {
     return this.http.get(direccion)
   }
 
+   //Envios
+  cargarTablaTransportistas(){
+    let direccion = this.urlControlTransportistas;
+    return this.http.get(direccion)
+  }
+  cargarComboTransportistaName(){
+    let direccion = this.urlCargarComboName
+    return this.http.get(direccion)
+  }
+  cargarTransportistaName(id: number){
+    let direccion = this.urlControlTransportistasName + id
+    return this.http.get(direccion)
+  }
+  porcentajeTransportistas(){
+    let direccion = this.urlPorcentajeTransportistas
+    return this.http.get(direccion)
+  }
 
+  //Control de Imagenes
+  controlImagenes(){
+    let direccion = this.urlImagenes
+    return this.http.get(direccion)
+  }
+
+  //ManoMano
+  cargarTablaDivision(){
+    let direccion = this.urlManoManoDistinto
+    return this.http.get(direccion)
+  }
+
+  cargarTablaPrimeraDivision(){
+    let direccion = this.urlManoManoPrimero
+    return this.http.get(direccion)
+  }
+
+  cargarTablaSegundaDivision(){
+    let direccion = this.urlManoManoSegundo
+    return this.http.get(direccion)
+  }
+
+  cargarTablaTerceraDivision(){
+    let direccion = this.urlManoManoTercero
+    return this.http.get(direccion)
+  }
+
+  cargarTablaCuartaDivision(){
+    let direccion = this.urlManoManoCuarto
+    return this.http.get(direccion)
+  }
+
+
+  cargarTablaSextaDivision(){
+    let direccion = this.urlManoManoSexto
+    return this.http.get(direccion)
+  }
+
+  cargarTablaSeptimaDivision(){
+    let direccion = this.urlManoManoSeptimo
+    return this.http.get(direccion)
+  }
 
 }

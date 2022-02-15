@@ -25,6 +25,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Imagenes Cleaner',
+        link: '/pages/tables/imagenes-cleaner'
       },
       {
         title: 'Orden Cat-Caracteristica',
@@ -42,7 +43,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'home-outline',
     children: [
       {
-        title: 'ManoMano'
+        title: 'ManoMano',
+        link: '/pages/tables/mano-mano'
       },
       {
         title: 'MAKRO',
@@ -69,14 +71,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
           }
         ]
       },
-      {
-        title: 'ALIEXPRESS',
-        children: [
-          {
-            title: 'Errores Stock'
-          }
-        ]
-      }
     ]
   },
   {
@@ -84,7 +78,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'trending-up-outline',
     children: [
       {
-        title: 'Dashboard'
+        title: 'Dashboard',
+        link: '/pages/dashboard',
       },
       {
         title: 'Importe Ventas',
@@ -102,7 +97,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'car-outline',
     children: [
       {
-        title: 'Transportistas'
+        title: 'Transportistas',
+        link: '/pages/tables/transportistas'
+      },
+      {
+        title: 'Porcentajes Enviados',
+        link: '/pages/tables/porcentaje-enviados'
       }
     ]
   },
@@ -115,10 +115,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Actualizar Noticia'
-      },
-      {
-        title: 'Login',
-        link: '/auth/login',
       }
     ]
   }

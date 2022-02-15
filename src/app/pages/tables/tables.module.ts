@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
-import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule } from '@nebular/theme';
+import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { ThemeModule } from '../../@theme/theme.module';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { TablesRoutingModule, routedComponents } from './tables-routing.module';
 import { FsIconComponent } from './tree-grid/tree-grid.component';
 import { DiarioPedidosComponent } from './diario-pedidos/diario-pedidos.component';
 import { DiferenciaDePagoComponent } from './diferencia-de-pago/diferencia-de-pago.component';
 import { PendientesAlmacenComponent } from './pendientes-almacen/pendientes-almacen.component';
 import { PreCompraComponent } from './pre-compra/pre-compra.component';
+import { ImagenesCleanerComponent } from './imagenes-cleaner/imagenes-cleaner.component';
+import { TransportistasComponent } from './transportistas/transportistas.component';
+import { PorcentajeEnviadosComponent } from './porcentaje-enviados/porcentaje-enviados.component';
+import { ManoManoComponent } from './mano-mano/mano-mano.component';
 
 @NgModule({
   imports: [
+    CommonModule,
+    FormsModule,
+    NbRadioModule,
+    NbSelectModule,
     NbCardModule,
     NbTreeGridModule,
     NbIconModule,
@@ -27,6 +37,10 @@ import { PreCompraComponent } from './pre-compra/pre-compra.component';
     DiferenciaDePagoComponent,
     PendientesAlmacenComponent,
     PreCompraComponent,
+    ImagenesCleanerComponent,
+    TransportistasComponent,
+    PorcentajeEnviadosComponent,
+    ManoManoComponent,
   ],
 })
 export class TablesModule { }
