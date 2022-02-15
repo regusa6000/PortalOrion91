@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id Makro</th>
+      <th scope="col">Nombre Cliente</th>
+      <th scope="col">Apellidos Cliente</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Referencia de Producto</th>
+      <th scope="col">Stock Actual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pagos of arrayMakro">
+      <td>{{ pagos.orderNumber }}</td>
+      <td>{{ pagos.name }}</td>
+      <td>{{ pagos.lastname }}</td>
+      <td>{{ pagos.product }}</td>
+      <td>{{ pagos.gtinProduct }}</td>
+      <td>{{ pagos.stock}}</td>
+    </tr>
+  </tbody>
+</table>
+

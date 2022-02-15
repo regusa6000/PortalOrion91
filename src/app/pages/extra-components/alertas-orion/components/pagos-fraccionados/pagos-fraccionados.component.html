@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Order Id</th>
+      <th scope="col">Referencia</th>
+      <th scope="col">Ruta Pedido Prestashop</th>
+      <th scope="col">Método de Pago</th>
+      <th scope="col">Fecha de Creación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pagos of arrayPagos">
+      <td>{{ pagos.id_order }}</td>
+      <td>{{ pagos.reference }}</td>
+      <td><a href="{{ pagos.url }}" target="_blank">{{ pagos.url }}</a></td>
+      <td>{{ pagos.payment }}</td>
+      <td>{{ pagos.date_add}}</td>
+    </tr>
+  </tbody>
+</table>

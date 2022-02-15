@@ -1,0 +1,25 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id Product</th>
+      <th scope="col">Id Atributo</th>
+      <th scope="col">Url Prestashop</th>
+      <th scope="col">Name</th>
+      <th scope="col">Predeterminado</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Total Producto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let predeter of predeterminados">
+      <td>{{ predeter.id_product }}</td>
+      <td>{{ predeter.id_product_attribute }}</td>
+      <td><a href="{{ predeter.url }}" target="_blank">{{ predeter.url }}</a></td>
+      <td>{{ predeter.name }}</td>
+      <td>{{ predeter.default_on}}</td>
+      <td>{{ predeter.cantidad_combinacion}}</td>
+      <td>{{ predeter.total_producto}}</td>
+    </tr>
+  </tbody>
+</table>
+

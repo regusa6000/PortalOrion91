@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id Aliexpress</th>
+      <th scope="col">Pedido AliExpress</th>
+      <th scope="col">Code</th>
+      <th scope="col">Error</th>
+      <th scope="col">Fecha Actualización</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let error of erroresAli">
+      <td>{{ error.idAli }}</td>
+      <td>{{ error.Pedido_Aliexpress }}</td>
+      <td>{{ error.Code }}</td>
+      <td>{{ error.Error }}</td>
+      <td>{{ error.Fecha_Actualizacion}}</td>
+    </tr>
+  </tbody>
+</table>
