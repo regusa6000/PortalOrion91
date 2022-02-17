@@ -10,9 +10,15 @@ export class PedidosMakroSinStockComponent implements OnInit {
 
   arrayMakro: any
 
-  constructor(public authSvc: AuthService) { }
+  constructor(public authSvc: AuthService) {
+    this.refrescarTabla();
+    setInterval(() => { this.refrescarTabla(); }, 10000);
+   }
 
   ngOnInit(): void {
+  }
+
+  refrescarTabla(){
     this.authSvc.pedidosSinStockMakro().subscribe(data=>{
       this.arrayMakro = data
     })

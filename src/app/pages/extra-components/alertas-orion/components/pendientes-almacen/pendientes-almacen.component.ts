@@ -10,9 +10,15 @@ export class PendientesAlmacenComponent implements OnInit {
 
   arrayPendientesAlmacen: any
 
-  constructor(public authSvc: AuthService) { }
+  constructor(public authSvc: AuthService) {
+    this.refrescarTabla();
+    setInterval(() => { this.refrescarTabla(); }, 10000);
+  }
 
   ngOnInit(): void {
+  }
+
+  refrescarTabla(){
     this.authSvc.cargarTablaPedidosAlmacen().subscribe(data=>{
       this.arrayPendientesAlmacen = data
     })

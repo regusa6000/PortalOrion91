@@ -15,6 +15,7 @@ import { ImagenesCleanerComponent } from './imagenes-cleaner/imagenes-cleaner.co
 import { TransportistasComponent } from './transportistas/transportistas.component';
 import { PorcentajeEnviadosComponent } from './porcentaje-enviados/porcentaje-enviados.component';
 import { ManoManoComponent } from './mano-mano/mano-mano.component';
+import { RoturasComponent } from './roturas/roturas.component';
 
 @NgModule({
   imports: [
@@ -41,6 +42,7 @@ import { ManoManoComponent } from './mano-mano/mano-mano.component';
     TransportistasComponent,
     PorcentajeEnviadosComponent,
     ManoManoComponent,
+    RoturasComponent,
   ],
 })
 export class TablesModule { }

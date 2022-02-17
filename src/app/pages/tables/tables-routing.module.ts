@@ -11,7 +11,8 @@ import { PreCompraComponent } from './pre-compra/pre-compra.component';
 import { TransportistasComponent } from './transportistas/transportistas.component';
 import { PorcentajeEnviadosComponent } from './porcentaje-enviados/porcentaje-enviados.component';
 import { ImagenesCleanerComponent } from './imagenes-cleaner/imagenes-cleaner.component';
-import { ManoManoComponent } from './mano-mano/mano-mano.component'
+import { ManoManoComponent } from './mano-mano/mano-mano.component';
+import { RoturasComponent } from './roturas/roturas.component';
 
 const routes: Routes = [{
   path: '',
@@ -56,6 +57,10 @@ const routes: Routes = [{
     {
       path: 'mano-mano',
       component: ManoManoComponent
+    },
+    {
+      path: 'roturas',
+      component: RoturasComponent
     }
   ],
 }];

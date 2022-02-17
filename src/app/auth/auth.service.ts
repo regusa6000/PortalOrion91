@@ -49,6 +49,9 @@ export class AuthService {
   urlManoManoSexto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSexto';
   urlManoManoSeptimo: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSeptimo';
 
+  //Roturas Stock
+  urlRoturaStock: string = 'http://vpnxer.grupohidalgos.com:8070/roturaStock';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -184,35 +187,34 @@ export class AuthService {
     let direccion = this.urlManoManoDistinto
     return this.http.get(direccion)
   }
-
   cargarTablaPrimeraDivision(){
     let direccion = this.urlManoManoPrimero
     return this.http.get(direccion)
   }
-
   cargarTablaSegundaDivision(){
     let direccion = this.urlManoManoSegundo
     return this.http.get(direccion)
   }
-
   cargarTablaTerceraDivision(){
     let direccion = this.urlManoManoTercero
     return this.http.get(direccion)
   }
-
   cargarTablaCuartaDivision(){
     let direccion = this.urlManoManoCuarto
     return this.http.get(direccion)
   }
-
-
   cargarTablaSextaDivision(){
     let direccion = this.urlManoManoSexto
     return this.http.get(direccion)
   }
-
   cargarTablaSeptimaDivision(){
     let direccion = this.urlManoManoSeptimo
+    return this.http.get(direccion)
+  }
+
+  //Roturas Stock
+  controlRoturaStock(){
+    let direccion = this.urlRoturaStock
     return this.http.get(direccion)
   }
 

@@ -26,6 +26,7 @@ import { EchartsMultipleXaxisComponent } from './echarts/echarts-multiple-xaxis.
 import { EchartsAreaStackComponent } from './echarts/echarts-area-stack.component';
 import { EchartsBarAnimationComponent } from './echarts/echarts-bar-animation.component';
 import { EchartsRadarComponent } from './echarts/echarts-radar.component';
+import { EchartsDashboardComponent } from './echarts/echarts-dashboard.component';
 
 const components = [
   ChartjsBarComponent,
@@ -47,6 +48,7 @@ const components = [
   EchartsAreaStackComponent,
   EchartsBarAnimationComponent,
   EchartsRadarComponent,
+  EchartsDashboardComponent
 ];
 
 @NgModule({
@@ -58,6 +60,6 @@ const components = [
     ChartModule,
     NbCardModule,
   ],
-  declarations: [...routedComponents, ...components],
+  declarations: [...routedComponents, ...components,],
 })
 export class ChartsModule {}
