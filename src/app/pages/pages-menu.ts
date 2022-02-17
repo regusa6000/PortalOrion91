@@ -58,7 +58,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/control-makro'
           },
           {
-            title: 'Precios Rangos Makro'
+            title: 'Precios Rangos Makro',
+            link: '/pages/tables/precios-makro-rangos'
           }
         ]
       },

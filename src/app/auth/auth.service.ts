@@ -57,6 +57,25 @@ export class AuthService {
   urlMakroOffersPublicados: string = 'http://vpnxer.grupohidalgos.com:8070/offersPublicados';
   urlMakroOffersNoPublicados: string = 'http://vpnxer.grupohidalgos.com:8070/offerNoPublicados';
 
+  //Rutas de Rango de Precios de Makro
+  urlTotalDeProductosRangoMakro: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakro';
+  urlListaDeRangosMakroPorEan13: string = 'http://vpnxer.grupohidalgos.com:8070/listaDeRangosMakro/';
+  urlActualizarRangosMakro: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarRango';
+  urlBuscarListado: string = 'http://vpnxer.grupohidalgos.com:8070/buscarListado/';
+  urlRegistrarNuevoRango: string = 'http://vpnxer.grupohidalgos.com:8070/registrarRangoMakro';
+  urlEliminarRango: string = 'http://vpnxer.grupohidalgos.com:8070/eliminarRango/';
+
+  //Rutas de Rango de Precios de Makro Select
+  urlProductosPublicadosMakroConRangoYConStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroConRangoYConStock';
+  urlProductosPublicadosMakroConRangoYSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroConRangoYSinStock';
+  urlProductosPublicadosMakroSinRangoYConStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroSinRangoYConStock';
+  urlProductosPublicadosMakroSinRangoYSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroSinRangoYSinStock';
+
+  //PruebaRangos
+  urlPruebaMakro: string = 'http://192.168.30.148:8000/pruebaRangos';
+
+
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -235,6 +254,63 @@ export class AuthService {
   cargarMakroOffersNoPublicados(){
     let direccion = this.urlMakroOffersNoPublicados
     return this.http.get(direccion)
+  }
+
+  //Rangos de Makro
+  totalProductosPublicadosMakro(){
+    let direccion = this.urlTotalDeProductosRangoMakro
+    return this.http.get(direccion)
+  }
+
+  listaDeRangosMakroPorEan13(ean13: number){
+    let direccion = this.urlListaDeRangosMakroPorEan13 + ean13
+    return this.http.get(direccion)
+  }
+
+  productosPublicadosMakroConRangoYConStock(){
+    let direccion = this.urlProductosPublicadosMakroConRangoYConStock
+    return this.http.get(direccion)
+  }
+
+  productosPublicadosMakroConRangoYSinStock(){
+    let direccion = this.urlProductosPublicadosMakroConRangoYSinStock
+    return this.http.get(direccion)
+  }
+
+  productosPublicadosMakroSinRangoYConStock(){
+    let direccion = this.urlProductosPublicadosMakroSinRangoYConStock
+    return this.http.get(direccion)
+  }
+
+  productosPublicadosMakroSinRangoYSinStock(){
+    let direccion = this.urlProductosPublicadosMakroSinRangoYSinStock
+    return this.http.get(direccion)
+  }
+
+  buscarListado(ean13: number){
+    let direccion = this.urlBuscarListado + ean13
+    return this.http.get(direccion)
+  }
+
+  registrarRangoMakro(json: any){
+    let direccion = this.urlRegistrarNuevoRango
+    return this.http.post(direccion,json)
+  }
+
+  actualizarRangoMakro(json: any){
+    let direccion = this.urlActualizarRangosMakro
+    return this.http.put(direccion, json)
+  }
+
+  eliminarRango(ean13: number, rango: number){
+    let direccion = this.urlEliminarRango + ean13 + "/" + rango
+    return this.http.delete(direccion)
+  }
+
+  //PruebaRango
+  pruebaRango(){
+      let direccion = this.urlPruebaMakro
+      return this.http.get(direccion)
   }
 
 }

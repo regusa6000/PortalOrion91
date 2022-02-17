@@ -14,6 +14,7 @@ import { ImagenesCleanerComponent } from './imagenes-cleaner/imagenes-cleaner.co
 import { ManoManoComponent } from './mano-mano/mano-mano.component';
 import { RoturasComponent } from './roturas/roturas.component';
 import { ControlMakroComponent } from './control-makro/control-makro.component';
+import { PreciosMakroRangosComponent } from './precios-makro-rangos/precios-makro-rangos.component';
 
 const routes: Routes = [{
   path: '',
@@ -66,6 +67,10 @@ const routes: Routes = [{
     {
       path: 'control-makro',
       component: ControlMakroComponent
+    },
+    {
+      path: 'precios-makro-rangos',
+      component: PreciosMakroRangosComponent
     }
   ],
 }];

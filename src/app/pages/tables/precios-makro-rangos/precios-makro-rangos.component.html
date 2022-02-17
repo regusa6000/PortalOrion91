@@ -1,0 +1,72 @@
+<nb-card>
+  <nb-card-header>Precios Makro</nb-card-header>
+
+  <nb-card-body>
+            <div class="table-responsive cnstr-record product-tbl">
+              <table class="table table-bordered heading-hvr">
+                <thead>
+                  <tr>
+                    <th> </th>
+                    <th>Número Rangos</th>
+                    <th>GTIN</th>
+                    <th>SKU</th>
+                    <th>Producto</th>
+                    <th>Stock</th>
+                    <th>PrecioPS</th>
+                    <th>Precio Makro</th>
+                    <th>Margen</th>
+                    <th>Pallet</th>
+                    <th>Pack</th>
+                    <th>PMP</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let product of productosPublicados; let i = index">
+                  <tr>
+                    <td align="center">
+                        <nb-icon icon="plus-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" (click)="showLinea(i)" (click)="buscarRangos(product.sku)"></nb-icon>
+                        <nb-icon icon="minus-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]"></nb-icon>
+                    </td>
+                    <td>{{product.contadorRangos}}</td>
+                    <td>{{product.gtin}}</td>
+                    <td>{{product.sku}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.stock}}</td>
+                    <td>{{product.pricePs}}</td>
+                    <td>{{product.priceMakro}}</td>
+                    <td>{{product.margen}}</td>
+                    <td>{{product.pallet}}</td>
+                    <td>{{product.pack}}</td>
+                    <td>{{product.pmp}}</td>
+                  </tr>
+
+                  <!--Parte de los Rangos-->
+                  <tr [hidden]="!hideme[i]" class="sub-table no-bg">
+                    <td align="center"> </td>
+                    <td colspan="15" class="p-0">
+                      <table class="table mb-0 table-striped">
+                        <thead class="bg-dark text-white">
+                          <tr>
+                            <th>Referencia</th>
+                            <th>Ud. Rango</th>
+                            <th>Precio Ud.</th>
+                            <th>Margen Rango</th>
+                            <th>Dto. Rango</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let rangos of rangosProductos">
+                            <td>{{rangos.ean13}}</td>
+                            <td>{{rangos.rango}}</td>
+                            <td>{{rangos.precio_sin_iva}}</td>
+                            <td>{{rangos.margenNuevo}}</td>
+                            <td>{{rangos.porcentaje_dto }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+<nb-card-body>
