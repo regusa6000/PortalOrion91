@@ -16,6 +16,7 @@ import { TransportistasComponent } from './transportistas/transportistas.compone
 import { PorcentajeEnviadosComponent } from './porcentaje-enviados/porcentaje-enviados.component';
 import { ManoManoComponent } from './mano-mano/mano-mano.component';
 import { RoturasComponent } from './roturas/roturas.component';
+import { ControlMakroComponent } from './control-makro/control-makro.component';
 
 @NgModule({
   imports: [
@@ -43,6 +44,7 @@ import { RoturasComponent } from './roturas/roturas.component';
     PorcentajeEnviadosComponent,
     ManoManoComponent,
     RoturasComponent,
+    ControlMakroComponent,
   ],
 })
 export class TablesModule { }

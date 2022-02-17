@@ -52,6 +52,11 @@ export class AuthService {
   //Roturas Stock
   urlRoturaStock: string = 'http://vpnxer.grupohidalgos.com:8070/roturaStock';
 
+  //Rutas de Makro
+  urlMakroTodosLosProductos: string = 'http://vpnxer.grupohidalgos.com:8070/productosTotalesMakro';
+  urlMakroOffersPublicados: string = 'http://vpnxer.grupohidalgos.com:8070/offersPublicados';
+  urlMakroOffersNoPublicados: string = 'http://vpnxer.grupohidalgos.com:8070/offerNoPublicados';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -215,6 +220,20 @@ export class AuthService {
   //Roturas Stock
   controlRoturaStock(){
     let direccion = this.urlRoturaStock
+    return this.http.get(direccion)
+  }
+
+  //Funciones de Makro
+  cargarMakroTodosLosProductos(){
+    let direccion = this.urlMakroTodosLosProductos
+    return this.http.get(direccion)
+  }
+  cargarMakroOffersPublicados(){
+    let direccion = this.urlMakroOffersPublicados
+    return this.http.get(direccion)
+  }
+  cargarMakroOffersNoPublicados(){
+    let direccion = this.urlMakroOffersNoPublicados
     return this.http.get(direccion)
   }
 

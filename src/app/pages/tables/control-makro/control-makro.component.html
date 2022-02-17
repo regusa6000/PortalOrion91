@@ -1,0 +1,15 @@
+<nb-card>
+  <nb-card-header>Productos Publicados en Makro</nb-card-header>
+
+  <nb-card-body>
+    <span>Muestra los precios de ORION91 vs MAKRO.</span><br><br>
+
+    <nb-radio-group  style="display: flex; justify-content: center;">
+      <nb-radio [value]="1" (click)="avanzado(1)"> Productos Publicados </nb-radio>
+      <nb-radio [value]="2" (click)="avanzado(2)"> Productos No Publicados </nb-radio>
+    </nb-radio-group> <br>
+
+    <ng2-smart-table [settings]="config" [source]="source">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

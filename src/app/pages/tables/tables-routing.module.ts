@@ -13,6 +13,7 @@ import { PorcentajeEnviadosComponent } from './porcentaje-enviados/porcentaje-en
 import { ImagenesCleanerComponent } from './imagenes-cleaner/imagenes-cleaner.component';
 import { ManoManoComponent } from './mano-mano/mano-mano.component';
 import { RoturasComponent } from './roturas/roturas.component';
+import { ControlMakroComponent } from './control-makro/control-makro.component';
 
 const routes: Routes = [{
   path: '',
@@ -61,6 +62,10 @@ const routes: Routes = [{
     {
       path: 'roturas',
       component: RoturasComponent
+    },
+    {
+      path: 'control-makro',
+      component: ControlMakroComponent
     }
   ],
 }];

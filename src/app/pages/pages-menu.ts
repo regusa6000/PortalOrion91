@@ -54,7 +54,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'MAKRO',
         children: [
           {
-            title: 'Productos Publicados'
+            title: 'Productos Publicados',
+            link: '/pages/tables/control-makro'
           },
           {
             title: 'Precios Rangos Makro'
