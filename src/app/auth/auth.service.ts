@@ -59,7 +59,7 @@ export class AuthService {
 
   //Rutas de Rango de Precios de Makro
   urlTotalDeProductosRangoMakro: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakro';
-  urlListaDeRangosMakroPorEan13: string = 'http://vpnxer.grupohidalgos.com:8070/listaDeRangosMakro/';
+  urlListaDeRangosMakroPorEan13: string = 'http://192.168.30.148:8000/listaDeRangosMakro/';
   urlActualizarRangosMakro: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarRango';
   urlBuscarListado: string = 'http://vpnxer.grupohidalgos.com:8070/buscarListado/';
   urlRegistrarNuevoRango: string = 'http://vpnxer.grupohidalgos.com:8070/registrarRangoMakro';
@@ -74,6 +74,13 @@ export class AuthService {
   //PruebaRangos
   urlPruebaMakro: string = 'http://192.168.30.148:8000/pruebaRangos';
 
+
+  //Categorias Redireccionadas
+  urlCategoriasRedireccionadas: string = 'http://192.168.30.148:8000/categoriasRedireccionadas';
+  urlCountCategoriasRedireccionadas: string = 'http://192.168.30.148:8000/countCategoriasRedireccionadas'
+
+  //Rutas Ventas Productos
+  urlVentaProductos: string = 'http://vpnxer.grupohidalgos.com:8070/ventaProductos/';
 
 
   public loggedIn = new BehaviorSubject<boolean>(false);
@@ -152,6 +159,10 @@ export class AuthService {
   }
   countDeCombinadosPredeterminadosSinStock(){
     let direccion = this.urlCombinadosPredeterminadosSinStockBadge
+    return this.http.get(direccion)
+  }
+  badgeCategoriasRedireccionadas(){
+    let direccion = this.urlCountCategoriasRedireccionadas
     return this.http.get(direccion)
   }
 
@@ -311,6 +322,18 @@ export class AuthService {
   pruebaRango(){
       let direccion = this.urlPruebaMakro
       return this.http.get(direccion)
+  }
+
+  //Categorias Redireccionadas
+  categoriasRedireccionadas(){
+    let direccion = this.urlCategoriasRedireccionadas
+    return this.http.get(direccion)
+  }
+
+  //Ventas Productos
+  ventasProductos(idProducto: number, fechaInicio: any, fechaFin: any, tienda: number){
+    let direccion = this.urlVentaProductos + idProducto + '/' + fechaInicio + '/' + fechaFin + '/' + tienda
+    return this.http.get(direccion)
   }
 
 }

@@ -1,0 +1,23 @@
+<br>
+  <b><p style="text-decoration: underline;">Crear nuevo Rango</p></b>
+<br>
+<table class="table mb-0 table-striped">
+  <thead class="bg-dark text-white">
+    <tr>
+      <th>Referencia</th>
+      <th>Ud. Rango(Uds.)</th>
+      <th>Dto. Rango(%)</th>
+      <th>Crear</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="number" nbInput fullWidth shape="semi-round" placeholder="Referencia" value="{{ sku }}" disabled></td>
+      <td><input type="number" nbInput fullWidth shape="semi-round" placeholder="Unidades Rango" [(ngModel)] = "rangos"></td>
+      <td><input type="number" nbInput fullWidth shape="semi-round" placeholder="Porcentaje de Descuentro" [(ngModel)]="descuento"></td>
+      <!-- <td><span id="margenCalcular-{{ sku }}"></span></td> -->
+      <td align="center"><nb-icon icon="checkmark-outline" pack="eva" class="expand-row" (click)="registrarRango(sku,rangos,descuento,margen,pmp,precio,precioPadre)"></nb-icon></td>
+    </tr>
+  </tbody>
+</table>
+<br>

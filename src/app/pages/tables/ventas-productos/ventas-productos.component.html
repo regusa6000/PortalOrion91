@@ -1,0 +1,63 @@
+<nb-card size="large">
+
+  <nb-card-header>Productos Vendidos</nb-card-header>
+
+  <div style="display: flex; justify-content: flex-end; align-items: center; padding: 15px;" *ngIf="!mostrarTabla">
+      <!--IDPRODUCT-->
+      <div>
+        <input type="text" nbInput fullWidth placeholder="IdProduct:" [(ngModel)]="idProduct">
+      </div>
+      <!--FECHAS-->
+      <div>
+        <nb-card-body class="two-inputs">
+          <input nbInput placeholder="Seleccionar Fecha:" [nbDatepicker]="rangepicker">
+          <nb-rangepicker #rangepicker (rangeChange)="cambioRango($event)"></nb-rangepicker>
+        </nb-card-body>
+      </div>
+      <!--TIENDA-->
+      <div style="margin-right: 20px;">
+        <nb-select placeholder="Transportistas" (selectedChange)="select($event)">
+          <nb-option *ngFor="let name of tiendas; let i = index" [value]="i+1">{{ name }}</nb-option>
+        </nb-select>
+      </div>
+      <!--BOTON-->
+      <div>
+        <button nbButton status="primary" (click)="buscarProducto(idProduct)">Buscar</button>
+      </div>
+  </div>
+
+  <div *ngIf="mostrarTabla">
+    <div class="table-responsive cnstr-record product-tbl" width="90%">
+      <table class="table table-bordered heading-hvr">
+        <thead>
+          <tr>
+            <th>IdProduct</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Importe de Venta</th>
+            <th>Fecha</th>
+            <th>Pago</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let product of arrayRelleno">
+          <tr>
+            <td>{{product.product_id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.product_quantity}}</td>
+            <td>{{product.importeVendido}}</td>
+            <td>{{product.date_add}}</td>
+            <td>{{product.payment}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <div *ngIf="mostrarTabla">
+      <canvas id="canvasSumatoria">{{ chartSumatoria }}</canvas>
+    </div> -->
+
+  </div>
+
+</nb-card>
+
+

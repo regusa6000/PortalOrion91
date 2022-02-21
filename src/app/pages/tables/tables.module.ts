@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule } from '@nebular/theme';
+import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { ThemeModule } from '../../@theme/theme.module';
@@ -18,6 +18,10 @@ import { ManoManoComponent } from './mano-mano/mano-mano.component';
 import { RoturasComponent } from './roturas/roturas.component';
 import { ControlMakroComponent } from './control-makro/control-makro.component';
 import { PreciosMakroRangosComponent } from './precios-makro-rangos/precios-makro-rangos.component';
+import { RangosMakroComponent } from './precios-makro-rangos/components/rangos-makro/rangos-makro.component';
+import { RegistrarRangoComponent } from './precios-makro-rangos/components/registrar-rango/registrar-rango.component';
+import { VentasProductosComponent } from './ventas-productos/ventas-productos.component';
+// import { NbCalendarRangeModule } from '.'
 
 @NgModule({
   imports: [
@@ -32,6 +36,9 @@ import { PreciosMakroRangosComponent } from './precios-makro-rangos/precios-makr
     ThemeModule,
     TablesRoutingModule,
     Ng2SmartTableModule,
+    NbCalendarRangeModule,
+    NbDatepickerModule,
+    NbButtonModule
   ],
   declarations: [
     ...routedComponents,
@@ -47,6 +54,9 @@ import { PreciosMakroRangosComponent } from './precios-makro-rangos/precios-makr
     RoturasComponent,
     ControlMakroComponent,
     PreciosMakroRangosComponent,
+    RangosMakroComponent,
+    RegistrarRangoComponent,
+    VentasProductosComponent,
   ],
 })
 export class TablesModule { }

@@ -1,0 +1,46 @@
+  <br>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="margin-left: 10;">
+        <p style="text-decoration: underline;"><b>Actualizar Rango</b></p>
+      </div>
+      <div style="margin-right: 10px;">
+        <nb-icon icon="refresh-outline" pack="eva" (click)="actualizarTablaRangos(sku)"></nb-icon>
+      </div>
+   </div>
+
+  <br>
+  <table class="table mb-0 table-striped">
+    <thead class="bg-dark text-white">
+      <tr>
+        <th>Crear Rango</th>
+        <th>Referencia</th>
+        <th>Ud. Rango(Uds.)</th>
+        <th>Precio Ud.(€)</th>
+        <th>Margen Rango(%)</th>
+        <th>Dto. Rango(%)</th>
+        <th>Nuevo Descuento(%)</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rangos of rangosProductos; let i = index">
+        <td align="center">
+          <nb-icon icon="plus-square-outline" pack="eva" *ngIf="!formulario[i]" (click)="showFormulario(i)"></nb-icon>
+          <nb-icon icon="minus-square-outline" pack="eva" *ngIf="formulario[i]" (click)="formulario[i] = !formulario[i]"></nb-icon>
+        </td>
+        <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Ean13" value="{{rangos.ean13}}" disabled></td>
+        <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Número de Rango" value="{{rangos.rango}}" disabled></td>
+        <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Precio sin Iva" value="{{rangos.precio_sin_iva}}" disabled></td>
+        <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Margen" value="{{rangos.margenNuevo}}" disabled></td>
+        <!-- <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Descuento" value="{{rangos.porcentaje_dto }}"
+            id="editarPorcentaje-{{ rangos.id_product }}-{{ rangos.ean13 }}-{{ rangos.rango }}"></td> -->
+            <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Descuento" value="{{rangos.porcentaje_dto }}" disabled></td>
+            <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Nuevo Descuento" name="nuevo" [(ngModel)] = 'editarPorcentaje[i]'></td>
+        <td align="center"><nb-icon icon="edit-2-outline" pack="eva" (click)="editar(rangos.id_product,rangos.ean13,rangos.rango,precio,editarPorcentaje[i])"></nb-icon></td>
+        <td align="center"><nb-icon icon="trash-2-outline" pack="eva" (click)="eliminarRango(rangos.ean13,rangos.rango)"></nb-icon></td>
+      </tr>
+
+    </tbody>
+  </table>
+  <br>

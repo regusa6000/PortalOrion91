@@ -44,6 +44,7 @@ import { PendientesAlmacenComponent } from './alertas-orion/components/pendiente
 import { PedidosMakroSinStockComponent } from './alertas-orion/components/pedidos-makro-sin-stock/pedidos-makro-sin-stock.component';
 import { ErroresAliExpressComponent } from './alertas-orion/components/errores-ali-express/errores-ali-express.component';
 import { CombinadosPredeterminadosSinStockComponent } from './alertas-orion/components/combinados-predeterminados-sin-stock/combinados-predeterminados-sin-stock.component';
+import { CategoriasRedireccionadasComponent } from './alertas-orion/components/categorias-redireccionadas/categorias-redireccionadas.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -95,6 +96,7 @@ const MODULES = [
     PedidosMakroSinStockComponent,
     ErroresAliExpressComponent,
     CombinadosPredeterminadosSinStockComponent,
+    CategoriasRedireccionadasComponent,
   ],
 })
 export class ExtraComponentsModule { }

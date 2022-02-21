@@ -95,6 +95,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Ventas Productos',
+        link: '/pages/tables/ventas-productos'
       },
     ],
   },

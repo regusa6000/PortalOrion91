@@ -22,11 +22,13 @@ export class PagesComponent implements OnInit{
   pedidosFraccionados: any
   makroSinStock: any
   erroresAli: any
+  redireccionadas: any
+  predeterminados: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
     //Cada 10 segundos lanza la consulta para poder tenerlo siempre actualizada
-    setInterval(() => { this.refrescarAlertas(); }, 10000);
+    setInterval(() => { this.refrescarAlertas(); }, 100000);
   }
 
 
@@ -57,12 +59,24 @@ export class PagesComponent implements OnInit{
               this.erroresAli = data
               total += this.erroresAli
 
-              if(total > 0){
-                this.menu[0].badge = {
-                  text: `${total}`,
-                  status:"danger"
-                }
-              }
+                this.authSvc.badgeCategoriasRedireccionadas().subscribe(data=>{
+                  this.redireccionadas = data
+                  total += this.redireccionadas
+
+                  this.authSvc.countDeCombinadosPredeterminadosSinStock().subscribe(data=>{
+                    this.predeterminados = data
+                    total += this.predeterminados
+
+                      if(total > 0){
+                        this.menu[0].badge = {
+                          text: `${total}`,
+                          status:"danger"
+                        }
+                      }
+
+                  })
+
+                })
 
             })
 

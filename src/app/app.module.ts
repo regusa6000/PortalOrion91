@@ -23,7 +23,7 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import { NbAuthJWTToken, NbAuthModule, NbAuthSimpleToken, NbPasswordAuthStrategy } from '@nebular/auth';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -71,7 +71,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   ],
 
   providers: [
-    { provide: LOCALE_ID, useValue: 'es-BR' },
+    // { provide: LOCALE_ID, useValue: 'es-BR' },
     NbDatepickerModule,
     {provide : LocationStrategy , useClass: HashLocationStrategy}
     ],

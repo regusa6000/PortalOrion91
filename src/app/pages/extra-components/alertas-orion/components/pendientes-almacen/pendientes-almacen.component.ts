@@ -12,7 +12,7 @@ export class PendientesAlmacenComponent implements OnInit {
 
   constructor(public authSvc: AuthService) {
     this.refrescarTabla();
-    setInterval(() => { this.refrescarTabla(); }, 10000);
+    setInterval(() => { this.refrescarTabla(); }, 100000);
   }
 
   ngOnInit(): void {

@@ -15,6 +15,7 @@ import { ManoManoComponent } from './mano-mano/mano-mano.component';
 import { RoturasComponent } from './roturas/roturas.component';
 import { ControlMakroComponent } from './control-makro/control-makro.component';
 import { PreciosMakroRangosComponent } from './precios-makro-rangos/precios-makro-rangos.component';
+import { VentasProductosComponent } from './ventas-productos/ventas-productos.component';
 
 const routes: Routes = [{
   path: '',
@@ -71,6 +72,10 @@ const routes: Routes = [{
     {
       path: 'precios-makro-rangos',
       component: PreciosMakroRangosComponent
+    },
+    {
+      path: 'ventas-productos',
+      component: VentasProductosComponent
     }
   ],
 }];
@@ -88,5 +93,6 @@ export const routedComponents = [
   DiarioPedidosComponent,
   DiferenciaDePagoComponent,
   PendientesAlmacenComponent,
-  PreCompraComponent
+  PreCompraComponent,
+  VentasProductosComponent
 ];

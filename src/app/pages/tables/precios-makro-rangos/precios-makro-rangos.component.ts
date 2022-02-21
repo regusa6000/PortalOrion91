@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NbComponentStatus, NbToastrService } from '@nebular/theme';
 import { AuthService } from '../../../auth/auth.service';
 
 @Component({
@@ -10,10 +11,10 @@ export class PreciosMakroRangosComponent implements OnInit {
 
   productosPublicados: any
   hideme = [];
+  formulario = [];
   Index: any;
-  rangosProductos: any
 
-  constructor(private authSvc: AuthService) { }
+  constructor(private authSvc: AuthService,private toastrService: NbToastrService) { }
 
   ngOnInit(): void {
     this.authSvc.totalProductosPublicadosMakro().subscribe(data=>{
@@ -27,11 +28,10 @@ export class PreciosMakroRangosComponent implements OnInit {
     this.Index = index;
   }
 
-  buscarRangos(ean13: number){
-    this.authSvc.listaDeRangosMakroPorEan13(ean13).subscribe(data=>{
-      this.rangosProductos = data
-      console.log(this.rangosProductos)
-    })
+  showFormulario(index) {
+    this.formulario[index] = !this.formulario[index];
+    this.Index = index;
   }
+
 
 }

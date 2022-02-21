@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Url Antigua</th>
+      <th scope="col">Id Category</th>
+      <th scope="col">Url Destino</th>
+      <th scope="col">Id Product</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let redireccion of redireccionadas">
+      <td>{{ redireccion.url_antigua }}</td>
+      <td>{{ redireccion.id_category }}</td>
+      <td>{{ redireccion.url_destino }}</td>
+      <td>{{ redireccion.id_product}}</td>
+      <td>{{ redireccion.name}}</td>
+      <td>{{ redireccion.active}}</td>
+    </tr>
+  </tbody>
+</table>
