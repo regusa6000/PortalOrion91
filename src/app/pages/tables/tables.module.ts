@@ -21,6 +21,13 @@ import { PreciosMakroRangosComponent } from './precios-makro-rangos/precios-makr
 import { RangosMakroComponent } from './precios-makro-rangos/components/rangos-makro/rangos-makro.component';
 import { RegistrarRangoComponent } from './precios-makro-rangos/components/registrar-rango/registrar-rango.component';
 import { VentasProductosComponent } from './ventas-productos/ventas-productos.component';
+import { ImporteDeVentasComponent } from './importe-de-ventas/importe-de-ventas.component';
+import { HistoricoStockComponent } from './historico-stock/historico-stock.component';
+import { CategoriasPorMesesComponent } from './categorias-por-meses/categorias-por-meses.component';
+import { ProductosTopFechasComponent } from './productos-top-fechas/productos-top-fechas.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
+import { CategoriaProductoComponent } from './categoria-producto/categoria-producto.component';
+import { PosicionProductosComponent } from './categoria-producto/posicion-productos/posicion-productos.component';
 // import { NbCalendarRangeModule } from '.'
 
 @NgModule({
@@ -57,6 +64,13 @@ import { VentasProductosComponent } from './ventas-productos/ventas-productos.co
     RangosMakroComponent,
     RegistrarRangoComponent,
     VentasProductosComponent,
+    ImporteDeVentasComponent,
+    HistoricoStockComponent,
+    CategoriasPorMesesComponent,
+    ProductosTopFechasComponent,
+    FavoritosComponent,
+    CategoriaProductoComponent,
+    PosicionProductosComponent,
   ],
 })
 export class TablesModule { }

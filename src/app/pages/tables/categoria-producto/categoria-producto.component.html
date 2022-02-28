@@ -1,0 +1,36 @@
+<nb-card>
+  <nb-card-header>Orden Cat-Product</nb-card-header>
+
+  <nb-card-body>
+            <div class="table-responsive cnstr-record product-tbl">
+              <table class="table table-bordered heading-hvr">
+                <thead>
+                  <tr>
+                    <th> </th>
+                    <th>Id Categoría</th>
+                    <th>Categoría</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let cat of listadoCategorias; let i = index">
+                  <tr>
+                    <td align="center">
+                        <nb-icon icon="maximize-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" (click)="showLinea(i)"></nb-icon>
+                        <nb-icon icon="minimize-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]"></nb-icon>
+                    </td>
+                    <td>{{cat.idCategory}}</td>
+                    <td>{{cat.idCategoryName}}</td>
+                  </tr>
+
+
+                  <tr [hidden]="!hideme[i]" class="sub-table no-bg">
+                    <td align="center"> </td>
+                    <td colspan="15" class="p-0">
+                      <ngx-posicion-productos [idCategory] = "cat.idCategory"></ngx-posicion-productos>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+<nb-card-body>

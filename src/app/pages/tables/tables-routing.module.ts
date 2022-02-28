@@ -16,6 +16,12 @@ import { RoturasComponent } from './roturas/roturas.component';
 import { ControlMakroComponent } from './control-makro/control-makro.component';
 import { PreciosMakroRangosComponent } from './precios-makro-rangos/precios-makro-rangos.component';
 import { VentasProductosComponent } from './ventas-productos/ventas-productos.component';
+import { ImporteDeVentasComponent } from './importe-de-ventas/importe-de-ventas.component';
+import { HistoricoStockComponent } from './historico-stock/historico-stock.component';
+import { CategoriasPorMesesComponent } from './categorias-por-meses/categorias-por-meses.component';
+import { ProductosTopFechasComponent } from './productos-top-fechas/productos-top-fechas.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
+import { CategoriaProductoComponent } from './categoria-producto/categoria-producto.component';
 
 const routes: Routes = [{
   path: '',
@@ -76,6 +82,30 @@ const routes: Routes = [{
     {
       path: 'ventas-productos',
       component: VentasProductosComponent
+    },
+    {
+      path: 'importe-de-ventas',
+      component: ImporteDeVentasComponent
+    },
+    {
+      path: 'historico-stock',
+      component: HistoricoStockComponent
+    },
+    {
+      path: 'categorias-por-meses',
+      component: CategoriasPorMesesComponent
+    },
+    {
+      path: 'productos-top-fechas',
+      component: ProductosTopFechasComponent
+    },
+    {
+      path: 'favoritos',
+      component: FavoritosComponent
+    },
+    {
+      path: 'categoria-producto',
+      component: CategoriaProductoComponent
     }
   ],
 }];

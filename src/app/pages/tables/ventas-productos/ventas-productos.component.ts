@@ -39,6 +39,7 @@ export class VentasProductosComponent implements OnInit {
       this.arrayRelleno = data
       this.mostrarTabla = true
       // setInterval(() => { this.lineaGrafica(this.arrayRelleno); }, 10000);
+      setTimeout(() => { this.lineaGrafica(this.arrayRelleno); }, 10000);
       console.log(data)
     })
   }
@@ -74,10 +75,10 @@ export class VentasProductosComponent implements OnInit {
     this.chartSumatoria = new Chart('canvasSumatoria', {
       type: 'line',
       data: {
-          labels: [miArrayFechas[0]],
+          labels: miArrayFechas,
           datasets: [{
               label: 'Importe',
-              data: [miArrayImporte[0]],
+              data: miArrayImporte,
               borderColor: 'black',
               borderWidth: 3
           }]

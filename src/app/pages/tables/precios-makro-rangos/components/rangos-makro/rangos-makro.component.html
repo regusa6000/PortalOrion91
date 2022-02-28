@@ -12,7 +12,7 @@
   <table class="table mb-0 table-striped">
     <thead class="bg-dark text-white">
       <tr>
-        <th>Crear Rango</th>
+        <!-- <th>Crear Rango</th> -->
         <th>Referencia</th>
         <th>Ud. Rango(Uds.)</th>
         <th>Precio Ud.(€)</th>
@@ -25,10 +25,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let rangos of rangosProductos; let i = index">
-        <td align="center">
+        <!-- <td align="center">
           <nb-icon icon="plus-square-outline" pack="eva" *ngIf="!formulario[i]" (click)="showFormulario(i)"></nb-icon>
           <nb-icon icon="minus-square-outline" pack="eva" *ngIf="formulario[i]" (click)="formulario[i] = !formulario[i]"></nb-icon>
-        </td>
+        </td> -->
         <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Ean13" value="{{rangos.ean13}}" disabled></td>
         <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Número de Rango" value="{{rangos.rango}}" disabled></td>
         <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Precio sin Iva" value="{{rangos.precio_sin_iva}}" disabled></td>

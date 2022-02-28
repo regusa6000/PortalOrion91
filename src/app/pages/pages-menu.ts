@@ -21,20 +21,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'layout-outline',
     children: [
       {
-        title: 'Categorías Vacias',
-      },
-      {
         title: 'Imagenes Cleaner',
         link: '/pages/tables/imagenes-cleaner'
       },
       {
-        title: 'Orden Cat-Caracteristica',
-      },
-      {
-        title: 'Orden Cat-Producto',
+        title: 'Productos por Categoría',
+        link: '/pages/tables/categoria-producto'
       },
       {
         title: 'Historico Stock',
+        link: '/pages/tables/historico-stock'
+      },
+      {
+        title: 'Productos Top',
+        link: '/pages/tables/productos-top-fechas'
       },
       {
         title: 'Roturas',
@@ -63,20 +63,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
           }
         ]
       },
-      {
-        title: 'AMAZON',
-        children: [
-          {
-            title: 'Imágenes'
-          },
-          {
-            title: 'Imágenes Errores'
-          },
-          {
-            title: 'Imágenes Oks'
-          }
-        ]
-      },
     ]
   },
   {
@@ -89,14 +75,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Importe Ventas',
+        link: '/pages/tables/importe-de-ventas'
       },
       {
         title: 'Ventas Categorías',
+        link: '/pages/tables/categorias-por-meses'
       },
       {
         title: 'Ventas Productos',
         link: '/pages/tables/ventas-productos'
       },
+      {
+        title: 'Uso Favoritos',
+        link: '/pages/tables/favoritos'
+      }
     ],
   },
   {

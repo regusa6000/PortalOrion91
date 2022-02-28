@@ -1,0 +1,32 @@
+<nb-card>
+  <nb-card-header>Orden Cat-Product</nb-card-header>
+
+  <nb-card-body>
+            <div class="table-responsive cnstr-record product-tbl">
+              <table class="table table-bordered heading-hvr">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>ID Producto</th>
+                    <th>Producto</th>
+                    <th>Stock</th>
+                    <th>Posición</th>
+                    <th>Nueva Posición</th>
+                    <th>Botón Guardar</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let cat of catProduct; let i = index;">
+                  <tr>
+                    <td align="center"><img src="https://orion91.com/img/tmp/product_mini_{{ cat.id_image }}.jpg" alt=""></td>
+                    <td>{{cat.id_product}}</td>
+                    <td>{{cat.name}}</td>
+                    <td>{{ cat.quantity }}</td>
+                    <td>{{ cat.position }}</td>
+                    <td><input type="text" nbInput fullWidth shape="semi-round" placeholder="Nueva Posición" name="nuevo" [(ngModel)] = 'editarPosicion[i]'></td>
+                    <td align="center"><nb-icon icon="edit-2-outline" pack="eva" (click)="editar(cat.id_category,cat.id_product,editarPosicion[i])"></nb-icon></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+<nb-card-body>

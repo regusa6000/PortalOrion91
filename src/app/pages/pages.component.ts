@@ -24,11 +24,14 @@ export class PagesComponent implements OnInit{
   erroresAli: any
   redireccionadas: any
   predeterminados: any
+  manoMano: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
+    this.refrescarBadgeManoMano();
     //Cada 10 segundos lanza la consulta para poder tenerlo siempre actualizada
     setInterval(() => { this.refrescarAlertas(); }, 100000);
+    setInterval(() => { this.refrescarBadgeManoMano(); }, 100000);
   }
 
 
@@ -74,6 +77,8 @@ export class PagesComponent implements OnInit{
                         }
                       }
 
+                      console.log(this.menu)
+
                   })
 
                 })
@@ -88,6 +93,32 @@ export class PagesComponent implements OnInit{
 
     })
 
+  }
+
+  refrescarBadgeManoMano(){
+
+    let ManoMano = 0
+
+    this.authSvc.controlManoManoBadge().subscribe(data=>{
+      this.manoMano = data
+       ManoMano = this.manoMano
+
+      if(ManoMano > 0){
+        this.menu[3].children[0].badge = {
+          text: `${ManoMano}`,
+          status:"danger"
+        }
+
+        this.menu[3].badge = {
+          text: `${ManoMano}`,
+          status:"danger"
+        }
+
+      }
+
+      console.log(this.manoMano)
+
+    })
   }
 
 }

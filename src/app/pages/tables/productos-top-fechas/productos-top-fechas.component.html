@@ -1,0 +1,31 @@
+<nb-card size="large" style="height: 100%; width: 100%;">
+
+  <nb-card-header>Productos Top</nb-card-header>
+
+  <nb-card-body class="two-inputs">
+
+    <div style="display: flex; justify-content: flex-end; align-items: center; padding: 15px;" *ngIf="!mostrarTabla">
+      <!--FECHAS-->
+      <div>
+        <input nbInput placeholder="Seleccionar Fecha:" [nbDatepicker]="rangepicker">
+        <nb-rangepicker #rangepicker (rangeChange)="cambioRango($event)"></nb-rangepicker>
+      </div>
+      <!--BOTON-->
+      <div>
+        <button nbButton status="primary" (click)="buscarProducto()" style="margin-right: 10px;">Buscar</button>
+      </div>
+  </div>
+  <button nbButton status="primary" (click)="vacear()" *ngIf="mostrarTabla" style="width: 50%; margin: auto; margin-top: 10px; display: flex;">Volver a buscar</button>
+
+  <div *ngIf="mostrarTabla" style="width: 95%; margin: auto; margin-top: 30px;">
+    <ng2-smart-table [settings]="config" [source]="productosTop">
+    </ng2-smart-table>
+  </div>
+
+  </nb-card-body>
+
+
+
+</nb-card>
+
+

@@ -1,0 +1,35 @@
+<nb-card>
+  <nb-card-header>Importe de Ventas</nb-card-header>
+
+  <nb-card-body>
+    <span>Canales de Venta (ultimos 52 semanas ), agrupados por semanas.</span><br><br>
+
+    <div>
+      <nb-radio-group  style="display: flex; justify-content: center;">
+        <nb-radio name='miCheckbox' [value]="1" (click)="agregar(0)"> Orion91 </nb-radio>
+        <nb-radio name='miCheckbox' [value]="2" (click)="agregar(1)"> ManoMano </nb-radio>
+        <nb-radio name='miCheckbox' [value]="3" (click)="agregar(2)"> Carrefour </nb-radio>
+        <nb-radio name='miCheckbox' [value]="4" (click)="agregar(3)"> Ali Express </nb-radio>
+        <nb-radio name='miCheckbox' [value]="5" (click)="agregar(4)"> Amazon </nb-radio>
+        <nb-radio name='miCheckbox' [value]="6" (click)="agregar(5)"> Grupon </nb-radio>
+        <nb-radio name='miCheckbox' [value]="7" (click)="agregar(6)"> Embargos </nb-radio>
+        <nb-radio name='miCheckbox' [value]="8" (click)="agregar(7)"> MequedoUno </nb-radio>
+        <nb-radio name='miCheckbox' [value]="9" (click)="agregar(8)"> Fnac </nb-radio>
+        <nb-radio name='miCheckbox' [value]="10" (click)="agregar(9)"> Wish </nb-radio>
+        <nb-radio name='miCheckbox' [value]="11" (click)="agregar(10)"> Makro </nb-radio>
+        <nb-radio name='miCheckbox' [value]="12" (click)="agregar(11)"> Pc Componentes </nb-radio>
+        <nb-radio name='miCheckbox' [value]="13" (click)="agregar(12)"> Sprinter </nb-radio>
+        <nb-radio name='miCheckbox' [value]="14" (click)="agregar(13)"> Bulevip </nb-radio>
+      </nb-radio-group>
+    </div><br>
+
+    <div style="text-align: center;">
+      <span>Click aqui para sobreponer graficas.</span>
+    </div><br>
+
+    <div class="estadosSumatoria" *ngIf="mostrar" style="width: 95%; margin: auto;">
+      <canvas id="canvasSumatoria">{{ chartSumatoria }}</canvas>
+    </div><br><br><br>
+
+  </nb-card-body>
+</nb-card>

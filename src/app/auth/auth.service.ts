@@ -10,66 +10,67 @@ import { User, UserResponse } from '../shared/guards/components/models/user.inte
 })
 export class AuthService {
 
-  urlVentasSemanales: string = 'http://vpnxer.grupohidalgos.com:8070/ventasSemanalesTiendas';
+  urlVentasSemanales: string = 'http://192.168.30.148:8000/ventasSemanalesTiendas';
 
   //Badges
-  urlControlPedidosPagadosBadge: string = 'http://vpnxer.grupohidalgos.com:8070/controlPedidosPagadosBadge';
-  urlControlPedidosAlmacenBadge: string = 'http://vpnxer.grupohidalgos.com:8070/pedidosAlmacenBadge';
-  urlBadgePagosFraccionados: string = 'http://vpnxer.grupohidalgos.com:8070/badgePedidosFraccionados';
-  urlBadgePedidosSinStockMakro: string = 'http://vpnxer.grupohidalgos.com:8070/badgepedidosSinStockMakro';
-  urlBadgeAliexpress: string = 'http://vpnxer.grupohidalgos.com:8070/badgeAliExpress';
-  urlCombinadosPredeterminadosSinStockBadge: string = 'http://vpnxer.grupohidalgos.com:8070/CombinadospredeterminadosSinStockCount';
+  urlControlPedidosPagadosBadge: string = 'http://192.168.30.148:8000/controlPedidosPagadosBadge';
+  urlControlPedidosAlmacenBadge: string = 'http://192.168.30.148:8000/pedidosAlmacenBadge';
+  urlBadgePagosFraccionados: string = 'http://192.168.30.148:8000/badgePedidosFraccionados';
+  urlBadgePedidosSinStockMakro: string = 'http://192.168.30.148:8000/badgepedidosSinStockMakro';
+  urlBadgeAliexpress: string = 'http://192.168.30.148:8000/badgeAliExpress';
+  urlCombinadosPredeterminadosSinStockBadge: string = 'http://192.168.30.148:8000/CombinadospredeterminadosSinStockCount';
+  urlControlManoManoBadge: string = 'http://192.168.30.148:8000/controlManoManoBadge';
 
   //Alertas
-  urlPagosFraccionados: string = 'http://vpnxer.grupohidalgos.com:8070/pedidosFraccionados';
-  urlControlPedidosPagados: string = 'http://vpnxer.grupohidalgos.com:8070/controlPedidosPagados';
-  urlControlPedidosAlmacen: string = 'http://vpnxer.grupohidalgos.com:8070/controlPedidosAlmacen';
-  urlControlPreCompra: string = 'http://vpnxer.grupohidalgos.com:8070/controlPreCompras';
-  urlPedidosSinStockMakro: string = 'http://vpnxer.grupohidalgos.com:8070/pedidosSinStockMakro';
-  urlControlAliexpress: string = 'http://vpnxer.grupohidalgos.com:8070/controlAliExpress';
-  urlCombinadosPredeterminadosSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/CombinadospredeterminadosSinStock';
+  urlPagosFraccionados: string = 'http://192.168.30.148:8000/pedidosFraccionados';
+  urlControlPedidosPagados: string = 'http://192.168.30.148:8000/controlPedidosPagados';
+  urlControlPedidosAlmacen: string = 'http://192.168.30.148:8000/controlPedidosAlmacen';
+  urlControlPreCompra: string = 'http://192.168.30.148:8000/controlPreCompras';
+  urlPedidosSinStockMakro: string = 'http://192.168.30.148:8000/pedidosSinStockMakro';
+  urlControlAliexpress: string = 'http://192.168.30.148:8000/controlAliExpress';
+  urlCombinadosPredeterminadosSinStock: string = 'http://192.168.30.148:8000/CombinadospredeterminadosSinStock';
 
   //Envios
-  urlControlTransportistas: string = 'http://vpnxer.grupohidalgos.com:8070/controlTransportistas';
-  urlCargarComboName: string = 'http://vpnxer.grupohidalgos.com:8070/cargarComboName';
-  urlControlTransportistasName: string = 'http://vpnxer.grupohidalgos.com:8070/controlTransportistasName/';
-  urlPorcentajeTransportistas: string = 'http://vpnxer.grupohidalgos.com:8070/porcentajeTransportistas';
+  urlControlTransportistas: string = 'http://192.168.30.148:8000/controlTransportistas';
+  urlCargarComboName: string = 'http://192.168.30.148:8000/cargarComboName';
+  urlControlTransportistasName: string = 'http://192.168.30.148:8000/controlTransportistasName/';
+  urlPorcentajeTransportistas: string = 'http://192.168.30.148:8000/porcentajeTransportistas';
 
   //Imagenes
-  urlImagenes: string = 'http://vpnxer.grupohidalgos.com:8070/imagenes';
+  urlImagenes: string = 'http://192.168.30.148:8000/imagenes';
 
   //Control ManoMano
-  urlControlManoAMano: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmano';
-  urlControlManoAManoPorId: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmano/';
-  urlManoManoDistinto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAManoDivision';
-  urlManoManoPrimero: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorPrimero';
-  urlManoManoSegundo: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSegundo';
-  urlManoManoTercero: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorTercero';
-  urlManoManoCuarto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorCuarto';
-  urlManoManoSexto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSexto';
-  urlManoManoSeptimo: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSeptimo';
+  urlControlManoAMano: string = 'http://192.168.30.148:8000/manoAmano';
+  urlControlManoAManoPorId: string = 'http://192.168.30.148:8000/manoAmano/';
+  urlManoManoDistinto: string = 'http://192.168.30.148:8000/manoAManoDivision';
+  urlManoManoPrimero: string = 'http://192.168.30.148:8000/manoAmanoPorPrimero';
+  urlManoManoSegundo: string = 'http://192.168.30.148:8000/manoAmanoPorSegundo';
+  urlManoManoTercero: string = 'http://192.168.30.148:8000/manoAmanoPorTercero';
+  urlManoManoCuarto: string = 'http://192.168.30.148:8000/manoAmanoPorCuarto';
+  urlManoManoSexto: string = 'http://192.168.30.148:8000/manoAmanoPorSexto';
+  urlManoManoSeptimo: string = 'http://192.168.30.148:8000/manoAmanoPorSeptimo';
 
   //Roturas Stock
-  urlRoturaStock: string = 'http://vpnxer.grupohidalgos.com:8070/roturaStock';
+  urlRoturaStock: string = 'http://192.168.30.148:8000/roturaStock';
 
   //Rutas de Makro
-  urlMakroTodosLosProductos: string = 'http://vpnxer.grupohidalgos.com:8070/productosTotalesMakro';
-  urlMakroOffersPublicados: string = 'http://vpnxer.grupohidalgos.com:8070/offersPublicados';
-  urlMakroOffersNoPublicados: string = 'http://vpnxer.grupohidalgos.com:8070/offerNoPublicados';
+  urlMakroTodosLosProductos: string = 'http://192.168.30.148:8000/productosTotalesMakro';
+  urlMakroOffersPublicados: string = 'http://192.168.30.148:8000/offersPublicados';
+  urlMakroOffersNoPublicados: string = 'http://192.168.30.148:8000/offerNoPublicados';
 
   //Rutas de Rango de Precios de Makro
-  urlTotalDeProductosRangoMakro: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakro';
+  urlTotalDeProductosRangoMakro: string = 'http://192.168.30.148:8000/productosPublicadosMakro';
   urlListaDeRangosMakroPorEan13: string = 'http://192.168.30.148:8000/listaDeRangosMakro/';
-  urlActualizarRangosMakro: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarRango';
-  urlBuscarListado: string = 'http://vpnxer.grupohidalgos.com:8070/buscarListado/';
-  urlRegistrarNuevoRango: string = 'http://vpnxer.grupohidalgos.com:8070/registrarRangoMakro';
-  urlEliminarRango: string = 'http://vpnxer.grupohidalgos.com:8070/eliminarRango/';
+  urlActualizarRangosMakro: string = 'http://192.168.30.148:8000/actualizarRango';
+  urlBuscarListado: string = 'http://192.168.30.148:8000/buscarListado/';
+  urlRegistrarNuevoRango: string = 'http://192.168.30.148:8000/registrarRangoMakro';
+  urlEliminarRango: string = 'http://192.168.30.148:8000/eliminarRango/';
 
   //Rutas de Rango de Precios de Makro Select
-  urlProductosPublicadosMakroConRangoYConStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroConRangoYConStock';
-  urlProductosPublicadosMakroConRangoYSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroConRangoYSinStock';
-  urlProductosPublicadosMakroSinRangoYConStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroSinRangoYConStock';
-  urlProductosPublicadosMakroSinRangoYSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroSinRangoYSinStock';
+  urlProductosPublicadosMakroConRangoYConStock: string = 'http://192.168.30.148:8000/productosPublicadosMakroConRangoYConStock';
+  urlProductosPublicadosMakroConRangoYSinStock: string = 'http://192.168.30.148:8000/productosPublicadosMakroConRangoYSinStock';
+  urlProductosPublicadosMakroSinRangoYConStock: string = 'http://192.168.30.148:8000/productosPublicadosMakroSinRangoYConStock';
+  urlProductosPublicadosMakroSinRangoYSinStock: string = 'http://192.168.30.148:8000/productosPublicadosMakroSinRangoYSinStock';
 
   //PruebaRangos
   urlPruebaMakro: string = 'http://192.168.30.148:8000/pruebaRangos';
@@ -80,7 +81,55 @@ export class AuthService {
   urlCountCategoriasRedireccionadas: string = 'http://192.168.30.148:8000/countCategoriasRedireccionadas'
 
   //Rutas Ventas Productos
-  urlVentaProductos: string = 'http://vpnxer.grupohidalgos.com:8070/ventaProductos/';
+  urlVentaProductos: string = 'http://192.168.30.148:8000/ventaProductos/';
+
+  //Sumatorias por Semana
+  urlSumatoriaPorSemana: string = 'http://192.168.30.148:8000/sumatoriaPorSemana';
+  urlSumatoriaPorSemanaOrion91: string = 'http://192.168.30.148:8000/sumatoriaOrion';
+  urlSumatoriaPorSemanaManoMano: string = 'http://192.168.30.148:8000/sumatoriaManoMano';
+  urlSumatorioPorSemanaCarrefour: string = 'http://192.168.30.148:8000/sumatorioCarrefour';
+  urlSumatorioPorSemanaAliExpress: string = 'http://192.168.30.148:8000/sumatorioAliExpress';
+  urlSumatorioPorSemanaAmazon: string = 'http://192.168.30.148:8000/sumatoriaAmazon';
+  urlSumatorioPorSemanaGrupon: string = 'http://192.168.30.148:8000/sumatorioGrupon';
+  urlSumatorioPorSemanaEmbargos: string = 'http://192.168.30.148:8000/sumatorioEmbargos';
+  urlSumatorioPorSemanaMequedoUno: string = 'http://192.168.30.148:8000/sumatorioMequedoUno';
+  urlSumatorioPorSemanaFnac: string = 'http://192.168.30.148:8000/sumatorioFnac';
+  urlSumatorioPorSemanaWish: string = 'http://192.168.30.148:8000/sumatorioWish';
+  urlSumatorioPorSemanaMakro: string = 'http://192.168.30.148:8000/sumatorioMakro';
+  urlSumatorioPorSemanaPcComponentes: string = 'http://192.168.30.148:8000/sumatorioPcComponenetes';
+  urlSumatorioPorSemanaSprinter: string = 'http://192.168.30.148:8000/sumatorioSprinter';
+  urlSumatorioPorSemanaBulevip:string = 'http://192.168.30.148:8000/sumatorioBulevip';
+
+  //Rutas de Estadisticas
+  urlImporteDeVentas: string = 'http://192.168.30.148:8000/importeDeVentas';
+  urlImporteDeVentasManoMano: string = 'http://192.168.30.148:8000/importeDeVentasManoMano';
+  urlImporteDeVentasCarrefour: string = 'http://192.168.30.148:8000/importeDeVentasCarrefour';
+  urlImporteDeVentasAliExpress: string = 'http://192.168.30.148:8000/importeDeVentasAliExpress';
+  urlImporteDeVentasAmazon: string = 'http://192.168.30.148:8000/importeDeVentasAmazon';
+  urlImporteDeVentasGroupon: string = 'http://192.168.30.148:8000/importeDeVentasGroupon';
+  urlImporteDeVentasEmbargos: string = 'http://192.168.30.148:8000/importeDeVentasEmbargos';
+  urlImporteDeVentasMequedoUno: string = 'http://192.168.30.148:8000/importeDeVentasMequedoUno';
+  urlImporteDeVentasFnac: string = 'http://192.168.30.148:8000/importeDeVentasFnac';
+  urlImporteDeVentasWish: string = 'http://192.168.30.148:8000/importeDeVentasWish';
+  urlImporteDeVentasMakro: string = 'http://192.168.30.148:8000/importeDeVentasMakro';
+  urlImporteDeVetasPcComponentes: string = 'http://192.168.30.148:8000/importeDeVentasPcComponentes';
+  urlImporteDeVentasSprinter: string = 'http://192.168.30.148:8000/importeDeVentasSprinter';
+  urlImporteDeVentasBulevip: string = 'http://192.168.30.148:8000/importeDeVentasBulevip';
+
+  //Rutas de Historico de Stock
+  urlGraficoIdProducto: string = 'http://192.168.30.148:8000/controlStockGraficoIdProducto/';
+  urlControlHistoricoStock: string = 'http://192.168.30.148:8000/controlHistoricoStock/';
+
+  //Rutas Ventas Categorias
+  urlCategoriasPorMeses: string  = 'http://192.168.30.148:8000/categoriasPorMeses';
+
+  //Productos top entre fechas
+  urlProductosTopEntreFechas: string = 'http://192.168.30.148:8000/productosTopEntreFechas';
+
+  //Productos por categoria
+  urlCategoriaProductosName: string = 'http://192.168.30.148:8000/caracteristicasName'
+  urlproductosPorIdCategoria: string = 'http://192.168.30.148:8000/productosPorIdCategoria/';
+  urlActualizarProducto: string = 'http://192.168.30.148:8000/actualizarPosicionProducto/';
 
 
   public loggedIn = new BehaviorSubject<boolean>(false);
@@ -163,6 +212,10 @@ export class AuthService {
   }
   badgeCategoriasRedireccionadas(){
     let direccion = this.urlCountCategoriasRedireccionadas
+    return this.http.get(direccion)
+  }
+  controlManoManoBadge(){
+    let direccion = this.urlControlManoManoBadge
     return this.http.get(direccion)
   }
 
@@ -333,6 +386,163 @@ export class AuthService {
   //Ventas Productos
   ventasProductos(idProducto: number, fechaInicio: any, fechaFin: any, tienda: number){
     let direccion = this.urlVentaProductos + idProducto + '/' + fechaInicio + '/' + fechaFin + '/' + tienda
+    return this.http.get(direccion)
+  }
+
+  //Sumatorias por Año
+  sumatoriaPorSemana(){
+    let direccion = this.urlSumatoriaPorSemana
+    return this.http.get(direccion)
+  }
+  sumatoriaPorSemanaOrion91(){
+    let direccion = this.urlSumatoriaPorSemanaOrion91
+    return this.http.get(direccion)
+  }
+  sumatoriaPorSemanaManoMano(){
+    let direccion = this.urlSumatoriaPorSemanaManoMano
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaCarrefour(){
+    let direccion = this.urlSumatorioPorSemanaCarrefour
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaAliExpress(){
+    let direccion = this.urlSumatorioPorSemanaAliExpress
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaAmazon(){
+    let direccion = this.urlSumatorioPorSemanaAmazon
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaGrupon(){
+    let direccion = this.urlSumatorioPorSemanaGrupon
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaEmbargos(){
+    let direccion = this.urlSumatorioPorSemanaEmbargos
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaMequedoUno(){
+    let direccion = this.urlSumatorioPorSemanaMequedoUno
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaFnac(){
+    let direccion = this.urlSumatorioPorSemanaFnac
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaWish(){
+    let direccion = this.urlSumatorioPorSemanaWish
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaMakro(){
+    let direccion = this.urlSumatorioPorSemanaMakro
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaPcComponentes(){
+    let direccion = this.urlSumatorioPorSemanaPcComponentes
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaSprinter(){
+    let direccion = this.urlSumatorioPorSemanaSprinter
+    return this.http.get(direccion)
+  }
+  sumatorioPorSemanaBulevip(){
+    let direccion = this.urlSumatorioPorSemanaBulevip
+    return this.http.get(direccion)
+  }
+
+  //Funciones de Estadisticas
+  importeDeVentas(){
+    let direccion = this.urlImporteDeVentas
+    return this.http.get(direccion)
+  }
+  importeDeVentasManoMano(){
+    let direccion = this.urlImporteDeVentasManoMano
+    return this.http.get(direccion)
+  }
+  importeDeVentasCarrefour(){
+    let direccion = this.urlImporteDeVentasCarrefour
+    return this.http.get(direccion)
+  }
+  importeDeVentasAliExpress(){
+    let direccion = this.urlImporteDeVentasAliExpress
+    return this.http.get(direccion)
+  }
+  importeDeVentasAmazon(){
+    let direccion = this.urlImporteDeVentasAmazon
+    return this.http.get(direccion)
+  }
+  importeDeVentasGroupon(){
+    let direccion = this.urlImporteDeVentasGroupon
+    return this.http.get(direccion)
+  }
+  importeDeVentasEmbargos(){
+    let direccion = this.urlImporteDeVentasEmbargos
+    return this.http.get(direccion)
+  }
+  importeDeVentasMequedoUno(){
+    let direccion = this.urlImporteDeVentasMequedoUno
+    return this.http.get(direccion)
+  }
+  importeDeVentasFnac(){
+    let direccion = this.urlImporteDeVentasFnac
+    return this.http.get(direccion)
+  }
+  importeDeVentasWish(){
+    let direccion = this.urlImporteDeVentasWish
+    return this.http.get(direccion)
+  }
+  importeDeVentasMakro(){
+    let direccion = this.urlImporteDeVentasMakro
+    return this.http.get(direccion)
+  }
+  importeDeVentasPcComponentes(){
+    let direccion = this.urlImporteDeVetasPcComponentes
+    return this.http.get(direccion)
+  }
+  importeDeVentasSprinte(){
+    let direccion = this.urlImporteDeVentasSprinter
+    return this.http.get(direccion)
+  }
+  importeDeVentasBulevip(){
+    let direccion = this.urlImporteDeVentasBulevip
+    return this.http.get(direccion)
+  }
+
+
+  //Historico de Stock
+  cargarTablaHistoricoStock(id_producto : any){
+    let direccion = this.urlControlHistoricoStock + id_producto;
+    return this.http.get(direccion)
+  }
+  cargarGraficoIdProducto(ean13: number){
+    let direccion = this.urlGraficoIdProducto + ean13
+    return this.http.get(direccion)
+  }
+
+  //Ventas por categorias
+  categoriasPorMeses(){
+    let direccion = this.urlCategoriasPorMeses
+    return this.http.get(direccion)
+  }
+
+  //Productos top entre fechas
+  productosTopEntreFechas(fechaInicio: any, fechaFin: any){
+    let direccion = this.urlProductosTopEntreFechas + '/' + fechaInicio + '/' + fechaFin
+    return this.http.get(direccion)
+  }
+
+  //Categoria por Producto
+  categoriasProductosName(){
+    let direccion = this.urlCategoriaProductosName
+    return this.http.get(direccion)
+  }
+  productosPorIdCategoria(idCategoria: number){
+    let direccion = this.urlproductosPorIdCategoria + idCategoria
+    return this.http.get(direccion)
+  }
+  actualizarProductoCategoria(idCategoria: number, idProducto: number, posicion: number){
+    let direccion = this.urlActualizarProducto + idCategoria + '/' + idProducto + '/' + posicion
     return this.http.get(direccion)
   }
 
