@@ -28,6 +28,7 @@ import { ProductosTopFechasComponent } from './productos-top-fechas/productos-to
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { CategoriaProductoComponent } from './categoria-producto/categoria-producto.component';
 import { PosicionProductosComponent } from './categoria-producto/posicion-productos/posicion-productos.component';
+
 // import { NbCalendarRangeModule } from '.'
 
 @NgModule({

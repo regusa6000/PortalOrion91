@@ -122,6 +122,14 @@ export class AuthService {
 
   //Rutas Ventas Categorias
   urlCategoriasPorMeses: string  = 'http://192.168.30.148:8000/categoriasPorMeses';
+  urlCategoriasGeneral: string = 'http://192.168.30.148:8000/categoriasGeneral';
+  urlIdCategoriaPorMeses: string = 'http://192.168.30.148:8000/categoriaIdPorMeses/';
+  urlCategoriasIdPorMesesPorTienda: string = 'http://192.168.30.148:8000/categoriaIdPorMesesPorTienda/';
+  urlCategoriaPorTiendaOrionPorIdCategoria: string = 'http://192.168.30.148:8000/categoriaPorTiendaOrionPorIdCategoria/';
+  urlCategoriaPorTiendaWishPorIdCategoria: string = 'http://192.168.30.148:8000/categoriaPorTiendaWishPorIdCategoria/';
+  urlCategoriasPorTienda: string = 'http://192.168.30.148:8000/categoriasPorTiendas/';
+  urlCategoriasPorTiendaOrion: string = 'http://192.168.30.148:8000/categoriasPorTiendaOrion';
+  urlCategoriasPorTiendaWish: string = 'http://192.168.30.148:8000/categoriasPorTiendaWish';
 
   //Productos top entre fechas
   urlProductosTopEntreFechas: string = 'http://192.168.30.148:8000/productosTopEntreFechas';
@@ -523,6 +531,38 @@ export class AuthService {
   //Ventas por categorias
   categoriasPorMeses(){
     let direccion = this.urlCategoriasPorMeses
+    return this.http.get(direccion)
+  }
+  categoriasGeneral(){
+    let direccion = this.urlCategoriasGeneral
+    return this.http.get(direccion)
+  }
+  idCategoriaPorMeses(idcategory: number){
+    let direccion = this.urlIdCategoriaPorMeses + idcategory
+    return this.http.get(direccion)
+  }
+  categoriaIdPorMesesPorTienda(variableTienda: number,idCategoria: number){
+    let direccion = this.urlCategoriasIdPorMesesPorTienda + variableTienda + '/' + idCategoria
+    return this.http.get(direccion)
+  }
+  categoriaPorTiendaOrionPorIdCategoria(idCategory: number){
+    let direccion = this.urlCategoriaPorTiendaOrionPorIdCategoria + idCategory
+    return this.http.get(direccion)
+  }
+  categoriaPorTiendaWishPorIdCategoria(idCategory: number){
+    let direccion = this.urlCategoriaPorTiendaWishPorIdCategoria + idCategory
+    return this.http.get(direccion)
+  }
+  categoriaPorTienda(numeroCategoria: number){
+    let direccion = this.urlCategoriasPorTienda + numeroCategoria
+    return this.http.get(direccion)
+  }
+  categoriasPorTiendaOrion(){
+    let direccion = this.urlCategoriasPorTiendaOrion
+    return this.http.get(direccion)
+  }
+  CategoriasPorTiendaWish(){
+    let direccion = this.urlCategoriasPorTiendaWish
     return this.http.get(direccion)
   }
 
