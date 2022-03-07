@@ -9,13 +9,20 @@ import { AuthService } from '../../../auth/auth.service';
 export class DiarioPedidosComponent implements OnInit {
 
   source: any;
+  loading = false;
 
   constructor(public authSvc: AuthService) { }
 
   ngOnInit(): void {
+    this.toggleLoadingAnimation()
     this.authSvc.ventasSemanales().subscribe(data=>{
       this.source = data
     })
+  }
+
+  toggleLoadingAnimation() {
+    this.loading = true;
+    setTimeout(() => this.loading = false, 5000);
   }
 
   config = {

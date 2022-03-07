@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
+import { NbCardModule, NbSpinnerModule , NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { ThemeModule } from '../../@theme/theme.module';
@@ -28,6 +28,8 @@ import { ProductosTopFechasComponent } from './productos-top-fechas/productos-to
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { CategoriaProductoComponent } from './categoria-producto/categoria-producto.component';
 import { PosicionProductosComponent } from './categoria-producto/posicion-productos/posicion-productos.component';
+import { OpinionesCrudComponent } from './opiniones-crud/opiniones-crud.component';
+import { OpinionesGraficoComponent } from './opiniones-grafico/opiniones-grafico.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -46,7 +48,8 @@ import { PosicionProductosComponent } from './categoria-producto/posicion-produc
     Ng2SmartTableModule,
     NbCalendarRangeModule,
     NbDatepickerModule,
-    NbButtonModule
+    NbButtonModule,
+    NbSpinnerModule
   ],
   declarations: [
     ...routedComponents,
@@ -72,6 +75,8 @@ import { PosicionProductosComponent } from './categoria-producto/posicion-produc
     FavoritosComponent,
     CategoriaProductoComponent,
     PosicionProductosComponent,
+    OpinionesCrudComponent,
+    OpinionesGraficoComponent,
   ],
 })
 export class TablesModule { }

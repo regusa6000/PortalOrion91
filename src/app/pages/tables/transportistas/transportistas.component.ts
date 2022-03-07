@@ -12,10 +12,12 @@ export class TransportistasComponent implements OnInit {
   nameTransportistas: any
   transportistaPaack: string = 'paack'
   idPaack: number = 227
+  loading = false;
 
   constructor(public authSvc: AuthService) { }
 
   ngOnInit(): void {
+    this.toggleLoadingAnimation()
     this.authSvc.cargarTablaTransportistas().subscribe(data=>{
       this.source = data
     })
@@ -25,11 +27,17 @@ export class TransportistasComponent implements OnInit {
   }
 
   buscarTransportista(event){
+    this.toggleLoadingAnimation()
     this.authSvc.cargarTransportistaName(event).subscribe(data=>{
       this.source = ''
       this.source = data
     })
     console.log(event)
+  }
+
+  toggleLoadingAnimation() {
+    this.loading = true;
+    setTimeout(() => this.loading = false, 10000);
   }
 
   config = {

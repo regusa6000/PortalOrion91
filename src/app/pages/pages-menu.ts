@@ -1,4 +1,5 @@
 import { NbMenuItem } from '@nebular/theme';
+import { link } from 'fs';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
@@ -14,6 +15,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Diario Pedidos',
         link: '/pages/tables/diario-pedidos'
       },
+      {
+        title: 'Productos Top',
+        link: '/pages/tables/productos-top-fechas'
+      },
     ]
   },
   {
@@ -25,16 +30,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/imagenes-cleaner'
       },
       {
-        title: 'Productos por Categoría',
-        link: '/pages/tables/categoria-producto'
-      },
-      {
         title: 'Historico Stock',
         link: '/pages/tables/historico-stock'
       },
       {
-        title: 'Productos Top',
-        link: '/pages/tables/productos-top-fechas'
+        title: 'Categorías',
+        children: [
+          {
+            title: 'Orden Productos',
+            link: '/pages/tables/categoria-producto'
+          },
+          {
+            title: 'Orden Carácteristicas'
+          },
+          {
+            title: 'Árbol de Categorías',
+            link: '/pages/charts/echarts',
+          },
+        ]
       },
       {
         title: 'Roturas',
@@ -84,6 +97,19 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Ventas Productos',
         link: '/pages/tables/ventas-productos'
+      },
+      {
+        title: 'Opiniones',
+        children: [
+          {
+            title: 'Registro de Datos',
+            link: '/pages/tables/opiniones-crud'
+          },
+          {
+            title:'Gráfico de Datos',
+            link: '/pages/tables/opiniones-grafico'
+          }
+        ]
       },
       {
         title: 'Uso Favoritos',

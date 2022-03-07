@@ -22,6 +22,8 @@ import { CategoriasPorMesesComponent } from './categorias-por-meses/categorias-p
 import { ProductosTopFechasComponent } from './productos-top-fechas/productos-top-fechas.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { CategoriaProductoComponent } from './categoria-producto/categoria-producto.component';
+import { OpinionesCrudComponent } from './opiniones-crud/opiniones-crud.component';
+import { OpinionesGraficoComponent } from './opiniones-grafico/opiniones-grafico.component';
 
 const routes: Routes = [{
   path: '',
@@ -106,6 +108,14 @@ const routes: Routes = [{
     {
       path: 'categoria-producto',
       component: CategoriaProductoComponent
+    },
+    {
+      path: 'opiniones-crud',
+      component: OpinionesCrudComponent
+    },
+    {
+      path: 'opiniones-grafico',
+      component: OpinionesGraficoComponent
     }
   ],
 }];

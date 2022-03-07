@@ -12,6 +12,7 @@ export class HistoricoStockComponent implements OnInit {
   historicoStock: any;
   idProductoStock = false;
   ean13: any
+  loading = false;
 
   //Arrays para graficos
   stockArray: any;
@@ -26,6 +27,8 @@ export class HistoricoStockComponent implements OnInit {
 
   buscar(ean13: any){
 
+    this.toggleLoadingAnimation()
+
     this.authSvc.cargarTablaHistoricoStock(ean13).subscribe(data=>{
       this.historicoStock = data
       this.idProductoStock = true
@@ -33,6 +36,8 @@ export class HistoricoStockComponent implements OnInit {
     })
 
     this.authSvc.cargarGraficoIdProducto(ean13).subscribe(data=>{
+
+
 
       this.stockArray = ''
       this.stockArray = data
@@ -65,6 +70,11 @@ export class HistoricoStockComponent implements OnInit {
       this.lineaGrafica(temporalFechas,temporalStock)
     })
 
+  }
+
+  toggleLoadingAnimation() {
+    this.loading = true;
+    setTimeout(() => this.loading = false, 90000);
   }
 
   lineaGrafica(arrayFechas: any, arrayStock: any){

@@ -1,4 +1,4 @@
-<nb-card>
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
   <nb-card-header>Porcentaje Enviados</nb-card-header>
   <nb-card-body>
     <ng2-smart-table [settings]="config" [source]="source">
@@ -6,7 +6,7 @@
   </nb-card-body>
 </nb-card>
 
-<nb-card>
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
   <nb-card-header>Gráfico</nb-card-header>
   <nb-card-body>
     <canvas id="canvas">{{ chart }}</canvas>

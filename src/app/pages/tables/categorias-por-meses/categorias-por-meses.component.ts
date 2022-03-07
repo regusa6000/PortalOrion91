@@ -15,6 +15,7 @@ export class CategoriasPorMesesComponent implements OnInit {
   arrayCategorias: any = []
   hideme = [];
   Index: any;
+  loading = false;
 
   tiendas = [
     {'variable':1,'name':'Orion91'},
@@ -35,6 +36,7 @@ export class CategoriasPorMesesComponent implements OnInit {
   constructor(private authSvc: AuthService) { }
 
   ngOnInit(): void {
+    this.toggleLoadingAnimation()
     this.authSvc.categoriasPorMeses().subscribe(data=>{
       this.listadoCategorias = data
     })
@@ -101,6 +103,7 @@ export class CategoriasPorMesesComponent implements OnInit {
 
   buscarTienda(variable: number){
 
+    this.toggleLoadingAnimation()
     this.numerosCategorias = ''
 
     if(variable != 1 && variable != 10){
@@ -213,6 +216,11 @@ export class CategoriasPorMesesComponent implements OnInit {
       },
     })
 
+  }
+
+  toggleLoadingAnimation() {
+    this.loading = true;
+    setTimeout(() => this.loading = false, 80000);
   }
 
 

@@ -1,4 +1,4 @@
-<nb-card>
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
   <nb-card-header>Control Historico Stock</nb-card-header>
   <nb-card-body style="height: 100%;">
 
@@ -15,6 +15,13 @@
       <ng2-smart-table [settings]="config" [source]="historicoStock" *ngIf="idProductoStock">
       </ng2-smart-table>
     </div>
+
+  </nb-card-body>
+</nb-card>
+
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary" *ngIf="idProductoStock">
+  <nb-card-header>Gráfico</nb-card-header>
+  <nb-card-body>
 
     <br>
       <div style="width: 90%; margin: auto;">

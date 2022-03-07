@@ -12,10 +12,12 @@ export class PorcentajeEnviadosComponent implements OnInit {
   source: any
   chart: Chart | undefined;
   arrayFechas: any
+  loading = false;
 
   constructor(public authSvc: AuthService) { }
 
   ngOnInit(): void {
+    this.toggleLoadingAnimation()
     this.authSvc.porcentajeTransportistas().subscribe(data=>{
       this.source = data
 
@@ -26,6 +28,11 @@ export class PorcentajeEnviadosComponent implements OnInit {
      }, 10000);
 
     })
+  }
+
+  toggleLoadingAnimation() {
+    this.loading = true;
+    setTimeout(() => this.loading = false, 18000);
   }
 
   config = {

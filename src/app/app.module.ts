@@ -53,7 +53,7 @@ import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@ang
             class: NbAuthSimpleToken,
             key: 'token'
           },
-          baseEndpoint: 'http://192.168.30.148:8000',
+          baseEndpoint: 'http://vpnxer.grupohidalgos.com:8070',
           login: {
             endpoint: '/login',
             method: 'post',

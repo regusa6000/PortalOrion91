@@ -11,11 +11,18 @@ export class RoturasComponent implements OnInit {
   constructor(public authSvc: AuthService) { }
 
   source: any
+  loading = false;
 
   ngOnInit(): void {
+    this.toggleLoadingAnimation()
     this.authSvc.controlRoturaStock().subscribe(data=>{
       this.source = data
     })
+  }
+
+  toggleLoadingAnimation() {
+    this.loading = true;
+    setTimeout(() => this.loading = false, 5000);
   }
 
   config = {

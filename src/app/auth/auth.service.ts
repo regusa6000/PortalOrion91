@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
@@ -9,6 +9,7 @@ import { User, UserResponse } from '../shared/guards/components/models/user.inte
   providedIn: 'root'
 })
 export class AuthService {
+
 
   urlVentasSemanales: string = 'http://192.168.30.148:8000/ventasSemanalesTiendas';
 
@@ -49,6 +50,7 @@ export class AuthService {
   urlManoManoCuarto: string = 'http://192.168.30.148:8000/manoAmanoPorCuarto';
   urlManoManoSexto: string = 'http://192.168.30.148:8000/manoAmanoPorSexto';
   urlManoManoSeptimo: string = 'http://192.168.30.148:8000/manoAmanoPorSeptimo';
+  urlManoManoOctavo: string = 'http://192.168.30.148:8000/manoAmanoPorOctavo';
 
   //Roturas Stock
   urlRoturaStock: string = 'http://192.168.30.148:8000/roturaStock';
@@ -135,9 +137,23 @@ export class AuthService {
   urlProductosTopEntreFechas: string = 'http://192.168.30.148:8000/productosTopEntreFechas';
 
   //Productos por categoria
-  urlCategoriaProductosName: string = 'http://192.168.30.148:8000/caracteristicasName'
+  urlCategoriaProductosName: string = 'http://192.168.30.148:8000/categoriasProductosName'
   urlproductosPorIdCategoria: string = 'http://192.168.30.148:8000/productosPorIdCategoria/';
   urlActualizarProducto: string = 'http://192.168.30.148:8000/actualizarPosicionProducto/';
+
+  //Grafico Categorias
+  urlGraficoCategorias: string = 'http://192.168.30.148:8000/arbolCategorias';
+
+
+  //Opiniones
+  urlListadoCanales: string = 'http://192.168.30.148:8000/listadoCanales';
+  urlListadoGeneralOpiniones: string = 'http://192.168.30.148:8000/listadoGeneral';
+  urlBaseTipoOpinion: string = 'http://192.168.30.148:8000/baseTipoOpinion/';
+  urlRegistrarPorcentaje: string = 'http://192.168.30.148:8000/registrarPorcentaje'
+  urlActualizarRegistroPorcentaje: string = 'http://192.168.30.148:8000/actualizarPorcentaje';
+  urlEliminarRegistroPorcentaje: string = 'http://192.168.30.148:8000/eliminarPorcentaje/';
+  urlSelectOpiniones: string = 'http://192.168.30.148:8000/rellenarSelect';
+  urlGraficoOpiniones: string = 'http://192.168.30.148:8000/cargarGrafico/';
 
 
   public loggedIn = new BehaviorSubject<boolean>(false);
@@ -305,6 +321,10 @@ export class AuthService {
   }
   cargarTablaSeptimaDivision(){
     let direccion = this.urlManoManoSeptimo
+    return this.http.get(direccion)
+  }
+  cargarTablaOctavaDivision(){
+    let direccion = this.urlManoManoOctavo
     return this.http.get(direccion)
   }
 
@@ -583,6 +603,46 @@ export class AuthService {
   }
   actualizarProductoCategoria(idCategoria: number, idProducto: number, posicion: number){
     let direccion = this.urlActualizarProducto + idCategoria + '/' + idProducto + '/' + posicion
+    return this.http.get(direccion)
+  }
+
+  //Grafico Categorias
+  cargarGraficoCategorias(){
+    let direccion = this.urlGraficoCategorias
+    return this.http.get(direccion)
+  }
+
+  //Opiniones
+  listadoCanales(){
+    let direccion = this.urlListadoCanales
+    return this.http.get(direccion)
+  }
+  listadoGeneralOpiniones(){
+    let direccion = this.urlListadoGeneralOpiniones
+    return this.http.get(direccion)
+  }
+  baseTipoOpinion(id: number){
+    let direccion = this.urlBaseTipoOpinion + id
+    return this.http.get(direccion)
+  }
+  registrarPorcentajeCanal(json: any){
+    let direccion = this.urlRegistrarPorcentaje
+    return this.http.post(direccion,json)
+  }
+  actualizarRegistroPorcentaje(json: any){
+    let direccion = this.urlActualizarRegistroPorcentaje
+    return this.http.put(direccion,json)
+  }
+  eliminarRegistroPorcentaje(idValor: any){
+    let direccion = this.urlEliminarRegistroPorcentaje + idValor
+    return this.http.delete(direccion)
+  }
+  cargarSelectOpiniones(){
+    let direccion = this.urlSelectOpiniones
+    return this.http.get(direccion)
+  }
+  cargarGraficoOpiniones(id: number){
+    let direccion = this.urlGraficoOpiniones + id
     return this.http.get(direccion)
   }
 

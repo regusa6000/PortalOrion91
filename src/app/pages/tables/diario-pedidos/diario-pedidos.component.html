@@ -1,7 +1,5 @@
-<nb-card>
-  <nb-card-header>
-    Pedidos Diarios
-  </nb-card-header>
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
+  <nb-card-header>Pedidos Diarios</nb-card-header>
 
   <nb-card-body>
     <ng2-smart-table [settings]="config" [source]="source">

@@ -1,7 +1,31 @@
-<nb-card>
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
   <nb-card-header>Precios Makro</nb-card-header>
 
   <nb-card-body>
+
+    <br><br>
+    <div style="display: flex; justify-content: flex-end;">
+      <div style="padding: 10px;">
+        <nb-select placeholder="Rango: " (selectedChange)="seleccionRango($event)">
+          <nb-option *ngFor="let combo of comboRangos" [value]="combo.value">{{ combo.name }}</nb-option>
+        </nb-select>
+      </div>
+      <div style="padding: 10px;">
+        <nb-select placeholder="Stock: " (selectedChange)="seleccionStock($event)">
+          <nb-option *ngFor="let stock of comboCantidadStock" [value]="stock.value">{{ stock.name }}</nb-option>
+        </nb-select>
+      </div>
+      <div style="padding: 10px;">
+        <button nbButton status="primary" (click)="buscar()">Buscar</button>
+      </div>
+      <div style="padding: 10px;">
+        <button nbButton status="primary" (click)="volverAbuscar()">Volver a buscar</button>
+      </div>
+    </div>
+
+    <br><br>
+
+
             <div class="table-responsive cnstr-record product-tbl">
               <table class="table table-bordered heading-hvr">
                 <thead>

@@ -71,6 +71,12 @@ export class ManoManoComponent implements OnInit {
           this.manoAmano = data
         })
         break
+      case 9:
+      this.authSvc.cargarTablaOctavaDivision().subscribe(data=>{
+        this.manoAmano = ""
+        this.manoAmano = data
+      })
+        break
     }
   }
 

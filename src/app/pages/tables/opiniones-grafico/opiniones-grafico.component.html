@@ -1,0 +1,19 @@
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
+  <nb-card-header>Gráfico Opiniones</nb-card-header>
+
+  <nb-card-body>
+
+    <div>
+      <nb-select placeholder="Seleccionar..." (selectedChange)="buscarTienda($event)">
+        <nb-option *ngFor="let listado of listadoSelect" [value]="listado.id">{{ listado.canal }}</nb-option>
+      </nb-select>
+    </div>
+
+    <br><br>
+    <div style="width: 90%; margin: auto;">
+      <canvas id="canvas">{{ chart }}</canvas>
+    </div>
+    <br><br>
+
+  </nb-card-body>
+</nb-card>
