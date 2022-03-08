@@ -30,6 +30,11 @@ import { CategoriaProductoComponent } from './categoria-producto/categoria-produ
 import { PosicionProductosComponent } from './categoria-producto/posicion-productos/posicion-productos.component';
 import { OpinionesCrudComponent } from './opiniones-crud/opiniones-crud.component';
 import { OpinionesGraficoComponent } from './opiniones-grafico/opiniones-grafico.component';
+import { IncidenciasMensualesComponent } from './incidencias-mensuales/incidencias-mensuales.component';
+import { CarpetaCompartidosComponent } from './carpeta-compartidos/carpeta-compartidos.component';
+import { ZonasComponent } from './carpeta-compartidos/components/zonas/zonas.component';
+import { ConfiguracionZonasComponent } from './configuracion-zonas/configuracion-zonas.component';
+import { ConfiguracionLinksComponent } from './configuracion-links/configuracion-links.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -77,6 +82,11 @@ import { OpinionesGraficoComponent } from './opiniones-grafico/opiniones-grafico
     PosicionProductosComponent,
     OpinionesCrudComponent,
     OpinionesGraficoComponent,
+    IncidenciasMensualesComponent,
+    CarpetaCompartidosComponent,
+    ZonasComponent,
+    ConfiguracionZonasComponent,
+    ConfiguracionLinksComponent,
   ],
 })
 export class TablesModule { }

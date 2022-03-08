@@ -156,6 +156,22 @@ export class AuthService {
   urlGraficoOpiniones: string = 'http://192.168.30.148:8000/cargarGrafico/';
 
 
+  //Incidencias
+  urlIncidenciasMensuales: string = 'http://192.168.30.148:8000/productosTopIncidenciasMensual';
+
+
+  //Zonas
+  urlCargarZonas: string = 'http://192.168.30.148:8000/cargarZonas';
+  urlCargarLinkPorIdZona: string = 'http://192.168.30.148:8000/cargarLinksPorZonas/';
+  urlCrearNuevaZona: string = 'http://192.168.30.148:8000/crearNuevaZona';
+  urlActualizarZona: string = 'http://192.168.30.148:8000/actualizarDatosZona'
+  urlCargarLinks: string = 'http://192.168.30.148:8000/cargarLinks';
+  urlCargarSelectZonas: string = 'http://192.168.30.148:8000/cargarSelectZonas';
+  urlCrearNuevoLink: string = 'http://192.168.30.148:8000/crearNuevoLink';
+  urlActualizarLink: string = 'http://192.168.30.148:8000/actualizarLink';
+  urlEliminarLink: string = 'http://192.168.30.148:8000/eliminarLink/';
+
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -644,6 +660,50 @@ export class AuthService {
   cargarGraficoOpiniones(id: number){
     let direccion = this.urlGraficoOpiniones + id
     return this.http.get(direccion)
+  }
+
+  //Incidencias
+  incidenciasMensuales(){
+    let direccion = this.urlIncidenciasMensuales
+    return this.http.get(direccion)
+  }
+
+  //Zonas
+  cargarZonas(){
+    let direccion = this.urlCargarZonas
+    return this.http.get(direccion)
+  }
+  cargarLinksPorIdZona(idZona: number){
+    let direccion = this.urlCargarLinkPorIdZona + idZona
+    return this.http.get(direccion)
+  }
+  crearNuevaZona(json: any){
+    let direccion = this.urlCrearNuevaZona
+    return this.http.post(direccion,json)
+  }
+  actualizarZona(json: any){
+    let direccion = this.urlActualizarZona
+    return this.http.put(direccion,json)
+  }
+  cargarLinks(){
+    let direccion = this.urlCargarLinks
+    return this.http.get(direccion)
+  }
+  cargarSelectZonas(){
+    let direccion = this.urlCargarSelectZonas
+    return this.http.get(direccion)
+  }
+  crearNuevoLink(json: any){
+    let direccion = this.urlCrearNuevoLink
+    return this.http.post(direccion,json)
+  }
+  actualizarLink(json: any){
+    let direccion = this.urlActualizarLink
+    return this.http.put(direccion,json)
+  }
+  eliminarLink(idLink: number){
+    let direccion = this.urlEliminarLink + idLink
+    return this.http.delete(direccion)
   }
 
 }

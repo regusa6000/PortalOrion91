@@ -57,10 +57,10 @@ import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@ang
           login: {
             endpoint: '/login',
             method: 'post',
-            // redirect: {
-            //   success: '/pages/dashboard',
-            //   failure: null,
-            // }
+            redirect: {
+              success: '/pages/extra-components/alertas-orion',
+              failure: null,
+            }
 
           },
 

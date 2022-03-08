@@ -1,5 +1,4 @@
 import { NbMenuItem } from '@nebular/theme';
-import { link } from 'fs';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
@@ -19,6 +18,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Productos Top',
         link: '/pages/tables/productos-top-fechas'
       },
+      {
+        title: 'Incidencias Top',
+        link: '/pages/tables/incidencias-mensuales'
+      }
     ]
   },
   {
@@ -116,6 +119,29 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/favoritos'
       }
     ],
+  },
+  {
+    title: 'ARCHIVOS',
+    icon: 'folder-outline',
+    children: [
+      {
+        title: 'Excels',
+        children: [
+          {
+            title: 'Archivos Compartidos',
+            link: '/pages/tables/carpeta-compartidos'
+          },
+          {
+            title: 'Configuración Zonas',
+            link: '/pages/tables/configuracion-zonas'
+          },
+          {
+            title: 'Configuración Rutas',
+            link: '/pages/tables/configuracion-links'
+          }
+        ]
+      }
+    ]
   },
   {
     title: 'ENVIOS',

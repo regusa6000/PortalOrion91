@@ -1,0 +1,9 @@
+<div *ngFor="let zona of zonas">
+  <nb-card>
+    <nb-card-header>{{ zona.nombre_zona }}</nb-card-header>
+    <nb-card-body>
+      <ngx-zonas [idZona] = "zona.id_zona"></ngx-zonas>
+    </nb-card-body>
+  </nb-card>
+</div>
+

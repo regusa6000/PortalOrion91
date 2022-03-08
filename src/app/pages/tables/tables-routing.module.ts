@@ -24,6 +24,10 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
 import { CategoriaProductoComponent } from './categoria-producto/categoria-producto.component';
 import { OpinionesCrudComponent } from './opiniones-crud/opiniones-crud.component';
 import { OpinionesGraficoComponent } from './opiniones-grafico/opiniones-grafico.component';
+import { IncidenciasMensualesComponent } from './incidencias-mensuales/incidencias-mensuales.component';
+import { CarpetaCompartidosComponent } from './carpeta-compartidos/carpeta-compartidos.component';
+import { ConfiguracionZonasComponent } from './configuracion-zonas/configuracion-zonas.component';
+import { ConfiguracionLinksComponent } from './configuracion-links/configuracion-links.component';
 
 const routes: Routes = [{
   path: '',
@@ -116,6 +120,22 @@ const routes: Routes = [{
     {
       path: 'opiniones-grafico',
       component: OpinionesGraficoComponent
+    },
+    {
+      path: 'incidencias-mensuales',
+      component: IncidenciasMensualesComponent
+    },
+    {
+      path: 'carpeta-compartidos',
+      component: CarpetaCompartidosComponent
+    },
+    {
+      path: 'configuracion-zonas',
+      component: ConfiguracionZonasComponent
+    },
+    {
+      path: 'configuracion-links',
+      component: ConfiguracionLinksComponent
     }
   ],
 }];

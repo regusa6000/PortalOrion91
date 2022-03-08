@@ -22,7 +22,7 @@ export class DiarioPedidosComponent implements OnInit {
 
   toggleLoadingAnimation() {
     this.loading = true;
-    setTimeout(() => this.loading = false, 5000);
+    setTimeout(() => this.loading = false, 10000);
   }
 
   config = {
@@ -40,6 +40,10 @@ export class DiarioPedidosComponent implements OnInit {
         title: 'Año',
         type: 'number',
       },
+      dia_SEMANA:{
+        title: 'Dia Semana',
+        type: 'string'
+      },
       tot_ped: {
         title: 'Total Pedidos',
         type: 'number',
@@ -56,9 +60,17 @@ export class DiarioPedidosComponent implements OnInit {
         title: 'Media',
         type: 'number'
       },
-      dia_SEMANA:{
-        title: 'Dia Semana',
-        type: 'string'
+      ORION91:{
+        title: 'Total Pedidos Orion91',
+        type: 'number'
+      },
+      ORION91_SUM:{
+          title: 'Total Orion91',
+          type: 'number'
+      },
+      MEDIAORION91:{
+        title: 'Media Orion91',
+        type: 'number'
       },
       media06:{
         title: '00-06',

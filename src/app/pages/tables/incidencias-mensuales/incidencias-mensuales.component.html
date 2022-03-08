@@ -1,0 +1,9 @@
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
+  <nb-card-header>Incidencias Top</nb-card-header>
+
+  <nb-card-body>
+    <p>Top 30 incidencias, últimos 30 días.</p>
+    <ng2-smart-table [settings]="config" [source]="source">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

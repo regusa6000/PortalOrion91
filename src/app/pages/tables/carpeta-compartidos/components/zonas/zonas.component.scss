@@ -1,0 +1,16 @@
+.cajaPadre{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .cajaPadre{
+    justify-content: space-around;
+  }
+  .col-md-2{
+    width: 50%;
+  }
+
+}
