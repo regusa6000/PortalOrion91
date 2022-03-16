@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id Producto</th>
+      <th scope="col">Id Ax</th>
+      <th scope="col">Producto ORION91</th>
+      <th scope="col">Producto AMAZON</th>
+      <th scope="col">Total de caracteres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let amazon of mpAmazon">
+      <td>{{ amazon.id_product }}</td>
+      <td>{{ amazon.ax_id }}</td>
+      <td>{{ amazon.Name_ORION91 }}</td>
+      <td>{{ amazon.MP_NombreArticulo}}</td>
+      <td>{{ amazon.caracteres}}</td>
+    </tr>
+  </tbody>
+</table>

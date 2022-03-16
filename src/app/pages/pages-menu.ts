@@ -29,12 +29,28 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'layout-outline',
     children: [
       {
-        title: 'Imagenes Cleaner',
-        link: '/pages/tables/imagenes-cleaner'
-      },
-      {
-        title: 'Historico Stock',
-        link: '/pages/tables/historico-stock'
+        title: 'Productos',
+        children: [
+          {
+            title: 'Imagenes Cleaner',
+            link: '/pages/tables/imagenes-cleaner'
+          },
+          {
+            title: 'Historico Stock',
+            link: '/pages/tables/historico-stock'
+          },
+          {
+            title: 'Roturas',
+            link: '/pages/tables/roturas'
+          },
+          {
+            title: 'Productos Faqs',
+            link: '/pages/tables/productos-faqs'
+          },
+          {
+            title: 'Productos Urls Internas',
+          }
+        ]
       },
       {
         title: 'Categorías',
@@ -50,12 +66,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
             title: 'Árbol de Categorías',
             link: '/pages/charts/echarts',
           },
+          {
+            title: 'Sliders Elementor',
+            link: '/pages/tables/sliders-elementor'
+          }
         ]
       },
-      {
-        title: 'Roturas',
-        link: '/pages/tables/roturas'
-      }
     ],
   },
   {
@@ -79,6 +95,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
           }
         ]
       },
+      {
+        title: 'Amazon',
+        link: '/pages/tables/amazon-caracteres'
+      }
     ]
   },
   {
@@ -115,8 +135,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
         ]
       },
       {
-        title: 'Uso Favoritos',
-        link: '/pages/tables/favoritos'
+        title: 'Favoritos',
+        children: [
+          {
+            title: 'Top Favoritos',
+            link: '/pages/tables/favoritos'
+          }
+        ]
       }
     ],
   },

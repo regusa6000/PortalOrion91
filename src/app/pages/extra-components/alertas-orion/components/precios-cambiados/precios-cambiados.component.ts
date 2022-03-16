@@ -2,25 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../../../auth/auth.service';
 
 @Component({
-  selector: 'ngx-pagos-fraccionados',
-  templateUrl: './pagos-fraccionados.component.html',
-  styleUrls: ['./pagos-fraccionados.component.scss']
+  selector: 'ngx-precios-cambiados',
+  templateUrl: './precios-cambiados.component.html',
+  styleUrls: ['./precios-cambiados.component.scss']
 })
-export class PagosFraccionadosComponent implements OnInit {
+export class PreciosCambiadosComponent implements OnInit {
 
-  arrayPagos: any
+  preciosAx: any
 
   constructor(public authSvc: AuthService) {
     this.refrescarTabla();
     setInterval(() => { this.refrescarTabla(); }, 300000);
-   }
+
+  }
 
   ngOnInit(): void {
   }
 
   refrescarTabla(){
-    this.authSvc.pedidosPagosFraccionados().subscribe(data=>{
-      this.arrayPagos = data
+    this.authSvc.preciosCambiados().subscribe(data=>{
+      this.preciosAx = data
     })
   }
 

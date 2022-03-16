@@ -28,6 +28,9 @@ import { IncidenciasMensualesComponent } from './incidencias-mensuales/incidenci
 import { CarpetaCompartidosComponent } from './carpeta-compartidos/carpeta-compartidos.component';
 import { ConfiguracionZonasComponent } from './configuracion-zonas/configuracion-zonas.component';
 import { ConfiguracionLinksComponent } from './configuracion-links/configuracion-links.component';
+import { ProductosFaqsComponent } from './productos-faqs/productos-faqs.component';
+import { AmazonCaracteresComponent } from './amazon-caracteres/amazon-caracteres.component';
+import { SlidersElementorComponent } from './sliders-elementor/sliders-elementor.component';
 
 const routes: Routes = [{
   path: '',
@@ -136,6 +139,18 @@ const routes: Routes = [{
     {
       path: 'configuracion-links',
       component: ConfiguracionLinksComponent
+    },
+    {
+      path: 'productos-faqs',
+      component: ProductosFaqsComponent
+    },
+    {
+      path: 'amazon-caracteres',
+      component: AmazonCaracteresComponent
+    },
+    {
+      path: 'sliders-elementor',
+      component: SlidersElementorComponent
     }
   ],
 }];

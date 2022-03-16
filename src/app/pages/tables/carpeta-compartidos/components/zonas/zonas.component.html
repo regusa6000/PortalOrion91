@@ -3,7 +3,7 @@
   <div *ngFor="let link of links" class="col-md-2" style="text-align: center;">
     <div>
       <a href="{{ link.link }}" target="_blank"><img src="../../../../../../assets/images/{{ link.img_icon }}.png" alt=""></a>
-      <!-- <a href="{{ link.link }}" target="_blank"><img src="/orion/assets/images/excel.png" alt=""></a> -->
+      <!-- <a href="{{ link.link }}" target="_blank"><img src="/orion/assets/images/{{ link.img_icon }}.png" alt=""></a> -->
     </div>
     <div>
       <p>{{ link.nombre_link }}</p>

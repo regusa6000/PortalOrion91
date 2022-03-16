@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id Producto</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Categoría</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of elementor">
+      <td>{{ element.id_product }}</td>
+      <td>{{ element.name }}</td>
+      <td>{{ element.cat_name }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../../../auth/auth.service';
 
 @Component({
-  selector: 'ngx-pagos-fraccionados',
-  templateUrl: './pagos-fraccionados.component.html',
-  styleUrls: ['./pagos-fraccionados.component.scss']
+  selector: 'ngx-alertas-amazon',
+  templateUrl: './alertas-amazon.component.html',
+  styleUrls: ['./alertas-amazon.component.scss']
 })
-export class PagosFraccionadosComponent implements OnInit {
+export class AlertasAmazonComponent implements OnInit {
 
-  arrayPagos: any
+  mpAmazon: any
 
   constructor(public authSvc: AuthService) {
     this.refrescarTabla();
@@ -19,8 +19,8 @@ export class PagosFraccionadosComponent implements OnInit {
   }
 
   refrescarTabla(){
-    this.authSvc.pedidosPagosFraccionados().subscribe(data=>{
-      this.arrayPagos = data
+    this.authSvc.alertasAmazon().subscribe(data=>{
+      this.mpAmazon = data
     })
   }
 

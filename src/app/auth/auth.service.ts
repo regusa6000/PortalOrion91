@@ -30,6 +30,8 @@ export class AuthService {
   urlPedidosSinStockMakro: string = 'http://192.168.30.148:8000/pedidosSinStockMakro';
   urlControlAliexpress: string = 'http://192.168.30.148:8000/controlAliExpress';
   urlCombinadosPredeterminadosSinStock: string = 'http://192.168.30.148:8000/CombinadospredeterminadosSinStock';
+  urlAlertasElementor: string = 'http://192.168.30.148:8000/productosDescatalogadosElementor'
+  urlBadgeProductosDescatalogadosElementor: string = 'http://192.168.30.148:8000/badgeProductosDescatalogadosElementor';
 
   //Envios
   urlControlTransportistas: string = 'http://192.168.30.148:8000/controlTransportistas';
@@ -171,6 +173,28 @@ export class AuthService {
   urlActualizarLink: string = 'http://192.168.30.148:8000/actualizarLink';
   urlEliminarLink: string = 'http://192.168.30.148:8000/eliminarLink/';
 
+  //Precios Cambiados
+  urlPreciosCambiados: string = 'http://192.168.30.148:8000/controlPreciosCambiadosAx';
+  urlBadgePreciosCambiados: string = 'http://192.168.30.148:8000/badgeControlPreciosCambiadosAx';
+
+
+  //Faqs
+  urlCargarFaqs: string = 'http://192.168.30.148:8000/cargarFaqs';
+  urlCrearFaqs: string = 'http://192.168.30.148:8000/crearFaq';
+  urlActualizarFaq: string = 'http://192.168.30.148:8000/actualizarFaq';
+  urlEliminarFaq: string = 'http://192.168.30.148:8000/eliminarFaq/';
+
+
+  //Alertas Amazon
+  urlAlertasAmazon: string = 'http://192.168.30.148:8000/alertaCaracteresAmazon';
+  urlCountAlertasAmazon: string = 'http://192.168.30.148:8000/countAlertaCaracteresAmazon';
+
+  //Alertas Pre-Almacen
+  urlPreAlamcen: string = 'http://192.168.30.148:8000/preAlmacen';
+  urlCountPreAlmacen: string = 'http://192.168.30.148:8000/countPreAlmacen';
+
+  //Favoritos
+  urlCargarTopFavoritos: string = 'http://192.168.30.148:8000/cargarTopFavoritos';
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -258,6 +282,10 @@ export class AuthService {
     let direccion = this.urlControlManoManoBadge
     return this.http.get(direccion)
   }
+  badgeProductosDescatalogadosElementor(){
+    let direccion = this.urlBadgeProductosDescatalogadosElementor
+    return this.http.get(direccion)
+  }
 
 
   //Alertas
@@ -283,6 +311,10 @@ export class AuthService {
   }
   combinadosPredeterminadosSinStock(){
     let direccion = this.urlCombinadosPredeterminadosSinStock
+    return this.http.get(direccion)
+  }
+  alertasElementor(){
+    let direccion = this.urlAlertasElementor
     return this.http.get(direccion)
   }
 
@@ -704,6 +736,60 @@ export class AuthService {
   eliminarLink(idLink: number){
     let direccion = this.urlEliminarLink + idLink
     return this.http.delete(direccion)
+  }
+
+  //Precios Cambiados
+  preciosCambiados(){
+    let direccion = this.urlPreciosCambiados
+    return this.http.get(direccion)
+  }
+  badgePreciosCambiados(){
+    let direccion = this.urlBadgePreciosCambiados
+    return this.http.get(direccion)
+  }
+
+  //Faqs
+  cargarTablaFaqs(){
+    let direccion = this.urlCargarFaqs
+    return this.http.get(direccion)
+  }
+  crearFaq(json: any){
+    let direccion = this.urlCrearFaqs
+    return this.http.post(direccion, json)
+  }
+  actualizarFaq(json: any){
+    let direccion = this.urlActualizarFaq
+    return this.http.put(direccion, json)
+  }
+  eliminarFaq(idFaq: number){
+    let direccion = this.urlEliminarFaq + idFaq
+    return this.http.delete(direccion)
+  }
+
+  //Alertas Amazon
+  alertasAmazon(){
+    let direccion = this.urlAlertasAmazon
+    return this.http.get(direccion)
+  }
+  countAlertasAmazon(){
+    let direccion = this.urlCountAlertasAmazon
+    return this.http.get(direccion)
+  }
+
+  //Pre-Almacen
+  preAlmacen(){
+    let direccion = this.urlPreAlamcen
+    return this.http.get(direccion)
+  }
+  countPreAlmacen(){
+    let direccion = this.urlCountPreAlmacen
+    return this.http.get(direccion)
+  }
+
+  //Favoritos
+  cargarTopFavoritos(){
+    let direccion = this.urlCargarTopFavoritos
+    return this.http.get(direccion)
   }
 
 }

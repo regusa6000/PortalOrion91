@@ -45,6 +45,10 @@ import { PedidosMakroSinStockComponent } from './alertas-orion/components/pedido
 import { ErroresAliExpressComponent } from './alertas-orion/components/errores-ali-express/errores-ali-express.component';
 import { CombinadosPredeterminadosSinStockComponent } from './alertas-orion/components/combinados-predeterminados-sin-stock/combinados-predeterminados-sin-stock.component';
 import { CategoriasRedireccionadasComponent } from './alertas-orion/components/categorias-redireccionadas/categorias-redireccionadas.component';
+import { ProductosElementorComponent } from './alertas-orion/components/productos-elementor/productos-elementor.component';
+import { PreciosCambiadosComponent } from './alertas-orion/components/precios-cambiados/precios-cambiados.component';
+import { AlertasAmazonComponent } from './alertas-orion/components/alertas-amazon/alertas-amazon.component';
+import { PreAlmacenComponent } from './alertas-orion/components/pre-almacen/pre-almacen.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -97,6 +101,10 @@ const MODULES = [
     ErroresAliExpressComponent,
     CombinadosPredeterminadosSinStockComponent,
     CategoriasRedireccionadasComponent,
+    ProductosElementorComponent,
+    PreciosCambiadosComponent,
+    AlertasAmazonComponent,
+    PreAlmacenComponent,
   ],
 })
 export class ExtraComponentsModule { }

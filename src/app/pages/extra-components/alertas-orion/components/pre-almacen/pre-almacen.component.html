@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Order Id</th>
+      <th scope="col">Referencia</th>
+      <th scope="col">Método de Pago</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Fecha de Creación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pre of preAlmacen">
+      <td>{{ pre.id_order }}</td>
+      <td>{{ pre.reference }}</td>
+      <td>{{ pre.payment }}</td>
+      <td>{{ pre.name }}</td>
+      <td>{{ pre.date_add}}</td>
+    </tr>
+  </tbody>
+</table>

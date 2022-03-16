@@ -28,34 +28,25 @@ export class IncidenciasMensualesComponent implements OnInit {
   config = {
     actions: false,
     columns: {
-      productId: {
+      product_id: {
         title: 'IdProducto',
         type: 'number',
       },
-      name: {
+      product_name: {
         title: 'Producto',
         type: 'string',
       },
-      incidencias: {
+      cantidadIncidencias: {
         title: 'Cantidad Incidencias',
         type: 'number',
       },
-      totalIncidencias:{
+      importeIncidencias:{
         title: 'Importe Incidencias',
-        type: 'number'
-      },
-      porcentajeIncidencias: {
-        title: 'Índice sobre venta',
         type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + '€'
+        }
       },
-      ventas: {
-        title: 'Cantidad Vendidas',
-        type: 'number',
-      },
-      totalVentas:{
-        title: 'Importe Ventas',
-        type: 'number'
-      }
     },
   };
 

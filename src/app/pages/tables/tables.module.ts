@@ -35,6 +35,9 @@ import { CarpetaCompartidosComponent } from './carpeta-compartidos/carpeta-compa
 import { ZonasComponent } from './carpeta-compartidos/components/zonas/zonas.component';
 import { ConfiguracionZonasComponent } from './configuracion-zonas/configuracion-zonas.component';
 import { ConfiguracionLinksComponent } from './configuracion-links/configuracion-links.component';
+import { ProductosFaqsComponent } from './productos-faqs/productos-faqs.component';
+import { AmazonCaracteresComponent } from './amazon-caracteres/amazon-caracteres.component';
+import { SlidersElementorComponent } from './sliders-elementor/sliders-elementor.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -87,6 +90,9 @@ import { ConfiguracionLinksComponent } from './configuracion-links/configuracion
     ZonasComponent,
     ConfiguracionZonasComponent,
     ConfiguracionLinksComponent,
+    ProductosFaqsComponent,
+    AmazonCaracteresComponent,
+    SlidersElementorComponent,
   ],
 })
 export class TablesModule { }

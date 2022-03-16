@@ -25,13 +25,17 @@ export class PagesComponent implements OnInit{
   redireccionadas: any
   predeterminados: any
   manoMano: any
+  elementor: any
+  preciosCambiados: any
+  mpAmazon: any
+  preAlmacen: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
     this.refrescarBadgeManoMano();
     //Cada 10 segundos lanza la consulta para poder tenerlo siempre actualizada
-    setInterval(() => { this.refrescarAlertas(); }, 100000);
-    setInterval(() => { this.refrescarBadgeManoMano(); }, 100000);
+    setInterval(() => { this.refrescarAlertas(); }, 300000);
+    setInterval(() => { this.refrescarBadgeManoMano(); }, 300000);
   }
 
 
@@ -70,12 +74,34 @@ export class PagesComponent implements OnInit{
                     this.predeterminados = data
                     total += this.predeterminados
 
-                      if(total > 0){
-                        this.menu[0].badge = {
-                          text: `${total}`,
-                          status:"danger"
-                        }
-                      }
+                      this.authSvc.badgePreciosCambiados().subscribe(data=>{
+                        this.preciosCambiados = data
+                        total += this.preciosCambiados
+
+                        this.authSvc.countAlertasAmazon().subscribe(data=>{
+
+                          this.mpAmazon = data
+                          total += this.mpAmazon
+
+                          this.authSvc.countPreAlmacen().subscribe(data=>{
+
+                            this.preAlmacen = data
+                            total += this.preAlmacen
+
+                            if(total > 0){
+                              this.menu[0].badge = {
+                                text: `${total}`,
+                                status:"danger"
+                              }
+                            }
+
+                          })
+
+                        })
+
+                      })
+
+
 
                       console.log(this.menu)
 

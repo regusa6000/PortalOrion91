@@ -12,7 +12,7 @@ export class CategoriasRedireccionadasComponent implements OnInit {
 
   constructor(public authSvc: AuthService) {
     this.refrescarTabla();
-    setInterval(() => { this.refrescarTabla(); }, 100000);
+    setInterval(() => { this.refrescarTabla(); }, 300000);
    }
 
   ngOnInit(): void {

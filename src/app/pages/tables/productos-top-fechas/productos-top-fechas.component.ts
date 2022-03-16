@@ -44,8 +44,15 @@ export class ProductosTopFechasComponent implements OnInit {
     actions: false,
     columns: {
       id_product: {
-        title: 'IdProduct',
+        title: 'Id Producto',
         type: 'number',
+      },
+      imagen: {
+        title: 'Imagen',
+        type: 'html',
+        valuePrepareFunction: (value) =>{
+          return "<img src='"+ value + "'>"
+        }
       },
       name: {
         title: 'Producto',
@@ -62,6 +69,9 @@ export class ProductosTopFechasComponent implements OnInit {
       suma_importes: {
         title: 'Importe',
         type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + '€'
+        }
       }
     },
   };
