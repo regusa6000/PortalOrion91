@@ -38,6 +38,8 @@ import { ConfiguracionLinksComponent } from './configuracion-links/configuracion
 import { ProductosFaqsComponent } from './productos-faqs/productos-faqs.component';
 import { AmazonCaracteresComponent } from './amazon-caracteres/amazon-caracteres.component';
 import { SlidersElementorComponent } from './sliders-elementor/sliders-elementor.component';
+import { PreciosFijosMakroComponent } from './precios-fijos-makro/precios-fijos-makro.component';
+import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-pedidos-tiendas.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -93,6 +95,8 @@ import { SlidersElementorComponent } from './sliders-elementor/sliders-elementor
     ProductosFaqsComponent,
     AmazonCaracteresComponent,
     SlidersElementorComponent,
+    PreciosFijosMakroComponent,
+    DiarioPedidosTiendasComponent,
   ],
 })
 export class TablesModule { }

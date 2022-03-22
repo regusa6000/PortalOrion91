@@ -3,6 +3,8 @@
 }
 :host ::ng-deep ng2-smart-table td:nth-child(6){
   text-align: right;
+  // max-width: 100px;
+  // width: 100%;
 }
 :host ::ng-deep ng2-smart-table td:nth-child(7){
   text-align: right;
@@ -33,4 +35,23 @@
 }
 :host ::ng-deep ng2-smart-table td:nth-child(16){
   text-align: right;
+}
+img{
+  width: 10px !important;
+}
+:host ::ng-deep .rojo{
+  color: #ff0000;
+  margin-left: 5px;
+}
+:host ::ng-deep .verde{
+  color: #44bf16;
+  margin-left: 5px;
+}
+:host ::ng-deep .imagen{
+  max-width: 16px;
+  width: 100%;
+}
+:host ::ng-deep .caja{
+  display: flex;
+  flex-direction: row;
 }

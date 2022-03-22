@@ -12,6 +12,7 @@ export class AuthService {
 
 
   urlVentasSemanales: string = 'http://192.168.30.148:8000/ventasSemanalesTiendas';
+  urlVentasSemanalesTiendas: string = 'http://192.168.30.148:8000/ventasSemanalesTodasLasTiendas';
 
   //Badges
   urlControlPedidosPagadosBadge: string = 'http://192.168.30.148:8000/controlPedidosPagadosBadge';
@@ -195,6 +196,14 @@ export class AuthService {
 
   //Favoritos
   urlCargarTopFavoritos: string = 'http://192.168.30.148:8000/cargarTopFavoritos';
+  urlCargarGraficoFavoritos: string = 'http://192.168.30.148:8000/cargarGraficoFavoritos';
+
+  //Precios Fijos
+  urlCargarSelectPreciosFijos: string = 'http://192.168.30.148:8000/cargarSelectProductos';
+  urlCargarTablaPreciosFijos: string = 'http://192.168.30.148:8000/cargarTablaPreciosFijos';
+  urlRegistrarPrecioFijo: string = 'http://192.168.30.148:8000/registrarPrecioFijo';
+  urlEliminarPrecioFijo: string = 'http://192.168.30.148:8000/eliminarPrecioFijo/';
+  urlActualizarPrecioFijo: string = 'http://192.168.30.148:8000/actualizarPrecioFijo';
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -240,6 +249,10 @@ export class AuthService {
   //Ventas Semanales
   ventasSemanales(){
     let direccion = this.urlVentasSemanales
+    return this.http.get(direccion)
+  }
+  ventasSemanalesTiendas(){
+    let direccion = this.urlVentasSemanalesTiendas
     return this.http.get(direccion)
   }
 
@@ -790,6 +803,33 @@ export class AuthService {
   cargarTopFavoritos(){
     let direccion = this.urlCargarTopFavoritos
     return this.http.get(direccion)
+  }
+  cargarGraficoFavoritos(){
+    let direccion = this.urlCargarGraficoFavoritos
+    return this.http.get(direccion)
+  }
+
+
+  //Precios Fijos Makro
+  cargarSelectPreciosFijos(){
+    let direccion = this.urlCargarSelectPreciosFijos
+    return this.http.get(direccion)
+  }
+  cargarTablaPreciosFijos(){
+    let direccion = this.urlCargarTablaPreciosFijos
+    return this.http.get(direccion)
+  }
+  registrarPrecioFijo(json: any){
+    let direccion = this.urlRegistrarPrecioFijo
+    return this.http.post(direccion,json)
+  }
+  eliminarPrecioFijo(id: number){
+    let direccion = this.urlEliminarPrecioFijo + id
+    return this.http.delete(direccion)
+  }
+  actualizarPrecioFijo(json: any){
+    let direccion = this.urlActualizarPrecioFijo
+    return this.http.put(direccion, json)
   }
 
 }

@@ -1,0 +1,8 @@
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
+  <nb-card-header>Pedidos Diarios por Canal</nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="config" [source]="source" style="width: 95%;">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

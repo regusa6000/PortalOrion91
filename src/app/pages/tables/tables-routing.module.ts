@@ -31,6 +31,8 @@ import { ConfiguracionLinksComponent } from './configuracion-links/configuracion
 import { ProductosFaqsComponent } from './productos-faqs/productos-faqs.component';
 import { AmazonCaracteresComponent } from './amazon-caracteres/amazon-caracteres.component';
 import { SlidersElementorComponent } from './sliders-elementor/sliders-elementor.component';
+import { PreciosFijosMakroComponent } from './precios-fijos-makro/precios-fijos-makro.component';
+import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-pedidos-tiendas.component';
 
 const routes: Routes = [{
   path: '',
@@ -47,6 +49,10 @@ const routes: Routes = [{
     {
       path: 'diario-pedidos',
       component: DiarioPedidosComponent
+    },
+    {
+      path: 'diario-pedidos-tiendas',
+      component: DiarioPedidosTiendasComponent
     },
     {
       path: 'diferencia-de-pago',
@@ -151,6 +157,10 @@ const routes: Routes = [{
     {
       path: 'sliders-elementor',
       component: SlidersElementorComponent
+    },
+    {
+      path: 'precios-fijos-makro',
+      component: PreciosFijosMakroComponent
     }
   ],
 }];

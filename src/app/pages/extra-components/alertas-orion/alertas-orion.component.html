@@ -1,5 +1,5 @@
 <!--Precios cambiados en Tienda-->
-<nb-card>
+<nb-card *ngIf="preciosCambiados > 0">
   <nb-card-header>Control de precios Ax vs ORION91</nb-card-header>
   <nb-card-body>
     <ngx-precios-cambiados></ngx-precios-cambiados>
@@ -7,7 +7,7 @@
 </nb-card>
 
 <!--Pedidos en Pre-Almacen-->
-<nb-card>
+<nb-card *ngIf="preAlmacen > 0">
   <nb-card-header>Pedidos en Pre-Almacén</nb-card-header>
   <nb-card-body>
     <ngx-pre-almacen></ngx-pre-almacen>
@@ -15,7 +15,7 @@
 </nb-card>
 
 <!--Pagos Fraccionados-->
-<nb-card>
+<nb-card *ngIf="pedidosFraccionados > 0">
   <nb-card-header>Pagos Fraccionados pendientes de aceptar</nb-card-header>
   <nb-card-body>
     <ngx-pagos-fraccionados></ngx-pagos-fraccionados>
@@ -23,7 +23,7 @@
 </nb-card>
 
 <!--Diferencia de Pagos-->
-<nb-card>
+<nb-card *ngIf="pedidosPagados > 0">
   <nb-card-header>Diferencia de Pagos</nb-card-header>
   <nb-card-body>
     <span>Pedidos con diferencia entre lo pagado y lo cobrado.</span><br><br>
@@ -32,7 +32,7 @@
 </nb-card>
 
 <!--Pendientes Almacén-->
-<nb-card>
+<nb-card *ngIf="pedidosPendientes > 0">
   <nb-card-header>Pendientes Almacén</nb-card-header>
   <nb-card-body>
     <span>Pedidos pagados y que no han pasado a AX (Diferencia horas +3).</span><br><br>
@@ -41,7 +41,7 @@
 </nb-card>
 
 <!--Pedidos de Makro sin Stock-->
-<nb-card>
+<nb-card *ngIf="makroSinStock > 0">
   <nb-card-header>Pedidos de Makro sin Stock</nb-card-header>
   <nb-card-body>
     <ngx-pedidos-makro-sin-stock></ngx-pedidos-makro-sin-stock>
@@ -49,7 +49,7 @@
 </nb-card>
 
 <!--Alertas Amazon-->
-<nb-card>
+<nb-card *ngIf="mpAmazon > 0">
   <nb-card-header>Productos con más de 200 caracteres en nombre AMAZON</nb-card-header>
   <nb-card-body>
     <ngx-alertas-amazon></ngx-alertas-amazon>
@@ -57,7 +57,7 @@
 </nb-card>
 
 <!--Errores AliExpress-->
-<nb-card>
+<nb-card *ngIf="erroresAli > 0">
   <nb-card-header>Errores AliExpress</nb-card-header>
   <nb-card-body>
     <ngx-errores-ali-express></ngx-errores-ali-express>
@@ -65,7 +65,7 @@
 </nb-card>
 
 <!--Predeterminado Sin Stock-->
-<nb-card>
+<nb-card *ngIf="predeterminados > 0">
   <nb-card-header>Combinados Predeterminados Sin Stock</nb-card-header>
   <nb-card-body>
     <ngx-combinados-predeterminados-sin-stock></ngx-combinados-predeterminados-sin-stock>
@@ -73,7 +73,7 @@
 </nb-card>
 
 <!--Categorias redireccionadas-->
-<nb-card>
+<nb-card *ngIf="redireccionadas">
   <nb-card-header>Control categorías Redireccionadas con productos asignados</nb-card-header>
   <nb-card-body>
     <ngx-categorias-redireccionadas></ngx-categorias-redireccionadas>

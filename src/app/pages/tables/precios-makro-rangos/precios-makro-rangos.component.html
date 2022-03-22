@@ -37,7 +37,9 @@
                     <th>Producto</th>
                     <th>Stock</th>
                     <th>PrecioPS</th>
-                    <th>Precio Makro</th>
+                    <th>Precio Fijo</th>
+                    <th>Precio Calculado</th>
+                    <th>Precio Enviado Makro</th>
                     <th>Margen</th>
                     <th>Pallet</th>
                     <th>Pack</th>
@@ -57,6 +59,8 @@
                     <td>{{product.name}}</td>
                     <td>{{product.stock}}</td>
                     <td>{{product.pricePs}}</td>
+                    <td>{{ product.precio_fijo }}</td>
+                    <td>{{ product.precioCalculado }}</td>
                     <td>{{product.priceMakro}}</td>
                     <td>{{product.margen}}</td>
                     <td>{{product.pallet}}</td>

@@ -5,11 +5,16 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { AlertasOrionComponent } from './extra-components/alertas-orion/alertas-orion.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
+    {
+      path: 'alertas-orion',
+      component: AlertasOrionComponent
+    },
     {
       path: 'dashboard',
       component: ECommerceComponent,
@@ -70,7 +75,7 @@ const routes: Routes = [{
     },
     {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'alertas-orion',
       pathMatch: 'full',
     },
     {

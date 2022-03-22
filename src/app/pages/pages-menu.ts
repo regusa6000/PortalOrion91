@@ -15,6 +15,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/diario-pedidos'
       },
       {
+        title: 'Diario Pedidos/Canal',
+        link: '/pages/tables/diario-pedidos-tiendas'
+      },
+      {
         title: 'Productos Top',
         link: '/pages/tables/productos-top-fechas'
       },
@@ -92,6 +96,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
           {
             title: 'Precios Rangos Makro',
             link: '/pages/tables/precios-makro-rangos'
+          },
+          {
+            title: 'Precios Fijos',
+            link: '/pages/tables/precios-fijos-makro'
           }
         ]
       },

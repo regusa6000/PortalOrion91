@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { spawn } from 'child_process';
 import { AuthService } from '../../../auth/auth.service';
+import * as eva from 'eva-icons';
 
 @Component({
   selector: 'ngx-diario-pedidos',
@@ -10,6 +12,7 @@ export class DiarioPedidosComponent implements OnInit {
 
   source: any;
   loading = false;
+  domSanitizer: any;
 
   constructor(public authSvc: AuthService) { }
 
@@ -47,6 +50,21 @@ export class DiarioPedidosComponent implements OnInit {
       tot_ped: {
         title: 'Total Pedidos',
         type: 'number',
+      },
+      porcentaje:{
+        title: 'Nº pedidos - 7',
+        type: 'html',
+        valuePrepareFunction: (value: number) =>{
+          if(value < 0){
+            // return `<span style="color: red"><img src= "../../../../assets/images/abajo.png" width="40">${value}</span>`
+            return '<div class="caja"><img src= "../../../../assets/images/abajo.png" class="imagen"><span class="rojo">' + value + '%</span></div>';
+
+          }else{
+            // return `<span style="color: green"><img src= "../../../../assets/images/arriba.png" width="40">${value}</span>`
+            return '<div class="caja"><img src= "../../../../assets/images/arriba.png" class="imagen"><span class="verde">' + value + '%</span></div>';
+          }
+
+        }
       },
       tot_sum_IVA: {
         title: 'Total Con Iva',
