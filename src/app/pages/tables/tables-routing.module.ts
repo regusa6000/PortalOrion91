@@ -33,6 +33,7 @@ import { AmazonCaracteresComponent } from './amazon-caracteres/amazon-caracteres
 import { SlidersElementorComponent } from './sliders-elementor/sliders-elementor.component';
 import { PreciosFijosMakroComponent } from './precios-fijos-makro/precios-fijos-makro.component';
 import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-pedidos-tiendas.component';
+import { VentasPorHabitantesComponent } from './ventas-por-habitantes/ventas-por-habitantes.component';
 
 const routes: Routes = [{
   path: '',
@@ -161,6 +162,10 @@ const routes: Routes = [{
     {
       path: 'precios-fijos-makro',
       component: PreciosFijosMakroComponent
+    },
+    {
+      path: 'ventas-por-habitantes',
+      component: VentasPorHabitantesComponent
     }
   ],
 }];

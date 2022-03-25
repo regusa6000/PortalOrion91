@@ -4,7 +4,7 @@
 
   <nb-card-body class="two-inputs">
 
-    <div style="display: flex; justify-content: flex-end; align-items: center; padding: 15px;" *ngIf="!mostrarTabla">
+    <div style="display: flex; justify-content: flex-end; align-items: center; padding: 15px;">
       <!--FECHAS-->
       <div>
         <input nbInput placeholder="Seleccionar Fecha:" [nbDatepicker]="rangepicker">
@@ -14,10 +14,13 @@
       <div>
         <button nbButton status="primary" (click)="buscarProducto()" style="margin-right: 10px; margin-left: 10px;">Buscar</button>
       </div>
+      <div>
+        <button nbButton status="primary" (click)="vacear()" style="margin-right: 10px; margin-left: 10px;">Top 15 dias</button>
+      </div>
   </div>
-  <button nbButton status="primary" (click)="vacear()" *ngIf="mostrarTabla" style="width: 50%; margin: auto; margin-top: 10px; display: flex;">Volver a buscar</button>
 
-  <div *ngIf="mostrarTabla" style="width: 95%; margin: auto; margin-top: 30px;">
+
+  <div style="width: 95%; margin: auto; margin-top: 30px;">
     <ng2-smart-table [settings]="config" [source]="productosTop">
     </ng2-smart-table>
   </div>

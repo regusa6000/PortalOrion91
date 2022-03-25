@@ -16,7 +16,13 @@ export class ProductosTopFechasComponent implements OnInit {
 
   constructor(public authSvc: AuthService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.authSvc.productosTopUltimos().subscribe(data=>{
+      this.productosTop = data
+    })
+
+  }
 
   buscarProducto(){
 
@@ -35,8 +41,7 @@ export class ProductosTopFechasComponent implements OnInit {
   }
 
   vacear(){
-    this.mostrarTabla = false
-    this.productosTop = ''
+    this.ngOnInit()
   }
 
 

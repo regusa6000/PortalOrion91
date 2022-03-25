@@ -5,6 +5,7 @@
       <th scope="col">Nº de pedido</th>
       <th scope="col">URL pedido</th>
       <th scope="col">Pago/Canal</th>
+      <th scope="col">Estado Pedido</th>
       <th scope="col">Fecha pedido</th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
       <td>{{ pendientes.reference }}</td>
       <td><a href="{{ pendientes.url }}" target="_blank">Ir a pedido</a></td>
       <td>{{ pendientes.payment }}</td>
+      <td>{{ pendientes.name }}</td>
       <td>{{ pendientes.date_add}}</td>
     </tr>
   </tbody>

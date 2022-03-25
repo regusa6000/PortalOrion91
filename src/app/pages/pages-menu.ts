@@ -25,6 +25,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Incidencias Top',
         link: '/pages/tables/incidencias-mensuales'
+      },
+      {
+        title: 'Ventas Por Habitantes',
+        link: '/pages/tables/ventas-por-habitantes'
       }
     ]
   },

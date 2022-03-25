@@ -25,10 +25,11 @@ export class DiarioPedidosComponent implements OnInit {
 
   toggleLoadingAnimation() {
     this.loading = true;
-    setTimeout(() => this.loading = false, 10000);
+    setTimeout(() => this.loading = false, 25000);
   }
 
   config = {
+    pager: { display: false },
     actions: false,
     columns: {
       dia: {
@@ -52,16 +53,16 @@ export class DiarioPedidosComponent implements OnInit {
         type: 'number',
       },
       porcentaje:{
-        title: 'Nº pedidos - 7',
+        title: 'Total con IVA -7 dias',
         type: 'html',
         valuePrepareFunction: (value: number) =>{
           if(value < 0){
-            // return `<span style="color: red"><img src= "../../../../assets/images/abajo.png" width="40">${value}</span>`
             return '<div class="caja"><img src= "../../../../assets/images/abajo.png" class="imagen"><span class="rojo">' + value + '%</span></div>';
+            // return '<div class="caja"><img src= "/orion/assets/images/abajo.png" class="imagen"><span class="rojo">' + value + '%</span></div>';
 
           }else{
-            // return `<span style="color: green"><img src= "../../../../assets/images/arriba.png" width="40">${value}</span>`
             return '<div class="caja"><img src= "../../../../assets/images/arriba.png" class="imagen"><span class="verde">' + value + '%</span></div>';
+            // return '<div class="caja"><img src= "/orion/assets/images/arriba.png" class="imagen"><span class="verde">' + value + '%</span></div>';
           }
 
         }

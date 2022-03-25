@@ -138,6 +138,7 @@ export class AuthService {
 
   //Productos top entre fechas
   urlProductosTopEntreFechas: string = 'http://192.168.30.148:8000/productosTopEntreFechas';
+  urlProductosTopUltimos: string = 'http://192.168.30.148:8000/productosTopUltimosDias';
 
   //Productos por categoria
   urlCategoriaProductosName: string = 'http://192.168.30.148:8000/categoriasProductosName'
@@ -204,6 +205,9 @@ export class AuthService {
   urlRegistrarPrecioFijo: string = 'http://192.168.30.148:8000/registrarPrecioFijo';
   urlEliminarPrecioFijo: string = 'http://192.168.30.148:8000/eliminarPrecioFijo/';
   urlActualizarPrecioFijo: string = 'http://192.168.30.148:8000/actualizarPrecioFijo';
+
+  //Ventas por Habitante
+  urlVentasHabitantes: string = 'http://192.168.30.148:8000/ventasHabitantes'
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -652,6 +656,10 @@ export class AuthService {
     let direccion = this.urlProductosTopEntreFechas + '/' + fechaInicio + '/' + fechaFin
     return this.http.get(direccion)
   }
+  productosTopUltimos(){
+    let direccion = this.urlProductosTopUltimos
+    return this.http.get(direccion)
+  }
 
   //Categoria por Producto
   categoriasProductosName(){
@@ -830,6 +838,12 @@ export class AuthService {
   actualizarPrecioFijo(json: any){
     let direccion = this.urlActualizarPrecioFijo
     return this.http.put(direccion, json)
+  }
+
+  //Ventas Por Habitante
+  ventasHabitantes(){
+    let direccion = this.urlVentasHabitantes
+    return this.http.get(direccion)
   }
 
 }

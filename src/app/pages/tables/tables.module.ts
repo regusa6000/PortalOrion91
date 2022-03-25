@@ -40,6 +40,8 @@ import { AmazonCaracteresComponent } from './amazon-caracteres/amazon-caracteres
 import { SlidersElementorComponent } from './sliders-elementor/sliders-elementor.component';
 import { PreciosFijosMakroComponent } from './precios-fijos-makro/precios-fijos-makro.component';
 import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-pedidos-tiendas.component';
+import { VentasPorHabitantesComponent } from './ventas-por-habitantes/ventas-por-habitantes.component';
+import { LeafletModule } from "@asymmetrik/ngx-leaflet";
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -59,7 +61,8 @@ import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-p
     NbCalendarRangeModule,
     NbDatepickerModule,
     NbButtonModule,
-    NbSpinnerModule
+    NbSpinnerModule,
+    LeafletModule
   ],
   declarations: [
     ...routedComponents,
@@ -97,6 +100,7 @@ import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-p
     SlidersElementorComponent,
     PreciosFijosMakroComponent,
     DiarioPedidosTiendasComponent,
+    VentasPorHabitantesComponent,
   ],
 })
 export class TablesModule { }

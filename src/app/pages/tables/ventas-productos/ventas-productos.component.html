@@ -16,7 +16,7 @@
       </div>
       <!--TIENDA-->
       <div style="margin-right: 20px;">
-        <nb-select placeholder="Transportistas" (selectedChange)="select($event)">
+        <nb-select placeholder="Canal" (selectedChange)="select($event)">
           <nb-option *ngFor="let name of tiendas; let i = index" [value]="i+1">{{ name }}</nb-option>
         </nb-select>
       </div>

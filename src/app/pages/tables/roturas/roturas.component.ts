@@ -26,6 +26,7 @@ export class RoturasComponent implements OnInit {
   }
 
   config = {
+    pager: { display: false },
     actions: false,
     columns: {
       id_product: {
