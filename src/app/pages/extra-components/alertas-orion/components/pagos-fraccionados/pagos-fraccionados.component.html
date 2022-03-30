@@ -5,6 +5,7 @@
       <th scope="col">Referencia</th>
       <th scope="col">URL Pedido</th>
       <th scope="col">Pago/Canal</th>
+      <th scope="col">Importe Pedido</th>
       <th scope="col">Fecha de Creación</th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
       <td>{{ pagos.reference }}</td>
       <td><a href="{{ pagos.url }}" target="_blank">Ir a pedido</a></td>
       <td>{{ pagos.payment }}</td>
+      <td>{{ pagos.total_paid }}€</td>
       <td>{{ pagos.date_add}}</td>
     </tr>
   </tbody>

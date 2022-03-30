@@ -25,12 +25,17 @@ export class ProductosTopFechasComponent implements OnInit {
   }
 
   buscarProducto(){
-
     this.authSvc.productosTopEntreFechas(this.fechaInicio,this.fechaFin).subscribe(data=>{
       this.productosTop = data
       this.mostrarTabla = true
     })
+  }
 
+  buscarProductosHoy(){
+    this.authSvc.productosTopHoy().subscribe(data=>{
+      this.productosTop = ''
+      this.productosTop = data
+    })
   }
 
   cambioRango(event){

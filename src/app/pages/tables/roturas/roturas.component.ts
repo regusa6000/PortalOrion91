@@ -33,16 +33,15 @@ export class RoturasComponent implements OnInit {
         title: 'Product Id',
         type: 'number',
       },
-      id_product_attribute: {
-        title: 'Atributo Id',
-        type: 'number',
+      imagen: {
+        title: 'Imagen',
+        type: 'html',
+        valuePrepareFunction: (value) =>{
+          return "<img src='"+ value + "'>"
+        }
       },
       ean13: {
         title: 'Ean13',
-        type: 'number',
-      },
-      reference: {
-        title: 'Referencia',
         type: 'number',
       },
       producto: {

@@ -62,7 +62,7 @@ import { LeafletModule } from "@asymmetrik/ngx-leaflet";
     NbDatepickerModule,
     NbButtonModule,
     NbSpinnerModule,
-    LeafletModule
+    LeafletModule.forRoot()
   ],
   declarations: [
     ...routedComponents,

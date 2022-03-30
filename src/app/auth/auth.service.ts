@@ -139,6 +139,7 @@ export class AuthService {
   //Productos top entre fechas
   urlProductosTopEntreFechas: string = 'http://192.168.30.148:8000/productosTopEntreFechas';
   urlProductosTopUltimos: string = 'http://192.168.30.148:8000/productosTopUltimosDias';
+  urlProductosTopHoy: string = 'http://192.168.30.148:8000/productosTopHoy';
 
   //Productos por categoria
   urlCategoriaProductosName: string = 'http://192.168.30.148:8000/categoriasProductosName'
@@ -658,6 +659,10 @@ export class AuthService {
   }
   productosTopUltimos(){
     let direccion = this.urlProductosTopUltimos
+    return this.http.get(direccion)
+  }
+  productosTopHoy(){
+    let direccion = this.urlProductosTopHoy
     return this.http.get(direccion)
   }
 

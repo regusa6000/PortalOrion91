@@ -72,6 +72,13 @@ export class FavoritosComponent implements OnInit {
           return `${cell.row.index + 1 +'º'}`;
         }
       },
+      imagen: {
+        title: 'Imagen',
+        type: 'html',
+        valuePrepareFunction: (value) =>{
+          return "<img src='"+ value + "'>"
+        }
+      },
       id_product:{
         title:'Id Producto',
         type: 'number'

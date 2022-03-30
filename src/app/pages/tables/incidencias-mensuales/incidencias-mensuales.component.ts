@@ -32,6 +32,13 @@ export class IncidenciasMensualesComponent implements OnInit {
         title: 'IdProducto',
         type: 'number',
       },
+      imagen: {
+        title: 'Imagen',
+        type: 'html',
+        valuePrepareFunction: (value) =>{
+          return "<img src='"+ value + "'>"
+        }
+      },
       product_name: {
         title: 'Producto',
         type: 'string',

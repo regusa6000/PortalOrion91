@@ -87,6 +87,13 @@ export class ManoManoComponent implements OnInit {
         title: 'Product Id',
         type: 'number',
       },
+      imagen: {
+        title: 'Imagen',
+        type: 'html',
+        valuePrepareFunction: (value) =>{
+          return "<img src='"+ value + "'>"
+        }
+      },
       name: {
         title: 'Producto',
         type: 'string',
@@ -94,30 +101,51 @@ export class ManoManoComponent implements OnInit {
       pricePresta: {
         title: 'Precio Orion91',
         type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + "€"
+        }
       },
       additionalShippingCostPresta: {
         title: 'Coste de Envio Orion91',
         type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + "€"
+        }
       },
       totalOrion: {
         title: 'Total Orion',
         type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + "€"
+        }
       },
       division:{
         title: 'Indice',
-        type: 'number'
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + "€"
+        }
       },
       price:{
         title: 'Precio ManoMano',
-        type: 'number'
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + "€"
+        }
       },
       normal_shipping_price:{
         title: 'Precio de Envio ManoMano',
-        type: 'number'
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + "€"
+        }
       },
       totalManoMano:{
         title: 'Total ManoMano',
-        type: 'number'
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + "€"
+        }
       },
     },
   };

@@ -47,6 +47,13 @@ export class ControlMakroComponent implements OnInit {
         title: 'Product Id',
         type: 'number',
       },
+      imagen: {
+        title: 'Imagen',
+        type: 'html',
+        valuePrepareFunction: (value) =>{
+          return "<img src='"+ value + "'>"
+        }
+      },
       gtin: {
         title: 'GTIN',
         type: 'number',
@@ -69,7 +76,10 @@ export class ControlMakroComponent implements OnInit {
       },
       price:{
         title: 'Precio',
-        type: 'number'
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + "€"
+        }
       },
       stock:{
         title: 'Stock',

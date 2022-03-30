@@ -2,7 +2,7 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Alertas',
+    title: 'ALERTAS',
     icon: 'bell-outline',
     link: '/pages/extra-components/alertas-orion'
   },
