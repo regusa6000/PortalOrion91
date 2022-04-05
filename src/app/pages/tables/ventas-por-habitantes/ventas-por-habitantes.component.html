@@ -12,6 +12,58 @@
       leaflet
       style="height: 800px"
       [leafletOptions]="options"
-      (leafletMapReady)="onMapReady($event)"></div>
+      (leafletMapReady)="onMapReady($event)">
+        <div style="background-color: white; position: absolute; right: 0; top: 0; ">
+          <table style="border: 2px solid black;">
+            <th align="center">Color</th>
+            <th align="center">Índice</th>
+            <tr style="padding: 5px;">
+              <td style="background-color: #e3ff14; padding: 5px; color: #e3ff14;">COLORES</td>
+              <td style="padding: 5px;"> Menores a 10  </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #6fcff7; padding: 5px; color: #6fcff7 ;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 15 y menor o igual a 20 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #5bb1e6; padding: 5px; color: #5bb1e6;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 20 y menor o igual a 25 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #51a3de; padding: 5px;color: #51a3de;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 25 y menor o igual a 30 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #4794d5; padding: 5px; color: #4794d5;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 30 y menor o igual a 35 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #3c85cd; padding: 5px;color: #3c85cd;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 35 y menor o igual a 40 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #3276c5; padding: 5px; color: #3276c5;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 40 y menor o igual a 45 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #2867bc; padding: 5px; color: #2867bc;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 45 y menor o igual a 50 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #1e58b4; padding: 5px; color: #1e58b4;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 50 y menor o igual a 55 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #144aac; padding: 5px;color: #144aac;">COLORES</td>
+              <td style="padding: 5px;"> Mayor a 55 y menor o igual a 65 </td>
+            </tr>
+            <tr style="padding: 5px;">
+              <td style="background-color: #0a3ba3; padding: 5px; color: #0a3ba3;">COLORES</td>
+              <td style="padding: 5px;"> Mayor o igual a 65 </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
   </nb-card-body>
 </nb-card>

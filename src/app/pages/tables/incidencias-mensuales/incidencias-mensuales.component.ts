@@ -51,7 +51,7 @@ export class IncidenciasMensualesComponent implements OnInit {
         title: 'Importe Incidencias',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
     },

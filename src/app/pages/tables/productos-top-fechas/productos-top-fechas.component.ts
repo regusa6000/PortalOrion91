@@ -80,7 +80,7 @@ export class ProductosTopFechasComponent implements OnInit {
         title: 'Importe',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       }
     },

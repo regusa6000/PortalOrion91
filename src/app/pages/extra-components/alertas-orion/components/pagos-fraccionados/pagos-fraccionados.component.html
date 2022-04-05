@@ -15,7 +15,7 @@
       <td>{{ pagos.reference }}</td>
       <td><a href="{{ pagos.url }}" target="_blank">Ir a pedido</a></td>
       <td>{{ pagos.payment }}</td>
-      <td>{{ pagos.total_paid }}€</td>
+      <td>{{ pagos.total_paid | currency:'EUR': true }}</td>
       <td>{{ pagos.date_add}}</td>
     </tr>
   </tbody>

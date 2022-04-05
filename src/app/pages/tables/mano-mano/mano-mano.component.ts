@@ -102,49 +102,49 @@ export class ManoManoComponent implements OnInit {
         title: 'Precio Orion91',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + "€"
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       additionalShippingCostPresta: {
         title: 'Coste de Envio Orion91',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + "€"
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       totalOrion: {
         title: 'Total Orion',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + "€"
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       division:{
         title: 'Indice',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + "€"
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       price:{
         title: 'Precio ManoMano',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + "€"
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       normal_shipping_price:{
         title: 'Precio de Envio ManoMano',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + "€"
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       totalManoMano:{
         title: 'Total ManoMano',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + "€"
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
     },

@@ -130,12 +130,12 @@ export class PagesComponent implements OnInit{
        ManoMano = this.manoMano
 
       if(ManoMano > 0){
-        this.menu[3].children[0].badge = {
+        this.menu[4].children[0].badge = {
           text: `${ManoMano}`,
           status:"danger"
         }
 
-        this.menu[3].badge = {
+        this.menu[4].badge = {
           text: `${ManoMano}`,
           status:"danger"
         }

@@ -1,0 +1,40 @@
+<div>
+  <!--Parte 1-->
+  <div>
+    <div>
+      <h6>Importe Total(Hoy)</h6>
+      <h5>{{ importeHoy | currency:'EUR': true }}</h5>
+    </div>
+    <div>
+      <nb-progress-bar [value]="porcentajeImportePosibleNegativo" [status]="status"></nb-progress-bar><br>
+      <span>Porcentaje (<b> {{ porcentajeImporte[0] }}% </b>)</span><br>
+      <span>Importe Total hace 7 dias: {{ importe7 | currency:'EUR': true}}</span>
+    </div>
+  </div>
+  <!--Parte 2-->
+  <br>
+  <div>
+    <div>
+      <h6>Número de Pedidos(Hoy)</h6>
+      <h5>{{ pedidosHoy }}</h5>
+    </div>
+    <div>
+      <nb-progress-bar [value]="porcentajePosibleNegativo" [status]="status2"></nb-progress-bar><br>
+      <span>Porcentaje (<b> {{ porcentajePedidos[0] }}% </b>)</span><br>
+      <span>Total de pedidos hace 7 dias: {{ pedidos7 }}</span>
+    </div>
+  </div>
+  <!--Parte 3-->
+  <br>
+  <div>
+    <div>
+      <h6>Carrito(Hoy)</h6>
+      <h5>{{ carritoHoy | currency:'EUR': true }}</h5>
+    </div>
+    <div>
+      <nb-progress-bar [value]="porcentajeCarritoPosibleNegativo" [status]="status3"></nb-progress-bar><br>
+      <span>Porcentaje (<b> {{ porcentajeCarrito[0] }}% </b>)</span><br>
+      <span>Carrito hace 7 dias: {{ carrito7 | currency:'EUR': true }}</span>
+    </div>
+  </div>
+</div>

@@ -34,6 +34,7 @@ import { SlidersElementorComponent } from './sliders-elementor/sliders-elementor
 import { PreciosFijosMakroComponent } from './precios-fijos-makro/precios-fijos-makro.component';
 import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-pedidos-tiendas.component';
 import { VentasPorHabitantesComponent } from './ventas-por-habitantes/ventas-por-habitantes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [{
   path: '',
@@ -166,6 +167,10 @@ const routes: Routes = [{
     {
       path: 'ventas-por-habitantes',
       component: VentasPorHabitantesComponent
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent
     }
   ],
 }];

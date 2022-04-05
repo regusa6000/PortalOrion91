@@ -210,6 +210,12 @@ export class AuthService {
   //Ventas por Habitante
   urlVentasHabitantes: string = 'http://192.168.30.148:8000/ventasHabitantes'
 
+  //Dashboard
+  urlAvanceSemanal: string = 'http://192.168.30.148:8000/avanceSemanal'
+  urlGraficoVentas: string = 'http://192.168.30.148:8000/graficoVentas'
+  urlGraficoVentasUnMes: string = 'http://192.168.30.148:8000/graficoVentasUnMes';
+  urlGraficoVentasUnaSemana: string = 'http://192.168.30.148:8000/graficoVentasUnaSemana'
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -848,6 +854,24 @@ export class AuthService {
   //Ventas Por Habitante
   ventasHabitantes(){
     let direccion = this.urlVentasHabitantes
+    return this.http.get(direccion)
+  }
+
+  //DashBoard
+  avanceSemanal(){
+    let direccion = this.urlAvanceSemanal
+    return this.http.get(direccion)
+  }
+  graficoVentas(){
+    let direccion = this.urlGraficoVentas
+    return this.http.get(direccion)
+  }
+  graficoVentasUnMes(){
+    let direccion = this.urlGraficoVentasUnMes
+    return this.http.get(direccion)
+  }
+  graficoVentasUnaSemana(){
+    let direccion = this.urlGraficoVentasUnaSemana
     return this.http.get(direccion)
   }
 

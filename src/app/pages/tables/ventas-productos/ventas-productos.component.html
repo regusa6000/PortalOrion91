@@ -44,7 +44,7 @@
             <td>{{product.product_id}}</td>
             <td>{{product.name}}</td>
             <td>{{product.product_quantity}}</td>
-            <td>{{product.importeVendido}}</td>
+            <td>{{product.importeVendido | currency:'EUR': true}}</td>
             <td>{{product.date_add}}</td>
             <td>{{product.payment}}</td>
           </tr>

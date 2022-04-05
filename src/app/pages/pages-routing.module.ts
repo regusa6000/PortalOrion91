@@ -2,8 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ECommerceComponent } from './e-commerce/e-commerce.component';
+import { DashboardComponent } from './tables/dashboard/dashboard.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 import { AlertasOrionComponent } from './extra-components/alertas-orion/alertas-orion.component';
 
@@ -17,10 +16,6 @@ const routes: Routes = [{
     },
     {
       path: 'dashboard',
-      component: ECommerceComponent,
-    },
-    {
-      path: 'iot-dashboard',
       component: DashboardComponent,
     },
     {
@@ -75,7 +70,7 @@ const routes: Routes = [{
     },
     {
       path: '',
-      redirectTo: 'alertas-orion',
+      redirectTo: 'dashboard',
       pathMatch: 'full',
     },
     {

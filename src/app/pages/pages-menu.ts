@@ -7,6 +7,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/extra-components/alertas-orion'
   },
   {
+    title: 'DASHBOARD',
+    icon: 'grid-outline',
+    link: '/pages/tables/dashboard'
+  },
+  {
     title: 'PEDIDOS',
     icon: 'shopping-cart-outline',
     children: [
@@ -117,10 +122,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'ESTADISTICAS',
     icon: 'trending-up-outline',
     children: [
-      {
-        title: 'Dashboard',
-        link: '/pages/dashboard',
-      },
+      // {
+      //   title: 'Dashboard',
+      //   link: '/pages/dashboard',
+      // },
+      // {
+      //   title: 'DashBoard',
+      //   link: '/pages/tables/dashboard'
+      // },
       {
         title: 'Importe Ventas',
         link: '/pages/tables/importe-de-ventas'

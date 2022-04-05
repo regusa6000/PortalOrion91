@@ -35,18 +35,18 @@
             </td>
             <td>{{cat.id_category}}</td>
             <td>{{cat.name}}</td>
-            <td align="right">{{cat.ENERO}}€</td>
-            <td align="right">{{cat.FEBRERO}}€</td>
-            <td align="right">{{cat.MARZO}}€</td>
-            <td align="right">{{cat.ABRIL}}€</td>
-            <td align="right">{{cat.MAYO}}€</td>
-            <td align="right">{{cat.JUNIO}}€</td>
-            <td align="right">{{cat.JULIO}}€</td>
-            <td align="right">{{cat.AGOSTO}}€</td>
-            <td align="right">{{cat.SEPTIEMBRE}}€</td>
-            <td align="right">{{cat.OCTUBRE}}€</td>
-            <td align="right">{{cat.NOVIEMBRE}}€</td>
-            <td align="right">{{cat.DICIEMBRE}}€</td>
+            <td align="right">{{cat.ENERO | currency:'EUR': true}}</td>
+            <td align="right">{{cat.FEBRERO | currency:'EUR': true}}</td>
+            <td align="right">{{cat.MARZO | currency:'EUR': true}}</td>
+            <td align="right">{{cat.ABRIL | currency:'EUR': true}}</td>
+            <td align="right">{{cat.MAYO | currency:'EUR': true}}</td>
+            <td align="right">{{cat.JUNIO | currency:'EUR': true}}</td>
+            <td align="right">{{cat.JULIO | currency:'EUR': true}}</td>
+            <td align="right">{{cat.AGOSTO | currency:'EUR': true}}</td>
+            <td align="right">{{cat.SEPTIEMBRE | currency:'EUR': true}}</td>
+            <td align="right">{{cat.OCTUBRE | currency:'EUR': true}}</td>
+            <td align="right">{{cat.NOVIEMBRE | currency:'EUR': true}}</td>
+            <td align="right">{{cat.DICIEMBRE | currency:'EUR': true}}</td>
           </tr>
 
           <tr [hidden]="!hideme[i]" class="sub-table no-bg" style="width: 100%;">

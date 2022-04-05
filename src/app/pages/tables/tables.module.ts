@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { NbCardModule, NbSpinnerModule , NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
+import { NbProgressBarModule,NbCardModule, NbSpinnerModule , NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { FormsModule } from '@angular/forms';
@@ -42,6 +43,12 @@ import { PreciosFijosMakroComponent } from './precios-fijos-makro/precios-fijos-
 import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-pedidos-tiendas.component';
 import { VentasPorHabitantesComponent } from './ventas-por-habitantes/ventas-por-habitantes.component';
 import { LeafletModule } from "@asymmetrik/ngx-leaflet";
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductosTopHoyComponent } from './dashboard/components/productos-top-hoy/productos-top-hoy.component';
+import { CuadroAvanceSemanalComponent } from './dashboard/components/cuadro-avance-semanal/cuadro-avance-semanal.component';
+import { GraficoVentasComponent } from './dashboard/components/grafico-ventas/grafico-ventas.component';
+import { GraficoVentasUnaSemanaComponent } from './dashboard/components/grafico-ventas-una-semana/grafico-ventas-una-semana.component';
+import { GraficoVentasUnMesComponent } from './dashboard/components/grafico-ventas-un-mes/grafico-ventas-un-mes.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -60,8 +67,10 @@ import { LeafletModule } from "@asymmetrik/ngx-leaflet";
     Ng2SmartTableModule,
     NbCalendarRangeModule,
     NbDatepickerModule,
+    NbProgressBarModule,
     NbButtonModule,
     NbSpinnerModule,
+    NgxEchartsModule,
     LeafletModule.forRoot()
   ],
   declarations: [
@@ -101,6 +110,12 @@ import { LeafletModule } from "@asymmetrik/ngx-leaflet";
     PreciosFijosMakroComponent,
     DiarioPedidosTiendasComponent,
     VentasPorHabitantesComponent,
+    DashboardComponent,
+    ProductosTopHoyComponent,
+    CuadroAvanceSemanalComponent,
+    GraficoVentasComponent,
+    GraficoVentasUnaSemanaComponent,
+    GraficoVentasUnMesComponent,
   ],
 })
 export class TablesModule { }

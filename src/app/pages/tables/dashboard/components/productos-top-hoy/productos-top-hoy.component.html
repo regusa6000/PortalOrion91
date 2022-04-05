@@ -1,0 +1,25 @@
+<div id="tablaTopHoy">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id Producto</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Categoría</th>
+        <th scope="col">Cantidad Vendida</th>
+        <th scope="col">Total Vendido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let top of productosTop">
+        <td>{{ top.id_product }}</td>
+        <td><img src="{{ top.imagen }}"></td>
+        <td>{{ top.name }}</td>
+        <td>{{ top.nombre_cat }}</td>
+        <td>{{ top.suma_cantidad}}</td>
+        <td>{{ top.suma_importes | currency:'EUR': true}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

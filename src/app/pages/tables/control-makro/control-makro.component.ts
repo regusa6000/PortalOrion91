@@ -78,7 +78,7 @@ export class ControlMakroComponent implements OnInit {
         title: 'Precio',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + "€"
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       stock:{

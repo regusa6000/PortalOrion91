@@ -20,10 +20,13 @@ import {
   NbMenuModule,
   NbSidebarModule,
   NbToastrModule,
-  NbWindowModule,
+  NbWindowModule
 } from '@nebular/theme';
 import { NbAuthJWTToken, NbAuthModule, NbAuthSimpleToken, NbPasswordAuthStrategy } from '@nebular/auth';
 import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+
+registerLocaleData(localeDe);
 
 @NgModule({
   declarations: [AppComponent],
@@ -58,7 +61,7 @@ import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@ang
             endpoint: '/login',
             method: 'post',
             redirect: {
-              success: '/pages/extra-components/alertas-orion',
+              success: '/pages/tables/dashboard',
               failure: null,
             }
 
@@ -71,7 +74,7 @@ import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@ang
   ],
 
   providers: [
-    // { provide: LOCALE_ID, useValue: 'es-BR' },
+    { provide: LOCALE_ID, useValue: 'de-DE' },
     NbDatepickerModule,
     {provide : LocationStrategy , useClass: HashLocationStrategy}
     ],

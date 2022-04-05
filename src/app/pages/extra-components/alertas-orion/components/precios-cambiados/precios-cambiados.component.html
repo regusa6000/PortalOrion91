@@ -16,8 +16,8 @@
       <td>{{ precio.id_product }}</td>
       <td>{{ precio.ean13}}</td>
       <td>{{ precio.reference }}</td>
-      <td>{{ precio.precioORION91 }}</td>
-      <td>{{ precio.precioAX }}</td>
+      <td>{{ precio.precioORION91 | currency:'EUR': true}}</td>
+      <td>{{ precio.precioAX | currency:'EUR': true}}</td>
       <td>{{ precio.nombre_producto }}</td>
       <td>{{ precio.nombre_atributo }}</td>
       <td>{{ precio.nombre_valor_att }}</td>

@@ -48,7 +48,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Con Iva',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       ORION91:{
@@ -59,7 +59,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
           title: 'Total Orion91',
           type: 'number',
           valuePrepareFunction: (value) =>{
-            return value + '€'
+            return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
           }
       },
       MANOMANO:{
@@ -70,7 +70,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total ManoMano',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       ALIEXPRESS:{
@@ -81,7 +81,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total AliExpress',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       AMAZON:{
@@ -92,7 +92,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Amazon',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       GROUPON:{
@@ -103,7 +103,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Groupon',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       EMBARGOS:{
@@ -114,7 +114,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Embargos',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       MEQUEDOUNO:{
@@ -125,7 +125,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total MequedoUno',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       FNAC:{
@@ -136,7 +136,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total FNAC',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       WISH:{
@@ -147,7 +147,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Wish',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       CARREFOUR :{
@@ -158,7 +158,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Carrefour',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       MAKRO:{
@@ -169,7 +169,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Makro',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       PcCOMPONENTES:{
@@ -180,7 +180,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total PcComponentes',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       SPRINTER:{
@@ -191,7 +191,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Sprinter',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       BULEVIP:{
@@ -202,7 +202,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Bulevip',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       VENCA:{
@@ -213,7 +213,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
         title: 'Total Venca',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return value + '€'
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       }
     },
