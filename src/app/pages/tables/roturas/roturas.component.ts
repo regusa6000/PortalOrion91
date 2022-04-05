@@ -61,15 +61,27 @@ export class RoturasComponent implements OnInit {
         type: 'number'
       },
       ud_30_dias:{
-        title: 'Ud. 30',
+        title: 'Uds. 30',
         type: 'number'
       },
       m_30:{
-        title: 'Md. 30',
+        title: 'Mds. 30',
         type: 'number'
       },
       rotura_en:{
         title: 'Rotura en dias:',
+        type: 'number'
+      },
+      ud_60_dias:{
+        title: 'Uds. 60',
+        type: 'number'
+      },
+      m_60:{
+        title: 'Mds. 60',
+        type: 'number'
+      },
+      rotura_en_60:{
+        title: 'Rotura en dias(60):',
         type: 'number'
       }
     },

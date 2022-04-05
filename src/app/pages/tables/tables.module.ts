@@ -49,6 +49,8 @@ import { CuadroAvanceSemanalComponent } from './dashboard/components/cuadro-avan
 import { GraficoVentasComponent } from './dashboard/components/grafico-ventas/grafico-ventas.component';
 import { GraficoVentasUnaSemanaComponent } from './dashboard/components/grafico-ventas-una-semana/grafico-ventas-una-semana.component';
 import { GraficoVentasUnMesComponent } from './dashboard/components/grafico-ventas-un-mes/grafico-ventas-un-mes.component';
+import { VentasSemanalComponent } from './dashboard/components/ventas-semanal/ventas-semanal.component';
+import { RoturaStockDashboardComponent } from './dashboard/components/rotura-stock-dashboard/rotura-stock-dashboard.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -116,6 +118,8 @@ import { GraficoVentasUnMesComponent } from './dashboard/components/grafico-vent
     GraficoVentasComponent,
     GraficoVentasUnaSemanaComponent,
     GraficoVentasUnMesComponent,
+    VentasSemanalComponent,
+    RoturaStockDashboardComponent,
   ],
 })
 export class TablesModule { }

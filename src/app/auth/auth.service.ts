@@ -215,6 +215,8 @@ export class AuthService {
   urlGraficoVentas: string = 'http://192.168.30.148:8000/graficoVentas'
   urlGraficoVentasUnMes: string = 'http://192.168.30.148:8000/graficoVentasUnMes';
   urlGraficoVentasUnaSemana: string = 'http://192.168.30.148:8000/graficoVentasUnaSemana'
+  urlVentasUltimaSemana: string = 'http://192.168.30.148:8000/ventasSemanalesDashBoard';
+  urlRoturaStockEnSemana: string = 'http://192.168.30.148:8000/roturaDeStock';
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -872,6 +874,14 @@ export class AuthService {
   }
   graficoVentasUnaSemana(){
     let direccion = this.urlGraficoVentasUnaSemana
+    return this.http.get(direccion)
+  }
+  ventasUltimaSemana(){
+    let direccion = this.urlVentasUltimaSemana
+    return this.http.get(direccion)
+  }
+  roturaStockDashBoard(){
+    let direccion = this.urlRoturaStockEnSemana
     return this.http.get(direccion)
   }
 

@@ -123,7 +123,7 @@ export class ManoManoComponent implements OnInit {
         title: 'Indice',
         type: 'number',
         valuePrepareFunction: (value) =>{
-          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
+          return value + '%'
         }
       },
       price:{

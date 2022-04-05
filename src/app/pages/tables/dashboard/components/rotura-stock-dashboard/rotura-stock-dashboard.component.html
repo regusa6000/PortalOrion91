@@ -1,0 +1,27 @@
+<div id="tablaRoturas">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Ean13</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Hoy</th>
+        <th scope="col">Hoy(-1)</th>
+        <th scope="col">Hoy(-2)</th>
+        <th scope="col">Hoy(-3)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of source">
+        <td>{{ dato.ean13 }}</td>
+        <td>{{ dato.name }}</td>
+        <td align="center"><img src="{{ dato.imagen }}"></td>
+        <td align="center">{{ dato.stock_hoy }}</td>
+        <td align="center">{{ dato.stock_hoy_1 }}</td>
+        <td align="center">{{ dato.stock_hoy_2 }}</td>
+        <td align="center">{{ dato.stock_hoy_3 }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
