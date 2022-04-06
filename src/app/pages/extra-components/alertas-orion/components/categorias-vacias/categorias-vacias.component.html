@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id Categoría</th>
+      <th scope="col">Categoría</th>
+      <th scope="col">Categoría Padre</th>
+      <th scope="col">URL Categoría</th>
+      <th scope="col">Redirigida</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cat of categoriasVacias">
+      <td>{{ cat.id_category }}</td>
+      <td>{{ cat.name }}</td>
+      <td>{{ cat.padre }}</td>
+      <td><a href="{{ cat.urlOrigen }}" target="_blank">Ir a pedido</a></td>
+      <td>{{ cat.redirigida }}</td>
+    </tr>
+  </tbody>
+</table>

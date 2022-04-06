@@ -20,6 +20,8 @@ export class AlertasOrionComponent implements OnInit {
   preciosCambiados: any
   mpAmazon: any
   preAlmacen: any
+  categoriasVacias: any
+  pedidosTransferencia: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -60,6 +62,12 @@ export class AlertasOrionComponent implements OnInit {
     })
     this.authSvc.countPreAlmacen().subscribe(data=>{
       this.preAlmacen = data
+    })
+    this.authSvc.badgeCategoriasVacias().subscribe(data=>{
+      this.categoriasVacias = data
+    })
+    this.authSvc.badgeTransferenciaBancariaSinStock().subscribe(data=>{
+      this.pedidosTransferencia = data
     })
 
   }

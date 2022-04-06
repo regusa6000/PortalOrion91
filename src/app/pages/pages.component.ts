@@ -29,6 +29,8 @@ export class PagesComponent implements OnInit{
   preciosCambiados: any
   mpAmazon: any
   preAlmacen: any
+  categoriasVacias: any
+  pedidosTransferencia: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -88,12 +90,26 @@ export class PagesComponent implements OnInit{
                             this.preAlmacen = data
                             total += this.preAlmacen
 
-                            if(total > 0){
-                              this.menu[0].badge = {
-                                text: `${total}`,
-                                status:"danger"
-                              }
-                            }
+                            this.authSvc.badgeCategoriasVacias().subscribe(data=>{
+
+                              this.categoriasVacias = data
+                              total += this.categoriasVacias
+
+                              this.authSvc.badgeTransferenciaBancariaSinStock().subscribe(data=>{
+
+                                this.pedidosTransferencia = data
+                                total += this.pedidosTransferencia
+
+                                if(total > 0){
+                                  this.menu[0].badge = {
+                                    text: `${total}`,
+                                    status:"danger"
+                                  }
+                                }
+
+                              })
+
+                            })
 
                           })
 

@@ -1,0 +1,24 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Referencia</th>
+      <th scope="col">Id Producto</th>
+      <th scope="col">Producto</th>
+      <th scope="col">URL Pedido</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Total</th>
+      <th scope="col">Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ped of pedidos">
+      <td>{{ ped.reference }}</td>
+      <td>{{ ped.product_id }}</td>
+      <td>{{ ped.product_name }}</td>
+      <td><a href="https://orion91.com/admin753tbd1ux/index.php?controller=AdminOrders&vieworder=&id_order={{ ped.id_order }}" target="_blank">Ir a pedido</a></td>
+      <td>{{ ped.quantity }}</td>
+      <td>{{ ped.total_paid | currency:'EUR': true}}</td>
+      <td>{{ ped.date_add}}</td>
+    </tr>
+  </tbody>
+</table>

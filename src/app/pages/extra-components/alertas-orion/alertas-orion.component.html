@@ -73,10 +73,26 @@
 </nb-card>
 
 <!--Categorias redireccionadas-->
-<nb-card *ngIf="redireccionadas">
+<nb-card *ngIf="redireccionadas > 0">
   <nb-card-header>Control categorías Redireccionadas con productos asignados</nb-card-header>
   <nb-card-body>
     <ngx-categorias-redireccionadas></ngx-categorias-redireccionadas>
+  </nb-card-body>
+</nb-card>
+
+<!--Categorias Vacias-->
+<nb-card *ngIf="categoriasVacias > 0">
+  <nb-card-header>Categorías Vacías </nb-card-header>
+  <nb-card-body>
+    <ngx-categorias-vacias></ngx-categorias-vacias>
+  </nb-card-body>
+</nb-card>
+
+<!--Pedidos de transferencia bancaria sin Stock-->
+<nb-card *ngIf="pedidosTransferencia > 0">
+  <nb-card-header>Pedidos Transferencia Bancaria sin Stock</nb-card-header>
+  <nb-card-body>
+    <ngx-pedido-transferencia-bancaria></ngx-pedido-transferencia-bancaria>
   </nb-card-body>
 </nb-card>
 

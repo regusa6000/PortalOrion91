@@ -22,6 +22,8 @@ export class AuthService {
   urlBadgeAliexpress: string = 'http://192.168.30.148:8000/badgeAliExpress';
   urlCombinadosPredeterminadosSinStockBadge: string = 'http://192.168.30.148:8000/CombinadospredeterminadosSinStockCount';
   urlControlManoManoBadge: string = 'http://192.168.30.148:8000/controlManoManoBadge';
+  urlBadgeCategoriasVacias: string = 'http://192.168.30.148:8000/controlCategoriasVaciasBadge';
+  urlBadgeTransferenciaBancariaSinStock: string = 'http://192.168.30.148:8000/countTransferenciaBancariaSinStock'
 
   //Alertas
   urlPagosFraccionados: string = 'http://192.168.30.148:8000/pedidosFraccionados';
@@ -33,6 +35,8 @@ export class AuthService {
   urlCombinadosPredeterminadosSinStock: string = 'http://192.168.30.148:8000/CombinadospredeterminadosSinStock';
   urlAlertasElementor: string = 'http://192.168.30.148:8000/productosDescatalogadosElementor'
   urlBadgeProductosDescatalogadosElementor: string = 'http://192.168.30.148:8000/badgeProductosDescatalogadosElementor';
+  urlCatedoriasVacias: string = 'http://192.168.30.148:8000/controlCategoriasVacias';
+  urlTransferenciasBancariasSinStock: string = 'http://192.168.30.148:8000/transferenciaBancariaSinStock';
 
   //Envios
   urlControlTransportistas: string = 'http://192.168.30.148:8000/controlTransportistas';
@@ -312,6 +316,14 @@ export class AuthService {
     let direccion = this.urlBadgeProductosDescatalogadosElementor
     return this.http.get(direccion)
   }
+  badgeCategoriasVacias(){
+    let direccion = this.urlBadgeCategoriasVacias
+    return this.http.get(direccion)
+  }
+  badgeTransferenciaBancariaSinStock(){
+    let direccion = this.urlBadgeTransferenciaBancariaSinStock
+    return this.http.get(direccion)
+  }
 
 
   //Alertas
@@ -341,6 +353,14 @@ export class AuthService {
   }
   alertasElementor(){
     let direccion = this.urlAlertasElementor
+    return this.http.get(direccion)
+  }
+  categoriasVacias(){
+    let direccion = this.urlCatedoriasVacias
+    return this.http.get(direccion)
+  }
+  transferenciaBancariaSinStock(){
+    let direccion = this.urlTransferenciasBancariasSinStock
     return this.http.get(direccion)
   }
 
