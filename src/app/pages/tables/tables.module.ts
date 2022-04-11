@@ -51,6 +51,10 @@ import { GraficoVentasUnaSemanaComponent } from './dashboard/components/grafico-
 import { GraficoVentasUnMesComponent } from './dashboard/components/grafico-ventas-un-mes/grafico-ventas-un-mes.component';
 import { VentasSemanalComponent } from './dashboard/components/ventas-semanal/ventas-semanal.component';
 import { RoturaStockDashboardComponent } from './dashboard/components/rotura-stock-dashboard/rotura-stock-dashboard.component';
+import { GraficoVentasPaisesHoyComponent } from './dashboard/components/grafico-ventas-paises-hoy/grafico-ventas-paises-hoy.component';
+import { GraficoVentasPaisesUnaSemanaComponent } from './dashboard/components/grafico-ventas-paises-una-semana/grafico-ventas-paises-una-semana.component';
+import { GraficoVentasPaisesUnMesComponent } from './dashboard/components/grafico-ventas-paises-un-mes/grafico-ventas-paises-un-mes.component';
+import { GraficoComparacionVentasComponent } from './dashboard/components/grafico-comparacion-ventas/grafico-comparacion-ventas.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -120,6 +124,10 @@ import { RoturaStockDashboardComponent } from './dashboard/components/rotura-sto
     GraficoVentasUnMesComponent,
     VentasSemanalComponent,
     RoturaStockDashboardComponent,
+    GraficoVentasPaisesHoyComponent,
+    GraficoVentasPaisesUnaSemanaComponent,
+    GraficoVentasPaisesUnMesComponent,
+    GraficoComparacionVentasComponent,
   ],
 })
 export class TablesModule { }

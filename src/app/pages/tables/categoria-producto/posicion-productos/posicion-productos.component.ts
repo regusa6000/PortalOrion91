@@ -10,7 +10,7 @@ import { NbComponentStatus, NbToastrService } from '@nebular/theme';
 export class PosicionProductosComponent implements OnInit {
 
   catProduct: any
-  editarPosicion = []
+  editarPosicion: string[] = []
   @Input() idCategory: any
 
   constructor(private authSvc: AuthService,private toastrService: NbToastrService) { }
@@ -31,6 +31,7 @@ export class PosicionProductosComponent implements OnInit {
           this.catProduct = data
           console.log(this.catProduct)
         })
+        this.editarPosicion.pop()
       }
     })
   }

@@ -23,7 +23,7 @@
   <!--DashBoard Ventas hoy-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Gráfico de Ventas Hoy</nb-card-header>
+      <nb-card-header>Canal de Ventas Hoy</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas></ngx-grafico-ventas>
         </nb-card-body>
@@ -32,7 +32,7 @@
   <!--DashBoard Ventas hoy-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Gráfico de Ventas (-7 dias)</nb-card-header>
+      <nb-card-header>Canal de Ventas (-7 dias)</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas-una-semana></ngx-grafico-ventas-una-semana>
         </nb-card-body>
@@ -41,7 +41,7 @@
   <!--DashBoard Ventas hoy-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Gráfico de Ventas (-30 dias)</nb-card-header>
+      <nb-card-header>Canal de Ventas (-30 dias)</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas-un-mes></ngx-grafico-ventas-un-mes>
         </nb-card-body>
@@ -50,6 +50,18 @@
 </div>
 
 <!--Tercera Parte-->
+<div class="row">
+  <div class="col-xxxl-8 col-xxl-8 col-lg-7 col-md-6">
+    <nb-card>
+      <nb-card-header>Comparación 2021 vs 2022</nb-card-header>
+        <nb-card-body>
+          <ngx-grafico-comparacion-ventas></ngx-grafico-comparacion-ventas>
+        </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<!--Cuarta Parte-->
 <div class="row">
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
@@ -65,6 +77,37 @@
       <nb-card-header>Roturas</nb-card-header>
         <nb-card-body>
           <ngx-rotura-stock-dashboard></ngx-rotura-stock-dashboard>
+        </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<!--Cuarta Parte-->
+<div class="row">
+  <!--DashBoard Ventas Paises hoy-->
+  <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
+    <nb-card>
+      <nb-card-header>Ventas por Paises Hoy</nb-card-header>
+        <nb-card-body>
+          <ngx-grafico-ventas-paises-hoy></ngx-grafico-ventas-paises-hoy>
+        </nb-card-body>
+    </nb-card>
+  </div>
+  <!--DashBoard Ventas Paises hoy -7-->
+  <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
+    <nb-card>
+      <nb-card-header>Ventas por Paises (-7 dias)</nb-card-header>
+        <nb-card-body>
+          <ngx-grafico-ventas-paises-una-semana></ngx-grafico-ventas-paises-una-semana>
+        </nb-card-body>
+    </nb-card>
+  </div>
+  <!--DashBoard Ventas Paises hoy -30-->
+  <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
+    <nb-card>
+      <nb-card-header>Ventas por Paises (-30 dias)</nb-card-header>
+        <nb-card-body>
+          <ngx-grafico-ventas-paises-un-mes></ngx-grafico-ventas-paises-un-mes>
         </nb-card-body>
     </nb-card>
   </div>

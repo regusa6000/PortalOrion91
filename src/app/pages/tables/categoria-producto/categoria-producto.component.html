@@ -9,6 +9,7 @@
                     <th> </th>
                     <th>Id Categoría</th>
                     <th>Categoría</th>
+                    <th align="center">URL</th>
                     <th>Cantidad de Productos</th>
                   </tr>
                 </thead>
@@ -20,7 +21,8 @@
                     </td>
                     <td>{{cat.id_category}}</td>
                     <td>{{cat.name}}</td>
-                    <td>{{ cat.cantidadProductos }}</td>
+                    <td align="center"><a href="{{ cat.url }}" target="_blank">Ir a Categoría</a></td>
+                    <td align="right">{{ cat.cantidadProductos }}</td>
                   </tr>
 
 
