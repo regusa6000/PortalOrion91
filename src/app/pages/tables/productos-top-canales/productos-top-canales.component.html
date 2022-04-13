@@ -1,0 +1,30 @@
+<nb-card>
+  <nb-card-header>Productos Top por Canal</nb-card-header>
+
+  <nb-card-body>
+
+    <div style=" display: flex; align-items: center; justify-content: end;">
+      <!--Select Canales-->
+      <div style="padding: 10px;">
+        <nb-select placeholder="Seleccione Canal" (selectedChange)="seleccionCanal($event)">
+          <nb-option *ngFor="let canal of canales" [value]="canal.value">{{ canal.name }}</nb-option>
+        </nb-select>
+      </div>
+      <!--Botones-->
+      <div>
+        <button nbButton status="primary" (click)="buscarSeleccion(0)" style="margin-right: 10px; margin-left: 10px;">Hoy</button>
+      </div>
+      <div>
+        <button nbButton status="primary" (click)="buscarSeleccion(15)" style="margin-right: 10px; margin-left: 10px;">Ultimos 15 dias</button>
+      </div>
+      <div>
+        <button nbButton status="primary" (click)="buscarSeleccion(30)" style="margin-right: 10px; margin-left: 10px;">Ultimos 30 dias</button>
+      </div>
+    </div>
+
+
+    <ng2-smart-table [settings]="config" [source]="source">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+

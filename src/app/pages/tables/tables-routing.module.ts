@@ -35,6 +35,7 @@ import { PreciosFijosMakroComponent } from './precios-fijos-makro/precios-fijos-
 import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-pedidos-tiendas.component';
 import { VentasPorHabitantesComponent } from './ventas-por-habitantes/ventas-por-habitantes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductosTopCanalesComponent } from './productos-top-canales/productos-top-canales.component';
 
 const routes: Routes = [{
   path: '',
@@ -171,6 +172,10 @@ const routes: Routes = [{
     {
       path: 'dashboard',
       component: DashboardComponent
+    },
+    {
+      path: 'productos-top-canales',
+      component: ProductosTopCanalesComponent
     }
   ],
 }];

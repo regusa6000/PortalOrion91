@@ -50,9 +50,10 @@ export class GraficoVentasUnaSemanaComponent implements OnInit {
               { value: data[0].Sum_Venca, name: 'Venca' },
               { value: data[0].Sum_Fnac, name: 'Fnac' },
               { value: data[0].Sum_MediaMarkt, name: 'MediaMarkt' },
-              { value: data[0].Sum_PcComponentes, name: 'PcComponentes' }
+              { value: data[0].Sum_PcComponentes, name: 'PcComponentes' },
+              { value: data[0].Sum_Wish, name: 'Wish' }
             ],
-            color: ['#008AF8','#131921','#002D72','#00E8CB','#E63107','#E41A15','#4674B4','#BDBEC0','#383637','#008B55','#52B9E2','#E8A6BC','#E1A925','#DF0000','#FF9400'],
+            color: ['#008AF8','#131921','#002D72','#00E8CB','#E63107','#E41A15','#4674B4','#BDBEC0','#383637','#008B55','#52B9E2','#E8A6BC','#E1A925','#DF0000','#FF9400','#17B3EA'],
             emphasis: {
               itemStyle: {
                 shadowBlur: 10,

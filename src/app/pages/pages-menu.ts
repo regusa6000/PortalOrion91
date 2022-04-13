@@ -115,6 +115,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Amazon',
         link: '/pages/tables/amazon-caracteres'
+      },
+      {
+        title: 'Productos Top/Canal',
+        link: '/pages/tables/productos-top-canales'
       }
     ]
   },

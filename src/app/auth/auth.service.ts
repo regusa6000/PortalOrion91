@@ -11,219 +11,234 @@ import { User, UserResponse } from '../shared/guards/components/models/user.inte
 export class AuthService {
 
 
-  urlVentasSemanales: string = 'http://vpnxer.grupohidalgos.com:8070/ventasSemanalesTiendas';
-  urlVentasSemanalesTiendas: string = 'http://vpnxer.grupohidalgos.com:8070/ventasSemanalesTodasLasTiendas';
+  urlVentasSemanales: string = 'http://192.168.30.148:8000/ventasSemanalesTiendas';
+  urlVentasSemanalesTiendas: string = 'http://192.168.30.148:8000/ventasSemanalesTodasLasTiendas';
 
   //Badges
-  urlControlPedidosPagadosBadge: string = 'http://vpnxer.grupohidalgos.com:8070/controlPedidosPagadosBadge';
-  urlControlPedidosAlmacenBadge: string = 'http://vpnxer.grupohidalgos.com:8070/pedidosAlmacenBadge';
-  urlBadgePagosFraccionados: string = 'http://vpnxer.grupohidalgos.com:8070/badgePedidosFraccionados';
-  urlBadgePedidosSinStockMakro: string = 'http://vpnxer.grupohidalgos.com:8070/badgepedidosSinStockMakro';
-  urlBadgeAliexpress: string = 'http://vpnxer.grupohidalgos.com:8070/badgeAliExpress';
-  urlCombinadosPredeterminadosSinStockBadge: string = 'http://vpnxer.grupohidalgos.com:8070/CombinadospredeterminadosSinStockCount';
-  urlControlManoManoBadge: string = 'http://vpnxer.grupohidalgos.com:8070/controlManoManoBadge';
-  urlBadgeCategoriasVacias: string = 'http://vpnxer.grupohidalgos.com:8070/controlCategoriasVaciasBadge';
-  urlBadgeTransferenciaBancariaSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/countTransferenciaBancariaSinStock'
+  urlControlPedidosPagadosBadge: string = 'http://192.168.30.148:8000/controlPedidosPagadosBadge';
+  urlControlPedidosAlmacenBadge: string = 'http://192.168.30.148:8000/pedidosAlmacenBadge';
+  urlBadgePagosFraccionados: string = 'http://192.168.30.148:8000/badgePedidosFraccionados';
+  urlBadgePedidosSinStockMakro: string = 'http://192.168.30.148:8000/badgepedidosSinStockMakro';
+  urlBadgeAliexpress: string = 'http://192.168.30.148:8000/badgeAliExpress';
+  urlCombinadosPredeterminadosSinStockBadge: string = 'http://192.168.30.148:8000/CombinadospredeterminadosSinStockCount';
+  urlControlManoManoBadge: string = 'http://192.168.30.148:8000/controlManoManoBadge';
+  urlBadgeCategoriasVacias: string = 'http://192.168.30.148:8000/controlCategoriasVaciasBadge';
+  urlBadgeTransferenciaBancariaSinStock: string = 'http://192.168.30.148:8000/countTransferenciaBancariaSinStock'
 
   //Alertas
-  urlPagosFraccionados: string = 'http://vpnxer.grupohidalgos.com:8070/pedidosFraccionados';
-  urlControlPedidosPagados: string = 'http://vpnxer.grupohidalgos.com:8070/controlPedidosPagados';
-  urlControlPedidosAlmacen: string = 'http://vpnxer.grupohidalgos.com:8070/controlPedidosAlmacen';
-  urlControlPreCompra: string = 'http://vpnxer.grupohidalgos.com:8070/controlPreCompras';
-  urlPedidosSinStockMakro: string = 'http://vpnxer.grupohidalgos.com:8070/pedidosSinStockMakro';
-  urlControlAliexpress: string = 'http://vpnxer.grupohidalgos.com:8070/controlAliExpress';
-  urlCombinadosPredeterminadosSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/CombinadospredeterminadosSinStock';
-  urlAlertasElementor: string = 'http://vpnxer.grupohidalgos.com:8070/productosDescatalogadosElementor'
-  urlBadgeProductosDescatalogadosElementor: string = 'http://vpnxer.grupohidalgos.com:8070/badgeProductosDescatalogadosElementor';
-  urlCatedoriasVacias: string = 'http://vpnxer.grupohidalgos.com:8070/controlCategoriasVacias';
-  urlTransferenciasBancariasSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/transferenciaBancariaSinStock';
+  urlPagosFraccionados: string = 'http://192.168.30.148:8000/pedidosFraccionados';
+  urlControlPedidosPagados: string = 'http://192.168.30.148:8000/controlPedidosPagados';
+  urlControlPedidosAlmacen: string = 'http://192.168.30.148:8000/controlPedidosAlmacen';
+  urlControlPreCompra: string = 'http://192.168.30.148:8000/controlPreCompras';
+  urlPedidosSinStockMakro: string = 'http://192.168.30.148:8000/pedidosSinStockMakro';
+  urlControlAliexpress: string = 'http://192.168.30.148:8000/controlAliExpress';
+  urlCombinadosPredeterminadosSinStock: string = 'http://192.168.30.148:8000/CombinadospredeterminadosSinStock';
+  urlAlertasElementor: string = 'http://192.168.30.148:8000/productosDescatalogadosElementor'
+  urlBadgeProductosDescatalogadosElementor: string = 'http://192.168.30.148:8000/badgeProductosDescatalogadosElementor';
+  urlCatedoriasVacias: string = 'http://192.168.30.148:8000/controlCategoriasVacias';
+  urlTransferenciasBancariasSinStock: string = 'http://192.168.30.148:8000/transferenciaBancariaSinStock';
 
   //Envios
-  urlControlTransportistas: string = 'http://vpnxer.grupohidalgos.com:8070/controlTransportistas';
-  urlCargarComboName: string = 'http://vpnxer.grupohidalgos.com:8070/cargarComboName';
-  urlControlTransportistasName: string = 'http://vpnxer.grupohidalgos.com:8070/controlTransportistasName/';
-  urlPorcentajeTransportistas: string = 'http://vpnxer.grupohidalgos.com:8070/porcentajeTransportistas';
+  urlControlTransportistas: string = 'http://192.168.30.148:8000/controlTransportistas';
+  urlCargarComboName: string = 'http://192.168.30.148:8000/cargarComboName';
+  urlControlTransportistasName: string = 'http://192.168.30.148:8000/controlTransportistasName/';
+  urlPorcentajeTransportistas: string = 'http://192.168.30.148:8000/porcentajeTransportistas';
 
   //Imagenes
-  urlImagenes: string = 'http://vpnxer.grupohidalgos.com:8070/imagenes';
+  urlImagenes: string = 'http://192.168.30.148:8000/imagenes';
 
   //Control ManoMano
-  urlControlManoAMano: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmano';
-  urlControlManoAManoPorId: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmano/';
-  urlManoManoDistinto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAManoDivision';
-  urlManoManoPrimero: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorPrimero';
-  urlManoManoSegundo: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSegundo';
-  urlManoManoTercero: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorTercero';
-  urlManoManoCuarto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorCuarto';
-  urlManoManoSexto: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSexto';
-  urlManoManoSeptimo: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorSeptimo';
-  urlManoManoOctavo: string = 'http://vpnxer.grupohidalgos.com:8070/manoAmanoPorOctavo';
+  urlControlManoAMano: string = 'http://192.168.30.148:8000/manoAmano';
+  urlControlManoAManoPorId: string = 'http://192.168.30.148:8000/manoAmano/';
+  urlManoManoDistinto: string = 'http://192.168.30.148:8000/manoAManoDivision';
+  urlManoManoPrimero: string = 'http://192.168.30.148:8000/manoAmanoPorPrimero';
+  urlManoManoSegundo: string = 'http://192.168.30.148:8000/manoAmanoPorSegundo';
+  urlManoManoTercero: string = 'http://192.168.30.148:8000/manoAmanoPorTercero';
+  urlManoManoCuarto: string = 'http://192.168.30.148:8000/manoAmanoPorCuarto';
+  urlManoManoSexto: string = 'http://192.168.30.148:8000/manoAmanoPorSexto';
+  urlManoManoSeptimo: string = 'http://192.168.30.148:8000/manoAmanoPorSeptimo';
+  urlManoManoOctavo: string = 'http://192.168.30.148:8000/manoAmanoPorOctavo';
 
   //Roturas Stock
-  urlRoturaStock: string = 'http://vpnxer.grupohidalgos.com:8070/roturaStock';
+  urlRoturaStock: string = 'http://192.168.30.148:8000/roturaStock';
 
   //Rutas de Makro
-  urlMakroTodosLosProductos: string = 'http://vpnxer.grupohidalgos.com:8070/productosTotalesMakro';
-  urlMakroOffersPublicados: string = 'http://vpnxer.grupohidalgos.com:8070/offersPublicados';
-  urlMakroOffersNoPublicados: string = 'http://vpnxer.grupohidalgos.com:8070/offerNoPublicados';
+  urlMakroTodosLosProductos: string = 'http://192.168.30.148:8000/productosTotalesMakro';
+  urlMakroOffersPublicados: string = 'http://192.168.30.148:8000/offersPublicados';
+  urlMakroOffersNoPublicados: string = 'http://192.168.30.148:8000/offerNoPublicados';
 
   //Rutas de Rango de Precios de Makro
-  urlTotalDeProductosRangoMakro: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakro';
-  urlListaDeRangosMakroPorEan13: string = 'http://vpnxer.grupohidalgos.com:8070/listaDeRangosMakro/';
-  urlActualizarRangosMakro: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarRango';
-  urlBuscarListado: string = 'http://vpnxer.grupohidalgos.com:8070/buscarListado/';
-  urlRegistrarNuevoRango: string = 'http://vpnxer.grupohidalgos.com:8070/registrarRangoMakro';
-  urlEliminarRango: string = 'http://vpnxer.grupohidalgos.com:8070/eliminarRango/';
+  urlTotalDeProductosRangoMakro: string = 'http://192.168.30.148:8000/productosPublicadosMakro';
+  urlListaDeRangosMakroPorEan13: string = 'http://192.168.30.148:8000/listaDeRangosMakro/';
+  urlActualizarRangosMakro: string = 'http://192.168.30.148:8000/actualizarRango';
+  urlBuscarListado: string = 'http://192.168.30.148:8000/buscarListado/';
+  urlRegistrarNuevoRango: string = 'http://192.168.30.148:8000/registrarRangoMakro';
+  urlEliminarRango: string = 'http://192.168.30.148:8000/eliminarRango/';
 
   //Rutas de Rango de Precios de Makro Select
-  urlProductosPublicadosMakroConRangoYConStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroConRangoYConStock';
-  urlProductosPublicadosMakroConRangoYSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroConRangoYSinStock';
-  urlProductosPublicadosMakroSinRangoYConStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroSinRangoYConStock';
-  urlProductosPublicadosMakroSinRangoYSinStock: string = 'http://vpnxer.grupohidalgos.com:8070/productosPublicadosMakroSinRangoYSinStock';
+  urlProductosPublicadosMakroConRangoYConStock: string = 'http://192.168.30.148:8000/productosPublicadosMakroConRangoYConStock';
+  urlProductosPublicadosMakroConRangoYSinStock: string = 'http://192.168.30.148:8000/productosPublicadosMakroConRangoYSinStock';
+  urlProductosPublicadosMakroSinRangoYConStock: string = 'http://192.168.30.148:8000/productosPublicadosMakroSinRangoYConStock';
+  urlProductosPublicadosMakroSinRangoYSinStock: string = 'http://192.168.30.148:8000/productosPublicadosMakroSinRangoYSinStock';
 
   //PruebaRangos
-  urlPruebaMakro: string = 'http://vpnxer.grupohidalgos.com:8070/pruebaRangos';
+  urlPruebaMakro: string = 'http://192.168.30.148:8000/pruebaRangos';
 
 
   //Categorias Redireccionadas
-  urlCategoriasRedireccionadas: string = 'http://vpnxer.grupohidalgos.com:8070/categoriasRedireccionadas';
-  urlCountCategoriasRedireccionadas: string = 'http://vpnxer.grupohidalgos.com:8070/countCategoriasRedireccionadas'
+  urlCategoriasRedireccionadas: string = 'http://192.168.30.148:8000/categoriasRedireccionadas';
+  urlCountCategoriasRedireccionadas: string = 'http://192.168.30.148:8000/countCategoriasRedireccionadas'
 
   //Rutas Ventas Productos
-  urlVentaProductos: string = 'http://vpnxer.grupohidalgos.com:8070/ventaProductos/';
+  urlVentaProductos: string = 'http://192.168.30.148:8000/ventaProductos/';
 
   //Sumatorias por Semana
-  urlSumatoriaPorSemana: string = 'http://vpnxer.grupohidalgos.com:8070/sumatoriaPorSemana';
-  urlSumatoriaPorSemanaOrion91: string = 'http://vpnxer.grupohidalgos.com:8070/sumatoriaOrion';
-  urlSumatoriaPorSemanaManoMano: string = 'http://vpnxer.grupohidalgos.com:8070/sumatoriaManoMano';
-  urlSumatorioPorSemanaCarrefour: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioCarrefour';
-  urlSumatorioPorSemanaAliExpress: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioAliExpress';
-  urlSumatorioPorSemanaAmazon: string = 'http://vpnxer.grupohidalgos.com:8070/sumatoriaAmazon';
-  urlSumatorioPorSemanaGrupon: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioGrupon';
-  urlSumatorioPorSemanaEmbargos: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioEmbargos';
-  urlSumatorioPorSemanaMequedoUno: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioMequedoUno';
-  urlSumatorioPorSemanaFnac: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioFnac';
-  urlSumatorioPorSemanaWish: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioWish';
-  urlSumatorioPorSemanaMakro: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioMakro';
-  urlSumatorioPorSemanaPcComponentes: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioPcComponenetes';
-  urlSumatorioPorSemanaSprinter: string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioSprinter';
-  urlSumatorioPorSemanaBulevip:string = 'http://vpnxer.grupohidalgos.com:8070/sumatorioBulevip';
+  urlSumatoriaPorSemana: string = 'http://192.168.30.148:8000/sumatoriaPorSemana';
+  urlSumatoriaPorSemanaOrion91: string = 'http://192.168.30.148:8000/sumatoriaOrion';
+  urlSumatoriaPorSemanaManoMano: string = 'http://192.168.30.148:8000/sumatoriaManoMano';
+  urlSumatorioPorSemanaCarrefour: string = 'http://192.168.30.148:8000/sumatorioCarrefour';
+  urlSumatorioPorSemanaAliExpress: string = 'http://192.168.30.148:8000/sumatorioAliExpress';
+  urlSumatorioPorSemanaAmazon: string = 'http://192.168.30.148:8000/sumatoriaAmazon';
+  urlSumatorioPorSemanaGrupon: string = 'http://192.168.30.148:8000/sumatorioGrupon';
+  urlSumatorioPorSemanaEmbargos: string = 'http://192.168.30.148:8000/sumatorioEmbargos';
+  urlSumatorioPorSemanaMequedoUno: string = 'http://192.168.30.148:8000/sumatorioMequedoUno';
+  urlSumatorioPorSemanaFnac: string = 'http://192.168.30.148:8000/sumatorioFnac';
+  urlSumatorioPorSemanaWish: string = 'http://192.168.30.148:8000/sumatorioWish';
+  urlSumatorioPorSemanaMakro: string = 'http://192.168.30.148:8000/sumatorioMakro';
+  urlSumatorioPorSemanaPcComponentes: string = 'http://192.168.30.148:8000/sumatorioPcComponenetes';
+  urlSumatorioPorSemanaSprinter: string = 'http://192.168.30.148:8000/sumatorioSprinter';
+  urlSumatorioPorSemanaBulevip:string = 'http://192.168.30.148:8000/sumatorioBulevip';
 
   //Rutas de Estadisticas
-  urlImporteDeVentas: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentas';
-  urlImporteDeVentasManoMano: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasManoMano';
-  urlImporteDeVentasCarrefour: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasCarrefour';
-  urlImporteDeVentasAliExpress: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasAliExpress';
-  urlImporteDeVentasAmazon: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasAmazon';
-  urlImporteDeVentasGroupon: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasGroupon';
-  urlImporteDeVentasEmbargos: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasEmbargos';
-  urlImporteDeVentasMequedoUno: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasMequedoUno';
-  urlImporteDeVentasFnac: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasFnac';
-  urlImporteDeVentasWish: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasWish';
-  urlImporteDeVentasMakro: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasMakro';
-  urlImporteDeVetasPcComponentes: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasPcComponentes';
-  urlImporteDeVentasSprinter: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasSprinter';
-  urlImporteDeVentasBulevip: string = 'http://vpnxer.grupohidalgos.com:8070/importeDeVentasBulevip';
+  urlImporteDeVentas: string = 'http://192.168.30.148:8000/importeDeVentas';
+  urlImporteDeVentasManoMano: string = 'http://192.168.30.148:8000/importeDeVentasManoMano';
+  urlImporteDeVentasCarrefour: string = 'http://192.168.30.148:8000/importeDeVentasCarrefour';
+  urlImporteDeVentasAliExpress: string = 'http://192.168.30.148:8000/importeDeVentasAliExpress';
+  urlImporteDeVentasAmazon: string = 'http://192.168.30.148:8000/importeDeVentasAmazon';
+  urlImporteDeVentasGroupon: string = 'http://192.168.30.148:8000/importeDeVentasGroupon';
+  urlImporteDeVentasEmbargos: string = 'http://192.168.30.148:8000/importeDeVentasEmbargos';
+  urlImporteDeVentasMequedoUno: string = 'http://192.168.30.148:8000/importeDeVentasMequedoUno';
+  urlImporteDeVentasFnac: string = 'http://192.168.30.148:8000/importeDeVentasFnac';
+  urlImporteDeVentasWish: string = 'http://192.168.30.148:8000/importeDeVentasWish';
+  urlImporteDeVentasMakro: string = 'http://192.168.30.148:8000/importeDeVentasMakro';
+  urlImporteDeVetasPcComponentes: string = 'http://192.168.30.148:8000/importeDeVentasPcComponentes';
+  urlImporteDeVentasSprinter: string = 'http://192.168.30.148:8000/importeDeVentasSprinter';
+  urlImporteDeVentasBulevip: string = 'http://192.168.30.148:8000/importeDeVentasBulevip';
 
   //Rutas de Historico de Stock
-  urlGraficoIdProducto: string = 'http://vpnxer.grupohidalgos.com:8070/controlStockGraficoIdProducto/';
-  urlControlHistoricoStock: string = 'http://vpnxer.grupohidalgos.com:8070/controlHistoricoStock/';
+  urlGraficoIdProducto: string = 'http://192.168.30.148:8000/controlStockGraficoIdProducto/';
+  urlControlHistoricoStock: string = 'http://192.168.30.148:8000/controlHistoricoStock/';
 
   //Rutas Ventas Categorias
-  urlCategoriasPorMeses: string  = 'http://vpnxer.grupohidalgos.com:8070/categoriasPorMeses';
-  urlCategoriasGeneral: string = 'http://vpnxer.grupohidalgos.com:8070/categoriasGeneral';
-  urlIdCategoriaPorMeses: string = 'http://vpnxer.grupohidalgos.com:8070/categoriaIdPorMeses/';
-  urlCategoriasIdPorMesesPorTienda: string = 'http://vpnxer.grupohidalgos.com:8070/categoriaIdPorMesesPorTienda/';
-  urlCategoriaPorTiendaOrionPorIdCategoria: string = 'http://vpnxer.grupohidalgos.com:8070/categoriaPorTiendaOrionPorIdCategoria/';
-  urlCategoriaPorTiendaWishPorIdCategoria: string = 'http://vpnxer.grupohidalgos.com:8070/categoriaPorTiendaWishPorIdCategoria/';
-  urlCategoriasPorTienda: string = 'http://vpnxer.grupohidalgos.com:8070/categoriasPorTiendas/';
-  urlCategoriasPorTiendaOrion: string = 'http://vpnxer.grupohidalgos.com:8070/categoriasPorTiendaOrion';
-  urlCategoriasPorTiendaWish: string = 'http://vpnxer.grupohidalgos.com:8070/categoriasPorTiendaWish';
+  urlCategoriasPorMeses: string  = 'http://192.168.30.148:8000/categoriasPorMeses';
+  urlCategoriasGeneral: string = 'http://192.168.30.148:8000/categoriasGeneral';
+  urlIdCategoriaPorMeses: string = 'http://192.168.30.148:8000/categoriaIdPorMeses/';
+  urlCategoriasIdPorMesesPorTienda: string = 'http://192.168.30.148:8000/categoriaIdPorMesesPorTienda/';
+  urlCategoriaPorTiendaOrionPorIdCategoria: string = 'http://192.168.30.148:8000/categoriaPorTiendaOrionPorIdCategoria/';
+  urlCategoriaPorTiendaWishPorIdCategoria: string = 'http://192.168.30.148:8000/categoriaPorTiendaWishPorIdCategoria/';
+  urlCategoriasPorTienda: string = 'http://192.168.30.148:8000/categoriasPorTiendas/';
+  urlCategoriasPorTiendaOrion: string = 'http://192.168.30.148:8000/categoriasPorTiendaOrion';
+  urlCategoriasPorTiendaWish: string = 'http://192.168.30.148:8000/categoriasPorTiendaWish';
 
   //Productos top entre fechas
-  urlProductosTopEntreFechas: string = 'http://vpnxer.grupohidalgos.com:8070/productosTopEntreFechas';
-  urlProductosTopUltimos: string = 'http://vpnxer.grupohidalgos.com:8070/productosTopUltimosDias';
-  urlProductosTopHoy: string = 'http://vpnxer.grupohidalgos.com:8070/productosTopHoy';
+  urlProductosTopEntreFechas: string = 'http://192.168.30.148:8000/productosTopEntreFechas';
+  urlProductosTopUltimos: string = 'http://192.168.30.148:8000/productosTopUltimosDias';
+  urlProductosTopHoy: string = 'http://192.168.30.148:8000/productosTopHoy';
 
   //Productos por categoria
-  urlCategoriaProductosName: string = 'http://vpnxer.grupohidalgos.com:8070/categoriasProductosName'
-  urlproductosPorIdCategoria: string = 'http://vpnxer.grupohidalgos.com:8070/productosPorIdCategoria/';
-  urlActualizarProducto: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarPosicionProducto/';
+  urlCategoriaProductosName: string = 'http://192.168.30.148:8000/categoriasProductosName'
+  urlproductosPorIdCategoria: string = 'http://192.168.30.148:8000/productosPorIdCategoria/';
+  urlActualizarProducto: string = 'http://192.168.30.148:8000/actualizarPosicionProducto/';
 
   //Grafico Categorias
-  urlGraficoCategorias: string = 'http://vpnxer.grupohidalgos.com:8070/arbolCategorias';
+  urlGraficoCategorias: string = 'http://192.168.30.148:8000/arbolCategorias';
 
 
   //Opiniones
-  urlListadoCanales: string = 'http://vpnxer.grupohidalgos.com:8070/listadoCanales';
-  urlListadoGeneralOpiniones: string = 'http://vpnxer.grupohidalgos.com:8070/listadoGeneral';
-  urlBaseTipoOpinion: string = 'http://vpnxer.grupohidalgos.com:8070/baseTipoOpinion/';
-  urlRegistrarPorcentaje: string = 'http://vpnxer.grupohidalgos.com:8070/registrarPorcentaje'
-  urlActualizarRegistroPorcentaje: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarPorcentaje';
-  urlEliminarRegistroPorcentaje: string = 'http://vpnxer.grupohidalgos.com:8070/eliminarPorcentaje/';
-  urlSelectOpiniones: string = 'http://vpnxer.grupohidalgos.com:8070/rellenarSelect';
-  urlGraficoOpiniones: string = 'http://vpnxer.grupohidalgos.com:8070/cargarGrafico/';
+  urlListadoCanales: string = 'http://192.168.30.148:8000/listadoCanales';
+  urlListadoGeneralOpiniones: string = 'http://192.168.30.148:8000/listadoGeneral';
+  urlBaseTipoOpinion: string = 'http://192.168.30.148:8000/baseTipoOpinion/';
+  urlRegistrarPorcentaje: string = 'http://192.168.30.148:8000/registrarPorcentaje'
+  urlActualizarRegistroPorcentaje: string = 'http://192.168.30.148:8000/actualizarPorcentaje';
+  urlEliminarRegistroPorcentaje: string = 'http://192.168.30.148:8000/eliminarPorcentaje/';
+  urlSelectOpiniones: string = 'http://192.168.30.148:8000/rellenarSelect';
+  urlGraficoOpiniones: string = 'http://192.168.30.148:8000/cargarGrafico/';
 
 
   //Incidencias
-  urlIncidenciasMensuales: string = 'http://vpnxer.grupohidalgos.com:8070/productosTopIncidenciasMensual';
+  urlIncidenciasMensuales: string = 'http://192.168.30.148:8000/productosTopIncidenciasMensual';
 
   //Zonas
-  urlCargarZonas: string = 'http://vpnxer.grupohidalgos.com:8070/cargarZonas';
-  urlCargarLinkPorIdZona: string = 'http://vpnxer.grupohidalgos.com:8070/cargarLinksPorZonas/';
-  urlCrearNuevaZona: string = 'http://vpnxer.grupohidalgos.com:8070/crearNuevaZona';
-  urlActualizarZona: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarDatosZona'
-  urlCargarLinks: string = 'http://vpnxer.grupohidalgos.com:8070/cargarLinks';
-  urlCargarSelectZonas: string = 'http://vpnxer.grupohidalgos.com:8070/cargarSelectZonas';
-  urlCrearNuevoLink: string = 'http://vpnxer.grupohidalgos.com:8070/crearNuevoLink';
-  urlActualizarLink: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarLink';
-  urlEliminarLink: string = 'http://vpnxer.grupohidalgos.com:8070/eliminarLink/';
+  urlCargarZonas: string = 'http://192.168.30.148:8000/cargarZonas';
+  urlCargarLinkPorIdZona: string = 'http://192.168.30.148:8000/cargarLinksPorZonas/';
+  urlCrearNuevaZona: string = 'http://192.168.30.148:8000/crearNuevaZona';
+  urlActualizarZona: string = 'http://192.168.30.148:8000/actualizarDatosZona'
+  urlCargarLinks: string = 'http://192.168.30.148:8000/cargarLinks';
+  urlCargarSelectZonas: string = 'http://192.168.30.148:8000/cargarSelectZonas';
+  urlCrearNuevoLink: string = 'http://192.168.30.148:8000/crearNuevoLink';
+  urlActualizarLink: string = 'http://192.168.30.148:8000/actualizarLink';
+  urlEliminarLink: string = 'http://192.168.30.148:8000/eliminarLink/';
 
   //Precios Cambiados
-  urlPreciosCambiados: string = 'http://vpnxer.grupohidalgos.com:8070/controlPreciosCambiadosAx';
-  urlBadgePreciosCambiados: string = 'http://vpnxer.grupohidalgos.com:8070/badgeControlPreciosCambiadosAx';
+  urlPreciosCambiados: string = 'http://192.168.30.148:8000/controlPreciosCambiadosAx';
+  urlBadgePreciosCambiados: string = 'http://192.168.30.148:8000/badgeControlPreciosCambiadosAx';
 
 
   //Faqs
-  urlCargarFaqs: string = 'http://vpnxer.grupohidalgos.com:8070/cargarFaqs';
-  urlCrearFaqs: string = 'http://vpnxer.grupohidalgos.com:8070/crearFaq';
-  urlActualizarFaq: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarFaq';
-  urlEliminarFaq: string = 'http://vpnxer.grupohidalgos.com:8070/eliminarFaq/';
+  urlCargarFaqs: string = 'http://192.168.30.148:8000/cargarFaqs';
+  urlCrearFaqs: string = 'http://192.168.30.148:8000/crearFaq';
+  urlActualizarFaq: string = 'http://192.168.30.148:8000/actualizarFaq';
+  urlEliminarFaq: string = 'http://192.168.30.148:8000/eliminarFaq/';
 
 
   //Alertas Amazon
-  urlAlertasAmazon: string = 'http://vpnxer.grupohidalgos.com:8070/alertaCaracteresAmazon';
-  urlCountAlertasAmazon: string = 'http://vpnxer.grupohidalgos.com:8070/countAlertaCaracteresAmazon';
+  urlAlertasAmazon: string = 'http://192.168.30.148:8000/alertaCaracteresAmazon';
+  urlCountAlertasAmazon: string = 'http://192.168.30.148:8000/countAlertaCaracteresAmazon';
 
   //Alertas Pre-Almacen
-  urlPreAlamcen: string = 'http://vpnxer.grupohidalgos.com:8070/preAlmacen';
-  urlCountPreAlmacen: string = 'http://vpnxer.grupohidalgos.com:8070/countPreAlmacen';
+  urlPreAlamcen: string = 'http://192.168.30.148:8000/preAlmacen';
+  urlCountPreAlmacen: string = 'http://192.168.30.148:8000/countPreAlmacen';
 
   //Favoritos
-  urlCargarTopFavoritos: string = 'http://vpnxer.grupohidalgos.com:8070/cargarTopFavoritos';
-  urlCargarGraficoFavoritos: string = 'http://vpnxer.grupohidalgos.com:8070/cargarGraficoFavoritos';
+  urlCargarTopFavoritos: string = 'http://192.168.30.148:8000/cargarTopFavoritos';
+  urlCargarGraficoFavoritos: string = 'http://192.168.30.148:8000/cargarGraficoFavoritos';
 
   //Precios Fijos
-  urlCargarSelectPreciosFijos: string = 'http://vpnxer.grupohidalgos.com:8070/cargarSelectProductos';
-  urlCargarTablaPreciosFijos: string = 'http://vpnxer.grupohidalgos.com:8070/cargarTablaPreciosFijos';
-  urlRegistrarPrecioFijo: string = 'http://vpnxer.grupohidalgos.com:8070/registrarPrecioFijo';
-  urlEliminarPrecioFijo: string = 'http://vpnxer.grupohidalgos.com:8070/eliminarPrecioFijo/';
-  urlActualizarPrecioFijo: string = 'http://vpnxer.grupohidalgos.com:8070/actualizarPrecioFijo';
+  urlCargarSelectPreciosFijos: string = 'http://192.168.30.148:8000/cargarSelectProductos';
+  urlCargarTablaPreciosFijos: string = 'http://192.168.30.148:8000/cargarTablaPreciosFijos';
+  urlRegistrarPrecioFijo: string = 'http://192.168.30.148:8000/registrarPrecioFijo';
+  urlEliminarPrecioFijo: string = 'http://192.168.30.148:8000/eliminarPrecioFijo/';
+  urlActualizarPrecioFijo: string = 'http://192.168.30.148:8000/actualizarPrecioFijo';
 
   //Ventas por Habitante
-  urlVentasHabitantes: string = 'http://vpnxer.grupohidalgos.com:8070/ventasHabitantes'
+  urlVentasHabitantes: string = 'http://192.168.30.148:8000/ventasHabitantes'
 
   //Dashboard
-  urlAvanceSemanal: string = 'http://vpnxer.grupohidalgos.com:8070/avanceSemanal'
-  urlGraficoVentas: string = 'http://vpnxer.grupohidalgos.com:8070/graficoVentas'
-  urlGraficoVentasUnMes: string = 'http://vpnxer.grupohidalgos.com:8070/graficoVentasUnMes';
-  urlGraficoVentasUnaSemana: string = 'http://vpnxer.grupohidalgos.com:8070/graficoVentasUnaSemana'
-  urlVentasUltimaSemana: string = 'http://vpnxer.grupohidalgos.com:8070/ventasSemanalesDashBoard';
-  urlRoturaStockEnSemana: string = 'http://vpnxer.grupohidalgos.com:8070/roturaDeStock';
-  urlGraficoVentasPaisesHoy: string = 'http://vpnxer.grupohidalgos.com:8070/graficoVentasPaisesHoy';
-  urlGraficoVentasPaisesUnaSemana: string = 'http://vpnxer.grupohidalgos.com:8070/graficoVentasPaisesUnaSemana';
-  urlGraficoVentasPaisesUnMes: string = 'http://vpnxer.grupohidalgos.com:8070/graficoVentasPaisesUnMes';
-  urlGraficoComparacionVentas: string = 'http://vpnxer.grupohidalgos.com:8070/graficoComparacionVentas';
+  urlAvanceSemanal: string = 'http://192.168.30.148:8000/avanceSemanal'
+  urlGraficoVentas: string = 'http://192.168.30.148:8000/graficoVentas'
+  urlGraficoVentasUnMes: string = 'http://192.168.30.148:8000/graficoVentasUnMes';
+  urlGraficoVentasUnaSemana: string = 'http://192.168.30.148:8000/graficoVentasUnaSemana'
+  urlVentasUltimaSemana: string = 'http://192.168.30.148:8000/ventasSemanalesDashBoard';
+  urlRoturaStockEnSemana: string = 'http://192.168.30.148:8000/roturaDeStock';
+  urlGraficoVentasPaisesHoy: string = 'http://192.168.30.148:8000/graficoVentasPaisesHoy';
+  urlGraficoVentasPaisesUnaSemana: string = 'http://192.168.30.148:8000/graficoVentasPaisesUnaSemana';
+  urlGraficoVentasPaisesUnMes: string = 'http://192.168.30.148:8000/graficoVentasPaisesUnMes';
+  urlGraficoComparacionVentas: string = 'http://192.168.30.148:8000/graficoComparacionVentas';
+
+  //Productos Top Por Canales Hoy
+  urlProductosTopCanales: string = 'http://192.168.30.148:8000/productosTopCanales/';
+  urlProductosTopOrion: string = 'http://192.168.30.148:8000/productosTopCanalOrion';
+  urlProductosTopWish: string = 'http://192.168.30.148:8000/productosTopCanalWish';
+
+  //Productos Top por Canales en los ultimos 15 dias
+  urlProductosTopCanales15Dias: string = 'http://192.168.30.148:8000/productosTopCanales15Dias/';
+  urlProductosTopOrion15Dias: string = 'http://192.168.30.148:8000/productosTopCanalOrion15Dias';
+  urlProductosTopWish15Dias: string = 'http://192.168.30.148:8000/productosTopCanalWish15Dias';
+
+  //Productos Top por Canales en lso ultimos 30 dias
+  urlProductosTopCanales30Dias: string = 'http://192.168.30.148:8000/productosTopCanales30Dias/';
+  urlProductosTopOrion30Dias: string = 'http://192.168.30.148:8000/productosTopCanalOrion30Dias';
+  urlProductosTopWish30Dias: string = 'http://192.168.30.148:8000/productosTopCanalWish30Dias';
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -236,7 +251,7 @@ export class AuthService {
   //Parte del Login
     login(authData: User): Observable<UserResponse | void> {
       return this.http
-      .post<UserResponse>('http://vpnxer.grupohidalgos.com:8070/login/', authData)
+      .post<UserResponse>('http://192.168.30.148:8000/login/', authData)
       .pipe(
         map( (res: UserResponse) => {
           console.log(res.data)
@@ -924,4 +939,45 @@ export class AuthService {
     return this.http.get(direccion)
   }
 
+  //Productos Top Por canales Hoy
+  productosTopCanales(variable: number){
+    let direccion = this.urlProductosTopCanales + variable
+    return this.http.get(direccion)
+  }
+  productosTopCanalOrion(){
+    let direccion = this.urlProductosTopOrion
+    return this.http.get(direccion)
+  }
+  productosTopCanalWish(){
+    let direccion = this.urlProductosTopWish
+    return this.http.get(direccion)
+  }
+
+  //Productos Top Por Canales en los ultimos 15 dias
+  productosTopCanales15Dias(variable: number){
+    let direccion = this.urlProductosTopCanales15Dias + variable
+    return this.http.get(direccion)
+  }
+  productosTopCanalOrion15Dias(){
+    let direccion = this.urlProductosTopOrion15Dias
+    return this.http.get(direccion)
+  }
+  productosTopCanalWish15Dias(){
+    let direccion = this.urlProductosTopWish15Dias
+    return this.http.get(direccion)
+  }
+
+  //Productos Top Por Canales en los ultimos 30 dias
+  productosTopCanales30Dias(variable: number){
+    let direccion = this.urlProductosTopCanales30Dias + variable
+    return this.http.get(direccion)
+  }
+  productosTopCanalOrion30Dias(){
+    let direccion = this.urlProductosTopOrion30Dias
+    return this.http.get(direccion)
+  }
+  productosTopCanalWish30Dias(){
+    let direccion = this.urlProductosTopWish30Dias
+    return this.http.get(direccion)
+  }
 }

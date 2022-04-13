@@ -1,30 +1,30 @@
 <div id="ventasSemanales">
-  <table class="table table-striped">
+  <table class="table table-striped" style="height: 429px;">
     <thead>
       <tr>
         <th scope="col">Fecha</th>
-        <th scope="col">Porcentaje</th>
-        <th scope="col">Total Pedidos</th>
-        <th scope="col">Total con Iva</th>
+        <th scope="col" style="text-align: center;">Porcentaje</th>
+        <th scope="col" style="text-align: center;">Total Pedidos</th>
+        <th scope="col" style="text-align: center;">Total con Iva</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let dato of datos">
         <td>{{ dato.fecha }}</td>
-        <td *ngIf="dato.porcentaje < 0">
+        <td *ngIf="dato.porcentaje < 0" align="center">
           <div class="caja">
-            <!-- <img src= "../../../../assets/images/abajo.png" class="imagen"><span class="rojo">{{ dato.porcentaje }}%</span> -->
-            <img src= "/orion/assets/images/abajo.png" class="imagen"><span class="rojo">{{ dato.porcentaje }}%</span>
+            <img src= "../../../../assets/images/abajo.png" class="imagen"><span class="rojo">{{ dato.porcentaje }}%</span>
+            <!-- <img src= "/orion/assets/images/abajo.png" class="imagen"><span class="rojo">{{ dato.porcentaje }}%</span> -->
           </div>
         </td>
-        <td *ngIf="dato.porcentaje > 0">
+        <td *ngIf="dato.porcentaje > 0" align="center">
           <div class="caja">
-            <!-- <img src= "../../../../assets/images/arriba.png" class="imagen"><span class="verde">{{ dato.porcentaje }}%</span> -->
-            <img src= "/orion/assets/images/arriba.png" class="imagen"><span class="verde">{{ dato.porcentaje }}%</span>
+            <img src= "../../../../assets/images/arriba.png" class="imagen"><span class="verde">{{ dato.porcentaje }}%</span>
+            <!-- <img src= "/orion/assets/images/arriba.png" class="imagen"><span class="verde">{{ dato.porcentaje }}%</span> -->
           </div>
         </td>
         <td align="center">{{ dato.tot_ped }}</td>
-        <td>{{ dato.tot_sum_IVA | currency:'EUR': true}}</td>
+        <td align="center">{{ dato.tot_sum_IVA | currency:'EUR': true}}</td>
       </tr>
     </tbody>
   </table>

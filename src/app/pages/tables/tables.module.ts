@@ -55,6 +55,7 @@ import { GraficoVentasPaisesHoyComponent } from './dashboard/components/grafico-
 import { GraficoVentasPaisesUnaSemanaComponent } from './dashboard/components/grafico-ventas-paises-una-semana/grafico-ventas-paises-una-semana.component';
 import { GraficoVentasPaisesUnMesComponent } from './dashboard/components/grafico-ventas-paises-un-mes/grafico-ventas-paises-un-mes.component';
 import { GraficoComparacionVentasComponent } from './dashboard/components/grafico-comparacion-ventas/grafico-comparacion-ventas.component';
+import { ProductosTopCanalesComponent } from './productos-top-canales/productos-top-canales.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -128,6 +129,7 @@ import { GraficoComparacionVentasComponent } from './dashboard/components/grafic
     GraficoVentasPaisesUnaSemanaComponent,
     GraficoVentasPaisesUnMesComponent,
     GraficoComparacionVentasComponent,
+    ProductosTopCanalesComponent,
   ],
 })
 export class TablesModule { }

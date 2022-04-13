@@ -72,17 +72,16 @@ export class GraficoComparacionVentasComponent implements OnInit {
         },
         series: [
           {
-            name: '2021',
-            type: 'line',
-            stack: 'Total',
-            data: this.año2021
-          },
-          {
             name: '2022',
             type: 'line',
-            stack: 'Total',
             data: this.año2022
+          },
+          {
+            name: '2021',
+            type: 'line',
+            data: this.año2021
           }
+
         ]
       };
 
