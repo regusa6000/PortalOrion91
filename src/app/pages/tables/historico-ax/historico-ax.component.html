@@ -1,0 +1,23 @@
+<nb-card>
+  <nb-card-header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div> Historico - Ax </div>
+      <div style="display: flex;">
+        <div>
+          <input type="text" nbInput [(ngModel)]="orPedido" placeholder="OR Pedido">
+        </div>
+        <div style="margin-left: 10px;">
+          <button nbButton status="primary" (click)="buscarOr()"><nb-icon icon="search-outline"></nb-icon></button>
+        </div>
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body *ngIf="ok > 0">
+
+    <ngx-incidencias [incidencia]="incidencias"></ngx-incidencias>
+    <ngx-transportista [cargas]="cargas"></ngx-transportista>
+
+  </nb-card-body>
+
+</nb-card>

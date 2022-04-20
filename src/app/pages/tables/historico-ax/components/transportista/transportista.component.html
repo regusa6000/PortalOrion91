@@ -1,0 +1,25 @@
+<nb-card>
+  <nb-card-header>Cargas</nb-card-header>
+
+  <nb-card-body>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Agencia</th>
+          <th scope="col">Código</th>
+          <th scope="col">Fecha Actualización</th>
+          <th scope="col">Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let carga of cargas">
+          <td>{{ carga.NombreAgencia }}</td>
+          <td>{{ carga.Codigo }}</td>
+          <td>{{ carga.FechaActualizacion }}</td>
+          <td>{{ carga.Preparado }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+
+</nb-card>

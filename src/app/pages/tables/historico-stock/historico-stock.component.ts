@@ -74,7 +74,7 @@ export class HistoricoStockComponent implements OnInit {
 
   toggleLoadingAnimation() {
     this.loading = true;
-    setTimeout(() => this.loading = false, 90000);
+    setTimeout(() => this.loading = false, 20000);
   }
 
   lineaGrafica(arrayFechas: any, arrayStock: any){

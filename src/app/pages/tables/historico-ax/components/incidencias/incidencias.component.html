@@ -1,0 +1,25 @@
+<nb-card>
+  <nb-card-header>Incidencias</nb-card-header>
+
+  <nb-card-body>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Or Pedido</th>
+          <th scope="col">Id Tipo</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Fecha Incidencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let inci of incidencia">
+          <td>{{ inci.ACTIVITYID }}</td>
+          <td>{{ inci.TIPOID }}</td>
+          <td>{{ inci.LONGDESCRIPTION }}</td>
+          <td>{{ inci.FECHACREACION }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+
+</nb-card>

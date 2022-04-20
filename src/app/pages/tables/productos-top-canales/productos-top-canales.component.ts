@@ -13,7 +13,8 @@ export class ProductosTopCanalesComponent implements OnInit {
   canales = [
     {value: 1, name: 'Orion91'}, {value: 2, name: 'Amazon'}, {value: 3, name: 'Makro'}, {value: 4, name: 'ManoMano'},{value: 5, name: 'AliExpress'},
     {value: 6, name: 'Worten'}, {value: 7, name: 'Carrefour'}, {value: 8, name: 'Embargos'}, {value: 9, name: 'MequedoUno'}, {value: 10, name: 'Sprinter'},
-    {value: 11, name: 'Bulevip'},{value: 12, name: 'Venca'}, {value: 13, name: 'Fnac'}, {value: 14, name: 'Wish'}, {value: 15, name: 'MediaMarkt'}
+    {value: 11, name: 'Bulevip'},{value: 12, name: 'Venca'}, {value: 13, name: 'Fnac'}, {value: 14, name: 'Wish'}, {value: 15, name: 'MediaMarkt'},
+    {value: 16, name: 'PcComponentes'},{value: 17, name: 'Vipalia'}
   ]
 
   constructor(private authSvc: AuthService) { }

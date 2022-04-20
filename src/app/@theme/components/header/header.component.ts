@@ -50,6 +50,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private router: Router) {
   }
 
+  redireccion(){
+    this.router.navigate(['pages/tables/buscador-de-productos']);
+  }
+
   ngOnInit() {
 
     let datosUsuario = localStorage.getItem('auth_app_token')

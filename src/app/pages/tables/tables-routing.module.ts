@@ -36,6 +36,11 @@ import { DiarioPedidosTiendasComponent } from './diario-pedidos-tiendas/diario-p
 import { VentasPorHabitantesComponent } from './ventas-por-habitantes/ventas-por-habitantes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductosTopCanalesComponent } from './productos-top-canales/productos-top-canales.component';
+import { HistoricoAxComponent } from './historico-ax/historico-ax.component';
+import { PropuestaComponent } from './propuesta/propuesta.component';
+import { ProductoNoPublicadosAmazonComponent } from './producto-no-publicados-amazon/producto-no-publicados-amazon.component';
+import { BuscadorDeProductosComponent } from './buscador-de-productos/buscador-de-productos.component';
+import { AmazonNoPublicadoComponent } from './amazon-no-publicado/amazon-no-publicado.component';
 
 const routes: Routes = [{
   path: '',
@@ -176,6 +181,26 @@ const routes: Routes = [{
     {
       path: 'productos-top-canales',
       component: ProductosTopCanalesComponent
+    },
+    {
+      path: 'historico-ax',
+      component: HistoricoAxComponent
+    },
+    {
+      path: 'propuesta',
+      component: PropuestaComponent
+    },
+    {
+      path: 'productos-no-publicados-amazon',
+      component: ProductoNoPublicadosAmazonComponent
+    },
+    {
+      path: 'buscador-de-productos',
+      component: BuscadorDeProductosComponent
+    },
+    {
+      path: 'amazon-no-publicado',
+      component: AmazonNoPublicadoComponent
     }
   ],
 }];

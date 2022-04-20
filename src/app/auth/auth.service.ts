@@ -194,6 +194,8 @@ export class AuthService {
   //Alertas Amazon
   urlAlertasAmazon: string = 'http://192.168.30.148:8000/alertaCaracteresAmazon';
   urlCountAlertasAmazon: string = 'http://192.168.30.148:8000/countAlertaCaracteresAmazon';
+  urlProductosNoPublicadosAmazon: string = 'http://192.168.30.148:8000/productosNoPublicadosAmazon';
+  urlProductosNoPublicadosAmazonMP: string = 'http://192.168.30.148:8000/productosNoPublicadosAmazonMP';
 
   //Alertas Pre-Almacen
   urlPreAlamcen: string = 'http://192.168.30.148:8000/preAlmacen';
@@ -239,6 +241,24 @@ export class AuthService {
   urlProductosTopCanales30Dias: string = 'http://192.168.30.148:8000/productosTopCanales30Dias/';
   urlProductosTopOrion30Dias: string = 'http://192.168.30.148:8000/productosTopCanalOrion30Dias';
   urlProductosTopWish30Dias: string = 'http://192.168.30.148:8000/productosTopCanalWish30Dias';
+
+  //Historico Ax
+  urlCargarToken: string = 'http://vpnxer.grupohidalgos.com:8080/api/loginPortal';
+  urlCargarIncidencia: string = 'http://172.26.1.217/api/INCIgetPedido';
+
+  //Presupuestos
+  urlCargarSelectEstados: string = 'http://192.168.30.148:8000/cargarSelectEstados';
+  urlVistaPresupuestos: string = 'http://192.168.30.148:8000/vistaPresupuestos';
+  urlRegistrasrPresupuesto: string = 'http://192.168.30.148:8000/registrarPresupuesto';
+  urlEliminarPresupuesto: string = 'http://192.168.30.148:8000/eliminarPresupuesto/';
+  urlActualizarPresupuesto: string = 'http://192.168.30.148:8000/actualizarPresupuesto';
+
+  //Buscador de Productos
+  urlBuscadorDeProductos: string = 'http://192.168.30.148:8000/buscadorProductos/';
+
+  //Productos sin ean13
+  urlProductosSinEan13: string = 'http://192.168.30.148:8000/productosSinEan13';
+  urlCountProductoSinEan13: string = 'http://192.168.30.148:8000/countProductosSinEan13';
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -847,6 +867,14 @@ export class AuthService {
     let direccion = this.urlCountAlertasAmazon
     return this.http.get(direccion)
   }
+  productosNoPublicadosAmazon(){
+    let direccion = this.urlProductosNoPublicadosAmazon
+    return this.http.get(direccion)
+  }
+  productosNoPublicadosAmazonMP(){
+    let direccion = this.urlProductosNoPublicadosAmazonMP
+    return this.http.get(direccion)
+  }
 
   //Pre-Almacen
   preAlmacen(){
@@ -980,4 +1008,53 @@ export class AuthService {
     let direccion = this.urlProductosTopWish30Dias
     return this.http.get(direccion)
   }
+
+  //Historico Ax
+  cargarToken(json: any){
+    let direccion = this.urlCargarToken
+    return this.http.post(direccion,json)
+  }
+  cargarIncidencia(json: any){
+    let direccion = this.urlCargarIncidencia
+    return this.http.post(direccion,json)
+  }
+
+  //Presupuestos
+  cargarSelectEstados(){
+    let direccion = this.urlCargarSelectEstados
+    return this.http.get(direccion)
+  }
+  vistaPresupuestos(){
+    let direccion = this.urlVistaPresupuestos
+    return this.http.get(direccion)
+  }
+  registrarPresupuesto(json: any){
+    let direccion = this.urlRegistrasrPresupuesto
+    return this.http.post(direccion,json)
+  }
+  eliminarPresupuesto(idPresupuesto: number){
+    let direccion = this.urlEliminarPresupuesto + idPresupuesto
+    return this.http.delete(direccion)
+  }
+  actualizarPresupuesto(json: any){
+    let direccion = this.urlActualizarPresupuesto
+    return this.http.put(direccion,json)
+  }
+
+  //Buscador de Productos
+  buscadorDeProductos(variable: any){
+    let direccion = this.urlBuscadorDeProductos + variable
+    return this.http.get(direccion)
+  }
+
+  //Productos Sin Ean13
+  productosSinEan13(){
+    let direccion = this.urlProductosSinEan13
+    return this.http.get(direccion)
+  }
+  countProductosSinEan13(){
+    let direccion = this.urlCountProductoSinEan13
+    return this.http.get(direccion)
+  }
+
 }

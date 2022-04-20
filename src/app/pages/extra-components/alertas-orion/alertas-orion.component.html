@@ -96,6 +96,14 @@
   </nb-card-body>
 </nb-card>
 
+<!--Productos Sin Ean13-->
+<nb-card *ngIf="ean13 > 0">
+  <nb-card-header>Productos sin Ean13</nb-card-header>
+  <nb-card-body>
+    <ngx-productos-sin-ean13></ngx-productos-sin-ean13>
+  </nb-card-body>
+</nb-card>
+
 <!--Productos desactivados en elementor-->
 <!-- <nb-card>
   <nb-card-header>Productos desactivados en slider de elementor</nb-card-header>

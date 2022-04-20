@@ -34,6 +34,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Ventas Por Habitantes',
         link: '/pages/tables/ventas-por-habitantes'
+      },
+      {
+        title: 'Historico - Ax',
+        link: '/pages/tables/historico-ax'
+      },
+      {
+        title: 'Presupuestos',
+        link: '/pages/tables/propuesta'
       }
     ]
   },
@@ -59,6 +67,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
           {
             title: 'Productos Faqs',
             link: '/pages/tables/productos-faqs'
+          },
+          {
+            title: 'Buscador de Productos',
+            link: '/pages/tables/buscador-de-productos'
           },
           {
             title: 'Productos Urls Internas',
@@ -114,7 +126,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Amazon',
-        link: '/pages/tables/amazon-caracteres'
+        children: [
+          {
+            title: 'No Publicados',
+            link: '/pages/tables/amazon-no-publicado'
+          },
+          {
+            title: 'Amazon Errores',
+            link: '/pages/tables/amazon-caracteres'
+          },
+          {
+            title: "MP Amazon 'NO' ",
+            link: '/pages/tables/productos-no-publicados-amazon'
+          }
+        ]
       },
       {
         title: 'Productos Top/Canal',

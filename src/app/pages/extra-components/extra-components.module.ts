@@ -51,6 +51,7 @@ import { AlertasAmazonComponent } from './alertas-orion/components/alertas-amazo
 import { PreAlmacenComponent } from './alertas-orion/components/pre-almacen/pre-almacen.component';
 import { CategoriasVaciasComponent } from './alertas-orion/components/categorias-vacias/categorias-vacias.component';
 import { PedidoTransferenciaBancariaComponent } from './alertas-orion/components/pedido-transferencia-bancaria/pedido-transferencia-bancaria.component';
+import { ProductosSinEan13Component } from './alertas-orion/components/productos-sin-ean13/productos-sin-ean13.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -109,6 +110,7 @@ const MODULES = [
     PreAlmacenComponent,
     CategoriasVaciasComponent,
     PedidoTransferenciaBancariaComponent,
+    ProductosSinEan13Component,
   ],
 })
 export class ExtraComponentsModule { }

@@ -56,6 +56,14 @@ import { GraficoVentasPaisesUnaSemanaComponent } from './dashboard/components/gr
 import { GraficoVentasPaisesUnMesComponent } from './dashboard/components/grafico-ventas-paises-un-mes/grafico-ventas-paises-un-mes.component';
 import { GraficoComparacionVentasComponent } from './dashboard/components/grafico-comparacion-ventas/grafico-comparacion-ventas.component';
 import { ProductosTopCanalesComponent } from './productos-top-canales/productos-top-canales.component';
+import { HistoricoAxComponent } from './historico-ax/historico-ax.component';
+import { IncidenciasComponent } from './historico-ax/components/incidencias/incidencias.component';
+import { PvcAxComponent } from './historico-ax/components/pvc-ax/pvc-ax.component';
+import { TransportistaComponent } from './historico-ax/components/transportista/transportista.component';
+import { PropuestaComponent } from './propuesta/propuesta.component';
+import { ProductoNoPublicadosAmazonComponent } from './producto-no-publicados-amazon/producto-no-publicados-amazon.component';
+import { BuscadorDeProductosComponent } from './buscador-de-productos/buscador-de-productos.component';
+import { AmazonNoPublicadoComponent } from './amazon-no-publicado/amazon-no-publicado.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -130,6 +138,14 @@ import { ProductosTopCanalesComponent } from './productos-top-canales/productos-
     GraficoVentasPaisesUnMesComponent,
     GraficoComparacionVentasComponent,
     ProductosTopCanalesComponent,
+    HistoricoAxComponent,
+    IncidenciasComponent,
+    PvcAxComponent,
+    TransportistaComponent,
+    PropuestaComponent,
+    ProductoNoPublicadosAmazonComponent,
+    BuscadorDeProductosComponent,
+    AmazonNoPublicadoComponent,
   ],
 })
 export class TablesModule { }
