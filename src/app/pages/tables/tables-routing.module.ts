@@ -41,6 +41,7 @@ import { PropuestaComponent } from './propuesta/propuesta.component';
 import { ProductoNoPublicadosAmazonComponent } from './producto-no-publicados-amazon/producto-no-publicados-amazon.component';
 import { BuscadorDeProductosComponent } from './buscador-de-productos/buscador-de-productos.component';
 import { AmazonNoPublicadoComponent } from './amazon-no-publicado/amazon-no-publicado.component';
+import { ProductoConPocasImagenesComponent } from './producto-con-pocas-imagenes/producto-con-pocas-imagenes.component';
 
 const routes: Routes = [{
   path: '',
@@ -201,6 +202,10 @@ const routes: Routes = [{
     {
       path: 'amazon-no-publicado',
       component: AmazonNoPublicadoComponent
+    },
+    {
+      path: 'productos-con-pocas-imagenes',
+      component: ProductoConPocasImagenesComponent
     }
   ],
 }];

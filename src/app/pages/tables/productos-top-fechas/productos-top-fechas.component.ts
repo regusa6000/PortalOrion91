@@ -68,6 +68,14 @@ export class ProductosTopFechasComponent implements OnInit {
         title: 'Producto',
         type: 'string',
       },
+      atributo: {
+        title: 'Atributo',
+        type: 'string'
+      },
+      valor: {
+        title: 'Valor',
+        type: 'string'
+      },
       nombre_cat: {
         title: 'Categoria',
         type: 'string',

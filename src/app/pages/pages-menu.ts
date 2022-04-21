@@ -73,6 +73,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/buscador-de-productos'
           },
           {
+            title: 'Productos con pocas IMG',
+            link: '/pages/tables/productos-con-pocas-imagenes'
+          },
+          {
             title: 'Productos Urls Internas',
           }
         ]

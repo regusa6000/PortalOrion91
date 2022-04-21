@@ -43,6 +43,14 @@ export class IncidenciasMensualesComponent implements OnInit {
         title: 'Producto',
         type: 'string',
       },
+      atributo: {
+        title: 'Atributo',
+        type: 'string'
+      },
+      valor: {
+        title: 'Valor',
+        type: 'string'
+      },
       cantidadIncidencias: {
         title: 'Cantidad Incidencias',
         type: 'number',

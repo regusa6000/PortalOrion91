@@ -260,6 +260,9 @@ export class AuthService {
   urlProductosSinEan13: string = 'http://192.168.30.148:8000/productosSinEan13';
   urlCountProductoSinEan13: string = 'http://192.168.30.148:8000/countProductosSinEan13';
 
+  //Productos con pocas imagenes
+  urlProductosConPocasImagenes: string = 'http://192.168.30.148:8000/productosConPocasImagenes';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -1054,6 +1057,12 @@ export class AuthService {
   }
   countProductosSinEan13(){
     let direccion = this.urlCountProductoSinEan13
+    return this.http.get(direccion)
+  }
+
+  //Productos con pocas imagenes
+  productosConPocasImagenes(){
+    let direccion = this.urlProductosConPocasImagenes
     return this.http.get(direccion)
   }
 
