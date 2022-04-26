@@ -57,15 +57,15 @@ export class RoturasComponent implements OnInit {
         type: 'string'
       },
       stock:{
-        title: 'Stock',
+        title: 'Stock actual',
         type: 'number'
       },
       ud_30_dias:{
-        title: 'Uds. 30',
+        title: 'Ventas 30 días',
         type: 'number'
       },
       m_30:{
-        title: 'Mds. 30',
+        title: 'Media 30 días',
         type: 'number'
       },
       rotura_en:{
@@ -73,11 +73,11 @@ export class RoturasComponent implements OnInit {
         type: 'number'
       },
       ud_60_dias:{
-        title: 'Uds. 60',
+        title: 'Ventas 60 días',
         type: 'number'
       },
       m_60:{
-        title: 'Mds. 60',
+        title: 'Media 60',
         type: 'number'
       },
       rotura_en_60:{

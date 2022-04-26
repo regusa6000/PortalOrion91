@@ -1,0 +1,20 @@
+<div id="tablaRoturas">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Canal</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Conector</th>
+        <th scope="col">Índice</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of source">
+        <td>{{ dato.nombre }}</td>
+        <td>{{ dato.tipo }}</td>
+        <td>{{ dato.conector }}</td>
+        <td>{{ dato.indice }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

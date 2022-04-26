@@ -48,9 +48,6 @@ export class HistoricoStockComponent implements OnInit {
       let temporalFechas: any[] = []
       let temporalStock: any[] = []
 
-      temporalFechas.push(0)
-      temporalStock.push(0)
-
       for( let a = 0 ; a < this.stockArray.length ; a++ ){
           if(this.stockArray[a].length > 0){
             temporalFechas.push(this.stockArray[a][0].fecha_actualizacion)
@@ -62,6 +59,12 @@ export class HistoricoStockComponent implements OnInit {
           temporalStock.push(this.stockArray[a][0].stock)
         }
       }
+
+      // temporalFechas.reverse()
+      // temporalStock.reverse()
+
+      temporalFechas.unshift(0)
+      temporalStock.unshift(0)
 
       console.log(temporalFechas)
       console.log(temporalStock)

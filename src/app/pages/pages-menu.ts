@@ -152,6 +152,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ]
   },
   {
+    title: 'ENVIOS',
+    icon: 'car-outline',
+    children: [
+      {
+        title: 'Transportistas',
+        link: '/pages/tables/transportistas'
+      },
+      {
+        title: 'Porcentajes Enviados',
+        link: '/pages/tables/porcentaje-enviados'
+      }
+    ]
+  },
+  {
     title: 'ESTADISTICAS',
     icon: 'trending-up-outline',
     children: [
@@ -219,20 +233,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/configuracion-links'
           }
         ]
-      }
-    ]
-  },
-  {
-    title: 'ENVIOS',
-    icon: 'car-outline',
-    children: [
-      {
-        title: 'Transportistas',
-        link: '/pages/tables/transportistas'
-      },
-      {
-        title: 'Porcentajes Enviados',
-        link: '/pages/tables/porcentaje-enviados'
       }
     ]
   },

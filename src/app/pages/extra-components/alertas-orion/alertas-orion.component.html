@@ -2,6 +2,7 @@
 <nb-card *ngIf="preciosCambiados > 0">
   <nb-card-header>Control de precios Ax vs ORION91</nb-card-header>
   <nb-card-body>
+    <span>Controlamos los precios que llegan de AX y si existe alguna diferencia los mostramos. Suele ocurrir cuando se han cambiado precios en AX y no se han pasado proceso de PRECIOS.</span><br><br>
     <ngx-precios-cambiados></ngx-precios-cambiados>
   </nb-card-body>
 </nb-card>
@@ -10,14 +11,16 @@
 <nb-card *ngIf="preAlmacen > 0">
   <nb-card-header>Pedidos en Pre-Almacén</nb-card-header>
   <nb-card-body>
+    <span>Son pedidos por un error de Waadby, Si la cantidad pedida - cantidad existente = 0, coloca este estado y no pasa a AX. Hay que entrar en el pedido ver las existencias y poner a estado "Pagado" en caso de existencias > 0.</span><br><br>
     <ngx-pre-almacen></ngx-pre-almacen>
   </nb-card-body>
 </nb-card>
 
 <!--Pagos Fraccionados-->
 <nb-card *ngIf="pedidosFraccionados > 0">
-  <nb-card-header>Pagos Fraccionados pendientes de aceptar</nb-card-header>
+  <nb-card-header>Pagos Fraccionados</nb-card-header>
   <nb-card-body>
+    <span>Entrar en la plataforma de SEQURA, comprobar que lo hayan aceptado y en caso afirmativo colocar el estado a "Pagado".</span><br><br>
     <ngx-pagos-fraccionados></ngx-pagos-fraccionados>
   </nb-card-body>
 </nb-card>
@@ -26,7 +29,7 @@
 <nb-card *ngIf="pedidosPagados > 0">
   <nb-card-header>Diferencia de Pagos</nb-card-header>
   <nb-card-body>
-    <span>Pedidos con diferencia entre lo pagado y lo cobrado.</span><br><br>
+    <span>Existe un error en algunas pasarelas en las que no cobra lo mismo al cliente que el importe del pedido. Suele ser por algún carrito caducado con algún tipo de descuento.</span><br><br>
     <ngx-diferencia-de-pagos></ngx-diferencia-de-pagos>
   </nb-card-body>
 </nb-card>
@@ -35,7 +38,7 @@
 <nb-card *ngIf="pedidosPendientes > 0">
   <nb-card-header>Pendientes Almacén</nb-card-header>
   <nb-card-body>
-    <span>Pedidos pagados y que no han pasado a AX (Diferencia horas +3).</span><br><br>
+    <span>Pedidos con el estado aceptado = OK, pero que no han pasado a AX. Excepto AliExpress que los retenemos 2 horas. Verificar la dirección del cliente no sea Canarias/Baleares, código postal 5 caracteres.....</span><br><br>
     <ngx-pendientes-almacen></ngx-pendientes-almacen>
   </nb-card-body>
 </nb-card>
@@ -44,14 +47,16 @@
 <nb-card *ngIf="makroSinStock > 0">
   <nb-card-header>Pedidos de Makro sin Stock</nb-card-header>
   <nb-card-body>
+    <span>Pedidos de Makro que no se pueden servir debido a que ya no tenemos stock. Ir a la plataforma de Makro y cancelar dichos pedidos.</span><br><br>
     <ngx-pedidos-makro-sin-stock></ngx-pedidos-makro-sin-stock>
   </nb-card-body>
 </nb-card>
 
 <!--Alertas Amazon-->
 <nb-card *ngIf="mpAmazon > 0">
-  <nb-card-header>Productos con más de 200 caracteres en nombre AMAZON</nb-card-header>
+  <nb-card-header>MP NombreArticulo > 200 caracteres(AMAZON)</nb-card-header>
   <nb-card-body>
+    <span>Amazon no permite nombres de más de 200 caracteres. Solucionar en AX y volver a pasar procesos.</span><br><br>
     <ngx-alertas-amazon></ngx-alertas-amazon>
   </nb-card-body>
 </nb-card>
@@ -60,6 +65,7 @@
 <nb-card *ngIf="erroresAli > 0">
   <nb-card-header>Errores AliExpress</nb-card-header>
   <nb-card-body>
+    <span>Caso error City: Ir al módulo de Aliexpress en PrestaShop y comprobar que la ciudad haya entrado con Nombre Correcto o Provincia, ejemplo: La Coruña -> A'Coruna</span><br><br>
     <ngx-errores-ali-express></ngx-errores-ali-express>
   </nb-card-body>
 </nb-card>
@@ -68,6 +74,7 @@
 <nb-card *ngIf="predeterminados > 0">
   <nb-card-header>Combinados Predeterminados Sin Stock</nb-card-header>
   <nb-card-body>
+    <span>La combinación predeterminada del artículo se ha quedado sin stock. Entrar al articulo y seleccionar como predeterminada la que tenga stock.</span><br><br>
     <ngx-combinados-predeterminados-sin-stock></ngx-combinados-predeterminados-sin-stock>
   </nb-card-body>
 </nb-card>
@@ -76,6 +83,7 @@
 <nb-card *ngIf="redireccionadas > 0">
   <nb-card-header>Control categorías Redireccionadas con productos asignados</nb-card-header>
   <nb-card-body>
+    <span>Se ha creado una redirección 301 a una categoría y en algún momento se le ha vuelto a asignar algún producto activo. Quitar la redirecciona  la categoría o reasignar los productos a otra categoría.</span><br><br>
     <ngx-categorias-redireccionadas></ngx-categorias-redireccionadas>
   </nb-card-body>
 </nb-card>
@@ -84,6 +92,7 @@
 <nb-card *ngIf="categoriasVacias > 0">
   <nb-card-header>Categorías Vacías </nb-card-header>
   <nb-card-body>
+    <span>Existen categorías sin productos asignados. Solución-> Volver a asignar productos a dicha categoría o hacer una redirección 301 a la categoría.</span><br><br>
     <ngx-categorias-vacias></ngx-categorias-vacias>
   </nb-card-body>
 </nb-card>
@@ -92,6 +101,7 @@
 <nb-card *ngIf="pedidosTransferencia > 0">
   <nb-card-header>Pedidos Transferencia Bancaria sin Stock</nb-card-header>
   <nb-card-body>
+    <span>Existen pedidos pendientes de pagar y que no se van a poder servir debido a la falta de stock. ¡¡OJO¡¡ no solicitar el pago de estos pedidos.</span><br><br>
     <ngx-pedido-transferencia-bancaria></ngx-pedido-transferencia-bancaria>
   </nb-card-body>
 </nb-card>
@@ -100,6 +110,7 @@
 <nb-card *ngIf="ean13 > 0">
   <nb-card-header>Productos sin Ean13</nb-card-header>
   <nb-card-body>
+    <span>Productos activos sin EAN13, este dato es vital para poder publicar los productos en los MP y los DS.</span><br><br>
     <ngx-productos-sin-ean13></ngx-productos-sin-ean13>
   </nb-card-body>
 </nb-card>

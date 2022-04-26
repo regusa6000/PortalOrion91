@@ -263,6 +263,9 @@ export class AuthService {
   //Productos con pocas imagenes
   urlProductosConPocasImagenes: string = 'http://192.168.30.148:8000/productosConPocasImagenes';
 
+  //Conectores
+  urlConectoresCanales: string = 'http://192.168.30.148:8000/conectores';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -1063,6 +1066,12 @@ export class AuthService {
   //Productos con pocas imagenes
   productosConPocasImagenes(){
     let direccion = this.urlProductosConPocasImagenes
+    return this.http.get(direccion)
+  }
+
+  //Conectores Canales
+  conectoresCanales(){
+    let direccion = this.urlConectoresCanales
     return this.http.get(direccion)
   }
 

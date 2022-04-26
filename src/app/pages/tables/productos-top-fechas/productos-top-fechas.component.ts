@@ -13,6 +13,7 @@ export class ProductosTopFechasComponent implements OnInit {
   productosTop: any
   fechaInicio: any
   fechaFin: any
+  valorBuscar: string
 
   constructor(public authSvc: AuthService) { }
 

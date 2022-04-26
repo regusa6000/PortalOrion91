@@ -75,7 +75,7 @@ export class VentasPorHabitantesComponent implements OnInit {
           var location = [this.arrayGlobal[a].latitud, this.arrayGlobal[a].longitud];
           var marker = L.marker([this.arrayGlobal[a].latitud, this.arrayGlobal[a].longitud],{icon: century21icon});
           marker.bindPopup(
-            "<p>" + this.arrayGlobal[a].ciudad + "</p><p>Poblacion:" + this.arrayGlobal[a].poblacion + "</p><p>Total Ventas: "+ this.arrayGlobal[a].totalVentas +"€</p><p>Porcentaje Ventas: "+ this.arrayGlobal[a].porcentajeVentas +"%</p><p>Venta por habitante: "+ this.arrayGlobal[a].ventaPorHabitante+"€</p>"
+            "<p>" + this.arrayGlobal[a].ciudad + "</p><p>Poblacion:" + this.arrayGlobal[a].poblacion + "</p><p>Total Ventas: "+ this.arrayGlobal[a].totalVentas +"€</p><p>Porcentaje Ventas: "+ this.arrayGlobal[a].porcentajeVentas +"%</p><p>€ x 100Mil habitantes: "+ this.arrayGlobal[a].ventaPorHabitante+"€</p>"
           );
           marker.addTo(map);
 

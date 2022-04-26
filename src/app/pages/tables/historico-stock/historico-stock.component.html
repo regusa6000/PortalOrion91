@@ -2,14 +2,19 @@
   <nb-card-header>Control Historico Stock</nb-card-header>
   <nb-card-body style="height: 100%;">
 
-    <div style="display: flex; justify-content: end; padding: 15px;" *ngIf="!idProductoStock">
-      <div style="margin-right: 15px;">
-        <input type="text" nbInput fullWidth placeholder="Ean13:" [(ngModel)]="ean13">
-      </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
       <div>
-        <button nbButton status="primary" (click)="buscar(ean13)">Buscar</button>
+        <span>Introduce un número de EAN13 y pulsa buscar.</span>
       </div>
-    </div>
+      <div style="display: flex; justify-content: end; padding: 15px;">
+        <div style="margin-right: 15px;">
+          <input type="text" nbInput fullWidth placeholder="Ean13:" [(ngModel)]="ean13">
+        </div>
+        <div>
+          <button nbButton status="primary" (click)="buscar(ean13)">Buscar</button>
+        </div>
+      </div>
+    </div><br><br>
 
     <div>
       <ng2-smart-table [settings]="config" [source]="historicoStock" *ngIf="idProductoStock">

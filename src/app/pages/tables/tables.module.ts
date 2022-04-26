@@ -65,6 +65,7 @@ import { ProductoNoPublicadosAmazonComponent } from './producto-no-publicados-am
 import { BuscadorDeProductosComponent } from './buscador-de-productos/buscador-de-productos.component';
 import { AmazonNoPublicadoComponent } from './amazon-no-publicado/amazon-no-publicado.component';
 import { ProductoConPocasImagenesComponent } from './producto-con-pocas-imagenes/producto-con-pocas-imagenes.component';
+import { ConectoresCanalesComponent } from './dashboard/components/conectores-canales/conectores-canales.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -148,6 +149,7 @@ import { ProductoConPocasImagenesComponent } from './producto-con-pocas-imagenes
     BuscadorDeProductosComponent,
     AmazonNoPublicadoComponent,
     ProductoConPocasImagenesComponent,
+    ConectoresCanalesComponent,
   ],
 })
 export class TablesModule { }
