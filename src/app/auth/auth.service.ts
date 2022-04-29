@@ -266,6 +266,19 @@ export class AuthService {
   //Conectores
   urlConectoresCanales: string = 'http://192.168.30.148:8000/conectores';
 
+  //Subir Archivos Noticias
+  urlSubirArchivos: string = 'http://192.168.30.148:8000/registrarNoticias';
+  urlListadoNoticias: string = 'http://192.168.30.148:8000/listadoNoticias/';
+  urlActualizarNoticia: string = 'http://192.168.30.148:8000/actualizarNoticia';
+  urlEliminarNoticia: string = 'http://192.168.30.148:8000/eliminarNoticia/';
+
+  //Guardar Productos Por Ean13
+  urlCargarSelectProductos: string = 'http://192.168.30.148:8000/cargarSelectProductos';
+  urlBuscarEan13PorProducto: string = 'http://192.168.30.148:8000/buscarEan13PorNombreProducto';
+  urlLlenarSelectTipoDeDocumento: string = 'http://192.168.30.148:8000/cargarSelectTipoDeDocumento';
+  urlRegistrarDocumentoPorProducto: string = 'http://192.168.30.148:8000/registrarDocumento';
+  urlListadoDocumentosPorEan13: string = 'http://192.168.30.148:8000/cargarListadoDocumentosPorEan13/';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -1075,4 +1088,43 @@ export class AuthService {
     return this.http.get(direccion)
   }
 
+  //subirArchivos Noticias
+  subirArchivos(json: any){
+    let direccion = this.urlSubirArchivos
+    return this.http.post(direccion,json)
+  }
+  listadoNoticias(idUser: number){
+    let direccion = this.urlListadoNoticias + idUser
+    return this.http.get(direccion)
+  }
+  actualizarNoticia(json: any){
+    let direccion = this.urlActualizarNoticia
+    return this.http.put(direccion,json)
+  }
+  eliminarNoticia(idNoticia: number, nameImagen: string){
+    let direccion = this.urlEliminarNoticia + idNoticia + '/' + nameImagen
+    return this.http.delete(direccion)
+  }
+
+  //Guardar Productos En carpetas
+  cargarSelectProductos(){
+    let direccion = this.urlCargarSelectProductos
+    return this.http.get(direccion)
+  }
+  buscarEan13PorNombreProducto(json: any){
+    let direccion = this.urlBuscarEan13PorProducto
+    return this.http.post(direccion,json)
+  }
+  buscarTipoDeDocumento(){
+    let direccion = this.urlLlenarSelectTipoDeDocumento
+    return this.http.get(direccion)
+  }
+  registrarDocumentoPorProducto(json: any){
+    let direccion = this.urlRegistrarDocumentoPorProducto
+    return this.http.post(direccion,json)
+  }
+  listadoDocumentosPorEan13(ean13: number){
+    let direccion = this.urlListadoDocumentosPorEan13 + ean13
+    return this.http.get(direccion)
+  }
 }

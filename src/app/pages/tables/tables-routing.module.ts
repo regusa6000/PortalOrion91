@@ -42,6 +42,9 @@ import { ProductoNoPublicadosAmazonComponent } from './producto-no-publicados-am
 import { BuscadorDeProductosComponent } from './buscador-de-productos/buscador-de-productos.component';
 import { AmazonNoPublicadoComponent } from './amazon-no-publicado/amazon-no-publicado.component';
 import { ProductoConPocasImagenesComponent } from './producto-con-pocas-imagenes/producto-con-pocas-imagenes.component';
+import { RegistroNoticiasComponent } from './registro-noticias/registro-noticias.component';
+import { ListadoNoticiasComponent } from './listado-noticias/listado-noticias.component';
+import { RegistroDocumentosComponent } from './registro-documentos/registro-documentos.component';
 
 const routes: Routes = [{
   path: '',
@@ -206,6 +209,18 @@ const routes: Routes = [{
     {
       path: 'productos-con-pocas-imagenes',
       component: ProductoConPocasImagenesComponent
+    },
+    {
+      path: 'registro-noticias',
+      component: RegistroNoticiasComponent
+    },
+    {
+      path: 'listado-noticias',
+      component: ListadoNoticiasComponent
+    },
+    {
+      path: 'registro-documentos',
+      component: RegistroDocumentosComponent
     }
   ],
 }];

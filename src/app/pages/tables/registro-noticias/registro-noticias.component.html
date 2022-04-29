@@ -1,0 +1,32 @@
+<nb-card>
+  <nb-card-header>Registro Noticias</nb-card-header>
+  <nb-card-body>
+
+    <div style="max-width: 700px; width: 100%; margin: auto;">
+
+      <div>
+        <input type="text" nbInput [(ngModel)]="tituloNoticia" placeholder="Titulo de Noticia: ">
+      </div><br>
+
+      <div>
+        <textarea nbInput fullWidth [(ngModel)]="noticia" placeholder="Noticia: "></textarea>
+      </div><br>
+
+      <div>
+        <div>
+          <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+        </div>
+      </div><br><br>
+
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <div style="margin: auto;">
+          <button nbButton status="primary" (click)="registrarNoticia()">Registrar</button>
+        </div>
+        <div>
+          <img [src]="imageSrc" *ngIf="imageSrc" style="max-width:100; width: 100%;">
+        </div>
+      </div>
+    </div>
+
+  </nb-card-body>
+</nb-card>

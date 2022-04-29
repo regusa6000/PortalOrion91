@@ -1,0 +1,7 @@
+<nb-card>
+  <nb-card-header>Listado Noticias</nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="config" [source]="source" (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="onEdit($event)"></ng2-smart-table>
+  </nb-card-body>
+</nb-card>

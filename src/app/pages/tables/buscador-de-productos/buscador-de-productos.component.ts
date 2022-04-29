@@ -54,6 +54,10 @@ export class BuscadorDeProductosComponent implements OnInit {
         title: 'Valor',
         type: 'string'
       },
+      ean13:{
+        title: 'Ean13',
+        type: 'string'
+      },
       axIdSimple: {
         title: 'Id Ax Simple',
         type: 'string'

@@ -1,0 +1,43 @@
+<nb-card>
+  <nb-card-header>Guardar Documentos</nb-card-header>
+  <nb-card-body>
+
+
+    <div>
+
+      <div>
+        <input #autoInput
+          nbInput
+          type="text"
+          (input)="onChange()"
+          placeholder="Seleccione Producto: "
+          [nbAutocomplete]="auto" />
+
+        <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+          <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+            {{ option }}
+          </nb-option>
+        </nb-autocomplete>
+      </div><br><br>
+
+      <div>
+        <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+      </div><br><br>
+
+      <div>
+        <nb-select placeholder="Tipo de Documento: " (selectedChange)="buscarTipodeDocumento($event)">
+          <nb-option *ngFor="let doc of arrayTipoDocumento" [value]="doc.idTipo">{{ doc.observacion }}</nb-option>
+        </nb-select>
+      </div><br>
+
+      <div style="margin: auto;">
+        <button nbButton status="primary" (click)="registrarNoticia()">Registrar Documento</button>
+      </div><br><br>
+
+    </div>
+
+
+
+  </nb-card-body>
+</nb-card>
+

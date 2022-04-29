@@ -233,6 +233,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/configuracion-links'
           }
         ]
+      },
+      {
+        title: 'Registro Documentos',
+        link: '/pages/tables/registro-documentos'
       }
     ]
   },
@@ -241,10 +245,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'twitter-outline',
     children: [
       {
-        title: 'Registrar Noticia'
+        title: 'Registrar Noticia',
+        link: '/pages/tables/registro-noticias'
       },
       {
-        title: 'Actualizar Noticia'
+        title: 'Listado Noticias',
+        link: '/pages/tables/listado-noticias'
       }
     ]
   }

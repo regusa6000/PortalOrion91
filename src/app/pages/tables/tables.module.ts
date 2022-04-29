@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbProgressBarModule,NbCardModule, NbSpinnerModule , NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
+import { NbProgressBarModule,NbAutocompleteModule,NbCardModule, NbSpinnerModule , NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgxEchartsModule } from 'ngx-echarts';
 
@@ -66,6 +66,10 @@ import { BuscadorDeProductosComponent } from './buscador-de-productos/buscador-d
 import { AmazonNoPublicadoComponent } from './amazon-no-publicado/amazon-no-publicado.component';
 import { ProductoConPocasImagenesComponent } from './producto-con-pocas-imagenes/producto-con-pocas-imagenes.component';
 import { ConectoresCanalesComponent } from './dashboard/components/conectores-canales/conectores-canales.component';
+import { RegistroNoticiasComponent } from './registro-noticias/registro-noticias.component';
+import { ListadoNoticiasComponent } from './listado-noticias/listado-noticias.component';
+import { RegistroDocumentosComponent } from './registro-documentos/registro-documentos.component';
+import { GuardarDocumentosComponent } from './registro-documentos/guardar-documentos/guardar-documentos.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -85,6 +89,7 @@ import { ConectoresCanalesComponent } from './dashboard/components/conectores-ca
     NbCalendarRangeModule,
     NbDatepickerModule,
     NbProgressBarModule,
+    NbAutocompleteModule,
     NbButtonModule,
     NbSpinnerModule,
     NgxEchartsModule,
@@ -150,6 +155,10 @@ import { ConectoresCanalesComponent } from './dashboard/components/conectores-ca
     AmazonNoPublicadoComponent,
     ProductoConPocasImagenesComponent,
     ConectoresCanalesComponent,
+    RegistroNoticiasComponent,
+    ListadoNoticiasComponent,
+    RegistroDocumentosComponent,
+    GuardarDocumentosComponent,
   ],
 })
 export class TablesModule { }

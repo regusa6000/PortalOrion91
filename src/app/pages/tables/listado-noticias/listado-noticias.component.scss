@@ -1,0 +1,7 @@
+:host ::ng-deep .imagen{
+  max-width: 50px;
+  width: 100%;
+}
+:host ::ng-deep ng2-smart-table td:nth-child(4){
+  text-align: center;
+}

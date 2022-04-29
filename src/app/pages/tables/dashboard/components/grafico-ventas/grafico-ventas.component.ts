@@ -59,10 +59,6 @@ export class GraficoVentasComponent implements OnInit {
         let json = {value: data[0].Sum_Sprinter, name: 'Sprinter'}
         this.arrayGrafico.push(json)
       }
-      if(data[0].Sum_MequedoUno > 0){
-        let json = {value: data[0].Sum_MequedoUno, name: 'MequedoUno'}
-        this.arrayGrafico.push(json)
-      }
       if(data[0].Sum_Bulevip > 0){
         let json = {value: data[0].Sum_Bulevip, name: 'Bulevip'}
         this.arrayGrafico.push(json)
