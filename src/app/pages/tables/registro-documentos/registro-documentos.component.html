@@ -9,7 +9,7 @@
 
       <div style="display: flex;">
         <div>
-          <input type="text" nbInput [(ngModel)]="ean13" placeholder="Producto: ">
+          <input type="text" nbInput [(ngModel)]="ean13" placeholder="Ean13: ">
         </div>
         <div style="margin-left: 10px;">
           <button nbButton status="primary" (click)="buscarDocumentos()"><nb-icon icon="search-outline"></nb-icon></button>
@@ -18,7 +18,7 @@
     </div><br><br>
 
     <!--Tabla para mostrar Archivos guardados dado ean13-->
-    <ng2-smart-table [settings]="config" [source]="source"></ng2-smart-table>
+    <ng2-smart-table [settings]="config" [source]="source" (deleteConfirm)="onDeleteConfirm($event)"></ng2-smart-table>
 
   </nb-card-body>
 </nb-card>

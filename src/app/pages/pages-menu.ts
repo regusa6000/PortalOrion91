@@ -53,6 +53,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Productos',
         children: [
           {
+            title: 'Registro Documentos',
+            link: '/pages/tables/registro-documentos'
+          },
+          {
             title: 'Imagenes Cleaner',
             link: '/pages/tables/imagenes-cleaner'
           },
@@ -233,10 +237,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/configuracion-links'
           }
         ]
-      },
-      {
-        title: 'Registro Documentos',
-        link: '/pages/tables/registro-documentos'
       }
     ]
   },

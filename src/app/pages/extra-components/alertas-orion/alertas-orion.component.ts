@@ -23,6 +23,9 @@ export class AlertasOrionComponent implements OnInit {
   categoriasVacias: any
   pedidosTransferencia: any
   ean13: any
+  pendientesAx: any
+  pedidosPendienteValidacion: any
+  pedidosNoEnviados: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -72,6 +75,30 @@ export class AlertasOrionComponent implements OnInit {
     })
     this.authSvc.countProductosSinEan13().subscribe(data=>{
       this.ean13 = data
+    })
+
+    //Pendientes Ax
+    let jsonToken  = {
+      'email': 'rgutierrez@hidalgosgroup.com',
+      'password': 'Orion2021'
+    }
+
+    this.authSvc.cargarToken(jsonToken).subscribe(data=>{
+      let token = data['details'].access_token
+
+      let jsontTok = {'token': token}
+
+      this.authSvc.pedidosPendientesAx(jsontTok).subscribe(data=>{
+        this.pendientesAx = data['details'].listado.length
+      })
+    })
+
+    this.authSvc.badgePedidosPendienteValidacion().subscribe(data=>{
+      this.pedidosPendienteValidacion = data
+    })
+
+    this.authSvc.badgePedidosNoEnviados().subscribe(data=>{
+      this.pedidosNoEnviados = data
     })
 
   }

@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, ViewChild } from '@angular/core';
+import { NbComponentStatus, NbToastrService } from '@nebular/theme';
+import { EventEmitter } from 'events';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AuthService } from '../../../../auth/auth.service';
@@ -17,10 +19,12 @@ export class GuardarDocumentosComponent implements OnInit {
   ean13: any
   eventoArchivo: any
   tipoDocumento: any
+  observacion: any
 
   @ViewChild('autoInput') input;
+  @Output() refrescarTabla = new EventEmitter();
 
-  constructor(public authSvc: AuthService) { }
+  constructor(public authSvc: AuthService, private toastrService: NbToastrService) { }
 
   ngOnInit(): void {
     this.authSvc.cargarSelectProductos().subscribe(data=>{
@@ -29,7 +33,7 @@ export class GuardarDocumentosComponent implements OnInit {
       console.log(this.arrayProductos)
 
       for(let a = 0 ; a < this.arrayProductos.length; a++){
-        this.options.push(this.arrayProductos[a].producto)
+        this.options.push(this.arrayProductos[a].ean13)
       }
 
     })
@@ -40,6 +44,11 @@ export class GuardarDocumentosComponent implements OnInit {
       this.arrayTipoDocumento = data
     })
 
+  }
+
+  refresTable(){
+    let data = 'Recarga'
+    this.refrescarTabla.emit(data)
   }
 
   private filter(value: string): string[] {
@@ -82,6 +91,7 @@ export class GuardarDocumentosComponent implements OnInit {
   }
 
   registrarNoticia(){
+    console.log(this.observacion)
 
     const file:File = this.eventoArchivo.target.files[0];
     let idPais = '1'
@@ -91,12 +101,24 @@ export class GuardarDocumentosComponent implements OnInit {
     formData.append('ean13',this.ean13)
     formData.append('idPais',idPais)
     formData.append('idTipo',this.tipoDocumento)
+    formData.append('observacion',this.observacion)
 
     this.authSvc.registrarDocumentoPorProducto(formData).subscribe(data=>{
       console.log(data)
+      if(data == true){
+        this.showToastRegister('success')
+      }else{
+        this.showToastErrorDatos('danger')
+      }
     })
 
   }
 
+  showToastRegister(status: NbComponentStatus) {
+    this.toastrService.show(status, `Archivo Guardado!`, { status });
+  }
+  showToastErrorDatos(status: NbComponentStatus) {
+    this.toastrService.show(status, `Error de Datos, imagen ya registrada!`, { status });
+  }
 
 }

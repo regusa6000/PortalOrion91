@@ -6,11 +6,15 @@
     <div>
 
       <div>
+        <p style="color: red;"><b>Recuerda seleccionar la opción del desplegable!!</b></p>
+      </div>
+
+      <div>
         <input #autoInput
           nbInput
           type="text"
           (input)="onChange()"
-          placeholder="Seleccione Producto: "
+          placeholder="Seleccione Ean13: "
           [nbAutocomplete]="auto" />
 
         <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
@@ -18,11 +22,11 @@
             {{ option }}
           </nb-option>
         </nb-autocomplete>
-      </div><br><br>
+      </div><br>
 
       <div>
         <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
-      </div><br><br>
+      </div><br>
 
       <div>
         <nb-select placeholder="Tipo de Documento: " (selectedChange)="buscarTipodeDocumento($event)">
@@ -30,9 +34,13 @@
         </nb-select>
       </div><br>
 
-      <div style="margin: auto;">
+      <div>
+        <textarea nbInput fullWidth placeholder="Observacion" [(ngModel)]="observacion"></textarea>
+      </div><br>
+
+      <div style="text-align: center;">
         <button nbButton status="primary" (click)="registrarNoticia()">Registrar Documento</button>
-      </div><br><br>
+      </div><br>
 
     </div>
 

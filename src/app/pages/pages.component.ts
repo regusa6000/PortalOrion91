@@ -32,6 +32,9 @@ export class PagesComponent implements OnInit{
   categoriasVacias: any
   pedidosTransferencia: any
   productosSinEan13: any
+  pendientesAx: any
+  pedidosPendientesValidacion: any
+  pedidosNoEnviados: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -106,12 +109,45 @@ export class PagesComponent implements OnInit{
                                   this.productosSinEan13 = data
                                   total += this.productosSinEan13
 
-                                  if(total > 0){
-                                    this.menu[0].badge = {
-                                      text: `${total}`,
-                                      status:"danger"
-                                    }
+                                  //Pendientes Ax
+                                  let jsonToken  = {
+                                    'email': 'rgutierrez@hidalgosgroup.com',
+                                    'password': 'Orion2021'
                                   }
+
+                                  this.authSvc.cargarToken(jsonToken).subscribe(data=>{
+                                    let token = data['details'].access_token
+
+                                    let jsontTok = {'token': token}
+
+                                    this.authSvc.pedidosPendientesAx(jsontTok).subscribe(data=>{
+                                      this.pendientesAx = data['details'].listado.length
+                                      total += this.pendientesAx
+
+                                      this.authSvc.badgePedidosPendienteValidacion().subscribe(data=>{
+
+                                        this.pedidosPendientesValidacion = data
+                                        total += this.pedidosPendientesValidacion
+
+                                        this.authSvc.badgePedidosNoEnviados().subscribe(data=>{
+
+                                          this.pedidosNoEnviados = data
+                                          total += this.pedidosNoEnviados
+
+                                          if(total > 0){
+                                            this.menu[0].badge = {
+                                              text: `${total}`,
+                                              status:"danger"
+                                            }
+                                          }
+
+                                        })
+
+                                      })
+
+                                    })
+
+                                  })
 
                                 })
 

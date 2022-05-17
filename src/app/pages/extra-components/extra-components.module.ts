@@ -52,6 +52,9 @@ import { PreAlmacenComponent } from './alertas-orion/components/pre-almacen/pre-
 import { CategoriasVaciasComponent } from './alertas-orion/components/categorias-vacias/categorias-vacias.component';
 import { PedidoTransferenciaBancariaComponent } from './alertas-orion/components/pedido-transferencia-bancaria/pedido-transferencia-bancaria.component';
 import { ProductosSinEan13Component } from './alertas-orion/components/productos-sin-ean13/productos-sin-ean13.component';
+import { PedidosEnviadosAxComponent } from './alertas-orion/components/pedidos-enviados-ax/pedidos-enviados-ax.component';
+import { PedidosPendienteValidacionComponent } from './alertas-orion/components/pedidos-pendiente-validacion/pedidos-pendiente-validacion.component';
+import { PedidosNoEnviadosComponent } from './alertas-orion/components/pedidos-no-enviados/pedidos-no-enviados.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -111,6 +114,9 @@ const MODULES = [
     CategoriasVaciasComponent,
     PedidoTransferenciaBancariaComponent,
     ProductosSinEan13Component,
+    PedidosEnviadosAxComponent,
+    PedidosPendienteValidacionComponent,
+    PedidosNoEnviadosComponent,
   ],
 })
 export class ExtraComponentsModule { }

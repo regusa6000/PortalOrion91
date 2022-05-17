@@ -1,0 +1,25 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Referencia</th>
+        <th scope="col">URL</th>
+        <th scope="col">Importe Pedido</th>
+        <th scope="col">Payment</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pendiente of source">
+        <td>{{ pendiente.reference }}</td>
+        <td><a href="{{ pendiente.url }}" target="_blank">Ir a pedido</a> </td>
+        <td>{{ pendiente.total_paid | currency:'EUR': true }}</td>
+        <td>{{ pendiente.payment }}</td>
+        <td>{{ pendiente.name }}</td>
+        <td>{{ pendiente.date_add }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

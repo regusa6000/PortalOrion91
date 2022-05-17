@@ -1,3 +1,11 @@
+<!--Pedidos > 5 dias no Enviados-->
+<nb-card *ngIf="pedidosNoEnviados > 0">
+  <nb-card-header>Pedidos > 5 dias NO ENVIADOS</nb-card-header>
+  <nb-card-body>
+    <ngx-pedidos-no-enviados></ngx-pedidos-no-enviados>
+  </nb-card-body>
+</nb-card>
+
 <!--Precios cambiados en Tienda-->
 <nb-card *ngIf="preciosCambiados > 0">
   <nb-card-header>Control de precios Ax vs ORION91</nb-card-header>
@@ -112,6 +120,22 @@
   <nb-card-body>
     <span>Productos activos sin EAN13, este dato es vital para poder publicar los productos en los MP y los DS.</span><br><br>
     <ngx-productos-sin-ean13></ngx-productos-sin-ean13>
+  </nb-card-body>
+</nb-card>
+
+<!--Pedidos Enviados Ax Pendientes-->
+<nb-card *ngIf="pendientesAx > 0">
+  <nb-card-header>Pedidos Enviados AX y no Procesados</nb-card-header>
+  <nb-card-body>
+    <ngx-pedidos-enviados-ax></ngx-pedidos-enviados-ax>
+  </nb-card-body>
+</nb-card>
+
+<!--Pedidos Pendientes de Validación-->
+<nb-card *ngIf="pedidosPendienteValidacion > 0">
+  <nb-card-header>Pedidos Pendiente Validación</nb-card-header>
+  <nb-card-body>
+    <ngx-pedidos-pendiente-validacion></ngx-pedidos-pendiente-validacion>
   </nb-card-body>
 </nb-card>
 
