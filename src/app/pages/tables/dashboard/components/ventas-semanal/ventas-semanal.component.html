@@ -13,14 +13,14 @@
         <td>{{ dato.fecha }}</td>
         <td *ngIf="dato.porcentaje < 0" align="center">
           <div class="caja">
-            <!-- <img src= "../../../../assets/images/abajo.png" class="imagen"><span class="rojo">{{ dato.porcentaje }}%</span> -->
-            <img src= "/orion/assets/images/abajo.png" class="imagen"><span class="rojo">{{ dato.porcentaje }}%</span>
+            <img src= "../../../../assets/images/abajo.png" class="imagen"><span class="rojo">{{ dato.porcentaje }}%</span>
+            <!-- <img src= "/orion/assets/images/abajo.png" class="imagen"><span class="rojo">{{ dato.porcentaje }}%</span> -->
           </div>
         </td>
         <td *ngIf="dato.porcentaje > 0" align="center">
           <div class="caja">
-            <!-- <img src= "../../../../assets/images/arriba.png" class="imagen"><span class="verde">{{ dato.porcentaje }}%</span> -->
-            <img src= "/orion/assets/images/arriba.png" class="imagen"><span class="verde">{{ dato.porcentaje }}%</span>
+            <img src= "../../../../assets/images/arriba.png" class="imagen"><span class="verde">{{ dato.porcentaje }}%</span>
+            <!-- <img src= "/orion/assets/images/arriba.png" class="imagen"><span class="verde">{{ dato.porcentaje }}%</span> -->
           </div>
         </td>
         <td align="center">{{ dato.tot_ped }}</td>

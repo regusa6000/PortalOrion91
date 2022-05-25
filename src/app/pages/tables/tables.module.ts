@@ -70,6 +70,8 @@ import { RegistroNoticiasComponent } from './registro-noticias/registro-noticias
 import { ListadoNoticiasComponent } from './listado-noticias/listado-noticias.component';
 import { RegistroDocumentosComponent } from './registro-documentos/registro-documentos.component';
 import { GuardarDocumentosComponent } from './registro-documentos/guardar-documentos/guardar-documentos.component';
+import { AbonosComponent } from './abonos/abonos.component';
+import { AbonosLineasComponent } from './abonos/components/abonos-lineas/abonos-lineas.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -159,6 +161,8 @@ import { GuardarDocumentosComponent } from './registro-documentos/guardar-docume
     ListadoNoticiasComponent,
     RegistroDocumentosComponent,
     GuardarDocumentosComponent,
+    AbonosComponent,
+    AbonosLineasComponent,
   ],
 })
 export class TablesModule { }

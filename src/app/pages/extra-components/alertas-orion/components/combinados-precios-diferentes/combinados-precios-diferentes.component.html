@@ -1,0 +1,24 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Precios Distintos</th>
+      <th scope="col">Id Producto</th>
+      <th scope="col">Ean13</th>
+      <th scope="col">Referencia</th>
+      <th scope="col">Producto</th>
+      <th scope="col">URL</th>
+      <th scope="col">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dif of source">
+      <td>{{ dif.distintos_precios }}</td>
+      <td>{{ dif.id_product }}</td>
+      <td>{{ dif.ean13 }}</td>
+      <td>{{ dif.reference }}</td>
+      <td>{{ dif.nombre_producto }}</td>
+      <td><a href="https://orion91.com/admin753tbd1ux/index.php/sell/catalog/products/{{ dif.id_product }}" target="_blank">Ir a Producto</a></td>
+      <td>{{ dif.precio | currency:'EUR': true}}</td>
+    </tr>
+  </tbody>
+</table>

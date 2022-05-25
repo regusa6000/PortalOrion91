@@ -1,0 +1,27 @@
+<br>
+  <table class="table mb-0 table-striped">
+    <thead class="bg-dark text-white">
+      <tr>
+        <th>Or Pedido</th>
+        <th>Id Producto</th>
+        <th>Imágen</th>
+        <th>Producto</th>
+        <th>Cantidad Vendida</th>
+        <th>Total Abono</th>
+        <th>Fecha Abono</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let abo of source; let i = index">
+        <td align="center">{{ abo.referenciaPs }}</td>
+        <td align="center">{{ abo.id_product }}</td>
+        <td align="center"><img src="{{ abo.imagen }}" alt=""></td>
+        <td align="center">{{ abo.name }}</td>
+        <td align="center">{{ abo.cantidadVendida }}</td>
+        <td align="right">{{ abo.precioFinal| currency:'EUR': true }}</td>
+        <td align="center">{{ abo.fechaFactura }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <br>

@@ -139,6 +139,14 @@
   </nb-card-body>
 </nb-card>
 
+<!--Productos Combinados con Precios Diferente-->
+<nb-card *ngIf="preciosDistintosCombinados > 0">
+  <nb-card-header>Productos Combinados con precio diferente</nb-card-header>
+  <nb-card-body>
+    <ngx-combinados-precios-diferentes></ngx-combinados-precios-diferentes>
+  </nb-card-body>
+</nb-card>
+
 <!--Productos desactivados en elementor-->
 <!-- <nb-card>
   <nb-card-header>Productos desactivados en slider de elementor</nb-card-header>

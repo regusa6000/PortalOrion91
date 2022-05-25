@@ -55,6 +55,7 @@ import { ProductosSinEan13Component } from './alertas-orion/components/productos
 import { PedidosEnviadosAxComponent } from './alertas-orion/components/pedidos-enviados-ax/pedidos-enviados-ax.component';
 import { PedidosPendienteValidacionComponent } from './alertas-orion/components/pedidos-pendiente-validacion/pedidos-pendiente-validacion.component';
 import { PedidosNoEnviadosComponent } from './alertas-orion/components/pedidos-no-enviados/pedidos-no-enviados.component';
+import { CombinadosPreciosDiferentesComponent } from './alertas-orion/components/combinados-precios-diferentes/combinados-precios-diferentes.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -117,6 +118,7 @@ const MODULES = [
     PedidosEnviadosAxComponent,
     PedidosPendienteValidacionComponent,
     PedidosNoEnviadosComponent,
+    CombinadosPreciosDiferentesComponent,
   ],
 })
 export class ExtraComponentsModule { }

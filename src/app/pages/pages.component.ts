@@ -35,6 +35,7 @@ export class PagesComponent implements OnInit{
   pendientesAx: any
   pedidosPendientesValidacion: any
   pedidosNoEnviados: any
+  productosCombinadosDiferentes: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -134,12 +135,19 @@ export class PagesComponent implements OnInit{
                                           this.pedidosNoEnviados = data
                                           total += this.pedidosNoEnviados
 
-                                          if(total > 0){
-                                            this.menu[0].badge = {
-                                              text: `${total}`,
-                                              status:"danger"
+                                          this.authSvc.badgeProductosDiferenciaPreciosCombinados().subscribe(data=>{
+
+                                            this.productosCombinadosDiferentes = data
+                                            total += this.productosCombinadosDiferentes
+
+                                            if(total > 0){
+                                              this.menu[0].badge = {
+                                                text: `${total}`,
+                                                status:"danger"
+                                              }
                                             }
-                                          }
+
+                                          })
 
                                         })
 

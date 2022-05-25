@@ -26,6 +26,7 @@ export class AlertasOrionComponent implements OnInit {
   pendientesAx: any
   pedidosPendienteValidacion: any
   pedidosNoEnviados: any
+  preciosDistintosCombinados: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -99,6 +100,10 @@ export class AlertasOrionComponent implements OnInit {
 
     this.authSvc.badgePedidosNoEnviados().subscribe(data=>{
       this.pedidosNoEnviados = data
+    })
+
+    this.authSvc.badgeProductosDiferenciaPreciosCombinados().subscribe(data=>{
+      this.preciosDistintosCombinados = data
     })
 
   }

@@ -46,6 +46,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ]
   },
   {
+    title: 'ABONOS',
+    icon: 'bookmark-outline',
+    link: '/pages/tables/abonos'
+  },
+  {
     title: 'CATÁLOGO',
     icon: 'layout-outline',
     children: [

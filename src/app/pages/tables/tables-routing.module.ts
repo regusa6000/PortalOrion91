@@ -45,6 +45,7 @@ import { ProductoConPocasImagenesComponent } from './producto-con-pocas-imagenes
 import { RegistroNoticiasComponent } from './registro-noticias/registro-noticias.component';
 import { ListadoNoticiasComponent } from './listado-noticias/listado-noticias.component';
 import { RegistroDocumentosComponent } from './registro-documentos/registro-documentos.component';
+import { AbonosComponent } from './abonos/abonos.component';
 
 const routes: Routes = [{
   path: '',
@@ -221,6 +222,10 @@ const routes: Routes = [{
     {
       path: 'registro-documentos',
       component: RegistroDocumentosComponent
+    },
+    {
+      path: 'abonos',
+      component: AbonosComponent
     }
   ],
 }];
