@@ -3,6 +3,7 @@
     <thead>
       <tr>
         <th scope="col">Ean13</th>
+        <th scope="col">Id Producto</th>
         <th scope="col">Producto</th>
         <th scope="col">Imagen</th>
         <th scope="col">Hoy</th>
@@ -14,6 +15,7 @@
     <tbody>
       <tr *ngFor="let dato of source">
         <td>{{ dato.ean13 }}</td>
+        <td>{{ dato.id_producto }}</td>
         <td>{{ dato.name }}</td>
         <td align="center"><img src="{{ dato.imagen }}"></td>
         <td align="center">{{ dato.stock_hoy }}</td>

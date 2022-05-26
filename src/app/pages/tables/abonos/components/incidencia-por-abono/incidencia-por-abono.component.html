@@ -1,0 +1,34 @@
+<div *ngIf="contadorIncidencias == 0">
+    <br>
+      <span>Este Pedido no tiene Incidencia!</span>
+    <br><br>
+</div>
+
+<div *ngIf="contadorIncidencias > 0">
+  <br>
+  <b><span style="text-decoration: underline;">Incidencias</span></b><br>
+
+    <table class="table mb-0 table-striped">
+      <thead class="bg-dark text-white">
+        <tr style="text-align: center;">
+          <th>Tipo Incidencia</th>
+          <th>Incidencia</th>
+          <th>Descripción</th>
+          <th>Creado Por(Alias Usuario)</th>
+          <th>Fecha Creación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let inci of incidencia">
+          <td align="center">{{ inci.tipoIncidencia }}</td>
+          <td align="center">{{ inci.valorTipo }}</td>
+          <td align="center">{{ inci.descripcion }}</td>
+          <td align="center">{{ inci.usuarioCreacion }}</td>
+          <td align="center">{{ inci.fechaCreacion }}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  <br>
+</div>
+

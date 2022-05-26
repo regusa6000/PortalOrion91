@@ -72,6 +72,7 @@ import { RegistroDocumentosComponent } from './registro-documentos/registro-docu
 import { GuardarDocumentosComponent } from './registro-documentos/guardar-documentos/guardar-documentos.component';
 import { AbonosComponent } from './abonos/abonos.component';
 import { AbonosLineasComponent } from './abonos/components/abonos-lineas/abonos-lineas.component';
+import { IncidenciaPorAbonoComponent } from './abonos/components/incidencia-por-abono/incidencia-por-abono.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -163,6 +164,7 @@ import { AbonosLineasComponent } from './abonos/components/abonos-lineas/abonos-
     GuardarDocumentosComponent,
     AbonosComponent,
     AbonosLineasComponent,
+    IncidenciaPorAbonoComponent,
   ],
 })
 export class TablesModule { }

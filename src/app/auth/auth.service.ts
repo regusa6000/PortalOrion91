@@ -292,6 +292,10 @@ export class AuthService {
   urlBuscarAbonosEntreFechas: string = 'http://192.168.30.21:8000/buscarAbonosPorFechas';
   urlBuscarLineasAbonos: string = 'http://192.168.30.21:8000/buscarLineasAbonos';
 
+  //Incidencias en Abonos
+  urlIncidenciaPorAbono: string = 'http://192.168.30.21:8000/buscarIncidenciaPorAbono';
+  urlCounrIncidenciaPorAbono: string = 'http://192.168.30.21:8000/countBuscarIncidenciaPorAbono';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -1185,6 +1189,14 @@ export class AuthService {
   buscarLineasAbonos(json: any){
     let direccion = this.urlBuscarLineasAbonos
     return this.http.post(direccion,json)
+  }
+  incidenciaPorAbono(json: any){
+    let direccion = this.urlIncidenciaPorAbono
+    return this.http.post(direccion, json)
+  }
+  countIncidenciaPorAbono(json: any){
+    let direccion = this.urlCounrIncidenciaPorAbono
+    return this.http.post(direccion, json)
   }
 
 }

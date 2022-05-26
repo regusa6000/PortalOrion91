@@ -1,7 +1,9 @@
 <br>
+<b><span style="text-decoration: underline;">Lineas Abonadas</span></b>
+<br>
   <table class="table mb-0 table-striped">
     <thead class="bg-dark text-white">
-      <tr>
+      <tr style="text-align: center;">
         <th>Or Pedido</th>
         <th>Id Producto</th>
         <th>Imágen</th>
@@ -16,7 +18,7 @@
         <td align="center">{{ abo.referenciaPs }}</td>
         <td align="center">{{ abo.id_product }}</td>
         <td align="center"><img src="{{ abo.imagen }}" alt=""></td>
-        <td align="center">{{ abo.name }}</td>
+        <td align="center">{{ abo.nombreProducto }}</td>
         <td align="center">{{ abo.cantidadVendida }}</td>
         <td align="right">{{ abo.precioFinal| currency:'EUR': true }}</td>
         <td align="center">{{ abo.fechaFactura }}</td>

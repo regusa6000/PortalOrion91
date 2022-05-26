@@ -36,6 +36,7 @@
             <th>AB</th>
             <th>PVC</th>
             <th>OR</th>
+            <th>ESTADO PEDIDO</th>
             <th>TRANSPORTE</th>
             <th>TOTAL PRODUCTOS</th>
             <th>TOTAL ABONO</th>
@@ -51,16 +52,26 @@
             <td align="center">{{abo.idFactura}}</td>
             <td align="center">{{abo.pedidoAx}}</td>
             <td align="center">{{abo.referenciaPs}}</td>
-            <td align="right">0,00 €</td>
+            <td align="center">
+              <div style="display: flex; justify-content: center;">
+                <div *ngIf="abo.estadoPedido == 'Enviado' || abo.estadoPedido == 'Pagado' || abo.estadoPedido == 'Amazon Prime' || abo.estadoPedido == 'En Proceso'" style="margin-right: 5px;">
+                  <nb-icon icon="alert-triangle-outline" pack="eva" style="color: red;"></nb-icon>
+                </div>
+                <div>{{ abo.estadoPedido }}</div>
+              </div>
+
+            </td>
+            <td align="right">{{ abo.transporte| currency:'EUR': true }}</td>
             <td align="right">{{ abo.cantidadProductos }}</td>
             <td align="right">{{abo.precioFinal| currency:'EUR': true}}</td>
-            <td align="right">{{ abo.fechaFactura }}</td>
+            <td align="center">{{ abo.fechaFactura }}</td>
           </tr>
 
           <tr [hidden]="!hideme[i]" class="sub-table no-bg">
             <td align="center"> </td>
             <td colspan="15" class="p-0">
               <ngx-abonos-lineas [orPedido]="abo.referenciaPs"></ngx-abonos-lineas>
+              <ngx-incidencia-por-abono [orPedido]="abo.referenciaPs"></ngx-incidencia-por-abono>
             </td>
           </tr>
 
