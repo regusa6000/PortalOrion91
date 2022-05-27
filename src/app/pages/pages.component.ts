@@ -36,6 +36,7 @@ export class PagesComponent implements OnInit{
   pedidosPendientesValidacion: any
   pedidosNoEnviados: any
   productosCombinadosDiferentes: any
+  precioBaseMenorPrecioOferta: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -140,12 +141,19 @@ export class PagesComponent implements OnInit{
                                             this.productosCombinadosDiferentes = data
                                             total += this.productosCombinadosDiferentes
 
-                                            if(total > 0){
-                                              this.menu[0].badge = {
-                                                text: `${total}`,
-                                                status:"danger"
+                                            this.authSvc.countPrecioBaseMenorPrecioOferta().subscribe(data=>{
+
+                                              this.precioBaseMenorPrecioOferta = data
+                                              total += this.precioBaseMenorPrecioOferta
+
+                                              if(total > 0){
+                                                this.menu[0].badge = {
+                                                  text: `${total}`,
+                                                  status:"danger"
+                                                }
                                               }
-                                            }
+
+                                            })
 
                                           })
 

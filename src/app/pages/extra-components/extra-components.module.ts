@@ -56,6 +56,7 @@ import { PedidosEnviadosAxComponent } from './alertas-orion/components/pedidos-e
 import { PedidosPendienteValidacionComponent } from './alertas-orion/components/pedidos-pendiente-validacion/pedidos-pendiente-validacion.component';
 import { PedidosNoEnviadosComponent } from './alertas-orion/components/pedidos-no-enviados/pedidos-no-enviados.component';
 import { CombinadosPreciosDiferentesComponent } from './alertas-orion/components/combinados-precios-diferentes/combinados-precios-diferentes.component';
+import { PrecioBaseMenorAPrecioOfertaComponent } from './alertas-orion/components/precio-base-menor-aprecio-oferta/precio-base-menor-aprecio-oferta.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -119,6 +120,7 @@ const MODULES = [
     PedidosPendienteValidacionComponent,
     PedidosNoEnviadosComponent,
     CombinadosPreciosDiferentesComponent,
+    PrecioBaseMenorAPrecioOfertaComponent,
   ],
 })
 export class ExtraComponentsModule { }

@@ -296,6 +296,10 @@ export class AuthService {
   urlIncidenciaPorAbono: string = 'http://192.168.30.21:8000/buscarIncidenciaPorAbono';
   urlCounrIncidenciaPorAbono: string = 'http://192.168.30.21:8000/countBuscarIncidenciaPorAbono';
 
+  //Precio Base Menor Precio Oferta
+  urlPrecioBaseMenorPrecioOferta: string = 'http://192.168.30.21:8000/controlPreciosBaseMenorPrecioOferta';
+  urlCountPrecioBaseMenorPrecioOferta: string = 'http://192.168.30.21:8000/countControlPreciosBaseMenorPrecioOferta';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -1199,4 +1203,13 @@ export class AuthService {
     return this.http.post(direccion, json)
   }
 
+  //Precio Base Menor Precio Oferta
+  precioBaseMenorPrecioOferta(){
+    let direccion = this.urlPrecioBaseMenorPrecioOferta
+    return this.http.get(direccion)
+  }
+  countPrecioBaseMenorPrecioOferta(){
+    let direccion = this.urlCountPrecioBaseMenorPrecioOferta
+    return this.http.get(direccion)
+  }
 }

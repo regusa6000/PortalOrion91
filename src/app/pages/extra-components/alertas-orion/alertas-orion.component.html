@@ -15,6 +15,14 @@
   </nb-card-body>
 </nb-card>
 
+<!--Precio Base < Precio Oferta-->
+<nb-card *ngIf="precioBaseMenorPrecioOferta > 0">
+  <nb-card-header>Control de Precio Base < Precio Oferta</nb-card-header>
+  <nb-card-body>
+    <ngx-precio-base-menor-aprecio-oferta></ngx-precio-base-menor-aprecio-oferta>
+  </nb-card-body>
+</nb-card>
+
 <!--Pedidos en Pre-Almacen-->
 <nb-card *ngIf="preAlmacen > 0">
   <nb-card-header>Pedidos en Pre-Almacén</nb-card-header>
