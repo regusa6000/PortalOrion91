@@ -37,6 +37,7 @@ export class PagesComponent implements OnInit{
   pedidosNoEnviados: any
   productosCombinadosDiferentes: any
   precioBaseMenorPrecioOferta: any
+  pedidosDuplicados: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -146,12 +147,18 @@ export class PagesComponent implements OnInit{
                                               this.precioBaseMenorPrecioOferta = data
                                               total += this.precioBaseMenorPrecioOferta
 
-                                              if(total > 0){
-                                                this.menu[0].badge = {
-                                                  text: `${total}`,
-                                                  status:"danger"
+                                              this.authSvc.badgePedidosDuplicados().subscribe(data=>{
+                                                this.pedidosDuplicados = data
+                                                total += this.pedidosDuplicados
+
+                                                if(total > 0){
+                                                  this.menu[0].badge = {
+                                                    text: `${total}`,
+                                                    status:"danger"
+                                                  }
                                                 }
-                                              }
+
+                                              })
 
                                             })
 
@@ -206,12 +213,12 @@ export class PagesComponent implements OnInit{
        ManoMano = this.manoMano
 
       if(ManoMano > 0){
-        this.menu[4].children[0].badge = {
+        this.menu[5].children[0].badge = {
           text: `${ManoMano}`,
           status:"danger"
         }
 
-        this.menu[4].badge = {
+        this.menu[5].badge = {
           text: `${ManoMano}`,
           status:"danger"
         }

@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Order</th>
+      <th scope="col">Payment</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Fecha de pedido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ped of source">
+      <td>{{ ped.reference }}</td>
+      <td>{{ ped.payment }}</td>
+      <td>{{ ped.name }}</td>
+      <td>{{ ped.date_add}}</td>
+    </tr>
+  </tbody>
+</table>

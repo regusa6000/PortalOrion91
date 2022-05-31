@@ -57,12 +57,12 @@ export class DiarioPedidosComponent implements OnInit {
         type: 'html',
         valuePrepareFunction: (value: number) =>{
           if(value < 0){
-            return '<div class="caja"><img src= "../../../../assets/images/abajo.png" class="imagen"><span class="rojo">' + value + '%</span></div>';
-            // return '<div class="caja"><img src= "/orion/assets/images/abajo.png" class="imagen"><span class="rojo">' + value + '%</span></div>';
+            // return '<div class="caja"><img src= "../../../../assets/images/abajo.png" class="imagen"><span class="rojo">' + value + '%</span></div>';
+            return '<div class="caja"><img src= "/orion/assets/images/abajo.png" class="imagen"><span class="rojo">' + value + '%</span></div>';
 
           }else{
-            return '<div class="caja"><img src= "../../../../assets/images/arriba.png" class="imagen"><span class="verde">' + value + '%</span></div>';
-            // return '<div class="caja"><img src= "/orion/assets/images/arriba.png" class="imagen"><span class="verde">' + value + '%</span></div>';
+            // return '<div class="caja"><img src= "../../../../assets/images/arriba.png" class="imagen"><span class="verde">' + value + '%</span></div>';
+            return '<div class="caja"><img src= "/orion/assets/images/arriba.png" class="imagen"><span class="verde">' + value + '%</span></div>';
           }
 
         }

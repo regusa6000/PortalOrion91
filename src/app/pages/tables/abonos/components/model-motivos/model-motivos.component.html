@@ -1,0 +1,60 @@
+<nb-card>
+  <nb-card-header>
+    <div style="display: flex; justify-content: space-between;">
+      <div>Registro Motivos Y Submotivos</div>
+      <div> <b><p> Pedido:  {{ orPedido }}</p></b></div>
+    </div>
+
+  </nb-card-header>
+  <nb-card-body>
+
+    <table class="table mb-0 table-striped">
+      <thead class="bg-dark text-white">
+        <tr style="text-align: center;">
+          <th>Or Pedido</th>
+          <th>Pedido Ax</th>
+          <th>Id Factura</th>
+          <th>Id Producto</th>
+          <th>Imágen</th>
+          <th>Producto</th>
+          <th>Cantidad Vendida</th>
+          <th>Total Abono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">{{ orPedido }}</td>
+          <td align="center">{{ pedidoAx }}</td>
+          <td align="center">{{ idFactura }}</td>
+          <td align="center">{{ idProduct }}</td>
+           <td align="center"><img src="{{ imagen }}" alt=""></td>
+          <td align="center">{{ nombreProducto }}</td>
+          <td align="center">{{ cantidadVendida }}</td>
+          <td align="right">{{ precioFinal| currency:'EUR': true }}</td>
+        </tr>
+
+      </tbody>
+    </table><br><br>
+
+    <div style="display: flex; justify-content: space-around;">
+      <div>
+        <nb-select placeholder="Seleccione Motivo" (selectedChange)="motivo($event)">
+          <nb-option *ngFor="let mot of motivoSelect" [value]="mot.id">{{ mot.motivo }}</nb-option>
+        </nb-select>
+      </div>
+
+      <div>
+        <nb-select placeholder="Seleccione Sub Motivo" (selectedChange)="submotivo($event)">
+          <nb-option *ngFor="let sub of subMotivoSelect" [value]="sub.id">{{ sub.submotivo }}</nb-option>
+        </nb-select>
+      </div>
+    </div>
+
+
+
+    <div style="text-align: center;">
+      <button nbButton status="primary" (click)="registrarMotivo()">Registrar</button>
+    </div>
+
+  </nb-card-body>
+</nb-card>

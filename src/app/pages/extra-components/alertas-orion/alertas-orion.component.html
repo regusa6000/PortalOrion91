@@ -155,6 +155,14 @@
   </nb-card-body>
 </nb-card>
 
+<!--Pedidos Duplicados-->
+<nb-card *ngIf="pedidosDuplicados > 0">
+  <nb-card-header>Pedidos OR- Duplicados</nb-card-header>
+  <nb-card-body>
+    <ngx-or-duplicados></ngx-or-duplicados>
+  </nb-card-body>
+</nb-card>
+
 <!--Productos desactivados en elementor-->
 <!-- <nb-card>
   <nb-card-header>Productos desactivados en slider de elementor</nb-card-header>

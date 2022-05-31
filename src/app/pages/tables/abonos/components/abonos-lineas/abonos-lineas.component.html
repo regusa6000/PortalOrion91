@@ -8,9 +8,10 @@
         <th>Id Producto</th>
         <th>Imágen</th>
         <th>Producto</th>
-        <th>Cantidad Vendida</th>
+        <th>Cantidad</th>
+        <th>Estado</th>
         <th>Total Abono</th>
-        <th>Fecha Abono</th>
+        <th>Motivar</th>
       </tr>
     </thead>
     <tbody>
@@ -20,8 +21,11 @@
         <td align="center"><img src="{{ abo.imagen }}" alt=""></td>
         <td align="center">{{ abo.nombreProducto }}</td>
         <td align="center">{{ abo.cantidadVendida }}</td>
+        <td align="center">{{ abo.motivo }}</td>
         <td align="right">{{ abo.precioFinal| currency:'EUR': true }}</td>
-        <td align="center">{{ abo.fechaFactura }}</td>
+        <td align="center">
+          <button nbButton status="basic" (click)="open(abo.id,abo.idFactura,abo.pedidoAx,abo.id_product,abo.nombreProducto,abo.cantidadVendida,abo.precioFinal,abo.imagen)"><nb-icon icon="plus-square-outline"></nb-icon></button>
+        </td>
       </tr>
 
     </tbody>

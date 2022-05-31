@@ -38,16 +38,17 @@
             <th>OR</th>
             <th>ESTADO PEDIDO</th>
             <th>TRANSPORTE</th>
-            <th>TOTAL PRODUCTOS</th>
+            <th>TOTAL LINEAS</th>
+            <th>TOTAL MOTIVADOS</th>
             <th>TOTAL ABONO</th>
             <th>FECHA ABONO</th>
           </tr>
         </thead>
         <tbody *ngFor="let abo of abonos; let i = index">
-          <tr>
+          <tr *ngIf="abo.cantidadMotivados == 0 && abo.cantidadMotivados < abo.cantidadProductos" style="color: red; font-weight: bold">
             <td align="center">
-                <nb-icon icon="maximize-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" (click)="showLinea(i)"></nb-icon>
-                <nb-icon icon="minimize-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]"></nb-icon>
+                <nb-icon icon="maximize-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" style="color: black !important;" (click)="showLinea(i)"></nb-icon>
+                <nb-icon icon="minimize-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" style="color: black !important;" (click)="hideme[i] = !hideme[i]"></nb-icon>
             </td>
             <td align="center">{{abo.idFactura}}</td>
             <td align="center">{{abo.pedidoAx}}</td>
@@ -63,9 +64,59 @@
             </td>
             <td align="right">{{ abo.transporte| currency:'EUR': true }}</td>
             <td align="right">{{ abo.cantidadProductos }}</td>
+            <td align="right">{{ abo.cantidadMotivados }}</td>
             <td align="right">{{abo.precioFinal| currency:'EUR': true}}</td>
             <td align="center">{{ abo.fechaFactura }}</td>
           </tr>
+
+          <tr *ngIf="abo.cantidadMotivados != 0 && abo.cantidadMotivados < abo.cantidadProductos" style="color: orange; font-weight: bold">
+            <td align="center">
+                <nb-icon icon="maximize-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" style="color: black !important;" (click)="showLinea(i)"></nb-icon>
+                <nb-icon icon="minimize-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" style="color: black !important;" (click)="hideme[i] = !hideme[i]"></nb-icon>
+            </td>
+            <td align="center">{{abo.idFactura}}</td>
+            <td align="center">{{abo.pedidoAx}}</td>
+            <td align="center">{{abo.referenciaPs}}</td>
+            <td align="center">
+              <div style="display: flex; justify-content: center;">
+                <div *ngIf="abo.estadoPedido == 'Enviado' || abo.estadoPedido == 'Pagado' || abo.estadoPedido == 'Amazon Prime' || abo.estadoPedido == 'En Proceso'" style="margin-right: 5px;">
+                  <nb-icon icon="alert-triangle-outline" pack="eva" style="color: red;"></nb-icon>
+                </div>
+                <div>{{ abo.estadoPedido }}</div>
+              </div>
+
+            </td>
+            <td align="right">{{ abo.transporte| currency:'EUR': true }}</td>
+            <td align="right">{{ abo.cantidadProductos }}</td>
+            <td align="right">{{ abo.cantidadMotivados }}</td>
+            <td align="right">{{abo.precioFinal| currency:'EUR': true}}</td>
+            <td align="center">{{ abo.fechaFactura }}</td>
+          </tr>
+
+          <tr *ngIf="abo.cantidadMotivados == abo.cantidadProductos" style="color: green; font-weight: bold">
+            <td align="center">
+                <nb-icon icon="maximize-outline" pack="eva" class="expand-row" style="color: black !important;" *ngIf="!hideme[i]" (click)="showLinea(i)"></nb-icon>
+                <nb-icon icon="minimize-outline" pack="eva" class="expand-row" style="color: black !important;" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]"></nb-icon>
+            </td>
+            <td align="center">{{abo.idFactura}}</td>
+            <td align="center">{{abo.pedidoAx}}</td>
+            <td align="center">{{abo.referenciaPs}}</td>
+            <td align="center">
+              <div style="display: flex; justify-content: center;">
+                <div *ngIf="abo.estadoPedido == 'Enviado' || abo.estadoPedido == 'Pagado' || abo.estadoPedido == 'Amazon Prime' || abo.estadoPedido == 'En Proceso'" style="margin-right: 5px;">
+                  <nb-icon icon="alert-triangle-outline" pack="eva" style="color: red;"></nb-icon>
+                </div>
+                <div>{{ abo.estadoPedido }}</div>
+              </div>
+
+            </td>
+            <td align="right">{{ abo.transporte| currency:'EUR': true }}</td>
+            <td align="right">{{ abo.cantidadProductos }}</td>
+            <td align="right">{{ abo.cantidadMotivados }}</td>
+            <td align="right">{{abo.precioFinal| currency:'EUR': true}}</td>
+            <td align="center">{{ abo.fechaFactura }}</td>
+          </tr>
+
 
           <tr [hidden]="!hideme[i]" class="sub-table no-bg">
             <td align="center"> </td>
