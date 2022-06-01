@@ -23,8 +23,17 @@ export class ModelMotivosComponent implements OnInit {
   subMotivoSelect: any
   motivoSeleccionado: number
   subMotivoSeleccionado:number
+  idUsuario: number
 
-  constructor(public authSvc: AuthService ,private toastrService: NbToastrService, private dialogService: NbDialogRef<any>) { }
+  constructor(public authSvc: AuthService ,private toastrService: NbToastrService, private dialogService: NbDialogRef<any>) {
+    let datosUsuario = localStorage.getItem('auth_app_token')
+    console.log('LocalStorage')
+    let valoresUsuario = JSON.parse(datosUsuario)
+    console.log(valoresUsuario)
+
+    let idUsuario = valoresUsuario.value[0]['id_user']
+    this.idUsuario = idUsuario
+   }
 
   ngOnInit(): void {
     this.authSvc.cargarSelectMotivos().subscribe(data=>{
@@ -47,6 +56,7 @@ export class ModelMotivosComponent implements OnInit {
     let json = {
       'referenciaPs': this.orPedido,
       'idAbonoLinea': this.idLineaAbono,
+      'idUsuario': this.idUsuario,
       'pedidoAx': this.pedidoAx,
       'idFactura': this.idFactura,
       'idMotivo': this.motivoSeleccionado,
@@ -58,22 +68,35 @@ export class ModelMotivosComponent implements OnInit {
     }
 
     this.authSvc.registrarMotivos(json).subscribe(data=>{
-      if(data == 1){
+
+      if(data == true){
         this.showToastRegister('success')
         this.dialogService.close()
       }else{
-        this.showToastErrorDatos('danger')
+        if(data == 1){
+          this.showToast('success')
+          this.dialogService.close()
+        }else{
+          this.showToastErrorDatos('danger')
+        }
       }
+
+      console.log(data)
+
     })
 
   }
 
   showToastRegister(status: NbComponentStatus) {
-    this.toastrService.show(status, `Registro Creado!`, { status });
+    this.toastrService.show(status, `Guardado  Correctamente!`, { status });
   }
 
   showToastErrorDatos(status: NbComponentStatus) {
     this.toastrService.show(status, `Error de Datos!`, { status });
+  }
+
+  showToast(status: NbComponentStatus) {
+    this.toastrService.show(status, `Guardado Actualizado!`, { status });
   }
 
 }

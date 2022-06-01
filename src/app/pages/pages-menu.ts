@@ -242,6 +242,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/configuracion-links'
           }
         ]
+      },
+      {
+        title: 'Contraseñas Plataformas',
+        link: '/pages/tables/contrasenas-plataformas'
       }
     ]
   },

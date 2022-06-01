@@ -10,7 +10,10 @@
         <th>Producto</th>
         <th>Cantidad</th>
         <th>Estado</th>
+        <th>Motivo</th>
+        <th>Sub Motivo</th>
         <th>Total Abono</th>
+        <th>Motivado Por:</th>
         <th>Motivar</th>
       </tr>
     </thead>
@@ -22,7 +25,10 @@
         <td align="center">{{ abo.nombreProducto }}</td>
         <td align="center">{{ abo.cantidadVendida }}</td>
         <td align="center">{{ abo.motivo }}</td>
+        <td align="center">{{ abo.motivoName }}</td>
+        <td align="center">{{ abo.submotivo }}</td>
         <td align="right">{{ abo.precioFinal| currency:'EUR': true }}</td>
+        <td align="center">{{ abo.nameUsuario }}</td>
         <td align="center">
           <button nbButton status="basic" (click)="open(abo.id,abo.idFactura,abo.pedidoAx,abo.id_product,abo.nombreProducto,abo.cantidadVendida,abo.precioFinal,abo.imagen)"><nb-icon icon="plus-square-outline"></nb-icon></button>
         </td>

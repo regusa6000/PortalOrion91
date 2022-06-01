@@ -1,0 +1,9 @@
+<nb-card>
+  <nb-card-header>Contraseñas de Plataformas</nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="config" [source]="source" (createConfirm)="onAdd($event)" (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="onEdit($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+
