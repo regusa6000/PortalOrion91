@@ -315,6 +315,17 @@ export class AuthService {
   urlActualizarContraseñasPlataformas: string = 'http://192.168.30.21:8000/actualizarClavesPlataformas';
   urlEliminarContraseñasPlataformas: string = 'http://192.168.30.21:8000/eliminarClavesPlataforma/';
 
+  //Abonos Incidencias Motivos
+  urlListadoAbonosIncidenciasMotivos: string = 'http://192.168.30.21:8000/incidenciaAbonosMotivos';
+
+  //Productos solo categorizados en OUTLET
+  urlProductosEnCategoriaOulet: string = 'http://192.168.30.21:8000/productosEnCategoriaOulet';
+  urlCountProductosEnCategoriaOulet: string = 'http://192.168.30.21:8000/countProductosEnCategoriaOulet';
+
+  //Productos SIN categoria predeterminada
+  urlProductosSinCategoriaPredeterminada: string = 'http://192.168.30.21:8000/productosSinCategoriaPredeterminada';
+  urlCountProductosSinCategoriaPredeterminada: string = 'http://192.168.30.21:8000/countProductosSinCategoriaPredeterminada';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -1268,6 +1279,32 @@ export class AuthService {
   eliminarContraseñasPlataformas(idPlataforma: number){
     let direccion = this.urlEliminarContraseñasPlataformas + idPlataforma
     return this.http.delete(direccion)
+  }
+
+  //Abonos Incidencias Motivos
+  listadoAbonosIncidenciasMotivos(json: any){
+    let direccion = this.urlListadoAbonosIncidenciasMotivos
+    return this.http.post(direccion,json)
+  }
+
+  //Productos Categorizado en Oulet
+  productosCategorizadosOulet(){
+    let direccion = this.urlProductosEnCategoriaOulet
+    return this.http.get(direccion)
+  }
+  countProductosCategorizadosOulet(){
+    let direccion = this.urlCountProductosEnCategoriaOulet
+    return this.http.get(direccion)
+  }
+
+  //Productos sin Categoria Pedeterminada
+  productosSinCategoriaPredeterminada(){
+    let direccion = this.urlProductosSinCategoriaPredeterminada
+    return this.http.get(direccion)
+  }
+  countProductosSinCategoriaPredeterminada(){
+    let direccion = this.urlCountProductosSinCategoriaPredeterminada
+    return this.http.get(direccion)
   }
 
 }

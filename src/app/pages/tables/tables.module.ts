@@ -75,6 +75,7 @@ import { AbonosLineasComponent } from './abonos/components/abonos-lineas/abonos-
 import { IncidenciaPorAbonoComponent } from './abonos/components/incidencia-por-abono/incidencia-por-abono.component';
 import { ModelMotivosComponent } from './abonos/components/model-motivos/model-motivos.component';
 import { ContrasenasPlataformasComponent } from './contrasenas-plataformas/contrasenas-plataformas.component';
+import { AbonosIncidenciasMotivosComponent } from './abonos-incidencias-motivos/abonos-incidencias-motivos.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -169,6 +170,7 @@ import { ContrasenasPlataformasComponent } from './contrasenas-plataformas/contr
     IncidenciaPorAbonoComponent,
     ModelMotivosComponent,
     ContrasenasPlataformasComponent,
+    AbonosIncidenciasMotivosComponent,
   ],
 })
 export class TablesModule { }

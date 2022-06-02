@@ -58,6 +58,8 @@ import { PedidosNoEnviadosComponent } from './alertas-orion/components/pedidos-n
 import { CombinadosPreciosDiferentesComponent } from './alertas-orion/components/combinados-precios-diferentes/combinados-precios-diferentes.component';
 import { PrecioBaseMenorAPrecioOfertaComponent } from './alertas-orion/components/precio-base-menor-aprecio-oferta/precio-base-menor-aprecio-oferta.component';
 import { OrDuplicadosComponent } from './alertas-orion/components/or-duplicados/or-duplicados.component';
+import { ProductosCategorizadosOuletComponent } from './alertas-orion/components/productos-categorizados-oulet/productos-categorizados-oulet.component';
+import { ProductosSinCategoriaPredeterminadaComponent } from './alertas-orion/components/productos-sin-categoria-predeterminada/productos-sin-categoria-predeterminada.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -123,6 +125,8 @@ const MODULES = [
     CombinadosPreciosDiferentesComponent,
     PrecioBaseMenorAPrecioOfertaComponent,
     OrDuplicadosComponent,
+    ProductosCategorizadosOuletComponent,
+    ProductosSinCategoriaPredeterminadaComponent,
   ],
 })
 export class ExtraComponentsModule { }

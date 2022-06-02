@@ -47,6 +47,7 @@ import { ListadoNoticiasComponent } from './listado-noticias/listado-noticias.co
 import { RegistroDocumentosComponent } from './registro-documentos/registro-documentos.component';
 import { AbonosComponent } from './abonos/abonos.component';
 import { ContrasenasPlataformasComponent } from './contrasenas-plataformas/contrasenas-plataformas.component';
+import { AbonosIncidenciasMotivosComponent } from './abonos-incidencias-motivos/abonos-incidencias-motivos.component';
 
 const routes: Routes = [{
   path: '',
@@ -231,6 +232,10 @@ const routes: Routes = [{
     {
       path: 'contrasenas-plataformas',
       component: ContrasenasPlataformasComponent
+    },
+    {
+      path: 'abonos-incidencias-motivos',
+      component: AbonosIncidenciasMotivosComponent
     }
   ],
 }];

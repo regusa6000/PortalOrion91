@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 
@@ -38,6 +39,8 @@ export class PagesComponent implements OnInit{
   productosCombinadosDiferentes: any
   precioBaseMenorPrecioOferta: any
   pedidosDuplicados: any
+  productosCategorizasdosOulet: any
+  productosSinCategoriaPredeterminada: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -151,12 +154,24 @@ export class PagesComponent implements OnInit{
                                                 this.pedidosDuplicados = data
                                                 total += this.pedidosDuplicados
 
-                                                if(total > 0){
-                                                  this.menu[0].badge = {
-                                                    text: `${total}`,
-                                                    status:"danger"
-                                                  }
-                                                }
+                                                this.authSvc.countProductosCategorizadosOulet().subscribe(data=>{
+                                                  this.productosCategorizasdosOulet = data
+                                                  total += this.productosCategorizasdosOulet
+
+                                                  this.authSvc.countProductosSinCategoriaPredeterminada().subscribe(data=>{
+                                                    this.productosSinCategoriaPredeterminada = data
+                                                    total += this.productosSinCategoriaPredeterminada
+
+                                                      if(total > 0){
+                                                        this.menu[0].badge = {
+                                                          text: `${total}`,
+                                                          status:"danger"
+                                                        }
+                                                      }
+
+                                                  })
+
+                                                })
 
                                               })
 

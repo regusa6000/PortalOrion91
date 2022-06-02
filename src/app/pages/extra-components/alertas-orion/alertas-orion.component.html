@@ -163,6 +163,23 @@
   </nb-card-body>
 </nb-card>
 
+<!--Productos Categorizados Oulet-->
+<nb-card *ngIf="productosCategorizadosOulet > 0">
+  <nb-card-header>Productos solo Categorizados en Outlet</nb-card-header>
+  <nb-card-body>
+    <ngx-productos-categorizados-oulet></ngx-productos-categorizados-oulet>
+  </nb-card-body>
+</nb-card>
+
+<!--Productos Sin categoría Predeterminada-->
+<nb-card *ngIf="productosSinCategoriaPredeterminada > 0">
+  <nb-card-header>Productos sin categoría Predeterminada</nb-card-header>
+  <nb-card-body>
+    <ngx-productos-sin-categoria-predeterminada></ngx-productos-sin-categoria-predeterminada>
+  </nb-card-body>
+</nb-card>
+
+
 <!--Productos desactivados en elementor-->
 <!-- <nb-card>
   <nb-card-header>Productos desactivados en slider de elementor</nb-card-header>

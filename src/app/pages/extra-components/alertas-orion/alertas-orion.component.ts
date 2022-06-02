@@ -29,6 +29,8 @@ export class AlertasOrionComponent implements OnInit {
   preciosDistintosCombinados: any
   precioBaseMenorPrecioOferta: any
   pedidosDuplicados: any
+  productosCategorizadosOulet: any
+  productosSinCategoriaPredeterminada: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -112,6 +114,12 @@ export class AlertasOrionComponent implements OnInit {
     })
     this.authSvc.badgePedidosDuplicados().subscribe(data=>{
       this.pedidosDuplicados = data
+    })
+    this.authSvc.countProductosCategorizadosOulet().subscribe(data=>{
+      this.productosCategorizadosOulet = data
+    })
+    this.authSvc.countProductosSinCategoriaPredeterminada().subscribe(data=>{
+      this.productosSinCategoriaPredeterminada = data
     })
 
   }
