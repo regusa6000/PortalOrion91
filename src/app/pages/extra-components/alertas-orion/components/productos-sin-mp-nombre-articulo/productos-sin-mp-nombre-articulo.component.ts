@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../../../auth/auth.service';
 
 @Component({
-  selector: 'ngx-productos-sin-categoria-predeterminada',
-  templateUrl: './productos-sin-categoria-predeterminada.component.html',
-  styleUrls: ['./productos-sin-categoria-predeterminada.component.scss']
+  selector: 'ngx-productos-sin-mp-nombre-articulo',
+  templateUrl: './productos-sin-mp-nombre-articulo.component.html',
+  styleUrls: ['./productos-sin-mp-nombre-articulo.component.scss']
 })
-export class ProductosSinCategoriaPredeterminadaComponent implements OnInit {
+export class ProductosSinMpNombreArticuloComponent implements OnInit {
 
   source: any
 
@@ -19,7 +19,7 @@ export class ProductosSinCategoriaPredeterminadaComponent implements OnInit {
   }
 
   refrescarTabla(){
-    this.authSvc.productosSinCategoriaPredeterminada().subscribe(data=>{
+    this.authSvc.productosSinMpNombreArticulo().subscribe(data=>{
       this.source = data
     })
   }

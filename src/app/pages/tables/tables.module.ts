@@ -76,6 +76,8 @@ import { IncidenciaPorAbonoComponent } from './abonos/components/incidencia-por-
 import { ModelMotivosComponent } from './abonos/components/model-motivos/model-motivos.component';
 import { ContrasenasPlataformasComponent } from './contrasenas-plataformas/contrasenas-plataformas.component';
 import { AbonosIncidenciasMotivosComponent } from './abonos-incidencias-motivos/abonos-incidencias-motivos.component';
+import { AbonosAgenciaTransporteComponent } from './abonos-agencia-transporte/abonos-agencia-transporte.component';
+import { RegistroPedidosPreAlmacenComponent } from './registro-pedidos-pre-almacen/registro-pedidos-pre-almacen.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -171,6 +173,8 @@ import { AbonosIncidenciasMotivosComponent } from './abonos-incidencias-motivos/
     ModelMotivosComponent,
     ContrasenasPlataformasComponent,
     AbonosIncidenciasMotivosComponent,
+    AbonosAgenciaTransporteComponent,
+    RegistroPedidosPreAlmacenComponent,
   ],
 })
 export class TablesModule { }

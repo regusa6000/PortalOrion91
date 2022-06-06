@@ -60,6 +60,7 @@ import { PrecioBaseMenorAPrecioOfertaComponent } from './alertas-orion/component
 import { OrDuplicadosComponent } from './alertas-orion/components/or-duplicados/or-duplicados.component';
 import { ProductosCategorizadosOuletComponent } from './alertas-orion/components/productos-categorizados-oulet/productos-categorizados-oulet.component';
 import { ProductosSinCategoriaPredeterminadaComponent } from './alertas-orion/components/productos-sin-categoria-predeterminada/productos-sin-categoria-predeterminada.component';
+import { ProductosSinMpNombreArticuloComponent } from './alertas-orion/components/productos-sin-mp-nombre-articulo/productos-sin-mp-nombre-articulo.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -127,6 +128,7 @@ const MODULES = [
     OrDuplicadosComponent,
     ProductosCategorizadosOuletComponent,
     ProductosSinCategoriaPredeterminadaComponent,
+    ProductosSinMpNombreArticuloComponent,
   ],
 })
 export class ExtraComponentsModule { }

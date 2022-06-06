@@ -10,9 +10,15 @@ export class ProductosCategorizadosOuletComponent implements OnInit {
 
   source: any
 
-  constructor(public authSvc: AuthService) { }
+  constructor(public authSvc: AuthService) {
+    this.refrescarTabla();
+    setInterval(() => { this.refrescarTabla(); }, 300000);
+   }
 
   ngOnInit(): void {
+  }
+
+  refrescarTabla(){
     this.authSvc.productosCategorizadosOulet().subscribe(data=>{
       this.source = data
     })

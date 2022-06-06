@@ -180,6 +180,15 @@
 </nb-card>
 
 
+<!--Productos Sin MP_NombreArticulo-->
+<nb-card *ngIf="productosSinMpNombreProducto > 0">
+  <nb-card-header>Productos sin MP Nombre Artículo</nb-card-header>
+  <nb-card-body>
+    <ngx-productos-sin-mp-nombre-articulo></ngx-productos-sin-mp-nombre-articulo>
+  </nb-card-body>
+</nb-card>
+
+
 <!--Productos desactivados en elementor-->
 <!-- <nb-card>
   <nb-card-header>Productos desactivados en slider de elementor</nb-card-header>

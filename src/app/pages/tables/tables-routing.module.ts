@@ -48,6 +48,8 @@ import { RegistroDocumentosComponent } from './registro-documentos/registro-docu
 import { AbonosComponent } from './abonos/abonos.component';
 import { ContrasenasPlataformasComponent } from './contrasenas-plataformas/contrasenas-plataformas.component';
 import { AbonosIncidenciasMotivosComponent } from './abonos-incidencias-motivos/abonos-incidencias-motivos.component';
+import { AbonosAgenciaTransporteComponent } from './abonos-agencia-transporte/abonos-agencia-transporte.component';
+import { RegistroPedidosPreAlmacenComponent } from './registro-pedidos-pre-almacen/registro-pedidos-pre-almacen.component';
 
 const routes: Routes = [{
   path: '',
@@ -236,6 +238,14 @@ const routes: Routes = [{
     {
       path: 'abonos-incidencias-motivos',
       component: AbonosIncidenciasMotivosComponent
+    },
+    {
+      path: 'abonos-agencia-transporte',
+      component: AbonosAgenciaTransporteComponent
+    },
+    {
+      path: 'registro-pedidos-pre-almacen',
+      component: RegistroPedidosPreAlmacenComponent
     }
   ],
 }];

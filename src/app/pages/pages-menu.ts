@@ -42,6 +42,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Presupuestos',
         link: '/pages/tables/propuesta'
+      },
+      {
+        title: 'Pedidos Pre-Almacén',
+        link: '/pages/tables/registro-pedidos-pre-almacen'
       }
     ]
   },
@@ -56,6 +60,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Abonos - Informes',
         link: '/pages/tables/abonos-incidencias-motivos'
+      },
+      {
+        title: 'Abonos - Agencias Transporte',
+        link: '/pages/tables/abonos-agencia-transporte'
       }
     ]
 

@@ -4,19 +4,14 @@
       <tr>
         <th scope="col" style="text-align: center;">Id Producto</th>
         <th scope="col" style="text-align: center;">Producto</th>
-        <th scope="col" style="text-align: center;">Categoría</th>
         <th scope="col" style="text-align: center;">Stock</th>
-        <th scope="col" style="text-align: center;">Nº Categorías</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let dato of source">
         <td align="center">{{ dato.id_product }}</td>
-        <td align="center">{{ dato.name }}</td>
-        <td align="center">{{ dato.categoria }}</td>
+        <td align="center">{{ dato.nombreProducto }}</td>
         <td align="center">{{ dato.stock }}</td>
-        <td align="center">{{ dato.n_cat }}</td>
-      </tr>
     </tbody>
   </table>
 

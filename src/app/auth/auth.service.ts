@@ -326,6 +326,16 @@ export class AuthService {
   urlProductosSinCategoriaPredeterminada: string = 'http://192.168.30.21:8000/productosSinCategoriaPredeterminada';
   urlCountProductosSinCategoriaPredeterminada: string = 'http://192.168.30.21:8000/countProductosSinCategoriaPredeterminada';
 
+  //Abonos Agencias de Tranporte
+  urlAbonosAgenciasTransporte: string = 'http://192.168.30.21:8000/abonosMotivosTransporte';
+
+  //Productos Sin MP_NombreArticulo
+  urlProductosSinMpNombreArticulo: string = 'http://192.168.30.21:8000/productosSinMPNombreArticulo';
+  urlCountProductosSinMPNombreArticulo: string = 'http://192.168.30.21:8000/countProductosSinMPNombreArticulo';
+
+  //Listado Tabla Pedidos con Estado PreAlmacen
+  urlListadoTablaPedidosPreAlmacen: string = 'http://192.168.30.21:8000/pedidosEstadosPreAlmacen';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -1304,6 +1314,28 @@ export class AuthService {
   }
   countProductosSinCategoriaPredeterminada(){
     let direccion = this.urlCountProductosSinCategoriaPredeterminada
+    return this.http.get(direccion)
+  }
+
+  //Abonos Motivos Transporte
+  abonosMotivosTransporte(json: any){
+    let direccion = this.urlAbonosAgenciasTransporte
+    return this.http.post(direccion, json)
+  }
+
+  //Productos Sin MP_NombreArticulo
+  productosSinMpNombreArticulo(){
+    let direccion = this.urlProductosSinMpNombreArticulo
+    return this.http.get(direccion)
+  }
+  countProductosSinMPNombreArticulo(){
+    let direccion = this.urlCountProductosSinMPNombreArticulo
+    return this.http.get(direccion)
+  }
+
+  //Listado Tabla Pedidos PreAlmacen
+  listadoTablaPedidosPreAlmacen(){
+    let direccion = this.urlListadoTablaPedidosPreAlmacen
     return this.http.get(direccion)
   }
 
