@@ -58,6 +58,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/abonos'
       },
       {
+        title: 'Abonos - Canales',
+        link: '/pages/tables/abonos-canales'
+      },
+      {
         title: 'Abonos - Informes',
         link: '/pages/tables/abonos-incidencias-motivos'
       },

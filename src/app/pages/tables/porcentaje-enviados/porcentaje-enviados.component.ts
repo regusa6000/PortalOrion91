@@ -58,6 +58,10 @@ export class PorcentajeEnviadosComponent implements OnInit {
         title: 'Gls',
         type: 'number',
       },
+      transaher: {
+        title: 'Transaher',
+        type: 'number'
+      },
       Tolosa:{
         title: 'Tolosa',
         type: 'number'
@@ -100,6 +104,13 @@ export class PorcentajeEnviadosComponent implements OnInit {
       datosGls.push(array[b]['gls'])
     }
 
+    //Datos Transaher
+    let datosTransaher = []
+    for(let b = 0 ; b < array.length ; b++){
+      datosTransaher.push(array[b]['transaher'])
+    }
+
+
     //Datos Tolosa
     let datosTolosa = [];
     for(let c = 0 ; c < array.length ; c++){
@@ -132,17 +143,18 @@ export class PorcentajeEnviadosComponent implements OnInit {
     datosTotal.reverse()
     datosPaack.reverse()
     datosGls.reverse()
+    datosTransaher.reverse()
     datosTolosa.reverse()
     datosEnvialia.reverse()
     datosTipsa.reverse()
     datosSeur.reverse()
     fechas.reverse()
 
-    this.grafico(datosTotal,datosPaack,datosGls,datosTolosa,datosEnvialia,datosTipsa,datosSeur,fechas)
+    this.grafico(datosTotal,datosPaack,datosGls,datosTransaher,datosTolosa,datosEnvialia,datosTipsa,datosSeur,fechas)
 
   }
 
-  grafico(arrayTotal: any,arrayPaack: any, arrayGls: any, arrayTolosa: any, arrayEnvialia: any, arrayTipsa: any, arraySeur: any, arrayFechas: any){
+  grafico(arrayTotal: any,arrayPaack: any, arrayGls: any, arrayTransaher: any, arrayTolosa: any, arrayEnvialia: any, arrayTipsa: any, arraySeur: any, arrayFechas: any){
 
     this.chart = new Chart('canvas',{
       type: 'line',
@@ -165,6 +177,12 @@ export class PorcentajeEnviadosComponent implements OnInit {
             label: 'Gls',
             data: arrayGls,
             borderColor: 'blue',
+            borderWidth: 3
+          },
+          {
+            label: 'Transaher',
+            data: arrayTransaher,
+            borderColor: 'silver',
             borderWidth: 3
           },
           {
