@@ -1,10 +1,9 @@
-
-<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
+<nb-card>
 
   <nb-card-header>
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <div>
-        <span><b>Abonos - Canales</b></span>
+        <span><b>Abonos - Productos</b></span>
       </div>
       <div>
         <span *ngIf="fechaInicio != null">Fechas: {{ fechaInicio }} - {{ fechaFin }}</span>
@@ -26,7 +25,7 @@
       </div>
     </div><br><br><br>
 
-    <ng2-smart-table [settings]="config" [source]="datosGrafico"></ng2-smart-table>
+    <ng2-smart-table [settings]="config" [source]="source"></ng2-smart-table>
 
   </nb-card-body>
 </nb-card>

@@ -1,0 +1,19 @@
+<nb-card>
+  <nb-card-header>Ventas Por Producto</nb-card-header>
+  <nb-card-body>
+
+    <div style="display: flex; justify-content: flex-end; align-items: center; padding: 15px;">
+      <!--IDPRODUCT-->
+      <div style="margin-right: 10px;">
+        <input type="text" nbInput fullWidth placeholder="IdProduct:" [(ngModel)]="idProducto">
+      </div>
+      <!--BOTON-->
+      <div>
+        <button nbButton status="primary" (click)="buscarPedidos()">Buscar</button>
+      </div>
+    </div><br><br>
+
+    <ng2-smart-table [settings]="config" [source]="source"></ng2-smart-table>
+
+  </nb-card-body>
+</nb-card>

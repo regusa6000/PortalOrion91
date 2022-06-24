@@ -2,18 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../auth/auth.service';
 import * as moment from 'moment';
 
-
 @Component({
-  selector: 'ngx-abonos-canales',
-  templateUrl: './abonos-canales.component.html',
-  styleUrls: ['./abonos-canales.component.scss']
+  selector: 'ngx-abonos-productos',
+  templateUrl: './abonos-productos.component.html',
+  styleUrls: ['./abonos-productos.component.scss']
 })
-export class AbonosCanalesComponent implements OnInit {
+export class AbonosProductosComponent implements OnInit {
 
+  source: any
   fechaInicio: any
   fechaFin: any
-  datosGrafico: any
-  loading = false;
 
   constructor(public authSvc: AuthService) { }
 
@@ -22,11 +20,9 @@ export class AbonosCanalesComponent implements OnInit {
 
   buscar(){
     let json = {'fechaInicio': this.fechaInicio, 'fechaFin': this.fechaFin}
-
-    this.toggleLoadingAnimation()
-    this.authSvc.graficoAbonosCanales(json).subscribe(data=>{
-      this.datosGrafico = data
-      console.log(this.datosGrafico)
+    this.authSvc.abonosProductosEntreFechas(json).subscribe(data=>{
+      this.source = data
+      console.log(this.source)
     })
   }
 
@@ -37,25 +33,17 @@ export class AbonosCanalesComponent implements OnInit {
     console.log(this.fechaFin)
   }
 
-  toggleLoadingAnimation() {
-    this.loading = true;
-    setTimeout(() => this.loading = false, 6000);
-  }
-
   config = {
     pager: { display: false },
     actions: false,
     columns: {
-      canal: {
-        title: 'Tienda',
-        type: 'number',
+      itemid: {
+        title: 'Id Ax',
+        type: 'string',
       },
-      abonos: {
-        title: 'Total Abonos',
-        type: 'number',
-        valuePrepareFunction: (value) =>{
-          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
-        }
+      name: {
+        title: 'Productos',
+        type: 'string',
       },
       facturas: {
         title: 'Total Facturas',
@@ -64,8 +52,29 @@ export class AbonosCanalesComponent implements OnInit {
           return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
+      abonos: {
+        title: 'Total Abonos',
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
+        }
+      },
       porcentajeAbonos:{
-        title: 'Porcentaje',
+        title: 'Porcentaje Abonos',
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return value + '%'
+        }
+      },
+      incidencias: {
+        title: 'Total Incidencias',
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
+        }
+      },
+      porcentajeIncis:{
+        title: 'Porcentaje Incidencias',
         type: 'number',
         valuePrepareFunction: (value) =>{
           return value + '%'
@@ -73,6 +82,5 @@ export class AbonosCanalesComponent implements OnInit {
       }
     },
   };
-
 
 }

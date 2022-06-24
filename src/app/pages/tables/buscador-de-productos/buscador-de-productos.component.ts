@@ -31,6 +31,13 @@ export class BuscadorDeProductosComponent implements OnInit {
         title: 'Id Producto',
         type: 'number'
       },
+      url: {
+        title: 'Enlace',
+        type: 'html',
+        valuePrepareFunction: (value) =>{
+          return "<a href='"+ value +"' target='_blank'>Enlace</a>"
+        }
+      },
       imagen:{
         title: 'Imagen',
         type: 'html',

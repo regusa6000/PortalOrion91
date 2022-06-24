@@ -79,6 +79,9 @@ import { AbonosIncidenciasMotivosComponent } from './abonos-incidencias-motivos/
 import { AbonosAgenciaTransporteComponent } from './abonos-agencia-transporte/abonos-agencia-transporte.component';
 import { RegistroPedidosPreAlmacenComponent } from './registro-pedidos-pre-almacen/registro-pedidos-pre-almacen.component';
 import { AbonosCanalesComponent } from './abonos-canales/abonos-canales.component';
+import { VentasPorProductoComponent } from './ventas-por-producto/ventas-por-producto.component';
+import { DatosFacturacionAxComponent } from './dashboard/components/datos-facturacion-ax/datos-facturacion-ax.component';
+import { AbonosProductosComponent } from './abonos-productos/abonos-productos.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -177,6 +180,9 @@ import { AbonosCanalesComponent } from './abonos-canales/abonos-canales.componen
     AbonosAgenciaTransporteComponent,
     RegistroPedidosPreAlmacenComponent,
     AbonosCanalesComponent,
+    VentasPorProductoComponent,
+    DatosFacturacionAxComponent,
+    AbonosProductosComponent,
   ],
 })
 export class TablesModule { }

@@ -62,6 +62,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/abonos-canales'
       },
       {
+        title: 'Abonos - Productos',
+        link: '/pages/tables/abonos-productos'
+      },
+      {
         title: 'Abonos - Informes',
         link: '/pages/tables/abonos-incidencias-motivos'
       },
@@ -106,6 +110,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
           {
             title: 'Productos con pocas IMG',
             link: '/pages/tables/productos-con-pocas-imagenes'
+          },
+          {
+            title: 'Ventas por Producto',
+            link: '/pages/tables/ventas-por-producto'
           },
           {
             title: 'Productos Urls Internas',

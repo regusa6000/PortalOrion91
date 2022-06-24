@@ -16,6 +16,7 @@ export class VentasProductosComponent implements OnInit {
   arrayRelleno: any
   mostrarTabla = false
   idProduct: any
+  tamanoArray: any
 
   chartSumatoria: Chart | undefined;
 
@@ -35,11 +36,12 @@ export class VentasProductosComponent implements OnInit {
 
 
   buscarProducto(idProducto: number){
+
     this.authSvc.ventasProductos(idProducto,this.fechaInicio,this.fechaFin,this.guardarValorSelect).subscribe(data=>{
       this.arrayRelleno = data
-      this.mostrarTabla = true
+      this.tamanoArray = this.arrayRelleno.length
       // setInterval(() => { this.lineaGrafica(this.arrayRelleno); }, 10000);
-      setTimeout(() => { this.lineaGrafica(this.arrayRelleno); }, 10000);
+      // setTimeout(() => { this.lineaGrafica(this.arrayRelleno); }, 10000);
       console.log(data)
     })
   }
@@ -86,6 +88,40 @@ export class VentasProductosComponent implements OnInit {
   });
 
   }
+
+  config = {
+    actions: false,
+    columns: {
+      product_id: {
+        title: 'Id Producto',
+        type: 'string'
+      },
+      name: {
+        title: 'Producto',
+        type: 'string'
+      },
+      product_quantity:{
+        title: 'Cantidad Vendida',
+        type: 'number',
+      },
+      importeVendido:{
+        title: 'Importe Vendido',
+        type: 'number',
+        valuePrepareFunction: (value) =>{
+          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
+        }
+      },
+      date_add:{
+        title: 'Fecha',
+        type: 'string'
+      },
+      payment:{
+        title: 'Pago',
+        type: 'string'
+      }
+    },
+  };
+
 
 }
 
