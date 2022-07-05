@@ -25,6 +25,7 @@ export class BuscadorDeProductosComponent implements OnInit {
   }
 
   config = {
+    pager: { display: false },
     actions: false,
     columns: {
       id_product: {
@@ -72,6 +73,10 @@ export class BuscadorDeProductosComponent implements OnInit {
       axIdCombinado: {
         title: 'Id Ax Combinado',
         type: 'string'
+      },
+      stock:{
+        title: 'Stock',
+        type: 'number'
       }
     },
   };

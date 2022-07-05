@@ -53,6 +53,7 @@ import { RegistroPedidosPreAlmacenComponent } from './registro-pedidos-pre-almac
 import { AbonosCanalesComponent } from './abonos-canales/abonos-canales.component';
 import { VentasPorProductoComponent } from './ventas-por-producto/ventas-por-producto.component';
 import { AbonosProductosComponent } from './abonos-productos/abonos-productos.component';
+import { CuponesDescuentosComponent } from './cupones-descuentos/cupones-descuentos.component';
 
 const routes: Routes = [{
   path: '',
@@ -261,6 +262,10 @@ const routes: Routes = [{
     {
       path: 'abonos-productos',
       component: AbonosProductosComponent
+    },
+    {
+      path: 'cupones-descuentos',
+      component: CuponesDescuentosComponent
     }
   ],
 }];

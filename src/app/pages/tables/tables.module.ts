@@ -82,6 +82,7 @@ import { AbonosCanalesComponent } from './abonos-canales/abonos-canales.componen
 import { VentasPorProductoComponent } from './ventas-por-producto/ventas-por-producto.component';
 import { DatosFacturacionAxComponent } from './dashboard/components/datos-facturacion-ax/datos-facturacion-ax.component';
 import { AbonosProductosComponent } from './abonos-productos/abonos-productos.component';
+import { CuponesDescuentosComponent } from './cupones-descuentos/cupones-descuentos.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -183,6 +184,7 @@ import { AbonosProductosComponent } from './abonos-productos/abonos-productos.co
     VentasPorProductoComponent,
     DatosFacturacionAxComponent,
     AbonosProductosComponent,
+    CuponesDescuentosComponent,
   ],
 })
 export class TablesModule { }

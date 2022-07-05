@@ -229,6 +229,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/ventas-productos'
       },
       {
+        title: 'Descuentos',
+        link: '/pages/tables/cupones-descuentos'
+      },
+      {
         title: 'Opiniones',
         children: [
           {

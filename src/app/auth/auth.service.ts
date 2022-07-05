@@ -190,7 +190,6 @@ export class AuthService {
   urlPreciosCambiados: string = 'http://192.168.30.21:8000/controlPreciosCambiadosAx';
   urlBadgePreciosCambiados: string = 'http://192.168.30.21:8000/badgeControlPreciosCambiadosAx';
 
-
   //Faqs
   urlCargarFaqs: string = 'http://192.168.30.21:8000/cargarFaqs';
   urlCrearFaqs: string = 'http://192.168.30.21:8000/crearFaq';
@@ -347,6 +346,9 @@ export class AuthService {
 
   //Abonos Productos entre fechas
   urlAbonosProductosEntreFechas: string = 'http://192.168.30.21:8000/abonosProductosEntreFechas';
+
+  //Cupones de Descuentos
+  urlCuponesDeDescuento: string = 'http://192.168.30.21:8000/descuentos';
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -1376,5 +1378,12 @@ export class AuthService {
     let direccion = this.urlAbonosProductosEntreFechas
     return this.http.post(direccion,json)
   }
+
+  //Cupones de Descuentos
+  cuponesDescuento(){
+    let direccion = this.urlCuponesDeDescuento
+    return this.http.get(direccion)
+  }
+
 
 }
