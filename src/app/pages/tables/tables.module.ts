@@ -83,6 +83,9 @@ import { VentasPorProductoComponent } from './ventas-por-producto/ventas-por-pro
 import { DatosFacturacionAxComponent } from './dashboard/components/datos-facturacion-ax/datos-facturacion-ax.component';
 import { AbonosProductosComponent } from './abonos-productos/abonos-productos.component';
 import { CuponesDescuentosComponent } from './cupones-descuentos/cupones-descuentos.component';
+import { RoturasActualesComponent } from './roturas-actuales/roturas-actuales.component';
+import { ProductosTopHace7DiasComponent } from './dashboard/components/productos-top-hace7-dias/productos-top-hace7-dias.component';
+import { ProductosTopHace30DiasComponent } from './dashboard/components/productos-top-hace30-dias/productos-top-hace30-dias.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -185,6 +188,9 @@ import { CuponesDescuentosComponent } from './cupones-descuentos/cupones-descuen
     DatosFacturacionAxComponent,
     AbonosProductosComponent,
     CuponesDescuentosComponent,
+    RoturasActualesComponent,
+    ProductosTopHace7DiasComponent,
+    ProductosTopHace30DiasComponent,
   ],
 })
 export class TablesModule { }

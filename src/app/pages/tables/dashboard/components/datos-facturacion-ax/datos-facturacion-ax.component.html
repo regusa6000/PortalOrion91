@@ -6,20 +6,20 @@
         <th scope="col" style="text-align: center;">Total Pedidos</th>
         <th scope="col" style="text-align: center;">Total Incis</th>
         <th scope="col" style="text-align: center;">Total Abonos</th>
-        <th scope="col" style="text-align: center;">Importe Pedidos (S/I) </th>
-        <th scope="col" style="text-align: center;">Importe Incis (S/I)</th>
-        <th scope="col" style="text-align: center;">Importe Abonos (S/I)</th>
+        <th scope="col" style="text-align: center;">Importe Pedidos Sin Iva </th>
+        <th scope="col" style="text-align: center;">Importe Incis Sin Iva</th>
+        <th scope="col" style="text-align: center;">Importe Abonos Sin Iva</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let dato of source">
-        <td align="right">{{ dato.dia }}</td>
-        <td align="right">{{ dato.suma_ped }}</td>
-        <td align="right">{{ dato.suma_incis }}</td>
-        <td align="right">{{ dato.suma_abo }}</td>
-        <td align="right">{{ dato.total_ped_s_i | currency:'EUR': true}}</td>
-        <td align="right">{{ dato.total_incis_s_i | currency:'EUR': true}}</td>
-        <td align="right">{{ dato.total_abo_s_i | currency:'EUR': true}}</td>
+        <td align="center">{{ dato.dia }}</td>
+        <td align="center">{{ dato.suma_ped }}</td>
+        <td align="center">{{ dato.suma_incis }}</td>
+        <td align="center">{{ dato.suma_abo }}</td>
+        <td align="center">{{ dato.total_ped_s_i | currency:'EUR': true}}</td>
+        <td align="center">{{ dato.total_incis_s_i | currency:'EUR': true}}</td>
+        <td align="center">{{ dato.total_abo_s_i | currency:'EUR': true}}</td>
       </tr>
     </tbody>
   </table>

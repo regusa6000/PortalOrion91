@@ -1,17 +1,15 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Order Id</th>
-      <th scope="col">Referencia</th>
-      <th scope="col">Método de Pago</th>
+      <th scope="col">Nº Pedido</th>
+      <th scope="col">Pago/Canal</th>
       <th scope="col">URL pedido</th>
       <th scope="col">Estado</th>
-      <th scope="col">Fecha de Creación</th>
+      <th scope="col">Fecha Pedido</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let pre of preAlmacen">
-      <td>{{ pre.id_order }}</td>
       <td>{{ pre.reference }}</td>
       <td>{{ pre.payment }}</td>
       <td><a href="https://orion91.com/admin753tbd1ux/index.php?controller=AdminOrders&vieworder=&id_order={{ pre.id_order }}" target="_blank">Ir a pedido</a></td>

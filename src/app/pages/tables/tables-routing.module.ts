@@ -54,6 +54,7 @@ import { AbonosCanalesComponent } from './abonos-canales/abonos-canales.componen
 import { VentasPorProductoComponent } from './ventas-por-producto/ventas-por-producto.component';
 import { AbonosProductosComponent } from './abonos-productos/abonos-productos.component';
 import { CuponesDescuentosComponent } from './cupones-descuentos/cupones-descuentos.component';
+import { RoturasActualesComponent } from './roturas-actuales/roturas-actuales.component';
 
 const routes: Routes = [{
   path: '',
@@ -266,6 +267,10 @@ const routes: Routes = [{
     {
       path: 'cupones-descuentos',
       component: CuponesDescuentosComponent
+    },
+    {
+      path: 'roturas-actuales',
+      component: RoturasActualesComponent
     }
   ],
 }];

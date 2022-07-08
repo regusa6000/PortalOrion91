@@ -96,8 +96,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/historico-stock'
           },
           {
-            title: 'Roturas',
+            title: 'Roturas Futuras',
             link: '/pages/tables/roturas'
+          },
+          {
+            title: 'Roturas Actuales',
+            link: '/pages/tables/roturas-actuales'
           },
           {
             title: 'Productos Faqs',

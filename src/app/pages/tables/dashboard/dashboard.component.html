@@ -2,7 +2,7 @@
   <!--Ventas dia(-7)-->
   <div class="col-xxxl-6 col-xxl-6 col-lg-6 col-md-6">
     <nb-card>
-      <nb-card-header>Comparación de ventas Hoy(-7)</nb-card-header>
+      <nb-card-header>Comparación de ventas Hoy vs hace 7 días</nb-card-header>
         <nb-card-body>
           <ngx-ventas-semanal></ngx-ventas-semanal>
         </nb-card-body>
@@ -35,7 +35,7 @@
   <!--DashBoard Ventas hoy-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Canal de Ventas Hoy</nb-card-header>
+      <nb-card-header>Canal de Ventas Hoy (Con Iva)</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas></ngx-grafico-ventas>
         </nb-card-body>
@@ -44,7 +44,7 @@
   <!--DashBoard Ventas hoy-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Canal de Ventas (-7 dias)</nb-card-header>
+      <nb-card-header>Canal de Ventas (hace 7 días (Con Iva) )</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas-una-semana></ngx-grafico-ventas-una-semana>
         </nb-card-body>
@@ -53,7 +53,7 @@
   <!--DashBoard Ventas hoy-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Canal de Ventas (-30 dias)</nb-card-header>
+      <nb-card-header>Canal de Ventas (hace 30 días (Con Iva) )</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas-un-mes></ngx-grafico-ventas-un-mes>
         </nb-card-body>
@@ -73,12 +73,36 @@
   </div>
 </div>
 
+<div class="row">
+  <!--Productos Top ultimos 7 dias-->
+  <div class="col-xxxl-12 col-xxl-12 col-lg-12 col-md-12">
+    <nb-card>
+      <nb-card-header>Productos Top Últimos 7 Días</nb-card-header>
+        <nb-card-body>
+          <ngx-productos-top-hace7-dias></ngx-productos-top-hace7-dias>
+        </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+  <!--Productos Top ultimos 30 dias-->
+  <div class="col-xxxl-12 col-xxl-12 col-lg-12 col-md-12">
+    <nb-card>
+      <nb-card-header>Productos Top Últimos 30 Días</nb-card-header>
+        <nb-card-body>
+          <ngx-productos-top-hace30-dias></ngx-productos-top-hace30-dias>
+        </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
 <!--Tercer Parte-->
 <div class="row">
   <!--DashBoard Ventas Paises hoy-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Ventas por Paises Hoy</nb-card-header>
+      <nb-card-header>Ventas por Paises Hoy (Con Iva)</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas-paises-hoy></ngx-grafico-ventas-paises-hoy>
         </nb-card-body>
@@ -87,7 +111,7 @@
   <!--DashBoard Ventas Paises hoy -7-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Ventas por Paises (-7 dias)</nb-card-header>
+      <nb-card-header>Ventas por Paises (hace 7 días (Con Iva) )</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas-paises-una-semana></ngx-grafico-ventas-paises-una-semana>
         </nb-card-body>
@@ -96,7 +120,7 @@
   <!--DashBoard Ventas Paises hoy -30-->
   <div class="col-xxxl-4 col-xxl-4 col-lg-5 col-md-6">
     <nb-card>
-      <nb-card-header>Ventas por Paises (-30 dias)</nb-card-header>
+      <nb-card-header>Ventas por Paises (hace 30 días (Con Iva) )</nb-card-header>
         <nb-card-body>
           <ngx-grafico-ventas-paises-un-mes></ngx-grafico-ventas-paises-un-mes>
         </nb-card-body>
@@ -108,7 +132,7 @@
 <div class="row">
   <div class="col-xxxl-12 col-xxl-12 col-lg-12 col-md-12">
     <nb-card>
-      <nb-card-header>Comparación 2021 vs 2022</nb-card-header>
+      <nb-card-header>Comparación 2021 vs 2022 (Con Iva)</nb-card-header>
         <nb-card-body>
           <ngx-grafico-comparacion-ventas></ngx-grafico-comparacion-ventas>
         </nb-card-body>
@@ -134,7 +158,7 @@
 <div class="row">
   <div class="col-xxxl-12 col-xxl-12 col-lg-12 col-md-12">
     <nb-card>
-      <nb-card-header>Conectores Canales</nb-card-header>
+      <nb-card-header>Control de Conectores de Canales</nb-card-header>
         <nb-card-body>
           <ngx-conectores-canales></ngx-conectores-canales>
         </nb-card-body>

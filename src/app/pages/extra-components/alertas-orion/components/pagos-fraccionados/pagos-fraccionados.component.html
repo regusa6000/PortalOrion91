@@ -1,8 +1,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Order Id</th>
-      <th scope="col">Referencia</th>
+      <th scope="col">Nº Pedido</th>
       <th scope="col">URL Pedido</th>
       <th scope="col">Pago/Canal</th>
       <th scope="col">Importe Pedido</th>
@@ -11,7 +10,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let pagos of arrayPagos">
-      <td>{{ pagos.id_order }}</td>
       <td>{{ pagos.reference }}</td>
       <td><a href="{{ pagos.url }}" target="_blank">Ir a pedido</a></td>
       <td>{{ pagos.payment }}</td>

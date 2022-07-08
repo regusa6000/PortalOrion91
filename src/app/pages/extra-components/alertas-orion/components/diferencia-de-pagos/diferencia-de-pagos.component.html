@@ -1,19 +1,17 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Order Id</th>
       <th scope="col">Total pedido</th>
       <th scope="col">Total pagado</th>
       <th scope="col">DIFERENCIA</th>
       <th scope="col">URL pedido</th>
       <th scope="col">Nº de pedido</th>
       <th scope="col">Pago/canal</th>
-      <th scope="col">Fecha de pedido</th>
+      <th scope="col">Fecha pedido</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let diferencia of arrayDiferenciaPagos">
-      <td>{{ diferencia.id_order }}</td>
       <td>{{ diferencia.total_paid | currency:'EUR': true}}</td>
       <td>{{ diferencia.amount | currency:'EUR': true}}</td>
       <td>{{ diferencia.diferencia | currency:'EUR': true}}</td>

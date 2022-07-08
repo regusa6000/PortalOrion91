@@ -69,6 +69,9 @@ export class AuthService {
   //Roturas Stock
   urlRoturaStock: string = 'http://192.168.30.21:8000/roturaStock';
 
+  //Roturas Actuales
+  urlRoturaStockActuales: string = 'http://192.168.30.21:8000/roturasActuales';
+
   //Rutas de Makro
   urlMakroTodosLosProductos: string = 'http://192.168.30.21:8000/productosTotalesMakro';
   urlMakroOffersPublicados: string = 'http://192.168.30.21:8000/offersPublicados';
@@ -151,6 +154,8 @@ export class AuthService {
   urlProductosTopEntreFechas: string = 'http://192.168.30.21:8000/productosTopEntreFechas';
   urlProductosTopUltimos: string = 'http://192.168.30.21:8000/productosTopUltimosDias';
   urlProductosTopHoy: string = 'http://192.168.30.21:8000/productosTopHoy';
+  urlProductosTopUltimos7Dias: string = 'http://192.168.30.21:8000/productosTopUltimos7DiasDashboard';
+  urlProductosTopUltimos30Dias: string = 'http://192.168.30.21:8000/productosTopUltimos30DiasDashboard';
 
   //Productos por categoria
   urlCategoriaProductosName: string = 'http://192.168.30.21:8000/categoriasProductosName'
@@ -583,6 +588,12 @@ export class AuthService {
     return this.http.get(direccion)
   }
 
+  //Roturas Stock Actuales
+  controlRoturasStockActual(){
+    let direccion = this.urlRoturaStockActuales
+    return this.http.get(direccion)
+  }
+
   //Funciones de Makro
   cargarMakroTodosLosProductos(){
     let direccion = this.urlMakroTodosLosProductos
@@ -846,6 +857,14 @@ export class AuthService {
   }
   productosTopHoy(){
     let direccion = this.urlProductosTopHoy
+    return this.http.get(direccion)
+  }
+  productosTopUltimos7Dias(){
+    let direccion = this.urlProductosTopUltimos7Dias
+    return this.http.get(direccion)
+  }
+  productosTopUltimos30Dias(){
+    let direccion = this.urlProductosTopUltimos30Dias
     return this.http.get(direccion)
   }
 
