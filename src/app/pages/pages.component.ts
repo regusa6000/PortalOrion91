@@ -42,6 +42,7 @@ export class PagesComponent implements OnInit{
   productosCategorizasdosOulet: any
   productosSinCategoriaPredeterminada: any
   productosSinMpNombreArticulo: any
+  productosSinBullets: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -167,12 +168,18 @@ export class PagesComponent implements OnInit{
                                                       this.productosSinMpNombreArticulo = data
                                                       total += this.productosSinMpNombreArticulo
 
+                                                      this.authSvc.countProductosSinBullets().subscribe(data=>{
+                                                        this.productosSinBullets = data
+                                                        total += this.productosSinBullets
+
                                                         if(total > 0){
                                                           this.menu[0].badge = {
                                                             text: `${total}`,
                                                             status:"danger"
                                                           }
                                                         }
+
+                                                      })
 
                                                     })
 

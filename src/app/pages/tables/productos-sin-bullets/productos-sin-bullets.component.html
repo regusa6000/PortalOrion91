@@ -1,0 +1,19 @@
+<nb-card size="large" style="height: 100%; width: 100%;">
+
+  <nb-card-header>
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+        Productos Sin Bullets
+      </div>
+      <div>
+        <button nbButton status="primary" (click)="exportToExcel()" style="margin-right: 10px; margin-left: 10px;">Exportar</button>
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body class="two-inputs">
+
+    <ng2-smart-table [settings]="config" [source]="source" id="season-tble"></ng2-smart-table>
+
+  </nb-card-body>
+</nb-card>

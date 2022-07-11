@@ -23,33 +23,33 @@ export class RegistroPedidosPreAlmacenComponent implements OnInit {
     actions: false,
     columns: {
       reference: {
-        title: 'Referencia',
+        title: 'Nº Pedido',
         type: 'string'
       },
       payment: {
-        title: 'Método de Pago',
+        title: 'Pago/Canal',
         type: 'string',
       },
       url:{
-        title: 'Enlace',
+        title: 'URL Pedido',
         type: 'html',
         valuePrepareFunction: (value: string) =>{
           return "<div style='text-align: center;' ><a href='" + value + "' target='_blank'>Ir a Pedido</a></div>";
         }
       },
       totalPaid:{
-        title: 'Total Pagado',
+        title: 'Total Pagado Por Importe (Con Iva)',
         type: 'number',
         valuePrepareFunction: (value) =>{
           return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
       fechaCreacionCompra:{
-        title: 'Fecha Compra',
+        title: 'Fecha Pedido',
         type: 'string'
       },
       fechaRegistro:{
-        title: 'Fecha Registro',
+        title: 'Fecha a "Pagado"',
         type: 'string'
       }
     },

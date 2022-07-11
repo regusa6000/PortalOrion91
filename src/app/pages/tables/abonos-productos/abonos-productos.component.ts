@@ -12,6 +12,7 @@ export class AbonosProductosComponent implements OnInit {
   source: any
   fechaInicio: any
   fechaFin: any
+  loading = false;
 
   constructor(public authSvc: AuthService) { }
 
@@ -19,11 +20,17 @@ export class AbonosProductosComponent implements OnInit {
   }
 
   buscar(){
+    this.toggleLoadingAnimation()
     let json = {'fechaInicio': this.fechaInicio, 'fechaFin': this.fechaFin}
     this.authSvc.abonosProductosEntreFechas(json).subscribe(data=>{
       this.source = data
       console.log(this.source)
     })
+  }
+
+  toggleLoadingAnimation() {
+    this.loading = true;
+    setTimeout(() => this.loading = false, 30000);
   }
 
   cambioRango(event){

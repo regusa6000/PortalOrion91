@@ -6,8 +6,9 @@
         <th scope="col">Imagen</th>
         <th scope="col">Producto</th>
         <th scope="col">Categoría</th>
-        <th scope="col">Cantidad</th>
-        <th scope="col">Total (Con Iva)</th>
+        <th style="text-align: center;" scope="col">Cantidad Vendida</th>
+        <th scope="col">Stock Actual</th>
+        <th scope="col">Total <br>(Con Iva)</th>
       </tr>
     </thead>
     <tbody>
@@ -16,7 +17,8 @@
         <td><img src="{{ top.imagen }}"></td>
         <td>{{ top.name }}</td>
         <td>{{ top.nombre_cat }}</td>
-        <td>{{ top.suma_cantidad}}</td>
+        <td align="center">{{ top.suma_cantidad}}</td>
+        <td>{{ top.stock }}</td>
         <td>{{ top.suma_importes | currency:'EUR': true}}</td>
       </tr>
     </tbody>

@@ -7,6 +7,14 @@
   </nb-card-body>
 </nb-card>
 
+<!--Productos Sin Bullets-->
+<nb-card *ngIf="productosSinBullets > 0">
+  <nb-card-header>Productos Sin Bullets</nb-card-header>
+  <nb-card-body>
+    <ngx-productos-sin-bullets></ngx-productos-sin-bullets>
+  </nb-card-body>
+</nb-card>
+
 <!--Precios cambiados en Tienda-->
 <nb-card *ngIf="preciosCambiados > 0">
   <nb-card-header>Control de precios Ax vs ORION91</nb-card-header>

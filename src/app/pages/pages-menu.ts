@@ -28,6 +28,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/productos-top-fechas'
       },
       {
+        title: 'Productos Top/Canal',
+        link: '/pages/tables/productos-top-canales'
+      },
+      {
         title: 'Incidencias Top',
         link: '/pages/tables/incidencias-mensuales'
       },
@@ -120,6 +124,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/ventas-por-producto'
           },
           {
+            title: 'Productos Sin Bullets',
+            link: '/pages/tables/productos-sin-bullets'
+          },
+          {
             title: 'Productos Urls Internas',
           }
         ]
@@ -187,10 +195,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/productos-no-publicados-amazon'
           }
         ]
-      },
-      {
-        title: 'Productos Top/Canal',
-        link: '/pages/tables/productos-top-canales'
       }
     ]
   },

@@ -86,6 +86,7 @@ import { CuponesDescuentosComponent } from './cupones-descuentos/cupones-descuen
 import { RoturasActualesComponent } from './roturas-actuales/roturas-actuales.component';
 import { ProductosTopHace7DiasComponent } from './dashboard/components/productos-top-hace7-dias/productos-top-hace7-dias.component';
 import { ProductosTopHace30DiasComponent } from './dashboard/components/productos-top-hace30-dias/productos-top-hace30-dias.component';
+import { ProductosSinBulletsComponent } from './productos-sin-bullets/productos-sin-bullets.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -191,6 +192,7 @@ import { ProductosTopHace30DiasComponent } from './dashboard/components/producto
     RoturasActualesComponent,
     ProductosTopHace7DiasComponent,
     ProductosTopHace30DiasComponent,
+    ProductosSinBulletsComponent,
   ],
 })
 export class TablesModule { }

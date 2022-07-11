@@ -355,6 +355,10 @@ export class AuthService {
   //Cupones de Descuentos
   urlCuponesDeDescuento: string = 'http://192.168.30.21:8000/descuentos';
 
+  //Productos Sin Bullets
+  urlProductosSinBullets: string = 'http://192.168.30.21:8000/productosSinBullets';
+  urlBadgeProductosSinBulles: string = 'http://192.168.30.21:8000/countProductosSinBullets';
+
   public loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -1404,5 +1408,15 @@ export class AuthService {
     return this.http.get(direccion)
   }
 
+
+  //Productos Sin Bullets
+  productosSinBullets(){
+    let direccion = this.urlProductosSinBullets
+    return this.http.get(direccion)
+  }
+  countProductosSinBullets(){
+    let direccion = this.urlBadgeProductosSinBulles
+    return this.http.get(direccion)
+  }
 
 }

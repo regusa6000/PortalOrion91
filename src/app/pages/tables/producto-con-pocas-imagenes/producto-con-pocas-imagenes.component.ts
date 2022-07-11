@@ -32,6 +32,13 @@ export class ProductoConPocasImagenesComponent implements OnInit {
         title: 'Id Producto',
         type: 'number',
       },
+      url:{
+        title: 'URL Producto',
+        type: 'html',
+        valuePrepareFunction: (value: string) =>{
+          return "<div style='text-align: center;' ><a href='" + value + "' target='_blank'>Ir a Producto</a></div>";
+        }
+      },
       imagen: {
         title: 'Imagen',
         type: 'html',

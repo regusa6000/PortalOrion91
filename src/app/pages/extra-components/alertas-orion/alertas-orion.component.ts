@@ -32,6 +32,7 @@ export class AlertasOrionComponent implements OnInit {
   productosCategorizadosOulet: any
   productosSinCategoriaPredeterminada: any
   productosSinMpNombreProducto: any
+  productosSinBullets: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -124,6 +125,9 @@ export class AlertasOrionComponent implements OnInit {
     })
     this.authSvc.countProductosSinMPNombreArticulo().subscribe(data=>{
       this.productosSinMpNombreProducto = data
+    })
+    this.authSvc.countProductosSinBullets().subscribe(data=>{
+      this.productosSinBullets = data
     })
 
   }
