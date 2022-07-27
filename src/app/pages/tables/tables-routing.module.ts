@@ -56,6 +56,13 @@ import { AbonosProductosComponent } from './abonos-productos/abonos-productos.co
 import { CuponesDescuentosComponent } from './cupones-descuentos/cupones-descuentos.component';
 import { RoturasActualesComponent } from './roturas-actuales/roturas-actuales.component';
 import { ProductosSinBulletsComponent } from './productos-sin-bullets/productos-sin-bullets.component';
+import { CategoriasFaqsComponent } from './categorias-faqs/categorias-faqs.component';
+import { ControlUsuariosComponent } from './control-usuarios/control-usuarios.component';
+import { ProductosSinEan13ConStockComponent } from './productos-sin-ean13-con-stock/productos-sin-ean13-con-stock.component';
+import { ProductosSinMpComponent } from './productos-sin-mp/productos-sin-mp.component';
+import { CategoriasSinFacetasComponent } from './categorias-sin-facetas/categorias-sin-facetas.component';
+import { FacturasAxComponent } from './facturas-ax/facturas-ax.component';
+import { DevolucionesComponent } from './devoluciones/devoluciones.component';
 
 const routes: Routes = [{
   path: '',
@@ -276,6 +283,34 @@ const routes: Routes = [{
     {
       path: 'productos-sin-bullets',
       component: ProductosSinBulletsComponent
+    },
+    {
+      path: 'categorias-faqs',
+      component: CategoriasFaqsComponent
+    },
+    {
+      path: 'control-usuarios',
+      component: ControlUsuariosComponent
+    },
+    {
+      path: 'productos-sin-ean13-con-stock',
+      component: ProductosSinEan13ConStockComponent
+    },
+    {
+      path: 'productos-sin-mp',
+      component: ProductosSinMpComponent
+    },
+    {
+      path: 'categorias-sin-facetas',
+      component: CategoriasSinFacetasComponent
+    },
+    {
+      path: 'facturas-ax',
+      component: FacturasAxComponent
+    },
+    {
+      path: 'devoluciones',
+      component: DevolucionesComponent
     }
   ],
 }];

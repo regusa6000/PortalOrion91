@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { spawn } from 'child_process';
 import { AuthService } from '../../../auth/auth.service';
 import * as eva from 'eva-icons';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'ngx-diario-pedidos',
@@ -13,6 +14,7 @@ export class DiarioPedidosComponent implements OnInit {
   source: any;
   loading = false;
   domSanitizer: any;
+  name = 'DiarioPedidos.xlsx';
 
   constructor(public authSvc: AuthService) { }
 
@@ -21,6 +23,16 @@ export class DiarioPedidosComponent implements OnInit {
     this.authSvc.ventasSemanales().subscribe(data=>{
       this.source = data
     })
+  }
+
+  exportToExcel(): void {
+    let element = document.getElementById('season-tble');
+    const worksheet: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    const book: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(book, worksheet, 'Sheet1');
+
+    XLSX.writeFile(book, this.name);
   }
 
   toggleLoadingAnimation() {

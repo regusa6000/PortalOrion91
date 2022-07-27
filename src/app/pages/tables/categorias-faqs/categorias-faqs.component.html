@@ -1,0 +1,9 @@
+<nb-card>
+  <nb-card-header>Categorías Faqs</nb-card-header>
+
+  <nb-card-body>
+    <span>Listado de Categorías que en su pie de página en ORION91.COM tienen FAQS.</span><br><br>
+    <ng2-smart-table [settings]="config" [source]="source" (createConfirm)="onAdd($event)" (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="onEdit($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

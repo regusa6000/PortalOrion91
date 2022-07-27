@@ -1,8 +1,17 @@
 <nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
-  <nb-card-header>Pedidos Diarios</nb-card-header>
+  <nb-card-header>
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+        Pedidos Diarios
+      </div>
+      <div>
+        <button nbButton status="primary" (click)="exportToExcel()" style="margin-right: 10px; margin-left: 10px;">Exportar</button>
+      </div>
+    </div>
+  </nb-card-header>
 
   <nb-card-body>
-    <ng2-smart-table [settings]="config" [source]="source">
+    <ng2-smart-table [settings]="config" [source]="source" id="season-tble">
     </ng2-smart-table>
   </nb-card-body>
 </nb-card>

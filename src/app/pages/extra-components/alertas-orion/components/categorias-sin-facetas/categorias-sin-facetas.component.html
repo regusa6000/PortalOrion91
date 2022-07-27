@@ -1,0 +1,20 @@
+<div id="tablaPedidosNoEnviados">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id Categoría</th>
+        <th scope="col">Categoría</th>
+        <th scope="col">Contador<br>Facetas</th>
+        <th scope="col">Elementor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of source">
+        <td>{{ cat.id_category }}</td>
+        <td>{{ cat.name }}</td>
+        <td>{{ cat.contador_facetas }}</td>
+        <td>{{ cat.elementor }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

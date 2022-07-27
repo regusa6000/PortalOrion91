@@ -11,353 +11,379 @@ import { User, UserResponse } from '../shared/guards/components/models/user.inte
 export class AuthService {
 
 
-  urlVentasSemanales: string = 'http://192.168.30.21:8000/ventasSemanalesTiendas';
-  urlVentasSemanalesTiendas: string = 'http://192.168.30.21:8000/ventasSemanalesTodasLasTiendas';
+  urlVentasSemanales: string = 'http://192.168.1.124:8000/ventasSemanalesTiendas';
+  urlVentasSemanalesTiendas: string = 'http://192.168.1.124:8000/ventasSemanalesTodasLasTiendas';
 
   //Badges
-  urlControlPedidosPagadosBadge: string = 'http://192.168.30.21:8000/controlPedidosPagadosBadge';
-  urlControlPedidosAlmacenBadge: string = 'http://192.168.30.21:8000/pedidosAlmacenBadge';
-  urlBadgePagosFraccionados: string = 'http://192.168.30.21:8000/badgePedidosFraccionados';
-  urlBadgePedidosSinStockMakro: string = 'http://192.168.30.21:8000/badgepedidosSinStockMakro';
-  urlBadgeAliexpress: string = 'http://192.168.30.21:8000/badgeAliExpress';
-  urlCombinadosPredeterminadosSinStockBadge: string = 'http://192.168.30.21:8000/CombinadospredeterminadosSinStockCount';
-  urlControlManoManoBadge: string = 'http://192.168.30.21:8000/controlManoManoBadge';
-  urlBadgeCategoriasVacias: string = 'http://192.168.30.21:8000/controlCategoriasVaciasBadge';
-  urlBadgeTransferenciaBancariaSinStock: string = 'http://192.168.30.21:8000/countTransferenciaBancariaSinStock'
-  urlBadgePedidosPendienteValidacion: string = 'http://192.168.30.21:8000/BadgeControlPedidosPendientesValidacion'
-  urlBadgePedidosNoEnviados: string = 'http://192.168.30.21:8000/countPedidosNoEnviados';
-  urlBadgeProductosDiferenciaDePreciosCombinados: string = 'http://192.168.30.21:8000/badgeDiferenciaPreciosCombinados';
+  urlControlPedidosPagadosBadge: string = 'http://192.168.1.124:8000/controlPedidosPagadosBadge';
+  urlControlPedidosAlmacenBadge: string = 'http://192.168.1.124:8000/pedidosAlmacenBadge';
+  urlBadgePagosFraccionados: string = 'http://192.168.1.124:8000/badgePedidosFraccionados';
+  urlBadgePedidosSinStockMakro: string = 'http://192.168.1.124:8000/badgepedidosSinStockMakro';
+  urlBadgeAliexpress: string = 'http://192.168.1.124:8000/badgeAliExpress';
+  urlCombinadosPredeterminadosSinStockBadge: string = 'http://192.168.1.124:8000/CombinadospredeterminadosSinStockCount';
+  urlControlManoManoBadge: string = 'http://192.168.1.124:8000/controlManoManoBadge';
+  urlBadgeCategoriasVacias: string = 'http://192.168.1.124:8000/controlCategoriasVaciasBadge';
+  urlBadgeTransferenciaBancariaSinStock: string = 'http://192.168.1.124:8000/countTransferenciaBancariaSinStock'
+  urlBadgePedidosPendienteValidacion: string = 'http://192.168.1.124:8000/BadgeControlPedidosPendientesValidacion'
+  urlBadgePedidosNoEnviados: string = 'http://192.168.1.124:8000/countPedidosNoEnviados';
+  urlBadgeProductosDiferenciaDePreciosCombinados: string = 'http://192.168.1.124:8000/badgeDiferenciaPreciosCombinados';
 
   //Alertas
-  urlPagosFraccionados: string = 'http://192.168.30.21:8000/pedidosFraccionados';
-  urlControlPedidosPagados: string = 'http://192.168.30.21:8000/controlPedidosPagados';
-  urlControlPedidosAlmacen: string = 'http://192.168.30.21:8000/controlPedidosAlmacen';
-  urlControlPreCompra: string = 'http://192.168.30.21:8000/controlPreCompras';
-  urlPedidosSinStockMakro: string = 'http://192.168.30.21:8000/pedidosSinStockMakro';
-  urlControlAliexpress: string = 'http://192.168.30.21:8000/controlAliExpress';
-  urlCombinadosPredeterminadosSinStock: string = 'http://192.168.30.21:8000/CombinadospredeterminadosSinStock';
-  urlAlertasElementor: string = 'http://192.168.30.21:8000/productosDescatalogadosElementor'
-  urlBadgeProductosDescatalogadosElementor: string = 'http://192.168.30.21:8000/badgeProductosDescatalogadosElementor';
-  urlCatedoriasVacias: string = 'http://192.168.30.21:8000/controlCategoriasVacias';
-  urlTransferenciasBancariasSinStock: string = 'http://192.168.30.21:8000/transferenciaBancariaSinStock';
+  urlPagosFraccionados: string = 'http://192.168.1.124:8000/pedidosFraccionados';
+  urlControlPedidosPagados: string = 'http://192.168.1.124:8000/controlPedidosPagados';
+  urlControlPedidosAlmacen: string = 'http://192.168.1.124:8000/controlPedidosAlmacen';
+  urlControlPreCompra: string = 'http://192.168.1.124:8000/controlPreCompras';
+  urlPedidosSinStockMakro: string = 'http://192.168.1.124:8000/pedidosSinStockMakro';
+  urlControlAliexpress: string = 'http://192.168.1.124:8000/controlAliExpress';
+  urlCombinadosPredeterminadosSinStock: string = 'http://192.168.1.124:8000/CombinadospredeterminadosSinStock';
+  urlAlertasElementor: string = 'http://192.168.1.124:8000/productosDescatalogadosElementor'
+  urlBadgeProductosDescatalogadosElementor: string = 'http://192.168.1.124:8000/badgeProductosDescatalogadosElementor';
+  urlCatedoriasVacias: string = 'http://192.168.1.124:8000/controlCategoriasVacias';
+  urlTransferenciasBancariasSinStock: string = 'http://192.168.1.124:8000/transferenciaBancariaSinStock';
+
+  //Pedidos Pendientes Ax
   urlPendientesAx: string = 'http://vpnxer.grupohidalgos.com:8080/api/getAlertasOrion';
-  urlPedidosPendienteValidacion: string = 'http://192.168.30.21:8000/controlPedidosPendientesValidacion';
-  urlPedidosNoEnviados: string = 'http://192.168.30.21:8000/pedidosNoEnviados';
-  urlProductosDiferenciaPreciosCombinados: string = 'http://192.168.30.21:8000/diferenciaPreciosCombinados';
+  urlEncontrarIdPedido: string = 'http://192.168.1.124:8000/encontrarIdPedido';
+
+  urlPedidosPendienteValidacion: string = 'http://192.168.1.124:8000/controlPedidosPendientesValidacion';
+  urlPedidosNoEnviados: string = 'http://192.168.1.124:8000/pedidosNoEnviados';
+  urlProductosDiferenciaPreciosCombinados: string = 'http://192.168.1.124:8000/diferenciaPreciosCombinados';
 
   //Envios
-  urlControlTransportistas: string = 'http://192.168.30.21:8000/controlTransportistas';
-  urlCargarComboName: string = 'http://192.168.30.21:8000/cargarComboName';
-  urlControlTransportistasName: string = 'http://192.168.30.21:8000/controlTransportistasName/';
-  urlPorcentajeTransportistas: string = 'http://192.168.30.21:8000/porcentajeTransportistas';
+  urlControlTransportistas: string = 'http://192.168.1.124:8000/controlTransportistas';
+  urlCargarComboName: string = 'http://192.168.1.124:8000/cargarComboName';
+  urlControlTransportistasName: string = 'http://192.168.1.124:8000/controlTransportistasName/';
+  urlPorcentajeTransportistas: string = 'http://192.168.1.124:8000/porcentajeTransportistas';
 
   //Imagenes
-  urlImagenes: string = 'http://192.168.30.21:8000/imagenes';
+  urlImagenes: string = 'http://192.168.1.124:8000/imagenes';
 
   //Control ManoMano
-  urlControlManoAMano: string = 'http://192.168.30.21:8000/manoAmano';
-  urlControlManoAManoPorId: string = 'http://192.168.30.21:8000/manoAmano/';
-  urlManoManoDistinto: string = 'http://192.168.30.21:8000/manoAManoDivision';
-  urlManoManoPrimero: string = 'http://192.168.30.21:8000/manoAmanoPorPrimero';
-  urlManoManoSegundo: string = 'http://192.168.30.21:8000/manoAmanoPorSegundo';
-  urlManoManoTercero: string = 'http://192.168.30.21:8000/manoAmanoPorTercero';
-  urlManoManoCuarto: string = 'http://192.168.30.21:8000/manoAmanoPorCuarto';
-  urlManoManoSexto: string = 'http://192.168.30.21:8000/manoAmanoPorSexto';
-  urlManoManoSeptimo: string = 'http://192.168.30.21:8000/manoAmanoPorSeptimo';
-  urlManoManoOctavo: string = 'http://192.168.30.21:8000/manoAmanoPorOctavo';
+  urlControlManoAMano: string = 'http://192.168.1.124:8000/manoAmano';
+  urlControlManoAManoPorId: string = 'http://192.168.1.124:8000/manoAmano/';
+  urlManoManoDistinto: string = 'http://192.168.1.124:8000/manoAManoDivision';
+  urlManoManoPrimero: string = 'http://192.168.1.124:8000/manoAmanoPorPrimero';
+  urlManoManoSegundo: string = 'http://192.168.1.124:8000/manoAmanoPorSegundo';
+  urlManoManoTercero: string = 'http://192.168.1.124:8000/manoAmanoPorTercero';
+  urlManoManoCuarto: string = 'http://192.168.1.124:8000/manoAmanoPorCuarto';
+  urlManoManoSexto: string = 'http://192.168.1.124:8000/manoAmanoPorSexto';
+  urlManoManoSeptimo: string = 'http://192.168.1.124:8000/manoAmanoPorSeptimo';
+  urlManoManoOctavo: string = 'http://192.168.1.124:8000/manoAmanoPorOctavo';
 
   //Roturas Stock
-  urlRoturaStock: string = 'http://192.168.30.21:8000/roturaStock';
+  urlRoturaStock: string = 'http://192.168.1.124:8000/roturaStock';
 
   //Roturas Actuales
-  urlRoturaStockActuales: string = 'http://192.168.30.21:8000/roturasActuales';
+  urlRoturaStockActuales: string = 'http://192.168.1.124:8000/roturasActuales';
 
   //Rutas de Makro
-  urlMakroTodosLosProductos: string = 'http://192.168.30.21:8000/productosTotalesMakro';
-  urlMakroOffersPublicados: string = 'http://192.168.30.21:8000/offersPublicados';
-  urlMakroOffersNoPublicados: string = 'http://192.168.30.21:8000/offerNoPublicados';
+  urlMakroTodosLosProductos: string = 'http://192.168.1.124:8000/productosTotalesMakro';
+  urlMakroOffersPublicados: string = 'http://192.168.1.124:8000/offersPublicados';
+  urlMakroOffersNoPublicados: string = 'http://192.168.1.124:8000/offerNoPublicados';
 
   //Rutas de Rango de Precios de Makro
-  urlTotalDeProductosRangoMakro: string = 'http://192.168.30.21:8000/productosPublicadosMakro';
-  urlListaDeRangosMakroPorEan13: string = 'http://192.168.30.21:8000/listaDeRangosMakro/';
-  urlActualizarRangosMakro: string = 'http://192.168.30.21:8000/actualizarRango';
-  urlBuscarListado: string = 'http://192.168.30.21:8000/buscarListado/';
-  urlRegistrarNuevoRango: string = 'http://192.168.30.21:8000/registrarRangoMakro';
-  urlEliminarRango: string = 'http://192.168.30.21:8000/eliminarRango/';
+  urlTotalDeProductosRangoMakro: string = 'http://192.168.1.124:8000/productosPublicadosMakro';
+  urlListaDeRangosMakroPorEan13: string = 'http://192.168.1.124:8000/listaDeRangosMakro/';
+  urlActualizarRangosMakro: string = 'http://192.168.1.124:8000/actualizarRango';
+  urlBuscarListado: string = 'http://192.168.1.124:8000/buscarListado/';
+  urlRegistrarNuevoRango: string = 'http://192.168.1.124:8000/registrarRangoMakro';
+  urlEliminarRango: string = 'http://192.168.1.124:8000/eliminarRango/';
 
   //Rutas de Rango de Precios de Makro Select
-  urlProductosPublicadosMakroConRangoYConStock: string = 'http://192.168.30.21:8000/productosPublicadosMakroConRangoYConStock';
-  urlProductosPublicadosMakroConRangoYSinStock: string = 'http://192.168.30.21:8000/productosPublicadosMakroConRangoYSinStock';
-  urlProductosPublicadosMakroSinRangoYConStock: string = 'http://192.168.30.21:8000/productosPublicadosMakroSinRangoYConStock';
-  urlProductosPublicadosMakroSinRangoYSinStock: string = 'http://192.168.30.21:8000/productosPublicadosMakroSinRangoYSinStock';
+  urlProductosPublicadosMakroConRangoYConStock: string = 'http://192.168.1.124:8000/productosPublicadosMakroConRangoYConStock';
+  urlProductosPublicadosMakroConRangoYSinStock: string = 'http://192.168.1.124:8000/productosPublicadosMakroConRangoYSinStock';
+  urlProductosPublicadosMakroSinRangoYConStock: string = 'http://192.168.1.124:8000/productosPublicadosMakroSinRangoYConStock';
+  urlProductosPublicadosMakroSinRangoYSinStock: string = 'http://192.168.1.124:8000/productosPublicadosMakroSinRangoYSinStock';
 
   //PruebaRangos
-  urlPruebaMakro: string = 'http://192.168.30.21:8000/pruebaRangos';
+  urlPruebaMakro: string = 'http://192.168.1.124:8000/pruebaRangos';
 
 
   //Categorias Redireccionadas
-  urlCategoriasRedireccionadas: string = 'http://192.168.30.21:8000/categoriasRedireccionadas';
-  urlCountCategoriasRedireccionadas: string = 'http://192.168.30.21:8000/countCategoriasRedireccionadas'
+  urlCategoriasRedireccionadas: string = 'http://192.168.1.124:8000/categoriasRedireccionadas';
+  urlCountCategoriasRedireccionadas: string = 'http://192.168.1.124:8000/countCategoriasRedireccionadas'
 
   //Rutas Ventas Productos
-  urlVentaProductos: string = 'http://192.168.30.21:8000/ventaProductos/';
+  urlVentaProductos: string = 'http://192.168.1.124:8000/ventaProductos/';
 
   //Sumatorias por Semana
-  urlSumatoriaPorSemana: string = 'http://192.168.30.21:8000/sumatoriaPorSemana';
-  urlSumatoriaPorSemanaOrion91: string = 'http://192.168.30.21:8000/sumatoriaOrion';
-  urlSumatoriaPorSemanaManoMano: string = 'http://192.168.30.21:8000/sumatoriaManoMano';
-  urlSumatorioPorSemanaCarrefour: string = 'http://192.168.30.21:8000/sumatorioCarrefour';
-  urlSumatorioPorSemanaAliExpress: string = 'http://192.168.30.21:8000/sumatorioAliExpress';
-  urlSumatorioPorSemanaAmazon: string = 'http://192.168.30.21:8000/sumatoriaAmazon';
-  urlSumatorioPorSemanaGrupon: string = 'http://192.168.30.21:8000/sumatorioGrupon';
-  urlSumatorioPorSemanaEmbargos: string = 'http://192.168.30.21:8000/sumatorioEmbargos';
-  urlSumatorioPorSemanaMequedoUno: string = 'http://192.168.30.21:8000/sumatorioMequedoUno';
-  urlSumatorioPorSemanaFnac: string = 'http://192.168.30.21:8000/sumatorioFnac';
-  urlSumatorioPorSemanaWish: string = 'http://192.168.30.21:8000/sumatorioWish';
-  urlSumatorioPorSemanaMakro: string = 'http://192.168.30.21:8000/sumatorioMakro';
-  urlSumatorioPorSemanaPcComponentes: string = 'http://192.168.30.21:8000/sumatorioPcComponenetes';
-  urlSumatorioPorSemanaSprinter: string = 'http://192.168.30.21:8000/sumatorioSprinter';
-  urlSumatorioPorSemanaBulevip:string = 'http://192.168.30.21:8000/sumatorioBulevip';
+  urlSumatoriaPorSemana: string = 'http://192.168.1.124:8000/sumatoriaPorSemana';
+  urlSumatoriaPorSemanaOrion91: string = 'http://192.168.1.124:8000/sumatoriaOrion';
+  urlSumatoriaPorSemanaManoMano: string = 'http://192.168.1.124:8000/sumatoriaManoMano';
+  urlSumatorioPorSemanaCarrefour: string = 'http://192.168.1.124:8000/sumatorioCarrefour';
+  urlSumatorioPorSemanaAliExpress: string = 'http://192.168.1.124:8000/sumatorioAliExpress';
+  urlSumatorioPorSemanaAmazon: string = 'http://192.168.1.124:8000/sumatoriaAmazon';
+  urlSumatorioPorSemanaGrupon: string = 'http://192.168.1.124:8000/sumatorioGrupon';
+  urlSumatorioPorSemanaEmbargos: string = 'http://192.168.1.124:8000/sumatorioEmbargos';
+  urlSumatorioPorSemanaMequedoUno: string = 'http://192.168.1.124:8000/sumatorioMequedoUno';
+  urlSumatorioPorSemanaFnac: string = 'http://192.168.1.124:8000/sumatorioFnac';
+  urlSumatorioPorSemanaWish: string = 'http://192.168.1.124:8000/sumatorioWish';
+  urlSumatorioPorSemanaMakro: string = 'http://192.168.1.124:8000/sumatorioMakro';
+  urlSumatorioPorSemanaPcComponentes: string = 'http://192.168.1.124:8000/sumatorioPcComponenetes';
+  urlSumatorioPorSemanaSprinter: string = 'http://192.168.1.124:8000/sumatorioSprinter';
+  urlSumatorioPorSemanaBulevip:string = 'http://192.168.1.124:8000/sumatorioBulevip';
 
   //Rutas de Estadisticas
-  urlImporteDeVentas: string = 'http://192.168.30.21:8000/importeDeVentas';
-  urlImporteDeVentasManoMano: string = 'http://192.168.30.21:8000/importeDeVentasManoMano';
-  urlImporteDeVentasCarrefour: string = 'http://192.168.30.21:8000/importeDeVentasCarrefour';
-  urlImporteDeVentasAliExpress: string = 'http://192.168.30.21:8000/importeDeVentasAliExpress';
-  urlImporteDeVentasAmazon: string = 'http://192.168.30.21:8000/importeDeVentasAmazon';
-  urlImporteDeVentasGroupon: string = 'http://192.168.30.21:8000/importeDeVentasGroupon';
-  urlImporteDeVentasEmbargos: string = 'http://192.168.30.21:8000/importeDeVentasEmbargos';
-  urlImporteDeVentasMequedoUno: string = 'http://192.168.30.21:8000/importeDeVentasMequedoUno';
-  urlImporteDeVentasFnac: string = 'http://192.168.30.21:8000/importeDeVentasFnac';
-  urlImporteDeVentasWish: string = 'http://192.168.30.21:8000/importeDeVentasWish';
-  urlImporteDeVentasMakro: string = 'http://192.168.30.21:8000/importeDeVentasMakro';
-  urlImporteDeVetasPcComponentes: string = 'http://192.168.30.21:8000/importeDeVentasPcComponentes';
-  urlImporteDeVentasSprinter: string = 'http://192.168.30.21:8000/importeDeVentasSprinter';
-  urlImporteDeVentasBulevip: string = 'http://192.168.30.21:8000/importeDeVentasBulevip';
+  urlImporteDeVentas: string = 'http://192.168.1.124:8000/importeDeVentas';
+  urlImporteDeVentasManoMano: string = 'http://192.168.1.124:8000/importeDeVentasManoMano';
+  urlImporteDeVentasCarrefour: string = 'http://192.168.1.124:8000/importeDeVentasCarrefour';
+  urlImporteDeVentasAliExpress: string = 'http://192.168.1.124:8000/importeDeVentasAliExpress';
+  urlImporteDeVentasAmazon: string = 'http://192.168.1.124:8000/importeDeVentasAmazon';
+  urlImporteDeVentasGroupon: string = 'http://192.168.1.124:8000/importeDeVentasGroupon';
+  urlImporteDeVentasEmbargos: string = 'http://192.168.1.124:8000/importeDeVentasEmbargos';
+  urlImporteDeVentasMequedoUno: string = 'http://192.168.1.124:8000/importeDeVentasMequedoUno';
+  urlImporteDeVentasFnac: string = 'http://192.168.1.124:8000/importeDeVentasFnac';
+  urlImporteDeVentasWish: string = 'http://192.168.1.124:8000/importeDeVentasWish';
+  urlImporteDeVentasMakro: string = 'http://192.168.1.124:8000/importeDeVentasMakro';
+  urlImporteDeVetasPcComponentes: string = 'http://192.168.1.124:8000/importeDeVentasPcComponentes';
+  urlImporteDeVentasSprinter: string = 'http://192.168.1.124:8000/importeDeVentasSprinter';
+  urlImporteDeVentasBulevip: string = 'http://192.168.1.124:8000/importeDeVentasBulevip';
 
   //Rutas de Historico de Stock
-  urlGraficoIdProducto: string = 'http://192.168.30.21:8000/controlStockGraficoIdProducto/';
-  urlControlHistoricoStock: string = 'http://192.168.30.21:8000/controlHistoricoStock/';
+  urlGraficoIdProducto: string = 'http://192.168.1.124:8000/controlStockGraficoIdProducto/';
+  urlControlHistoricoStock: string = 'http://192.168.1.124:8000/controlHistoricoStock/';
 
   //Rutas Ventas Categorias
-  urlCategoriasPorMeses: string  = 'http://192.168.30.21:8000/categoriasPorMeses';
-  urlCategoriasGeneral: string = 'http://192.168.30.21:8000/categoriasGeneral';
-  urlIdCategoriaPorMeses: string = 'http://192.168.30.21:8000/categoriaIdPorMeses/';
-  urlCategoriasIdPorMesesPorTienda: string = 'http://192.168.30.21:8000/categoriaIdPorMesesPorTienda/';
-  urlCategoriaPorTiendaOrionPorIdCategoria: string = 'http://192.168.30.21:8000/categoriaPorTiendaOrionPorIdCategoria/';
-  urlCategoriaPorTiendaWishPorIdCategoria: string = 'http://192.168.30.21:8000/categoriaPorTiendaWishPorIdCategoria/';
-  urlCategoriasPorTienda: string = 'http://192.168.30.21:8000/categoriasPorTiendas/';
-  urlCategoriasPorTiendaOrion: string = 'http://192.168.30.21:8000/categoriasPorTiendaOrion';
-  urlCategoriasPorTiendaWish: string = 'http://192.168.30.21:8000/categoriasPorTiendaWish';
+  urlCategoriasPorMeses: string  = 'http://192.168.1.124:8000/categoriasPorMeses';
+  urlCategoriasGeneral: string = 'http://192.168.1.124:8000/categoriasGeneral';
+  urlIdCategoriaPorMeses: string = 'http://192.168.1.124:8000/categoriaIdPorMeses/';
+  urlCategoriasIdPorMesesPorTienda: string = 'http://192.168.1.124:8000/categoriaIdPorMesesPorTienda/';
+  urlCategoriaPorTiendaOrionPorIdCategoria: string = 'http://192.168.1.124:8000/categoriaPorTiendaOrionPorIdCategoria/';
+  urlCategoriaPorTiendaWishPorIdCategoria: string = 'http://192.168.1.124:8000/categoriaPorTiendaWishPorIdCategoria/';
+  urlCategoriasPorTienda: string = 'http://192.168.1.124:8000/categoriasPorTiendas/';
+  urlCategoriasPorTiendaOrion: string = 'http://192.168.1.124:8000/categoriasPorTiendaOrion';
+  urlCategoriasPorTiendaWish: string = 'http://192.168.1.124:8000/categoriasPorTiendaWish';
 
   //Productos top entre fechas
-  urlProductosTopEntreFechas: string = 'http://192.168.30.21:8000/productosTopEntreFechas';
-  urlProductosTopUltimos: string = 'http://192.168.30.21:8000/productosTopUltimosDias';
-  urlProductosTopHoy: string = 'http://192.168.30.21:8000/productosTopHoy';
-  urlProductosTopUltimos7Dias: string = 'http://192.168.30.21:8000/productosTopUltimos7DiasDashboard';
-  urlProductosTopUltimos30Dias: string = 'http://192.168.30.21:8000/productosTopUltimos30DiasDashboard';
+  urlProductosTopEntreFechas: string = 'http://192.168.1.124:8000/productosTopEntreFechas';
+  urlProductosTopUltimos: string = 'http://192.168.1.124:8000/productosTopUltimosDias';
+  urlProductosTopHoy: string = 'http://192.168.1.124:8000/productosTopHoy';
+  urlProductosTopUltimos7Dias: string = 'http://192.168.1.124:8000/productosTopUltimos7DiasDashboard';
+  urlProductosTopUltimos30Dias: string = 'http://192.168.1.124:8000/productosTopUltimos30DiasDashboard';
 
   //Productos por categoria
-  urlCategoriaProductosName: string = 'http://192.168.30.21:8000/categoriasProductosName'
-  urlproductosPorIdCategoria: string = 'http://192.168.30.21:8000/productosPorIdCategoria/';
-  urlActualizarProducto: string = 'http://192.168.30.21:8000/actualizarPosicionProducto/';
+  urlCategoriaProductosName: string = 'http://192.168.1.124:8000/categoriasProductosName'
+  urlproductosPorIdCategoria: string = 'http://192.168.1.124:8000/productosPorIdCategoria/';
+  urlActualizarProducto: string = 'http://192.168.1.124:8000/actualizarPosicionProducto/';
 
   //Grafico Categorias
-  urlGraficoCategorias: string = 'http://192.168.30.21:8000/arbolCategorias';
+  urlGraficoCategorias: string = 'http://192.168.1.124:8000/arbolCategorias';
 
 
   //Opiniones
-  urlListadoCanales: string = 'http://192.168.30.21:8000/listadoCanales';
-  urlListadoGeneralOpiniones: string = 'http://192.168.30.21:8000/listadoGeneral';
-  urlBaseTipoOpinion: string = 'http://192.168.30.21:8000/baseTipoOpinion/';
-  urlRegistrarPorcentaje: string = 'http://192.168.30.21:8000/registrarPorcentaje'
-  urlActualizarRegistroPorcentaje: string = 'http://192.168.30.21:8000/actualizarPorcentaje';
-  urlEliminarRegistroPorcentaje: string = 'http://192.168.30.21:8000/eliminarPorcentaje/';
-  urlSelectOpiniones: string = 'http://192.168.30.21:8000/rellenarSelect';
-  urlGraficoOpiniones: string = 'http://192.168.30.21:8000/cargarGrafico/';
+  urlListadoCanales: string = 'http://192.168.1.124:8000/listadoCanales';
+  urlListadoGeneralOpiniones: string = 'http://192.168.1.124:8000/listadoGeneral';
+  urlBaseTipoOpinion: string = 'http://192.168.1.124:8000/baseTipoOpinion/';
+  urlRegistrarPorcentaje: string = 'http://192.168.1.124:8000/registrarPorcentaje'
+  urlActualizarRegistroPorcentaje: string = 'http://192.168.1.124:8000/actualizarPorcentaje';
+  urlEliminarRegistroPorcentaje: string = 'http://192.168.1.124:8000/eliminarPorcentaje/';
+  urlSelectOpiniones: string = 'http://192.168.1.124:8000/rellenarSelect';
+  urlGraficoOpiniones: string = 'http://192.168.1.124:8000/cargarGrafico/';
 
 
   //Incidencias
-  urlIncidenciasMensuales: string = 'http://192.168.30.21:8000/productosTopIncidenciasMensual';
+  urlIncidenciasMensuales: string = 'http://192.168.1.124:8000/productosTopIncidenciasMensual';
 
   //Zonas
-  urlCargarZonas: string = 'http://192.168.30.21:8000/cargarZonas';
-  urlCargarLinkPorIdZona: string = 'http://192.168.30.21:8000/cargarLinksPorZonas/';
-  urlCrearNuevaZona: string = 'http://192.168.30.21:8000/crearNuevaZona';
-  urlActualizarZona: string = 'http://192.168.30.21:8000/actualizarDatosZona'
-  urlCargarLinks: string = 'http://192.168.30.21:8000/cargarLinks';
-  urlCargarSelectZonas: string = 'http://192.168.30.21:8000/cargarSelectZonas';
-  urlCrearNuevoLink: string = 'http://192.168.30.21:8000/crearNuevoLink';
-  urlActualizarLink: string = 'http://192.168.30.21:8000/actualizarLink';
-  urlEliminarLink: string = 'http://192.168.30.21:8000/eliminarLink/';
+  urlCargarZonas: string = 'http://192.168.1.124:8000/cargarZonas';
+  urlCargarLinkPorIdZona: string = 'http://192.168.1.124:8000/cargarLinksPorZonas/';
+  urlCrearNuevaZona: string = 'http://192.168.1.124:8000/crearNuevaZona';
+  urlActualizarZona: string = 'http://192.168.1.124:8000/actualizarDatosZona'
+  urlCargarLinks: string = 'http://192.168.1.124:8000/cargarLinks';
+  urlCargarSelectZonas: string = 'http://192.168.1.124:8000/cargarSelectZonas';
+  urlCrearNuevoLink: string = 'http://192.168.1.124:8000/crearNuevoLink';
+  urlActualizarLink: string = 'http://192.168.1.124:8000/actualizarLink';
+  urlEliminarLink: string = 'http://192.168.1.124:8000/eliminarLink/';
 
   //Precios Cambiados
-  urlPreciosCambiados: string = 'http://192.168.30.21:8000/controlPreciosCambiadosAx';
-  urlBadgePreciosCambiados: string = 'http://192.168.30.21:8000/badgeControlPreciosCambiadosAx';
+  urlPreciosCambiados: string = 'http://192.168.1.124:8000/controlPreciosCambiadosAx';
+  urlBadgePreciosCambiados: string = 'http://192.168.1.124:8000/badgeControlPreciosCambiadosAx';
 
   //Faqs
-  urlCargarFaqs: string = 'http://192.168.30.21:8000/cargarFaqs';
-  urlCrearFaqs: string = 'http://192.168.30.21:8000/crearFaq';
-  urlActualizarFaq: string = 'http://192.168.30.21:8000/actualizarFaq';
-  urlEliminarFaq: string = 'http://192.168.30.21:8000/eliminarFaq/';
+  urlCargarFaqs: string = 'http://192.168.1.124:8000/cargarFaqs';
+  urlCrearFaqs: string = 'http://192.168.1.124:8000/crearFaq';
+  urlActualizarFaq: string = 'http://192.168.1.124:8000/actualizarFaq';
+  urlEliminarFaq: string = 'http://192.168.1.124:8000/eliminarFaq/';
 
 
   //Alertas Amazon
-  urlAlertasAmazon: string = 'http://192.168.30.21:8000/alertaCaracteresAmazon';
-  urlCountAlertasAmazon: string = 'http://192.168.30.21:8000/countAlertaCaracteresAmazon';
-  urlProductosNoPublicadosAmazon: string = 'http://192.168.30.21:8000/productosNoPublicadosAmazon';
-  urlProductosNoPublicadosAmazonMP: string = 'http://192.168.30.21:8000/productosNoPublicadosAmazonMP';
+  urlAlertasAmazon: string = 'http://192.168.1.124:8000/alertaCaracteresAmazon';
+  urlCountAlertasAmazon: string = 'http://192.168.1.124:8000/countAlertaCaracteresAmazon';
+  urlProductosNoPublicadosAmazon: string = 'http://192.168.1.124:8000/productosNoPublicadosAmazon';
+  urlProductosNoPublicadosAmazonMP: string = 'http://192.168.1.124:8000/productosNoPublicadosAmazonMP';
 
   //Alertas Pre-Almacen
-  urlPreAlamcen: string = 'http://192.168.30.21:8000/preAlmacen';
-  urlCountPreAlmacen: string = 'http://192.168.30.21:8000/countPreAlmacen';
+  urlPreAlamcen: string = 'http://192.168.1.124:8000/preAlmacen';
+  urlCountPreAlmacen: string = 'http://192.168.1.124:8000/countPreAlmacen';
 
   //Favoritos
-  urlCargarTopFavoritos: string = 'http://192.168.30.21:8000/cargarTopFavoritos';
-  urlCargarGraficoFavoritos: string = 'http://192.168.30.21:8000/cargarGraficoFavoritos';
+  urlCargarTopFavoritos: string = 'http://192.168.1.124:8000/cargarTopFavoritos';
+  urlCargarGraficoFavoritos: string = 'http://192.168.1.124:8000/cargarGraficoFavoritos';
 
   //Precios Fijos
-  urlCargarSelectPreciosFijos: string = 'http://192.168.30.21:8000/cargarSelectProductos';
-  urlCargarTablaPreciosFijos: string = 'http://192.168.30.21:8000/cargarTablaPreciosFijos';
-  urlRegistrarPrecioFijo: string = 'http://192.168.30.21:8000/registrarPrecioFijo';
-  urlEliminarPrecioFijo: string = 'http://192.168.30.21:8000/eliminarPrecioFijo/';
-  urlActualizarPrecioFijo: string = 'http://192.168.30.21:8000/actualizarPrecioFijo';
+  urlCargarSelectPreciosFijos: string = 'http://192.168.1.124:8000/cargarSelectProductos';
+  urlCargarTablaPreciosFijos: string = 'http://192.168.1.124:8000/cargarTablaPreciosFijos';
+  urlRegistrarPrecioFijo: string = 'http://192.168.1.124:8000/registrarPrecioFijo';
+  urlEliminarPrecioFijo: string = 'http://192.168.1.124:8000/eliminarPrecioFijo/';
+  urlActualizarPrecioFijo: string = 'http://192.168.1.124:8000/actualizarPrecioFijo';
 
   //Ventas por Habitante
-  urlVentasHabitantes: string = 'http://192.168.30.21:8000/ventasHabitantes'
+  urlVentasHabitantes: string = 'http://192.168.1.124:8000/ventasHabitantes'
 
   //Dashboard
-  urlAvanceSemanal: string = 'http://192.168.30.21:8000/avanceSemanal'
-  urlGraficoVentas: string = 'http://192.168.30.21:8000/graficoVentas'
-  urlGraficoVentasUnMes: string = 'http://192.168.30.21:8000/graficoVentasUnMes';
-  urlGraficoVentasUnaSemana: string = 'http://192.168.30.21:8000/graficoVentasUnaSemana'
-  urlVentasUltimaSemana: string = 'http://192.168.30.21:8000/ventasSemanalesDashBoard';
-  urlRoturaStockEnSemana: string = 'http://192.168.30.21:8000/roturaDeStock';
-  urlGraficoVentasPaisesHoy: string = 'http://192.168.30.21:8000/graficoVentasPaisesHoy';
-  urlGraficoVentasPaisesUnaSemana: string = 'http://192.168.30.21:8000/graficoVentasPaisesUnaSemana';
-  urlGraficoVentasPaisesUnMes: string = 'http://192.168.30.21:8000/graficoVentasPaisesUnMes';
-  urlGraficoComparacionVentas: string = 'http://192.168.30.21:8000/graficoComparacionVentas';
+  urlAvanceSemanal: string = 'http://192.168.1.124:8000/avanceSemanal'
+  urlGraficoVentas: string = 'http://192.168.1.124:8000/graficoVentas'
+  urlGraficoVentasUnMes: string = 'http://192.168.1.124:8000/graficoVentasUnMes';
+  urlGraficoVentasUnaSemana: string = 'http://192.168.1.124:8000/graficoVentasUnaSemana'
+  urlVentasUltimaSemana: string = 'http://192.168.1.124:8000/ventasSemanalesDashBoard';
+  urlRoturaStockEnSemana: string = 'http://192.168.1.124:8000/roturaDeStock';
+  urlGraficoVentasPaisesHoy: string = 'http://192.168.1.124:8000/graficoVentasPaisesHoy';
+  urlGraficoVentasPaisesUnaSemana: string = 'http://192.168.1.124:8000/graficoVentasPaisesUnaSemana';
+  urlGraficoVentasPaisesUnMes: string = 'http://192.168.1.124:8000/graficoVentasPaisesUnMes';
+  urlGraficoComparacionVentas: string = 'http://192.168.1.124:8000/graficoComparacionVentas';
 
   //Productos Top Por Canales Hoy
-  urlProductosTopCanales: string = 'http://192.168.30.21:8000/productosTopCanales/';
-  urlProductosTopOrion: string = 'http://192.168.30.21:8000/productosTopCanalOrion';
-  urlProductosTopWish: string = 'http://192.168.30.21:8000/productosTopCanalWish';
+  urlProductosTopCanales: string = 'http://192.168.1.124:8000/productosTopCanales/';
+  urlProductosTopOrion: string = 'http://192.168.1.124:8000/productosTopCanalOrion';
+  urlProductosTopWish: string = 'http://192.168.1.124:8000/productosTopCanalWish';
 
   //Productos Top por Canales en los ultimos 15 dias
-  urlProductosTopCanales15Dias: string = 'http://192.168.30.21:8000/productosTopCanales15Dias/';
-  urlProductosTopOrion15Dias: string = 'http://192.168.30.21:8000/productosTopCanalOrion15Dias';
-  urlProductosTopWish15Dias: string = 'http://192.168.30.21:8000/productosTopCanalWish15Dias';
+  urlProductosTopCanales15Dias: string = 'http://192.168.1.124:8000/productosTopCanales15Dias/';
+  urlProductosTopOrion15Dias: string = 'http://192.168.1.124:8000/productosTopCanalOrion15Dias';
+  urlProductosTopWish15Dias: string = 'http://192.168.1.124:8000/productosTopCanalWish15Dias';
 
   //Productos Top por Canales en lso ultimos 30 dias
-  urlProductosTopCanales30Dias: string = 'http://192.168.30.21:8000/productosTopCanales30Dias/';
-  urlProductosTopOrion30Dias: string = 'http://192.168.30.21:8000/productosTopCanalOrion30Dias';
-  urlProductosTopWish30Dias: string = 'http://192.168.30.21:8000/productosTopCanalWish30Dias';
+  urlProductosTopCanales30Dias: string = 'http://192.168.1.124:8000/productosTopCanales30Dias/';
+  urlProductosTopOrion30Dias: string = 'http://192.168.1.124:8000/productosTopCanalOrion30Dias';
+  urlProductosTopWish30Dias: string = 'http://192.168.1.124:8000/productosTopCanalWish30Dias';
 
   //Historico Ax
   urlCargarToken: string = 'http://vpnxer.grupohidalgos.com:8080/api/loginPortal';
   urlCargarIncidencia: string = 'http://172.26.1.217/api/INCIgetPedido';
 
   //Presupuestos
-  urlCargarSelectEstados: string = 'http://192.168.30.21:8000/cargarSelectEstados';
-  urlVistaPresupuestos: string = 'http://192.168.30.21:8000/vistaPresupuestos';
-  urlRegistrasrPresupuesto: string = 'http://192.168.30.21:8000/registrarPresupuesto';
-  urlEliminarPresupuesto: string = 'http://192.168.30.21:8000/eliminarPresupuesto/';
-  urlActualizarPresupuesto: string = 'http://192.168.30.21:8000/actualizarPresupuesto';
+  urlCargarSelectEstados: string = 'http://192.168.1.124:8000/cargarSelectEstados';
+  urlVistaPresupuestos: string = 'http://192.168.1.124:8000/vistaPresupuestos';
+  urlRegistrasrPresupuesto: string = 'http://192.168.1.124:8000/registrarPresupuesto';
+  urlEliminarPresupuesto: string = 'http://192.168.1.124:8000/eliminarPresupuesto/';
+  urlActualizarPresupuesto: string = 'http://192.168.1.124:8000/actualizarPresupuesto';
 
   //Buscador de Productos
-  urlBuscadorDeProductos: string = 'http://192.168.30.21:8000/buscadorProductos/';
+  urlBuscadorDeProductos: string = 'http://192.168.1.124:8000/buscadorProductos/';
 
   //Productos sin ean13
-  urlProductosSinEan13: string = 'http://192.168.30.21:8000/productosSinEan13';
-  urlCountProductoSinEan13: string = 'http://192.168.30.21:8000/countProductosSinEan13';
+  urlProductosSinEan13: string = 'http://192.168.1.124:8000/productosSinEan13';
+  urlCountProductoSinEan13: string = 'http://192.168.1.124:8000/countProductosSinEan13';
 
   //Productos con pocas imagenes
-  urlProductosConPocasImagenes: string = 'http://192.168.30.21:8000/productosConPocasImagenes';
+  urlProductosConPocasImagenes: string = 'http://192.168.1.124:8000/productosConPocasImagenes';
 
   //Conectores
-  urlConectoresCanales: string = 'http://192.168.30.21:8000/conectores';
+  urlConectoresCanales: string = 'http://192.168.1.124:8000/conectores';
 
   //Subir Archivos Noticias
-  urlSubirArchivos: string = 'http://192.168.30.21:8000/registrarNoticias';
-  urlListadoNoticias: string = 'http://192.168.30.21:8000/listadoNoticias/';
-  urlActualizarNoticia: string = 'http://192.168.30.21:8000/actualizarNoticia';
-  urlEliminarNoticia: string = 'http://192.168.30.21:8000/eliminarNoticia/';
+  urlSubirArchivos: string = 'http://192.168.1.124:8000/registrarNoticias';
+  urlListadoNoticias: string = 'http://192.168.1.124:8000/listadoNoticias/';
+  urlActualizarNoticia: string = 'http://192.168.1.124:8000/actualizarNoticia';
+  urlEliminarNoticia: string = 'http://192.168.1.124:8000/eliminarNoticia/';
 
   //Guardar Productos Por Ean13
-  urlCargarSelectProductos: string = 'http://192.168.30.21:8000/cargarSelectProductos';
-  urlBuscarEan13PorProducto: string = 'http://192.168.30.21:8000/buscarEan13PorNombreProducto';
-  urlLlenarSelectTipoDeDocumento: string = 'http://192.168.30.21:8000/cargarSelectTipoDeDocumento';
-  urlRegistrarDocumentoPorProducto: string = 'http://192.168.30.21:8000/registrarDocumento';
-  urlListadoDocumentosPorEan13: string = 'http://192.168.30.21:8000/cargarListadoDocumentosPorEan13/';
-  urlListadoDocumentosCompleto: string = 'http://192.168.30.21:8000/cargarListadoCompleto';
-  urlEliminarArchivoProducto: string = 'http://192.168.30.21:8000/eliminarArchivos';
+  urlCargarSelectProductos: string = 'http://192.168.1.124:8000/cargarSelectProductos';
+  urlBuscarEan13PorProducto: string = 'http://192.168.1.124:8000/buscarEan13PorNombreProducto';
+  urlLlenarSelectTipoDeDocumento: string = 'http://192.168.1.124:8000/cargarSelectTipoDeDocumento';
+  urlRegistrarDocumentoPorProducto: string = 'http://192.168.1.124:8000/registrarDocumento';
+  urlListadoDocumentosPorEan13: string = 'http://192.168.1.124:8000/cargarListadoDocumentosPorEan13/';
+  urlListadoDocumentosCompleto: string = 'http://192.168.1.124:8000/cargarListadoCompleto';
+  urlEliminarArchivoProducto: string = 'http://192.168.1.124:8000/eliminarArchivos';
 
   //Abonos
-  urlBuscarAbonosEntreFechas: string = 'http://192.168.30.21:8000/buscarAbonosPorFechas';
-  urlBuscarLineasAbonos: string = 'http://192.168.30.21:8000/buscarLineasAbonos';
+  urlBuscarAbonosEntreFechas: string = 'http://192.168.1.124:8000/buscarAbonosPorFechas';
+  urlBuscarLineasAbonos: string = 'http://192.168.1.124:8000/buscarLineasAbonos';
 
   //Incidencias en Abonos
-  urlIncidenciaPorAbono: string = 'http://192.168.30.21:8000/buscarIncidenciaPorAbono';
-  urlCounrIncidenciaPorAbono: string = 'http://192.168.30.21:8000/countBuscarIncidenciaPorAbono';
+  urlIncidenciaPorAbono: string = 'http://192.168.1.124:8000/buscarIncidenciaPorAbono';
+  urlCounrIncidenciaPorAbono: string = 'http://192.168.1.124:8000/countBuscarIncidenciaPorAbono';
 
   //Incidencias motivos y SubMotivos
-  urlCargarSelectMotivos: string = 'http://192.168.30.21:8000/cargarSelectMotivos';
-  urlCargarSelectSubMotivos: string = 'http://192.168.30.21:8000/cargarSelectSubMotivos/';
-  urlRegistrarMotivos: string = 'http://192.168.30.21:8000/registrarMotivosYSubMotivos';
+  urlCargarSelectMotivos: string = 'http://192.168.1.124:8000/cargarSelectMotivos';
+  urlCargarSelectSubMotivos: string = 'http://192.168.1.124:8000/cargarSelectSubMotivos/';
+  urlRegistrarMotivos: string = 'http://192.168.1.124:8000/registrarMotivosYSubMotivos';
 
   //Precio Base Menor Precio Oferta
-  urlPrecioBaseMenorPrecioOferta: string = 'http://192.168.30.21:8000/controlPreciosBaseMenorPrecioOferta';
-  urlCountPrecioBaseMenorPrecioOferta: string = 'http://192.168.30.21:8000/countControlPreciosBaseMenorPrecioOferta';
+  urlPrecioBaseMenorPrecioOferta: string = 'http://192.168.1.124:8000/controlPreciosBaseMenorPrecioOferta';
+  urlCountPrecioBaseMenorPrecioOferta: string = 'http://192.168.1.124:8000/countControlPreciosBaseMenorPrecioOferta';
 
   //Pedidos Duplicados
-  urlPedidosDuplicados: string = 'http://192.168.30.21:8000/pedidosDuplicados';
-  urlCountPedidosDuplicados: string = 'http://192.168.30.21:8000/countPedidosDuplicados';
+  urlPedidosDuplicados: string = 'http://192.168.1.124:8000/pedidosDuplicados';
+  urlCountPedidosDuplicados: string = 'http://192.168.1.124:8000/countPedidosDuplicados';
 
   //Contraseñas Plataformas
-  urlListadoContraseñasPlataformmas: string = 'http://192.168.30.21:8000/clavesPlataformas';
-  urlRegistrarContraseñasPlataformas: string = 'http://192.168.30.21:8000/registrarClavesPlataformas';
-  urlActualizarContraseñasPlataformas: string = 'http://192.168.30.21:8000/actualizarClavesPlataformas';
-  urlEliminarContraseñasPlataformas: string = 'http://192.168.30.21:8000/eliminarClavesPlataforma/';
+  urlListadoContraseñasPlataformmas: string = 'http://192.168.1.124:8000/clavesPlataformas';
+  urlRegistrarContraseñasPlataformas: string = 'http://192.168.1.124:8000/registrarClavesPlataformas';
+  urlActualizarContraseñasPlataformas: string = 'http://192.168.1.124:8000/actualizarClavesPlataformas';
+  urlEliminarContraseñasPlataformas: string = 'http://192.168.1.124:8000/eliminarClavesPlataforma/';
 
   //Abonos Incidencias Motivos
-  urlListadoAbonosIncidenciasMotivos: string = 'http://192.168.30.21:8000/incidenciaAbonosMotivos';
+  urlListadoAbonosIncidenciasMotivos: string = 'http://192.168.1.124:8000/incidenciaAbonosMotivos';
 
   //Productos solo categorizados en OUTLET
-  urlProductosEnCategoriaOulet: string = 'http://192.168.30.21:8000/productosEnCategoriaOulet';
-  urlCountProductosEnCategoriaOulet: string = 'http://192.168.30.21:8000/countProductosEnCategoriaOulet';
+  urlProductosEnCategoriaOulet: string = 'http://192.168.1.124:8000/productosEnCategoriaOulet';
+  urlCountProductosEnCategoriaOulet: string = 'http://192.168.1.124:8000/countProductosEnCategoriaOulet';
 
   //Productos SIN categoria predeterminada
-  urlProductosSinCategoriaPredeterminada: string = 'http://192.168.30.21:8000/productosSinCategoriaPredeterminada';
-  urlCountProductosSinCategoriaPredeterminada: string = 'http://192.168.30.21:8000/countProductosSinCategoriaPredeterminada';
+  urlProductosSinCategoriaPredeterminada: string = 'http://192.168.1.124:8000/productosSinCategoriaPredeterminada';
+  urlCountProductosSinCategoriaPredeterminada: string = 'http://192.168.1.124:8000/countProductosSinCategoriaPredeterminada';
 
   //Abonos Agencias de Tranporte
-  urlAbonosAgenciasTransporte: string = 'http://192.168.30.21:8000/abonosMotivosTransporte';
+  urlAbonosAgenciasTransporte: string = 'http://192.168.1.124:8000/abonosMotivosTransporte';
 
   //Productos Sin MP_NombreArticulo
-  urlProductosSinMpNombreArticulo: string = 'http://192.168.30.21:8000/productosSinMPNombreArticulo';
-  urlCountProductosSinMPNombreArticulo: string = 'http://192.168.30.21:8000/countProductosSinMPNombreArticulo';
+  urlProductosSinMpNombreArticulo: string = 'http://192.168.1.124:8000/productosSinMPNombreArticulo';
+  urlCountProductosSinMPNombreArticulo: string = 'http://192.168.1.124:8000/countProductosSinMPNombreArticulo';
 
   //Listado Tabla Pedidos con Estado PreAlmacen
-  urlListadoTablaPedidosPreAlmacen: string = 'http://192.168.30.21:8000/pedidosEstadosPreAlmacen';
+  urlListadoTablaPedidosPreAlmacen: string = 'http://192.168.1.124:8000/pedidosEstadosPreAlmacen';
 
   //Indice Abonos canales
-  urlIndiceAbonosPorCanal: string = 'http://192.168.30.21:8000/indiceAbonosPorCanal';
+  urlIndiceAbonosPorCanal: string = 'http://192.168.1.124:8000/indiceAbonosPorCanal';
 
   //Ventas Productos
-  urlVentasPedidosProductos: string = 'http://192.168.30.21:8000/ventasPorProducto';
+  urlVentasPedidosProductos: string = 'http://192.168.1.124:8000/ventasPorProducto';
 
   //Datos Facturación Ax
-  urlDatosFacturacionAx: string = 'http://192.168.30.21:8000/datosFacturacionAx'
+  urlDatosFacturacionAx: string = 'http://192.168.1.124:8000/datosFacturacionAx'
+
+  //Facturas AX Entre Fechas
+  urlFacturasAxEntreFechas: string = 'http://192.168.1.124:8000/datosFacturacionAxEntreFechas';
 
   //Abonos Productos entre fechas
-  urlAbonosProductosEntreFechas: string = 'http://192.168.30.21:8000/abonosProductosEntreFechas';
+  urlAbonosProductosEntreFechas: string = 'http://192.168.1.124:8000/abonosProductosEntreFechas';
 
   //Cupones de Descuentos
-  urlCuponesDeDescuento: string = 'http://192.168.30.21:8000/descuentos';
+  urlCuponesDeDescuento: string = 'http://192.168.1.124:8000/descuentos';
 
   //Productos Sin Bullets
-  urlProductosSinBullets: string = 'http://192.168.30.21:8000/productosSinBullets';
-  urlBadgeProductosSinBulles: string = 'http://192.168.30.21:8000/countProductosSinBullets';
+  urlProductosSinBullets: string = 'http://192.168.1.124:8000/productosSinBullets';
+  urlBadgeProductosSinBulles: string = 'http://192.168.1.124:8000/countProductosSinBullets';
+
+  //Faqs de Categorías
+  urlCargarFaqsCategorias: string = 'http://192.168.1.124:8000/cargarFaqsCategorias';
+  urlCrearFaqCategoria: string = 'http://192.168.1.124:8000/crearFaqCategory';
+  urlEliminarFaqCategoria: string = 'http://192.168.1.124:8000/eliminarFaqCategory/';
+  urlActualizarFaqCategoria: string = 'http://192.168.1.124:8000/actualizarFaqCategory';
+
+  //Control Menu
+  urlMostrarMenu: string = 'http://192.168.1.124:8000/visualizacionMenu/';
+
+  //Cargar Seleccion Menu por Usuario
+  urlCargarSeleccionMenuPorUsuario: string = 'http://192.168.1.124:8000/cargarBotonesSeleccionMenu';
+
+  //Categorias Sin Facetas
+  urlCategoriasSinFacetas: string = 'http://192.168.1.124:8000/alertasCategoriasSinFacetas';
+  urlCountCategoriasSinFacetas: string = 'http://192.168.1.124:8000/countAlertasCategoriasSinFacetas';
+
+  //Devoluciones por nombre
+  urlDevolucionesPorNombre: string = 'http://192.168.1.124:8000/devolucionesPorNombre';
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -370,7 +396,7 @@ export class AuthService {
   //Parte del Login
     login(authData: User): Observable<UserResponse | void> {
       return this.http
-      .post<UserResponse>('http://192.168.30.21:8000/login/', authData)
+      .post<UserResponse>('http://192.168.1.124:8000/login/', authData)
       .pipe(
         map( (res: UserResponse) => {
           console.log(res.data)
@@ -515,6 +541,11 @@ export class AuthService {
     let direccion = this.urlPendientesAx
     return this.http.post(direccion,json)
   }
+  buscarIdPedido(json: any){
+    let direccion = this.urlEncontrarIdPedido
+    return this.http.post(direccion,json)
+  }
+
   pedidosPendienteValidacion(){
     let direccion = this.urlPedidosPendienteValidacion
     return this.http.get(direccion)
@@ -1396,6 +1427,12 @@ export class AuthService {
     return this.http.get(direccion)
   }
 
+  //Facturas Ax Entre Fechas
+  facturasAxEntreFechas(json: any){
+    let direccion = this.urlFacturasAxEntreFechas
+    return this.http.post(direccion,json)
+  }
+
   //Abonos productos entre fechas
   abonosProductosEntreFechas(json: any){
     let direccion = this.urlAbonosProductosEntreFechas
@@ -1408,7 +1445,6 @@ export class AuthService {
     return this.http.get(direccion)
   }
 
-
   //Productos Sin Bullets
   productosSinBullets(){
     let direccion = this.urlProductosSinBullets
@@ -1417,6 +1453,52 @@ export class AuthService {
   countProductosSinBullets(){
     let direccion = this.urlBadgeProductosSinBulles
     return this.http.get(direccion)
+  }
+
+  //Faqs de Categorías
+  cargarFaqsCategorias(){
+    let direccion = this.urlCargarFaqsCategorias
+    return this.http.get(direccion)
+  }
+  crearFaqCategoria(json: any){
+    let direccion = this.urlCrearFaqCategoria
+    return this.http.post(direccion,json)
+  }
+  eliminarFaqCategoria(idFaq: number){
+    let direccion = this.urlEliminarFaqCategoria + idFaq
+    return this.http.delete(direccion)
+  }
+  actualizarFaqCategoria(json: any){
+    let direccion = this.urlActualizarFaqCategoria
+    return this.http.put(direccion,json)
+  }
+
+  //Control Menu
+  controlMenu(idUsuario: number){
+    let direccion = this.urlMostrarMenu + idUsuario
+    return this.http.get(direccion)
+  }
+
+  //Cargar Botones Selección Menú por Usuario
+  cargarBotonesSeleccion(){
+    let direccion = this.urlCargarSeleccionMenuPorUsuario
+    return this.http.get(direccion)
+  }
+
+  //Categorias Sin Facetas
+  categoriasSinFacetas(){
+    let direccion = this.urlCategoriasSinFacetas
+    return this.http.get(direccion)
+  }
+  countCategoriasSinFacetas(){
+    let direccion = this.urlCountCategoriasSinFacetas
+    return this.http.get(direccion)
+  }
+
+  //Devoluciones
+  buscarDevoluciones(json: any){
+    let direccion = this.urlDevolucionesPorNombre
+    return this.http.post(direccion,json)
   }
 
 }

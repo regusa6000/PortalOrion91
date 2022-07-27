@@ -22,7 +22,6 @@ export class AlertasOrionComponent implements OnInit {
   preAlmacen: any
   categoriasVacias: any
   pedidosTransferencia: any
-  ean13: any
   pendientesAx: any
   pedidosPendienteValidacion: any
   pedidosNoEnviados: any
@@ -31,7 +30,6 @@ export class AlertasOrionComponent implements OnInit {
   pedidosDuplicados: any
   productosCategorizadosOulet: any
   productosSinCategoriaPredeterminada: any
-  productosSinMpNombreProducto: any
   productosSinBullets: any
 
   constructor(private authSvc: AuthService) {
@@ -80,9 +78,6 @@ export class AlertasOrionComponent implements OnInit {
     this.authSvc.badgeTransferenciaBancariaSinStock().subscribe(data=>{
       this.pedidosTransferencia = data
     })
-    this.authSvc.countProductosSinEan13().subscribe(data=>{
-      this.ean13 = data
-    })
 
     //Pendientes Ax
     let jsonToken  = {
@@ -122,12 +117,6 @@ export class AlertasOrionComponent implements OnInit {
     })
     this.authSvc.countProductosSinCategoriaPredeterminada().subscribe(data=>{
       this.productosSinCategoriaPredeterminada = data
-    })
-    this.authSvc.countProductosSinMPNombreArticulo().subscribe(data=>{
-      this.productosSinMpNombreProducto = data
-    })
-    this.authSvc.countProductosSinBullets().subscribe(data=>{
-      this.productosSinBullets = data
     })
 
   }

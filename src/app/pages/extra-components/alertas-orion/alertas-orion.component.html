@@ -7,14 +7,6 @@
   </nb-card-body>
 </nb-card>
 
-<!--Productos Sin Bullets-->
-<nb-card *ngIf="productosSinBullets > 0">
-  <nb-card-header>Productos Sin Bullets</nb-card-header>
-  <nb-card-body>
-    <ngx-productos-sin-bullets></ngx-productos-sin-bullets>
-  </nb-card-body>
-</nb-card>
-
 <!--Precios cambiados en Tienda-->
 <nb-card *ngIf="preciosCambiados > 0">
   <nb-card-header>Control de precios Ax vs ORION91</nb-card-header>
@@ -131,15 +123,6 @@
   </nb-card-body>
 </nb-card>
 
-<!--Productos Sin Ean13-->
-<nb-card *ngIf="ean13 > 0">
-  <nb-card-header>Productos sin Ean13 y con Stock</nb-card-header>
-  <nb-card-body>
-    <span>Productos activos sin EAN13, este dato es vital para poder publicar los productos en los MP y los DS.</span><br><br>
-    <ngx-productos-sin-ean13></ngx-productos-sin-ean13>
-  </nb-card-body>
-</nb-card>
-
 <!--Pedidos Enviados Ax Pendientes-->
 <nb-card *ngIf="pendientesAx > 0">
   <nb-card-header>Pedidos Enviados AX y no Procesados</nb-card-header>
@@ -187,16 +170,6 @@
     <ngx-productos-sin-categoria-predeterminada></ngx-productos-sin-categoria-predeterminada>
   </nb-card-body>
 </nb-card>
-
-
-<!--Productos Sin MP_NombreArticulo-->
-<nb-card *ngIf="productosSinMpNombreProducto > 0">
-  <nb-card-header>Productos sin MP Nombre Artículo</nb-card-header>
-  <nb-card-body>
-    <ngx-productos-sin-mp-nombre-articulo></ngx-productos-sin-mp-nombre-articulo>
-  </nb-card-body>
-</nb-card>
-
 
 <!--Productos desactivados en elementor-->
 <!-- <nb-card>

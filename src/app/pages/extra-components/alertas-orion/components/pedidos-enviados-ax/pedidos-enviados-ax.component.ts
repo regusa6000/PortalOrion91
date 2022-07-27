@@ -9,6 +9,8 @@ import { AuthService } from '../../../../../auth/auth.service';
 export class PedidosEnviadosAxComponent implements OnInit {
 
   source: any
+  arrayPrincipal: any = []
+  idPedido: any
 
   constructor(public authSvc: AuthService) {
     this.refrescarTabla();
@@ -31,8 +33,27 @@ export class PedidosEnviadosAxComponent implements OnInit {
 
       this.authSvc.pedidosPendientesAx(jsontTok).subscribe(data=>{
         this.source = data['details'].listado
-        console.log('Pendientes Ax')
-        console.log(this.source.length)
+        this.arrayPrincipal = this.source
+
+        // for(let a = 0 ; a < this.arrayPrincipal.length ; a++){
+
+        //   let json = {'reference': this.arrayPrincipal[a].REFERENCIA}
+
+        //   this.authSvc.buscarIdPedido(json).subscribe(data=>{
+        //     this.idPedido = data
+        //     console.log('IDPEDIDO -> ' + this.idPedido.id_order)
+
+        //     // this.arrayPrincipal[a].push({idPedido: this.idPedido.id_order})
+        //     console.log(this.arrayPrincipal[0].concat('aaaaa'))
+        //     // console.log('Pendientes Ax')
+
+        //     // console.log(this.source.length)
+
+
+        //   })
+
+        // }
+
       })
 
     })

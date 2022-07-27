@@ -1,0 +1,9 @@
+<nb-card>
+  <nb-card-body>
+
+    <div *ngFor="let menu of datosMenu; let i = index">
+      <nb-checkbox status="info" value="{{ menu.id }}"  [(ngModel)]="item[i]" (change)="ver($event,item[i])">{{ menu.name }}</nb-checkbox>
+    </div>
+
+  </nb-card-body>
+</nb-card>

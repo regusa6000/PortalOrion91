@@ -1,0 +1,30 @@
+<nb-card>
+  <nb-card-header>
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+        Datos Facturación Ax
+        <br>
+        <span *ngIf="fechaInicio != null">Fechas: {{ fechaInicio }} - {{ fechaFin }}</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-around;">
+        <div>
+          <input nbInput placeholder="Seleccionar Fecha:" [nbDatepicker]="rangepicker">
+          <nb-rangepicker #rangepicker (rangeChange)="cambioRango($event)"></nb-rangepicker>
+        </div>
+        <div>
+          <button nbButton status="primary" (click)="facturasAxEntreFechas()" style="margin-right: 10px; margin-left: 10px;">Buscar</button>
+        </div>
+        <div>
+          <button nbButton status="primary" (click)="exportToExcel()" style="margin-right: 10px; margin-left: 10px;">Exportar</button>
+        </div>
+      </div>
+
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="config" [source]="source" id="season-tble">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbProgressBarModule,NbAutocompleteModule,NbCardModule, NbSpinnerModule , NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
+import { NbCheckboxModule,NbProgressBarModule,NbAutocompleteModule,NbCardModule, NbSpinnerModule , NbIconModule, NbInputModule, NbTreeGridModule,NbSelectModule,NbRadioModule,NbCalendarRangeModule,NbDatepickerModule,NbButtonModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgxEchartsModule } from 'ngx-echarts';
 
@@ -87,6 +87,13 @@ import { RoturasActualesComponent } from './roturas-actuales/roturas-actuales.co
 import { ProductosTopHace7DiasComponent } from './dashboard/components/productos-top-hace7-dias/productos-top-hace7-dias.component';
 import { ProductosTopHace30DiasComponent } from './dashboard/components/productos-top-hace30-dias/productos-top-hace30-dias.component';
 import { ProductosSinBulletsComponent } from './productos-sin-bullets/productos-sin-bullets.component';
+import { CategoriasFaqsComponent } from './categorias-faqs/categorias-faqs.component';
+import { ControlUsuariosComponent } from './control-usuarios/control-usuarios.component';
+import { ProductosSinEan13ConStockComponent } from './productos-sin-ean13-con-stock/productos-sin-ean13-con-stock.component';
+import { ProductosSinMpComponent } from './productos-sin-mp/productos-sin-mp.component';
+import { CategoriasSinFacetasComponent } from './categorias-sin-facetas/categorias-sin-facetas.component';
+import { FacturasAxComponent } from './facturas-ax/facturas-ax.component';
+import { DevolucionesComponent } from './devoluciones/devoluciones.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -109,6 +116,7 @@ import { ProductosSinBulletsComponent } from './productos-sin-bullets/productos-
     NbAutocompleteModule,
     NbButtonModule,
     NbSpinnerModule,
+    NbCheckboxModule,
     NgxEchartsModule,
     LeafletModule.forRoot()
   ],
@@ -193,6 +201,13 @@ import { ProductosSinBulletsComponent } from './productos-sin-bullets/productos-
     ProductosTopHace7DiasComponent,
     ProductosTopHace30DiasComponent,
     ProductosSinBulletsComponent,
+    CategoriasFaqsComponent,
+    ControlUsuariosComponent,
+    ProductosSinEan13ConStockComponent,
+    ProductosSinMpComponent,
+    CategoriasSinFacetasComponent,
+    FacturasAxComponent,
+    DevolucionesComponent,
   ],
 })
 export class TablesModule { }

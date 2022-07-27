@@ -51,7 +51,6 @@ import { AlertasAmazonComponent } from './alertas-orion/components/alertas-amazo
 import { PreAlmacenComponent } from './alertas-orion/components/pre-almacen/pre-almacen.component';
 import { CategoriasVaciasComponent } from './alertas-orion/components/categorias-vacias/categorias-vacias.component';
 import { PedidoTransferenciaBancariaComponent } from './alertas-orion/components/pedido-transferencia-bancaria/pedido-transferencia-bancaria.component';
-import { ProductosSinEan13Component } from './alertas-orion/components/productos-sin-ean13/productos-sin-ean13.component';
 import { PedidosEnviadosAxComponent } from './alertas-orion/components/pedidos-enviados-ax/pedidos-enviados-ax.component';
 import { PedidosPendienteValidacionComponent } from './alertas-orion/components/pedidos-pendiente-validacion/pedidos-pendiente-validacion.component';
 import { PedidosNoEnviadosComponent } from './alertas-orion/components/pedidos-no-enviados/pedidos-no-enviados.component';
@@ -60,8 +59,7 @@ import { PrecioBaseMenorAPrecioOfertaComponent } from './alertas-orion/component
 import { OrDuplicadosComponent } from './alertas-orion/components/or-duplicados/or-duplicados.component';
 import { ProductosCategorizadosOuletComponent } from './alertas-orion/components/productos-categorizados-oulet/productos-categorizados-oulet.component';
 import { ProductosSinCategoriaPredeterminadaComponent } from './alertas-orion/components/productos-sin-categoria-predeterminada/productos-sin-categoria-predeterminada.component';
-import { ProductosSinMpNombreArticuloComponent } from './alertas-orion/components/productos-sin-mp-nombre-articulo/productos-sin-mp-nombre-articulo.component';
-import { ProductosSinBulletsComponent } from './alertas-orion/components/productos-sin-bullets/productos-sin-bullets.component';
+import { CategoriasSinFacetasComponent } from './alertas-orion/components/categorias-sin-facetas/categorias-sin-facetas.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -120,7 +118,6 @@ const MODULES = [
     PreAlmacenComponent,
     CategoriasVaciasComponent,
     PedidoTransferenciaBancariaComponent,
-    ProductosSinEan13Component,
     PedidosEnviadosAxComponent,
     PedidosPendienteValidacionComponent,
     PedidosNoEnviadosComponent,
@@ -129,8 +126,7 @@ const MODULES = [
     OrDuplicadosComponent,
     ProductosCategorizadosOuletComponent,
     ProductosSinCategoriaPredeterminadaComponent,
-    ProductosSinMpNombreArticuloComponent,
-    ProductosSinBulletsComponent,
+    CategoriasSinFacetasComponent,
   ],
 })
 export class ExtraComponentsModule { }

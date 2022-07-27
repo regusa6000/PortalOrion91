@@ -1,0 +1,20 @@
+<nb-card>
+  <nb-card-header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div> Devoluciones </div>
+      <div style="display: flex;">
+        <div>
+          <input type="text" nbInput [(ngModel)]="valor" placeholder="Cliente: ">
+        </div>
+        <div style="margin-left: 10px;">
+          <button nbButton status="primary" (click)="buscador()"><nb-icon icon="search-outline"></nb-icon></button>
+        </div>
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="config" [source]="source"></ng2-smart-table>
+  </nb-card-body>
+
+</nb-card>

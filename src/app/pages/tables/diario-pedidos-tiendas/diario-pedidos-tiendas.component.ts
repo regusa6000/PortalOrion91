@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../auth/auth.service';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'ngx-diario-pedidos-tiendas',
@@ -10,6 +11,7 @@ export class DiarioPedidosTiendasComponent implements OnInit {
 
   source: any;
   loading = false;
+  name = 'DiarioPedidosCanales.xlsx';
 
   constructor(public authSvc: AuthService) { }
 
@@ -22,10 +24,21 @@ export class DiarioPedidosTiendasComponent implements OnInit {
 
   toggleLoadingAnimation() {
     this.loading = true;
-    setTimeout(() => this.loading = false, 25000);
+    setTimeout(() => this.loading = false, 88200);
+  }
+
+  exportToExcel(): void {
+    let element = document.getElementById('season-tble');
+    const worksheet: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    const book: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(book, worksheet, 'Sheet1');
+
+    XLSX.writeFile(book, this.name);
   }
 
   config = {
+    pager: { display: false },
     actions: false,
     columns: {
       dia: {

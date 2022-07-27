@@ -81,6 +81,7 @@ export class ManoManoComponent implements OnInit {
   }
 
   config = {
+    pager: { display: false },
     actions: false,
     columns: {
       id_product: {
