@@ -6,6 +6,10 @@
         <th scope="col">Tipo</th>
         <th scope="col">Conector</th>
         <th scope="col">Índice</th>
+        <th scope="col">Subida Producto</th>
+        <th scope="col">Actualización Stock</th>
+        <th scope="col">Actualización Ofertas</th>
+        <th scope="col">Sync Pedidos</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +18,15 @@
         <td>{{ dato.tipo }}</td>
         <td>{{ dato.conector }}</td>
         <td>{{ dato.indice }}</td>
+        <td *ngIf="dato.subida_producto.indexOf('manual') !== -1">
+          <span style="color: red;">{{ dato.subida_producto }}</span>
+        </td>
+        <td *ngIf="dato.subida_producto.indexOf('manual') == -1">
+          <span>{{ dato.subida_producto }}</span>
+        </td>
+        <td>{{ dato.actualizacion_stock }}</td>
+        <td>{{ dato.actualizacion_ofertas }}</td>
+        <td>{{ dato.sync_pedidos }}</td>
       </tr>
     </tbody>
   </table>

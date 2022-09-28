@@ -94,6 +94,13 @@ import { ProductosSinMpComponent } from './productos-sin-mp/productos-sin-mp.com
 import { CategoriasSinFacetasComponent } from './categorias-sin-facetas/categorias-sin-facetas.component';
 import { FacturasAxComponent } from './facturas-ax/facturas-ax.component';
 import { DevolucionesComponent } from './devoluciones/devoluciones.component';
+import { Novedades100DiasComponent } from './novedades100-dias/novedades100-dias.component';
+import { NoMapeadosAliExpressComponent } from './no-mapeados-ali-express/no-mapeados-ali-express.component';
+import { PedidosVendorComponent } from './pedidos-vendor/pedidos-vendor.component';
+import { PedidosVendorItemsComponent } from './pedidos-vendor/components/pedidos-vendor-items/pedidos-vendor-items.component';
+import { PedidosVendorlmatComponent } from './pedidos-vendor/components/pedidos-vendorlmat/pedidos-vendorlmat.component';
+import { ProductosNombreMpComponent } from './productos-nombre-mp/productos-nombre-mp.component';
+import { PedidosEliminadosComponent } from './pedidos-eliminados/pedidos-eliminados.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -208,6 +215,13 @@ import { DevolucionesComponent } from './devoluciones/devoluciones.component';
     CategoriasSinFacetasComponent,
     FacturasAxComponent,
     DevolucionesComponent,
+    Novedades100DiasComponent,
+    NoMapeadosAliExpressComponent,
+    PedidosVendorComponent,
+    PedidosVendorItemsComponent,
+    PedidosVendorlmatComponent,
+    ProductosNombreMpComponent,
+    PedidosEliminadosComponent,
   ],
 })
 export class TablesModule { }

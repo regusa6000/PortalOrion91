@@ -1,0 +1,69 @@
+<br>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="margin-left: 10;">
+    <p style="text-decoration: underline;"><b>Productos</b></p>
+  </div>
+</div>
+
+<br>
+<table class="table mb-0 table-striped">
+<thead class="bg-dark text-white">
+  <tr>
+    <!-- <th>Crear Rango</th> -->
+    <th> </th>
+    <th>Id producto de Amazon</th>
+    <th>Id producto Vendor</th>
+    <th>Item Id</th>
+    <th>Nº Lmat</th>
+    <th>Producto</th>
+    <th>Stock</th>
+    <th>Cantidad</th>
+    <th>Importe</th>
+  </tr>
+</thead>
+<tbody *ngFor="let item of arrayProvicional; let i = index">
+  <tr *ngIf="item.orderedQuantityAmount > item.stock" style="color: red;">
+    <td align="center">
+      <div *ngIf="item.lmat > 0" id="icono-{{ item.vendorProductIdentifier }}">
+        <nb-icon icon="maximize-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" (click)="showLinea(i)"></nb-icon>
+        <nb-icon icon="minimize-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]"></nb-icon>
+      </div>
+    </td>
+    <td>{{ item.amazonProductIdentifier }}</td>
+    <td>{{ item.vendorProductIdentifier }}</td>
+    <td>{{ item.itemid }}</td>
+    <td>{{ item.lmat }}</td>
+    <td>{{ item.descripcion }}</td>
+    <td>{{ item.stock }}</td>
+    <td>{{ item.orderedQuantityAmount }}</td>
+    <td>{{ item.netCostAmount }}</td>
+  </tr>
+
+  <tr *ngIf="item.orderedQuantityAmount < item.stock">
+    <td align="center">
+      <div *ngIf="item.lmat > 0" id="icono-{{ item.vendorProductIdentifier }}">
+        <nb-icon icon="maximize-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" (click)="showLinea(i)"></nb-icon>
+        <nb-icon icon="minimize-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]"></nb-icon>
+      </div>
+    </td>
+    <td>{{ item.amazonProductIdentifier }}</td>
+    <td>{{ item.vendorProductIdentifier }}</td>
+    <td>{{ item.itemid }}</td>
+    <td>{{ item.lmat }}</td>
+    <td>{{ item.descripcion }}</td>
+    <td>{{ item.stock }}</td>
+    <td>{{ item.orderedQuantityAmount }}</td>
+    <td>{{ item.netCostAmount }}</td>
+  </tr>
+
+  <!--Parte de  Lmat-->
+  <tr [hidden]="!hideme[i]" class="sub-table no-bg">
+    <td align="center"> </td>
+    <td colspan="15" class="p-0">
+      <ngx-pedidos-vendorlmat [idProductVendor] = "item.vendorProductIdentifier"></ngx-pedidos-vendorlmat>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+<br>

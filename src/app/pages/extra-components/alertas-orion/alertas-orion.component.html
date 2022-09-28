@@ -53,7 +53,7 @@
 
 <!--Pendientes Almacén-->
 <nb-card *ngIf="pedidosPendientes > 0">
-  <nb-card-header>Pendientes Almacén</nb-card-header>
+  <nb-card-header>Pendiente de enviar a AX</nb-card-header>
   <nb-card-body>
     <span>Pedidos con el estado aceptado = OK, pero que no han pasado a AX. Excepto AliExpress que los retenemos 2 horas. Verificar la dirección del cliente no sea Canarias/Baleares, código postal 5 caracteres.....</span><br><br>
     <ngx-pendientes-almacen></ngx-pendientes-almacen>
@@ -170,6 +170,32 @@
     <ngx-productos-sin-categoria-predeterminada></ngx-productos-sin-categoria-predeterminada>
   </nb-card-body>
 </nb-card>
+
+<!--No Mapeados AliExpress-->
+<nb-card *ngIf="noMapeadosAliExpress > 0">
+  <nb-card-header>No Mapeados AliExpress</nb-card-header>
+  <nb-card-body>
+    <ngx-no-mapeados-ali-express></ngx-no-mapeados-ali-express>
+  </nb-card-body>
+</nb-card>
+
+<!--Ultimo Pedido Enviado 2 Horas-->
+<nb-card *ngIf="alertaUltimoPedido == 'Alertar'">
+  <nb-card-header>Ultimo Pedido Enviado AX</nb-card-header>
+  <nb-card-body>
+    <ngx-ultimo-pedido></ngx-ultimo-pedido>
+  </nb-card-body>
+</nb-card>
+
+<!--Pedidos Eliminados-->
+<nb-card *ngIf="ultimoPedido > 0">
+  <nb-card-header>Pedidos Eliminados</nb-card-header>
+  <nb-card-body>
+    <span>Atención pedido eliminado, detectar el origen o el usuario que lo ha eliminado. ¡¡ OJO ¡¡ comprobar si esta en AX y cancelar/abonar, sino se hace esto bloqueara el proceso de estados de pedidos.</span><br><br>
+    <ngx-pedidos-eliminados></ngx-pedidos-eliminados>
+  </nb-card-body>
+</nb-card>
+
 
 <!--Productos desactivados en elementor-->
 <!-- <nb-card>

@@ -104,6 +104,10 @@ export class ProductosTopCanalesComponent implements OnInit {
         title: 'Id Producto',
         type: 'number'
       },
+      itemid:{
+        title: 'IDAX',
+        type: 'string'
+      },
       imagen: {
         title: 'Imagen',
         type: 'html',

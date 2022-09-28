@@ -50,6 +50,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Pedidos Pre-Almacén',
         link: '/pages/tables/registro-pedidos-pre-almacen'
+      },
+      {
+        title: 'Pedidos Eliminados',
+        link: '/pages/tables/pedidos-eliminados'
       }
     ]
   },
@@ -138,6 +142,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/roturas-actuales'
           },
           {
+            title: 'Nombre = MP',
+            link: '/pages/tables/productos-nombre-mp'
+          },
+          {
             title: 'Faqs',
             link: '/pages/tables/productos-faqs'
           },
@@ -162,7 +170,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
             link: '/pages/tables/productos-sin-mp'
           },
           {
-            title: 'Urls Internas',
+            title: 'Novedades',
+            link: '/pages/tables/novedades100-dias'
           }
         ]
       },
@@ -205,7 +214,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/mano-mano'
       },
       {
-        title: 'MAKRO',
+        title: 'Makro',
         children: [
           {
             title: 'Productos Publicados',
@@ -235,6 +244,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
           {
             title: "MP Amazon 'NO' ",
             link: '/pages/tables/productos-no-publicados-amazon'
+          }
+        ]
+      },
+      {
+        title: 'AliExpress',
+        children: [
+          {
+            title: 'No Mapeados',
+            link: '/pages/tables/no-mapeados-ali-express'
           }
         ]
       }
@@ -330,6 +348,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Contraseñas Plataformas',
         link: '/pages/tables/contrasenas-plataformas'
+      }
+    ]
+  },
+  {
+    title: 'VENDOR',
+    icon: 'bulb-outline',
+    children: [
+      {
+        title: 'Pedidos Vendor',
+        link: '/pages/tables/pedidos-vendor'
       }
     ]
   },

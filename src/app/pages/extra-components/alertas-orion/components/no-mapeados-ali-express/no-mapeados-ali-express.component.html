@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th style="text-align: center;" scope="col">Id Categoría Orion91</th>
+      <th style="text-align: center;" scope="col">Nombre Cat - Orion91</th>
+      <th style="text-align: center;" scope="col">Id Categoría Padre Orion91</th>
+      <th style="text-align: center;" scope="col">Número de Hijos</th>
+      <th style="text-align: center;" scope="col">Id Aliexpress</th>
+      <th style="text-align: center;" scope="col">Nombre Cat - AliExpress</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dato of ali">
+      <td align="center">{{ dato.id_category_default }}</td>
+      <td align="center">{{ dato.nombreCatOrion91 }}</td>
+      <td align="center">{{ dato.idCatPadreOrion91 }}</td>
+      <td align="center">{{ dato.nHijos }}</td>
+      <td align="center">{{ dato.ae_id }}</td>
+      <td align="center">{{ dato.nombreCatAliexpress }}</td>
+    </tr>
+  </tbody>
+</table>

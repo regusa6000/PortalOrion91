@@ -38,6 +38,10 @@ export class ProductosSinBulletsComponent implements OnInit {
         title: 'Id Producto',
         type: 'string'
       },
+      itemid: {
+        title: 'Id Ax',
+        type: 'string'
+      },
       ean: {
         title: 'Ean13',
         type: 'string',

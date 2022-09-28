@@ -60,6 +60,9 @@ import { OrDuplicadosComponent } from './alertas-orion/components/or-duplicados/
 import { ProductosCategorizadosOuletComponent } from './alertas-orion/components/productos-categorizados-oulet/productos-categorizados-oulet.component';
 import { ProductosSinCategoriaPredeterminadaComponent } from './alertas-orion/components/productos-sin-categoria-predeterminada/productos-sin-categoria-predeterminada.component';
 import { CategoriasSinFacetasComponent } from './alertas-orion/components/categorias-sin-facetas/categorias-sin-facetas.component';
+import { NoMapeadosAliExpressComponent } from './alertas-orion/components/no-mapeados-ali-express/no-mapeados-ali-express.component';
+import { UltimoPedidoComponent } from './alertas-orion/components/ultimo-pedido/ultimo-pedido.component';
+import { PedidosEliminadosComponent } from './alertas-orion/components/pedidos-eliminados/pedidos-eliminados.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -127,6 +130,9 @@ const MODULES = [
     ProductosCategorizadosOuletComponent,
     ProductosSinCategoriaPredeterminadaComponent,
     CategoriasSinFacetasComponent,
+    NoMapeadosAliExpressComponent,
+    UltimoPedidoComponent,
+    PedidosEliminadosComponent,
   ],
 })
 export class ExtraComponentsModule { }

@@ -30,6 +30,7 @@ export class PagesComponent implements OnInit {
   redireccionadas: any
   predeterminados: any
   manoMano: any
+  aliExpress: any
   elementor: any
   preciosCambiados: any
   mpAmazon: any
@@ -53,6 +54,9 @@ export class PagesComponent implements OnInit {
   countProductosSinMpNombreArticulo: any
   countProductosSinBullets: any
   countCategoriasSinFacetas: any
+
+  countNoMapeadosAliExpress: any
+  countPedidosEliminados: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -208,12 +212,26 @@ export class PagesComponent implements OnInit {
                                               this.productosSinCategoriaPredeterminada = data
                                               total += this.productosSinCategoriaPredeterminada
 
-                                              if (total > 0) {
-                                                this.menu[0].badge = {
-                                                  text: `${total}`,
-                                                  status: "danger"
-                                                }
-                                              }
+                                              this.authSvc.countNoMapeadosAli().subscribe(data=>{
+
+                                                this.countNoMapeadosAliExpress = data
+                                                total += this.countNoMapeadosAliExpress
+
+                                                this.authSvc.countPedidosEliminados().subscribe(data=>{
+
+                                                  this.countPedidosEliminados = data
+                                                  total += this.countPedidosEliminados
+
+                                                  if (total > 0) {
+                                                    this.menu[0].badge = {
+                                                      text: `${total}`,
+                                                      status: "danger"
+                                                    }
+                                                  }
+
+                                                })
+
+                                              })
 
                                             })
 
@@ -264,6 +282,7 @@ export class PagesComponent implements OnInit {
   refrescarBadgeManoMano() {
 
     let ManoMano = 0
+    let ali = 0
 
     this.authSvc.controlManoManoBadge().subscribe(data => {
       this.manoMano = data
@@ -274,18 +293,43 @@ export class PagesComponent implements OnInit {
           text: `${ManoMano}`,
           status: "danger"
         }
+      }
 
-        this.menu[8].badge = {
-          text: `${ManoMano}`,
-          status: "danger"
+      this.authSvc.countNoMapeadosAli().subscribe(data=>{
+
+        this.aliExpress = data
+        ali = this.aliExpress
+
+        console.log('Ali -> ' + ali)
+
+        if (ali > 0) {
+          this.menu[8].children[3].badge = {
+            text: `${ali}`,
+            status: "danger"
+          }
+          this.menu[8].children[3].children[0].badge = {
+            text: `${ali}`,
+            status: "danger"
+          }
         }
 
-      }
+        let sumaCantidad = ManoMano + ali
+
+        if(sumaCantidad > 0){
+          this.menu[8].badge = {
+            text: `${sumaCantidad}`,
+            status: "danger"
+          }
+        }
+
+      })
+
 
       console.log(this.manoMano)
 
     })
   }
+
 
   refrescarProductosSinEan13() {
 
@@ -440,6 +484,7 @@ export class PagesComponent implements OnInit {
     })
 
   }
+
 
 }
 

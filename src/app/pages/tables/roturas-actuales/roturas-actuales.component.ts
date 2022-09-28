@@ -46,6 +46,10 @@ export class RoturasActualesComponent implements OnInit {
         title: 'Product Id',
         type: 'number',
       },
+      itemid: {
+        title: 'Id Ax',
+        type: 'string'
+      },
       imagen: {
         title: 'Imagen',
         type: 'html',

@@ -32,6 +32,10 @@ export class ProductoConPocasImagenesComponent implements OnInit {
         title: 'Id Producto',
         type: 'number',
       },
+      itemid: {
+        title: 'Id Ax',
+        type: 'string'
+      },
       url:{
         title: 'URL Producto',
         type: 'html',
@@ -55,7 +59,7 @@ export class ProductoConPocasImagenesComponent implements OnInit {
         type: 'string',
       },
       contador:{
-        title: 'Nímero de Imágenes',
+        title: 'Número de Imágenes',
         type: 'number'
       }
     },

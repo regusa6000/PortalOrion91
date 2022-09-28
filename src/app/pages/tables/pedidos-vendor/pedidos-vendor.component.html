@@ -1,0 +1,55 @@
+<nb-card>
+<nb-card-header>Pedidos Amazon Vendor</nb-card-header>
+
+<nb-card-body>
+
+  <div class="table-responsive cnstr-record product-tbl">
+    <table class="table table-bordered heading-hvr">
+      <thead>
+        <tr>
+          <th> </th>
+          <th>Purchase Order Number</th>
+          <th>Purchase Order State</th>
+          <th>Purchase Order Type</th>
+          <th>Payment Method</th>
+          <th>Buying Party Id</th>
+          <th>Selling Party Id</th>
+          <th>Ship To Party Id</th>
+          <th>Bill To Party Id</th>
+          <th>Purchase Order Date</th>
+          <th>Purchase Order State Changed Date</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let pedidos of pedidosVendor; let i = index">
+        <tr>
+          <td align="center">
+              <nb-icon icon="maximize-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" (click)="showLinea(i)"></nb-icon>
+              <nb-icon icon="minimize-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]"></nb-icon>
+          </td>
+          <td>{{pedidos.purchaseOrderNumber}}</td>
+          <td>{{pedidos.purchaseOrderState}}</td>
+          <td>{{pedidos.purchaseOrderType}}</td>
+          <td>{{pedidos.paymentMethod}}</td>
+          <td>{{pedidos.buyingPartyId}}</td>
+          <td>{{pedidos.sellingPartyId}}</td>
+          <td>{{pedidos.shipToPartyId }}</td>
+          <td>{{pedidos.billToPartyId }}</td>
+          <td>{{pedidos.purchaseOrderDate}}</td>
+          <td>{{pedidos.purchaseOrderStateChangedDate}}</td>
+
+        </tr>
+
+        <!--Parte de los Items-->
+        <tr [hidden]="!hideme[i]" class="sub-table no-bg">
+          <td align="center"> </td>
+          <td colspan="15" class="p-0">
+            <ngx-pedidos-vendor-items [idAmazonVendor] = "pedidos.purchaseOrderNumber"></ngx-pedidos-vendor-items>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+  </div>
+<nb-card-body>

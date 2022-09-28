@@ -31,6 +31,9 @@ export class AlertasOrionComponent implements OnInit {
   productosCategorizadosOulet: any
   productosSinCategoriaPredeterminada: any
   productosSinBullets: any
+  noMapeadosAliExpress: any
+  alertaUltimoPedido: any
+  ultimoPedido: any
 
   constructor(private authSvc: AuthService) {
     this.refrescarAlertas();
@@ -117,6 +120,15 @@ export class AlertasOrionComponent implements OnInit {
     })
     this.authSvc.countProductosSinCategoriaPredeterminada().subscribe(data=>{
       this.productosSinCategoriaPredeterminada = data
+    })
+    this.authSvc.countNoMapeadosAli().subscribe(data=>{
+      this.noMapeadosAliExpress = data
+    })
+    this.authSvc.ultimoPedido2Horas().subscribe(data=>{
+      this.alertaUltimoPedido = data[0].alertar
+    })
+    this.authSvc.countPedidosEliminados().subscribe(data=>{
+      this.ultimoPedido = data
     })
 
   }

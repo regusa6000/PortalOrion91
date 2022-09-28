@@ -63,6 +63,11 @@ import { ProductosSinMpComponent } from './productos-sin-mp/productos-sin-mp.com
 import { CategoriasSinFacetasComponent } from './categorias-sin-facetas/categorias-sin-facetas.component';
 import { FacturasAxComponent } from './facturas-ax/facturas-ax.component';
 import { DevolucionesComponent } from './devoluciones/devoluciones.component';
+import { Novedades100DiasComponent } from './novedades100-dias/novedades100-dias.component';
+import { NoMapeadosAliExpressComponent } from './no-mapeados-ali-express/no-mapeados-ali-express.component';
+import { PedidosVendorComponent } from './pedidos-vendor/pedidos-vendor.component';
+import { ProductosNombreMpComponent } from './productos-nombre-mp/productos-nombre-mp.component';
+import { PedidosEliminadosComponent } from './pedidos-eliminados/pedidos-eliminados.component';
 
 const routes: Routes = [{
   path: '',
@@ -311,6 +316,26 @@ const routes: Routes = [{
     {
       path: 'devoluciones',
       component: DevolucionesComponent
+    },
+    {
+      path: 'novedades100-dias',
+      component: Novedades100DiasComponent
+    },
+    {
+      path: 'no-mapeados-ali-express',
+      component: NoMapeadosAliExpressComponent
+    },
+    {
+      path: 'pedidos-vendor',
+      component: PedidosVendorComponent
+    },
+    {
+      path: 'productos-nombre-mp',
+      component: ProductosNombreMpComponent
+    },
+    {
+      path: 'pedidos-eliminados',
+      component: PedidosEliminadosComponent
     }
   ],
 }];

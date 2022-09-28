@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th style="text-align: center;" scope="col">Inicio Brecha</th>
+      <th style="text-align: center;" scope="col">Fin Brecha</th>
+      <th style="text-align: center;" scope="col">Último Pedido</th>
+      <th style="text-align: center;" scope="col">Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dato of pedidos">
+      <td align="center">{{ dato.inicioBrecha }}</td>
+      <td align="center">{{ dato.finBrecha }}</td>
+      <td align="center">{{ dato.ultimoPedido }}</td>
+      <td align="center">{{ dato.date_add }}</td>
+    </tr>
+  </tbody>
+</table>

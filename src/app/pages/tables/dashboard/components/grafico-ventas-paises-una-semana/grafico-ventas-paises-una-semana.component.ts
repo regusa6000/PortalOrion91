@@ -29,7 +29,7 @@ export class GraficoVentasPaisesUnaSemanaComponent implements OnInit {
 
       let arrayColores = [
         {'name': 'Alemania', 'color': '#000000'},{'name': 'Bélgica', 'color': '#F2B700'},{'name': 'España','color': '#D60000'},{'name': 'Francia','color': '#002551'},
-        {'name': 'Italia','color': '#008D44'},{'name': 'Países Bajos','color': '#A84001'},{'name': 'Portugal', 'color': '#006300'}
+        {'name': 'Italia','color': '#008D44'},{'name': 'Países Bajos','color': '#A84001'},{'name': 'Portugal', 'color': '#006300'},{'name': 'Austria', 'color': '#E62837'}
       ]
 
       for(let paises = 0 ; paises < this.arrayAux.length ; paises++){
