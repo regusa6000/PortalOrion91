@@ -1,0 +1,22 @@
+<div id="tablaTopHoy">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" style="text-align: center;">Id</th>
+        <th scope="col" style="text-align: center;">Motivo</th>
+        <th scope="col" style="text-align: center;">Sub Motivo</th>
+        <th scope="col" style="text-align: center;">Total Abono</th>
+        <th scope="col" style="text-align: center;">Fecha </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of source">
+        <td align="center">{{ dato.id }}</td>
+        <td align="center">{{ dato.motivo }}</td>
+        <td align="center">{{ dato.submotivo }}</td>
+        <td align="center">{{ dato.total | currency:'EUR': true }}</td>
+        <td align="center">{{ dato.fechaAbono}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

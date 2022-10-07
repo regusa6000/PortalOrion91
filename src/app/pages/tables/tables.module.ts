@@ -101,6 +101,8 @@ import { PedidosVendorItemsComponent } from './pedidos-vendor/components/pedidos
 import { PedidosVendorlmatComponent } from './pedidos-vendor/components/pedidos-vendorlmat/pedidos-vendorlmat.component';
 import { ProductosNombreMpComponent } from './productos-nombre-mp/productos-nombre-mp.component';
 import { PedidosEliminadosComponent } from './pedidos-eliminados/pedidos-eliminados.component';
+import { TopAbonosMotivosComponent } from './dashboard/components/top-abonos-motivos/top-abonos-motivos.component';
+import { TopProductosAbonadosComponent } from './dashboard/components/top-productos-abonados/top-productos-abonados.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -222,6 +224,8 @@ import { PedidosEliminadosComponent } from './pedidos-eliminados/pedidos-elimina
     PedidosVendorlmatComponent,
     ProductosNombreMpComponent,
     PedidosEliminadosComponent,
+    TopAbonosMotivosComponent,
+    TopProductosAbonadosComponent,
   ],
 })
 export class TablesModule { }

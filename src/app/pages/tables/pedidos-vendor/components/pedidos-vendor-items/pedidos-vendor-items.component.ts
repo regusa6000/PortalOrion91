@@ -12,6 +12,7 @@ export class PedidosVendorItemsComponent implements OnInit {
   arrayProvicional: any = []
   hideme = [];
   Index: any;
+  nuevaCantidad = []
   @Input() idAmazonVendor: any
 
   constructor(private authSvc: AuthService) { }
@@ -85,6 +86,12 @@ export class PedidosVendorItemsComponent implements OnInit {
       // }
 
     })
+  }
+
+  funcionCantidad(nuevaCantidad: number){
+
+    alert(nuevaCantidad)
+
   }
 
   showLinea(index) {

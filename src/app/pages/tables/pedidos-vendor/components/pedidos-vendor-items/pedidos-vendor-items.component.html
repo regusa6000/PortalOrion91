@@ -18,6 +18,7 @@
     <th>Producto</th>
     <th>Stock</th>
     <th>Cantidad</th>
+    <th>Input/Cantidad</th>
     <th>Importe</th>
   </tr>
 </thead>
@@ -36,6 +37,7 @@
     <td>{{ item.descripcion }}</td>
     <td>{{ item.stock }}</td>
     <td>{{ item.orderedQuantityAmount }}</td>
+    <td><input type="text" nbInput placeholder="Text field" [(ngModel)]="nuevaCantidad[i]" (blur)="funcionCantidad(nuevaCantidad[i])"></td>
     <td>{{ item.netCostAmount }}</td>
   </tr>
 
@@ -53,6 +55,7 @@
     <td>{{ item.descripcion }}</td>
     <td>{{ item.stock }}</td>
     <td>{{ item.orderedQuantityAmount }}</td>
+    <td><input type="text" nbInput placeholder="Text field" [(ngModel)]="nuevaCantidad[i]" (blur)="funcionCantidad(nuevaCantidad[i])"></td>
     <td>{{ item.netCostAmount }}</td>
   </tr>
 

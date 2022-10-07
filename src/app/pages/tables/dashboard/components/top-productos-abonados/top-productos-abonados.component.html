@@ -1,0 +1,18 @@
+<div id="tablaTopHoy">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" style="text-align: center;">Id Ax</th>
+        <th scope="col" style="text-align: center;">Producto</th>
+        <th scope="col" style="text-align: center;">Total Sin Iva</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of source">
+        <td align="center">{{ dato.itemid }}</td>
+        <td align="center">{{ dato.name }}</td>
+        <td align="center">{{ dato.totalSinIva | currency:'EUR': true }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
