@@ -21,10 +21,12 @@
         </tr>
       </thead>
       <tbody *ngFor="let pedidos of pedidosVendor; let i = index">
-        <tr>
+        <tr id="fila-{{ pedidos.purchaseOrderNumber }}">
           <td align="center">
+            <div id="icono-{{ pedidos.purchaseOrderNumber }}">
               <nb-icon icon="maximize-outline" pack="eva" class="expand-row" *ngIf="!hideme[i]" (click)="showLinea(i)"></nb-icon>
               <nb-icon icon="minimize-outline" pack="eva" class="expand-row" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]"></nb-icon>
+            </div>
           </td>
           <td>{{pedidos.purchaseOrderNumber}}</td>
           <td>{{pedidos.purchaseOrderState}}</td>
@@ -43,7 +45,7 @@
         <tr [hidden]="!hideme[i]" class="sub-table no-bg">
           <td align="center"> </td>
           <td colspan="15" class="p-0">
-            <ngx-pedidos-vendor-items [idAmazonVendor] = "pedidos.purchaseOrderNumber"></ngx-pedidos-vendor-items>
+            <ngx-pedidos-vendor-items [idAmazonVendor] = "pedidos.purchaseOrderNumber" [shipToParty] = "pedidos.shipToPartyId"></ngx-pedidos-vendor-items>
           </td>
         </tr>
 

@@ -103,6 +103,10 @@ import { ProductosNombreMpComponent } from './productos-nombre-mp/productos-nomb
 import { PedidosEliminadosComponent } from './pedidos-eliminados/pedidos-eliminados.component';
 import { TopAbonosMotivosComponent } from './dashboard/components/top-abonos-motivos/top-abonos-motivos.component';
 import { TopProductosAbonadosComponent } from './dashboard/components/top-productos-abonados/top-productos-abonados.component';
+import { GraficoAbonosHoyComponent } from './dashboard/components/grafico-abonos-hoy/grafico-abonos-hoy.component';
+import { GraficoAbonosHace7DiasComponent } from './dashboard/components/grafico-abonos-hace7-dias/grafico-abonos-hace7-dias.component';
+import { GraficoAbonosHace30diasComponent } from './dashboard/components/grafico-abonos-hace30dias/grafico-abonos-hace30dias.component';
+import { AbonosInformeComponent } from './abonos-informe/abonos-informe.component';
 
 // import { NbCalendarRangeModule } from '.'
 
@@ -226,6 +230,10 @@ import { TopProductosAbonadosComponent } from './dashboard/components/top-produc
     PedidosEliminadosComponent,
     TopAbonosMotivosComponent,
     TopProductosAbonadosComponent,
+    GraficoAbonosHoyComponent,
+    GraficoAbonosHace7DiasComponent,
+    GraficoAbonosHace30diasComponent,
+    AbonosInformeComponent,
   ],
 })
 export class TablesModule { }

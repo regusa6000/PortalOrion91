@@ -1,7 +1,10 @@
 <br>
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <div style="margin-left: 10;">
-    <p style="text-decoration: underline;"><b>Productos</b></p>
+    <p style="text-decoration: underline; margin-left: 5px;"><b>Productos</b></p>
+  </div>
+  <div style="margin-right: 10px;">
+    <button nbButton status="primary" (click)="registrarPedidoVendor()"><nb-icon icon="plus-circle-outline"></nb-icon></button>
   </div>
 </div>
 
@@ -37,7 +40,8 @@
     <td>{{ item.descripcion }}</td>
     <td>{{ item.stock }}</td>
     <td>{{ item.orderedQuantityAmount }}</td>
-    <td><input type="text" nbInput placeholder="Text field" [(ngModel)]="nuevaCantidad[i]" (blur)="funcionCantidad(nuevaCantidad[i])"></td>
+    <td><input type="text" nbInput placeholder="Text field" [(ngModel)]="nuevaCantidad[i]"
+      (blur)="funcionCantidad(item.amazonProductIdentifier,item.itemid,nuevaCantidad[i],item.netCostAmount,i)"></td>
     <td>{{ item.netCostAmount }}</td>
   </tr>
 
@@ -55,7 +59,8 @@
     <td>{{ item.descripcion }}</td>
     <td>{{ item.stock }}</td>
     <td>{{ item.orderedQuantityAmount }}</td>
-    <td><input type="text" nbInput placeholder="Text field" [(ngModel)]="nuevaCantidad[i]" (blur)="funcionCantidad(nuevaCantidad[i])"></td>
+    <td><input type="text" nbInput placeholder="Text field" [(ngModel)]="nuevaCantidad[i]"
+        (blur)="funcionCantidad(item.amazonProductIdentifier,item.itemid,nuevaCantidad[i],item.netCostAmount,i)"></td>
     <td>{{ item.netCostAmount }}</td>
   </tr>
 

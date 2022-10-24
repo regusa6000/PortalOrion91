@@ -397,6 +397,9 @@ export class AuthService {
   urlPedidosAmazonVendor: string = 'http://vpnxer.grupohidalgos.com:8070/pedidosVendor'
   urlPedidosAmazonVendorItems: string = 'http://vpnxer.grupohidalgos.com:8070/pedidosVendorItems'
   urlPedidosAmazonVendorLmat: string = 'http://vpnxer.grupohidalgos.com:8080/api/AVproduct';
+  urlRegistrarLineaVendor: string = 'http://vpnxer.grupohidalgos.com:8070/registrarLineaVendor'
+  urlPedidosAmazonVendorEnAx: string = 'http://vpnxer.grupohidalgos.com:8080/api/pedidosVendorEnAX';
+  urlRegistrarOrderVendorAx: string = 'http://192.168.1.123:8000/registrarOrderVendorAx';
 
   //Productos nombre MP
   urlProductosNombreMo: string = 'http://vpnxer.grupohidalgos.com:8070/productosNombreMp';
@@ -410,6 +413,15 @@ export class AuthService {
 
   //Top 10 Productos Abonados
   urlTop10ProductosAbonados: string = 'http://vpnxer.grupohidalgos.com:8070/top10ProductosAbonados';
+
+  //Graficos Abonos Dashboard
+  urlGraficoAbonosHoy: string = 'http://vpnxer.grupohidalgos.com:8070/graficoAbonosHoy';
+  urlGraficoAbonos7Dias: string = 'http://vpnxer.grupohidalgos.com:8070/graficoAbonos7Dias';
+  urlGraficoAbonos30Dias: string = 'http://vpnxer.grupohidalgos.com:8070/graficoAbonos30Dias';
+
+  //Informe de Abonos Entre Fechas
+  urlInformeDeAbonosEntreFechas: string = 'http://vpnxer.grupohidalgos.com:8070/informeAbonosEntreFechas';
+
 
   public loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -1557,6 +1569,18 @@ export class AuthService {
     let direccion = this.urlPedidosAmazonVendorLmat
     return this.http.post(direccion,json)
   }
+  registarLineaVendor(json: any){
+    let direccion = this.urlRegistrarLineaVendor
+    return this.http.post(direccion, json)
+  }
+  pedidosAmazonVendorEnAx(json: any){
+    let direccion = this.urlPedidosAmazonVendorEnAx
+    return this.http.post(direccion,json)
+  }
+  registrarPedidoVendorAx(json: any){
+    let direccion = this.urlRegistrarOrderVendorAx
+    return this.http.post(direccion,json)
+  }
 
   //Alertas Ultimos Pedidos
   ultimoPedido2Horas(){
@@ -1590,6 +1614,26 @@ export class AuthService {
   top10ProductosAbonados(){
     let direccion = this.urlTop10ProductosAbonados
     return this.http.get(direccion)
+  }
+
+  //Graficos Abonos Dashboard
+  graficoAbonosHoy(){
+    let direccion = this.urlGraficoAbonosHoy
+    return this.http.get(direccion)
+  }
+  graficoAbonos7Dias(){
+    let direccion = this.urlGraficoAbonos7Dias
+    return this.http.get(direccion)
+  }
+  graficoAbonos30Dias(){
+    let direccion = this.urlGraficoAbonos30Dias
+    return this.http.get(direccion)
+  }
+
+  //Informe De Abonos Entre Fechas
+  informeAbonosEntreFechas(json: any){
+    let direccion = this.urlInformeDeAbonosEntreFechas
+    return this.http.post(direccion,json)
   }
 
 }

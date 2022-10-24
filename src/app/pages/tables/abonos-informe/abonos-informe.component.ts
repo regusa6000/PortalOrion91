@@ -3,21 +3,18 @@ import { AuthService } from '../../../auth/auth.service';
 import * as moment from 'moment';
 import * as XLSX from 'xlsx';
 
-
-
 @Component({
-  selector: 'ngx-abonos-canales',
-  templateUrl: './abonos-canales.component.html',
-  styleUrls: ['./abonos-canales.component.scss']
+  selector: 'ngx-abonos-informe',
+  templateUrl: './abonos-informe.component.html',
+  styleUrls: ['./abonos-informe.component.scss']
 })
-export class AbonosCanalesComponent implements OnInit {
+export class AbonosInformeComponent implements OnInit {
 
+  source: any
   fechaInicio: any
   fechaFin: any
-  datosGrafico: any
-  loading = false;
 
-  name = 'AbonosCanales.xlsx';
+  name = 'AbonosInforme.xlsx';
 
   constructor(public authSvc: AuthService) { }
 
@@ -26,11 +23,9 @@ export class AbonosCanalesComponent implements OnInit {
 
   buscar(){
     let json = {'fechaInicio': this.fechaInicio, 'fechaFin': this.fechaFin}
-
-    this.toggleLoadingAnimation()
-    this.authSvc.graficoAbonosCanales(json).subscribe(data=>{
-      this.datosGrafico = data
-      console.log(this.datosGrafico)
+    this.authSvc.informeAbonosEntreFechas(json).subscribe(data=>{
+      this.source = data
+      console.log(this.source)
     })
   }
 
@@ -39,11 +34,6 @@ export class AbonosCanalesComponent implements OnInit {
     if (event.end) this.fechaFin = moment(event.end).format('YYYY-MM-DD');
     console.log(this.fechaInicio)
     console.log(this.fechaFin)
-  }
-
-  toggleLoadingAnimation() {
-    this.loading = true;
-    setTimeout(() => this.loading = false, 6000);
   }
 
   exportToExcel(): void {
@@ -60,30 +50,52 @@ export class AbonosCanalesComponent implements OnInit {
     pager: { display: false },
     actions: false,
     columns: {
-      canal: {
-        title: 'Tienda',
-        type: 'number',
+      referenciaPs: {
+        title: 'Id Orden',
+        type: 'string',
       },
-      abonos: {
-        title: 'Total Abonos',
+      pedidoAx: {
+        title: 'Pedido Ax',
+        type: 'string',
+      },
+      abonoAX: {
+        title: 'Abono Ax',
+        type: 'string',
+      },
+      idProPS: {
+        title: 'Id Producto PS',
+        type: 'string'
+      },
+      itemID:{
+        title: 'Id Producto Ax',
+        type: 'string'
+      },
+      nombreProducto: {
+        title: 'Producto',
+        type: 'string'
+      },
+      cantidadVendida:{
+        title: 'Cantidad Vendida',
+        type: 'number'
+      },
+      precioFinal: {
+        title: 'Precio Final',
         type: 'number',
         valuePrepareFunction: (value) =>{
           return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
         }
       },
-      facturas: {
-        title: 'Total Facturas',
-        type: 'number',
-        valuePrepareFunction: (value) =>{
-          return Intl.NumberFormat('de-DE',{style:'currency',currency: 'EUR'}).format(value)
-        }
+      motivo :{
+        title: 'Motivo',
+        type: 'string'
       },
-      porcentajeAbonos:{
-        title: 'Porcentaje Abonados',
-        type: 'number',
-        valuePrepareFunction: (value) =>{
-          return value + '%'
-        }
+      submotivo :{
+        title: 'Sub Motivo',
+        type: 'string'
+      },
+      fechaAbono :{
+        title: 'Fecha Abono',
+        type: 'string'
       }
     },
   };

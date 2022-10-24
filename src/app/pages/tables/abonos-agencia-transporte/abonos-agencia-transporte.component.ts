@@ -33,6 +33,7 @@ export class AbonosAgenciaTransporteComponent implements OnInit {
   }
 
   config = {
+    pager: { display: false },
     actions: false,
     columns: {
       motivo: {

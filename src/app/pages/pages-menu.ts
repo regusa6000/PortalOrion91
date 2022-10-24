@@ -73,6 +73,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Abonos - Motivos',
+        link: '/pages/tables/abonos-incidencias-motivos'
+      },
+      {
+        title: 'Abonos - Motivados',
         link: '/pages/tables/abonos'
       },
       {
@@ -84,12 +88,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/abonos-productos'
       },
       {
-        title: 'Abonos - Informes',
-        link: '/pages/tables/abonos-incidencias-motivos'
+        title: 'Abonos - Transportistas',
+        link: '/pages/tables/abonos-agencia-transporte'
       },
       {
-        title: 'Abonos - Agencias Transporte',
-        link: '/pages/tables/abonos-agencia-transporte'
+        title: 'Pedidos/Abonos/Motivos',
+        link: '/pages/tables/abonos-informe'
       }
     ]
 

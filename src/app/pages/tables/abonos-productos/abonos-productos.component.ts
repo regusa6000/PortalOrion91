@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../auth/auth.service';
 import * as moment from 'moment';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'ngx-abonos-productos',
@@ -13,6 +14,8 @@ export class AbonosProductosComponent implements OnInit {
   fechaInicio: any
   fechaFin: any
   loading = false;
+
+  name = 'AbonosProductos.xlsx';
 
   constructor(public authSvc: AuthService) { }
 
@@ -38,6 +41,16 @@ export class AbonosProductosComponent implements OnInit {
     if (event.end) this.fechaFin = moment(event.end).format('YYYY-MM-DD');
     console.log(this.fechaInicio)
     console.log(this.fechaFin)
+  }
+
+  exportToExcel(): void {
+    let element = document.getElementById('season-tble');
+    const worksheet: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    const book: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(book, worksheet, 'Sheet1');
+
+    XLSX.writeFile(book, this.name);
   }
 
   config = {

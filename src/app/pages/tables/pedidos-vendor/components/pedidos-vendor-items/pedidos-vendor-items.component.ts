@@ -1,4 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
+import { NbComponentStatus, NbToastrService } from '@nebular/theme';
 import { AuthService } from '../../../../../auth/auth.service';
 
 @Component({
@@ -14,8 +15,9 @@ export class PedidosVendorItemsComponent implements OnInit {
   Index: any;
   nuevaCantidad = []
   @Input() idAmazonVendor: any
+  @Input() shipToParty: any
 
-  constructor(private authSvc: AuthService) { }
+  constructor(private authSvc: AuthService,private toastrService: NbToastrService) { }
 
   ngOnInit(): void {
     let json = {'idAmazonVendor': this.idAmazonVendor}
@@ -65,32 +67,28 @@ export class PedidosVendorItemsComponent implements OnInit {
 
       }
 
-
-      /**Parte para mostrar o no el más**/
-
-      // for(let a = 0 ; a < this.itemsPedido.length ; a++){
-
-      //   let jsonLmat = {'referencia': this.itemsPedido[a].vendorProductIdentifier}
-
-      //   this.authSvc.pedidosAmazonVendorLmat(jsonLmat).subscribe(data=>{
-
-      //     console.log('IdVendor -> ' +  this.itemsPedido[a].vendorProductIdentifier + ' , Lmat -> ' + data['details'].lmat)
-
-      //     if(data['details'].lmat == 0){
-      //       document.getElementById("icono-" + this.itemsPedido[a].vendorProductIdentifier).style.display = "none";
-      //     }
-
-      //   })
-
-      //   console.log(this.itemsPedido[a].vendorProductIdentifier)
-      // }
-
     })
   }
 
-  funcionCantidad(nuevaCantidad: number){
+  funcionCantidad(idPedidoAmazon: string, itemId: number, nuevaCantidad: number, precio: number, numeroLinea: number){
 
-    alert(nuevaCantidad)
+    let json = {'idPedidoAmazon': idPedidoAmazon, 'itemId': itemId, 'cantidad': nuevaCantidad
+                , 'precio': precio, 'numeroLinea': numeroLinea}
+
+    this.authSvc.registarLineaVendor(json).subscribe(data=>{
+      if(data == true){
+        this.showToastRegister('success')
+      }else{
+        this.showToastError('danger')
+      }
+
+      if(data == 1){
+        this.showToast('success')
+      }else{
+        this.showToastError('danger')
+      }
+
+    })
 
   }
 
@@ -99,5 +97,29 @@ export class PedidosVendorItemsComponent implements OnInit {
     this.Index = index;
   }
 
+  registrarPedidoVendor(){
+    let json = {'orderId': this.idAmazonVendor,'shipToParty': this.shipToParty}
+
+    this.authSvc.registrarPedidoVendorAx(json).subscribe(data=>{
+      console.log(data)
+
+      if(data == true){
+        this.showToastRegister('success')
+      }
+
+    })
+  }
+
+  showToast(status: NbComponentStatus) {
+    this.toastrService.show(status, `Registro Actualizado!`, { status });
+  }
+
+  showToastRegister(status: NbComponentStatus) {
+    this.toastrService.show(status, `Registro Creado!`, { status });
+  }
+
+  showToastError(status: NbComponentStatus) {
+    this.toastrService.show(status, `Error Registro!`, { status });
+  }
 
 }

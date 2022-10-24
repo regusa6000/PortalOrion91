@@ -68,6 +68,7 @@ import { NoMapeadosAliExpressComponent } from './no-mapeados-ali-express/no-mape
 import { PedidosVendorComponent } from './pedidos-vendor/pedidos-vendor.component';
 import { ProductosNombreMpComponent } from './productos-nombre-mp/productos-nombre-mp.component';
 import { PedidosEliminadosComponent } from './pedidos-eliminados/pedidos-eliminados.component';
+import { AbonosInformeComponent } from './abonos-informe/abonos-informe.component';
 
 const routes: Routes = [{
   path: '',
@@ -336,6 +337,10 @@ const routes: Routes = [{
     {
       path: 'pedidos-eliminados',
       component: PedidosEliminadosComponent
+    },
+    {
+      path: 'abonos-informe',
+      component: AbonosInformeComponent
     }
   ],
 }];
